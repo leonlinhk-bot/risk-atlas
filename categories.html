@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>分类索引 · Risk Atlas · 风险图谱</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">R</span>
+        <span class="brand-text"><b>Risk Atlas · 风险图谱</b><small>岭南大学 · MScRIAA（原 MSc RIM）· AI 赋能风险、保险与精算</small></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="map.html">知识地图</a>
+        <a href="categories.html" class="active">分类索引</a>
+        <div class="lang-switch" id="lang-switch"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">分类索引</h1>
+    <p class="page-sub">按五种类型浏览全部词条。</p>
+    <div id="sections"><p class="muted">加载中…</p></div>
+  </main>
+
+  <footer class="footer">
+    <span>© <b class="lingnan">Lingnan University</b></span> ·
+    <span>Risk Atlas · 风险图谱</span> ·
+    <span class="muted">纯静态 · 双链驱动</span>
+  </footer>
+
+  <script src="js/wiki.js"></script>
+  <script>
+    (function () {
+      Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
+      var ORDER = ['course', 'concept', 'tool', 'framework', 'track', 'credential'];
+      var LABEL = { course: '课程', concept: '概念', tool: '工具', framework: '框架', track: '纵深线', credential: '考牌' };
+
+      function tag(d) {
+        return '<span class="tag ' + Wiki.tagClass(d.type) + '">' + Wiki.typeLabel(d.type) + '</span>';
+      }
+
+      function entryCard(e) {
+        var line = e.code || e.en || (e.category ? '类别：' + e.category : '');
+        var sub = e.summary || '';
+        return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '">' +
+          '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) +
+          (line ? '<small>' + Wiki.escapeHtml(line) + '</small>' : '') +
+          '<small>' + Wiki.escapeHtml(sub) + '</small></a>';
+      }
+
+      Wiki.load().then(function (data) {
+        var entries = data.entries;
+        var groups = {};
+        entries.forEach(function (e) { (groups[e.type] = groups[e.type] || []).push(e); });
+        var html = '';
+        ORDER.forEach(function (t) {
+          var list = groups[t] || [];
+          if (!list.length) return;
+          html += '<section class="cat-section" id="type-' + t + '">';
+          html += '<h2>' + LABEL[t] + ' <span class="muted">(' + list.length + ')</span></h2>';
+          html += '<div class="entry-list">' + list.map(entryCard).join('') + '</div>';
+          html += '</section>';
+        });
+        document.getElementById('sections').innerHTML = html;
+        // 支持 #type-xxx 锚点滚动
+        if (location.hash) {
+          var target = document.querySelector(location.hash);
+          if (target) setTimeout(function () { target.scrollIntoView(); }, 0);
+        }
+      }).catch(function (err) {
+        document.getElementById('sections').innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(err.message) + '</p>';
+      });
+    })();
+  </script>
+</body>
+</html>

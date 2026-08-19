@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Risk Atlas · 风险图谱 · 岭南大学</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">R</span>
+        <span class="brand-text"><b>Risk Atlas · 风险图谱</b><small>岭南大学 · MScRIAA（原 MSc RIM）· AI 赋能风险、保险与精算</small></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="map.html">知识地图</a>
+        <a href="categories.html">分类索引</a>
+        <div class="lang-switch" id="lang-switch"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <p class="muted">加载中…</p>
+  </main>
+
+  <footer class="footer">
+    <span>© <b class="lingnan">Lingnan University</b></span> ·
+    <span>Risk Atlas · 风险图谱</span> ·
+    <span class="muted">纯静态 · 双链驱动</span>
+  </footer>
+
+  <script src="js/wiki.js"></script>
+  <script>
+    (function () {
+      Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
+      var main = document.getElementById('main');
+      var slug = (new URLSearchParams(location.search)).get('slug');
+
+      function tag(d) {
+        return '<span class="tag ' + Wiki.tagClass(d.type) + '">' + Wiki.typeLabel(d.type) + '</span>';
+      }
+      function trackLink(t) {
+        return t ? '<a class="wikilink" href="' + Wiki.entryHref(t.slug) + '">' + Wiki.escapeHtml(t.name) + '</a>' : '<span class="muted">—</span>';
+      }
+      function slugLinks(slugs, idx) {
+        if (!slugs || slugs.length === 0) return '<span class="muted">—</span>';
+        return slugs.map(function (s) {
+          var e = idx[s];
+          return e ? '<a class="wikilink" href="' + Wiki.entryHref(s) + '">' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</a>' : Wiki.escapeHtml(s);
+        }).join('、');
+      }
+      function row(k, v) { return '<tr><td class="ib-k">' + k + '</td><td class="ib-v">' + v + '</td></tr>'; }
+
+      function buildInfobox(e, idx) {
+        var rows = '<tr><td class="ib-k">类型</td><td class="ib-v">' + tag(e) + '</td></tr>';
+        if (e.type === 'course') {
+          if (e.code) rows += row('代码', '<b>' + e.code + '</b>');
+          if (e.status) rows += row('状态', e.status === 'catalog' ? '<span class="status-badge status-catalog">未修读</span>' : '<span class="status-badge status-enrolled">已修读</span>');
+          var tr = Wiki.trackRef(e, idx);
+          rows += row('纵深线', trackLink(tr));
+          if (e.workshop) rows += row('工作坊', '第 ' + e.workshop + ' 讲');
+          if (e.pair && idx[e.pair]) rows += row('同线课程', '<a class="wikilink" href="' + Wiki.entryHref(e.pair) + '">' + Wiki.escapeHtml(Wiki.tr(idx[e.pair], 'title')) + '</a>');
+          if (e.aiTools && e.aiTools.length) rows += row('AI 工具', slugLinks((e.aiTools || []).map(function (t) { return t.replace(/\[\[|\]\]/g, ''); }), idx));
+        } else if (e.type === 'concept' || e.type === 'framework') {
+          if (e.en) rows += row('英文', e.en);
+          var tr2 = Wiki.trackRef(e, idx);
+          rows += row('纵深线', trackLink(tr2));
+          if (e.courses && e.courses.length) rows += row('相关课程', slugLinks(e.courses, idx));
+        } else if (e.type === 'tool') {
+          if (e.category) rows += row('类别', e.category);
+          if (e.usedIn && e.usedIn.length) rows += row('用于课程', slugLinks(e.usedIn, idx));
+        } else if (e.type === 'track') {
+          if (e.number) rows += row('编号', e.number);
+          if (e.courses && e.courses.length) rows += row('包含课程', slugLinks(e.courses, idx));
+        } else if (e.type === 'credential') {
+          if (e.code) rows += row('卷次', '<b>' + e.code + '</b>');
+          if (e.status) rows += row('状态', e.status === 'passed' ? '已通过' : (e.status === 'preparing' ? '备考中' : '计划中'));
+          var tr3 = Wiki.trackRef(e, idx);
+          rows += row('纵深线', trackLink(tr3));
+          if (e.pair && idx[e.pair]) rows += row('主课程', '<a class="wikilink" href="' + Wiki.entryHref(e.pair) + '">' + Wiki.escapeHtml(Wiki.tr(idx[e.pair], 'title')) + '</a>');
+        }
+        return '<div class="infobox"><div class="ib-title">词条信息</div><table>' + rows + '</table></div>';
+      }
+
+      function renderEntry(e, entries, idx) {
+        var back = Wiki.backlinks(entries, e.slug);
+        var tr = Wiki.trackRef(e, idx);
+        var crumb = '<a href="index.html">首页</a> › <a href="categories.html#type-' + e.type + '">' + Wiki.typeLabel(e.type) + '</a>' +
+          (tr ? ' › <a href="' + Wiki.entryHref(tr.slug) + '">' + Wiki.escapeHtml(tr.name) + '</a>' : '') + ' › ' + Wiki.escapeHtml(Wiki.tr(e, 'title'));
+
+        var html = '';
+        html += '<div class="crumb">' + crumb + '</div>';
+        html += '<div class="wiki-layout">';
+        html += '<div class="wiki-main"><article class="article">';
+        html += '<h1 class="entry-title">' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</h1>';
+        if (e.code || e.en) {
+          html += '<div class="entry-sub">' + [e.code, e.en].filter(Boolean).map(Wiki.escapeHtml).join(' · ') + ' ' + tag(e) + '</div>';
+        } else {
+          html += '<div class="entry-sub">' + tag(e) + '</div>';
+        }
+        html += '<div class="entry-body">' + Wiki.renderBody(Wiki.trBody(e), idx) + '</div>';
+        html += '</article>';
+
+        if (back.length) {
+          html += '<div class="block"><h2>反向链接</h2><div class="backlink-list">' +
+            back.map(function (b) {
+              return '<a class="backlink-item" href="' + Wiki.entryHref(b.slug) + '">' + tag(b) + Wiki.escapeHtml(Wiki.tr(b, 'title')) + '</a>';
+            }).join('') + '</div></div>';
+        }
+        html += '</div>'; // wiki-main
+        html += '<div class="wiki-side">' + buildInfobox(e, idx) + '</div>';
+        html += '</div>'; // wiki-layout
+
+        document.title = Wiki.tr(e, 'title') + ' · Risk Atlas · 风险图谱';
+        main.innerHTML = html;
+      }
+
+      function renderMissing() {
+        document.title = '词条不存在 · Risk Atlas · 风险图谱';
+        main.innerHTML = '<div class="article"><h1 class="entry-title">词条不存在</h1>' +
+          '<p class="entry-body">没有找到词条 <code>' + Wiki.escapeHtml(slug || '') + '</code>。' +
+          '<br><a href="index.html">返回首页搜索</a> 或 <a href="categories.html">浏览分类索引</a>。</p></div>';
+      }
+
+      function renderLanding(entries, idx) {
+        var courses = entries.filter(function (e) { return e.type === 'course'; });
+        document.title = '词条 · Risk Atlas · 风险图谱';
+        main.innerHTML = '<div class="crumb"><a href="index.html">首页</a> › 词条</div>' +
+          '<h1 class="page-title">请选择一个词条</h1><p class="page-sub">以下是十门核心课程，点击进入；或在首页搜索任意词条。</p>' +
+          '<div class="entry-list">' + courses.map(function (e) {
+            return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '"><b>' + e.code + ' · ' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b><small>' + Wiki.escapeHtml(e.summary || '') + '</small></a>';
+          }).join('') + '</div>';
+      }
+
+      Wiki.load().then(function (data) {
+        var entries = data.entries;
+        var idx = Wiki.index(entries);
+        if (!slug) { renderLanding(entries, idx); return; }
+        var e = idx[slug];
+        if (!e) { renderMissing(); return; }
+        renderEntry(e, entries, idx);
+      }).catch(function (err) {
+        main.innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(err.message) + '</p>';
+      });
+    })();
+  </script>
+</body>
+</html>

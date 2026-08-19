@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Risk Atlas · 风险图谱 · 岭南大学</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">R</span>
+        <span class="brand-text"><b>Risk Atlas · 风险图谱</b><small>岭南大学 · MScRIAA（原 MSc RIM）· AI 赋能风险、保险与精算</small></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="active">首页</a>
+        <a href="map.html">知识地图</a>
+        <a href="categories.html">分类索引</a>
+        <div class="lang-switch" id="lang-switch"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>一个可生长的知识百科</h1>
+      <p>以双链（[[词条]]）为骨架，把 MSc RIM 的十门课程拆解成课程、概念、工具、框架与纵深线相互咬合的知识网络，服务「AI 赋能学习」。</p>
+      <div class="searchbox">
+        <input id="search-input" type="search" placeholder="搜索词条：如 久期、VaR、RIM537、DeepSeek…" autocomplete="off" />
+        <div id="search-results" class="search-results"></div>
+      </div>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="about">
+      <h2>关于 Risk Atlas · 风险图谱</h2>
+      <p>Risk Atlas 是面向岭南大学「风险与保险管理理学硕士」的开放知识百科——该专业原名 MSc in Risk and Insurance Management（MScRIM），现更名为 MSc in Risk, Insurance and Actuarial Analytics（MScRIAA），实为同一专业，覆盖风险（Risk）、保险（Insurance）与精算分析（Actuarial Analysis）三大领域。</p>
+      <p>岭南大学 MScRIAA（原 MScRIM）课程聚焦风险管理、保险市场、精算定价与数据分析，培养能够在保险与金融机构从事风险识别、量化建模、产品设计与财富架构的专业人才。本项目把官网十六门课程（RIM520–RIM540，5 必修 + 11 选修）拆解为课程、概念、工具、框架、纵深线与考牌六类词条，并以双链（[[词条]]）连接成一张可生长的知识网络，服务「AI 赋能学习」。</p>
+      <p class="en">Risk Atlas — an open knowledge graph for Lingnan University's MSc in Risk, Insurance and Actuarial Analytics (MScRIAA), formerly MSc in Risk and Insurance Management (MScRIM), spanning Risk, Insurance and Actuarial Analysis.</p>
+    </section>
+
+    <section class="cat-grid" id="cat-grid"></section>
+
+    <section class="popular">
+      <h2>热门词条</h2>
+      <div class="popular-list" id="popular"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <b class="lingnan">Lingnan University</b></span> ·
+    <span>Risk Atlas · 风险图谱</span> ·
+    <span class="muted">纯静态 · 双链驱动</span>
+  </footer>
+
+  <script src="js/wiki.js"></script>
+  <script src="js/search.js"></script>
+  <script>
+    (function () {
+      Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
+      var state = { entries: [], idx: {} };
+
+      function tag(d) {
+        return '<span class="tag ' + Wiki.tagClass(d.type) + '">' + Wiki.typeLabel(d.type) + '</span>';
+      }
+
+      function renderStats() {
+        var c = { course: 0, concept: 0, tool: 0, framework: 0, track: 0, credential: 0 };
+        state.entries.forEach(function (e) { c[e.type] = (c[e.type] || 0) + 1; });
+        var el = document.getElementById('stats');
+        el.innerHTML =
+          '<span><b>' + state.entries.length + '</b> 词条</span>' +
+          '<span><b>' + c.course + '</b> 课程</span>' +
+          '<span><b>' + c.concept + '</b> 概念</span>' +
+          '<span><b>' + c.tool + '</b> 工具</span>' +
+          '<span><b>' + c.framework + '</b> 框架</span>' +
+          '<span><b>' + c.credential + '</b> 考牌</span>' +
+          '<span><b>' + c.track + '</b> 纵深线</span>';
+      }
+
+      function renderCatGrid() {
+        var cats = [
+          { type: 'course', label: '课程', desc: 'RIM520–RIM540 十六门课程（5 必修 + 11 选修）' },
+          { type: 'concept', label: '概念', desc: '久期、信用利差、VaR 等核心概念' },
+          { type: 'tool', label: '工具', desc: 'DeepSeek、Kimi、秘塔 等 AI 工具' },
+          { type: 'framework', label: '框架', desc: 'ISO 31000、三道防线、RCTOA 等' },
+          { type: 'credential', label: '考牌', desc: 'IIQE 卷一~卷五 保险牌照' },
+          { type: 'track', label: '纵深线', desc: '五条专业纵深线' }
+        ];
+        var el = document.getElementById('cat-grid');
+        el.innerHTML = cats.map(function (c) {
+          return '<a class="cat-card" href="categories.html#type-' + c.type + '">' +
+            '<span class="tag ' + Wiki.tagClass(c.type) + '">' + c.label + '</span>' +
+            '<b>' + c.label + '</b><small>' + c.desc + '</small></a>';
+        }).join('');
+      }
+
+      function renderPopular() {
+        var deg = Wiki.inDegreeMap(state.entries);
+        var ranked = state.entries.slice()
+          .filter(function (e) { return e.type !== 'track'; })
+          .sort(function (a, b) { return (deg[b.slug] || 0) - (deg[a.slug] || 0); })
+          .slice(0, 9);
+        var el = document.getElementById('popular');
+        el.innerHTML = ranked.map(function (e) {
+          return '<a class="pop-item" href="' + Wiki.entryHref(e.slug) + '">' +
+            '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) +
+            '<small>' + Wiki.escapeHtml(e.summary || '') + '</small></a>';
+        }).join('');
+      }
+
+      Wiki.load().then(function (entries) {
+        state.entries = entries.entries;
+        state.idx = Wiki.index(state.entries);
+        renderStats();
+        renderCatGrid();
+        renderPopular();
+        Search.attach(
+          document.getElementById('search-input'),
+          document.getElementById('search-results'),
+          state.entries
+        );
+      }).catch(function (err) {
+        document.getElementById('stats').textContent = '加载失败：' + err.message;
+      });
+    })();
+  </script>
+</body>
+</html>

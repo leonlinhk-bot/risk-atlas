@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>知识地图 · Risk Atlas · 风险图谱</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">R</span>
+        <span class="brand-text"><b>Risk Atlas · 风险图谱</b><small>岭南大学 · MScRIAA（原 MSc RIM）· AI 赋能风险、保险与精算</small></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="map.html" class="active">知识地图</a>
+        <a href="categories.html">分类索引</a>
+        <div class="lang-switch" id="lang-switch"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">知识地图</h1>
+    <p class="page-sub">五条纵深线为骨干，课程 ↔ 概念 ↔ 工具 ↔ 框架相互咬合。拖拽节点、滚轮缩放、点击节点进入词条。</p>
+    <div class="legend">
+      <span class="lg"><span class="dot" style="background:#d9534f"></span>纵深线</span>
+      <span class="lg"><span class="dot" style="background:#14356a"></span>课程</span>
+      <span class="lg"><span class="dot" style="background:#c9a227"></span>概念</span>
+      <span class="lg"><span class="dot" style="background:#2e8b57"></span>工具</span>
+      <span class="lg"><span class="dot" style="background:#8e44ad"></span>框架</span>
+      <span class="lg"><span class="dot" style="background:#0e7490"></span>考牌</span>
+    </div>
+    <div id="graph"></div>
+  </main>
+
+  <footer class="footer">
+    <span>© <b class="lingnan">Lingnan University</b></span> ·
+    <span>Risk Atlas · 风险图谱</span> ·
+    <span class="muted">纯静态 · 双链驱动</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+  <script src="js/wiki.js"></script>
+  <script src="js/graph.js"></script>
+  <script>
+    Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
+    Wiki.load().then(function (data) {
+      Graph.render(data.entries, document.getElementById('graph'));
+    }).catch(function (err) {
+      var el = document.getElementById('graph');
+      el.classList.add('graph-fallback');
+      el.style.display = 'block';
+      el.innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(err.message) + '</p>';
+    });
+  </script>
+</body>
+</html>

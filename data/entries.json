@@ -1,0 +1,2023 @@
+{
+  "site": {
+    "title": "Risk Atlas · 风险图谱",
+    "titleEn": "Risk Atlas",
+    "school": "岭南大学",
+    "schoolEn": "Lingnan University",
+    "subtitle": "岭南大学 · MScRIAA（原 MSc RIM）· AI 赋能风险、保险与精算",
+    "version": "2.0.0",
+    "program": "MSc in Risk, Insurance and Actuarial Analytics (MScRIAA)",
+    "programFormer": "MSc in Risk and Insurance Management (MScRIM)",
+    "extraction": {
+      "progress": {
+        "rim520": "extracted",
+        "rim521": "extracted",
+        "rim522": "extracted",
+        "rim523": "extracted",
+        "rim524": "extracted",
+        "rim530": "extracted",
+        "rim531": "extracted",
+        "rim532": "extracted",
+        "rim536": "extracted",
+        "rim537": "extracted"
+      },
+      "doubts": [
+        "笔记为页码式课堂笔记，部分公式/计算仅标注「P24 solution」缺完整推导，需对照 Fabozzi 教材核实（如 Macaulay 久期具体数值）",
+        "笔记中英文原始记录与 AI 生成的中文解释并存，个别术语翻译需甄别（如「马尔卡夫持续时间」应为 Macaulay）",
+        "FN 复习标注了考试范围（Ch6/7/8/24 + 两个 PPT + Blackstone 案例）与「not test」页，属于老师给定范围，非课程全部内容"
+      ],
+      "sources": {
+        "rim537": [
+          "Course Outline 2024-25",
+          "Fabozzi CH01-04 in-class notes",
+          "FN Key notes+calculation",
+          "FN KeyWords",
+          "FN Sample Definition",
+          "FN in-class review",
+          "MT Simple Essay"
+        ],
+        "rim522": [
+          "Course Outline 2024-25",
+          "MT Lecture Summary & Sample Midterm",
+          "MT Sample Exam ×2",
+          "MT Key Notes & HW Q1-6",
+          "FN tips ×2",
+          "FN jiaqi 极简版（考试预测题）"
+        ],
+        "rim523": [
+          "Course Outline 2024-25",
+          "MT midterm 1 review",
+          "MT Formula",
+          "Distribution 3 in-class notes",
+          "FN formula and table",
+          "FN Sample questions",
+          "FN Tips",
+          "FN dis4 chi-ks"
+        ],
+        "rim530": [
+          "Course Outline 2024-25",
+          "FN Quiz Review 1-8",
+          "FN in-class review + Key notes",
+          "MT Quiz Review & Key Notes Summary",
+          "Quiz 1-8 Moodle 回顾"
+        ],
+        "rim531": [
+          "Course Outline 2024-25",
+          "FN 重点 English 记录词汇",
+          "FN in-class review + Key notes + Calculation",
+          "FN open-ended 开放题",
+          "MT Key Notes 非计算题/计算题"
+        ],
+        "rim532": [
+          "Course Outline and Schedule",
+          "FN 大题模拟 Top20",
+          "FN Update notes",
+          "FN in-class 录音整理",
+          "FN pre/final 录音原文",
+          "FN Essential Knowledge",
+          "MT Practice Review",
+          "Chapter 2-15 练习题"
+        ],
+        "rim536": [
+          "Course Outline 2024-25",
+          "FN Quiz 1-8（含答案解析）",
+          "FN in-class review + Key notes",
+          "FN 重点 English 词汇",
+          "MT Quiz Review",
+          "Moodle Quiz 1-8"
+        ],
+        "rim520": [
+          "Course Outline and Schedule",
+          "FN Summary Notes",
+          "FN Revision (jiaqi)",
+          "VaR in-class Notes",
+          "FN futures/forwards exercises",
+          "MT Key Notes",
+          "MT Revision Exercise 1-3"
+        ],
+        "rim521": [
+          "Course Outline（Insurance Economics 旧版）",
+          "FN Notes（期末结构）",
+          "SET1-11 练习（供求/市场结构/宏观/贸易/信息不对称）",
+          "set1-5 选择题 Kimi 汇总",
+          "midterm notes"
+        ],
+        "rim524": [
+          "RIM524_Outline 2024-25",
+          "CH1-10 章节笔记",
+          "FN SET4-10 Key Notes for Calculations",
+          "Final_notes（期末结构）",
+          "Mid-term_notes",
+          "CH1-10 练习与答案"
+        ]
+      },
+      "reviewed": true,
+      "reviewNotes": "10/10 门课程提取完成；复盘补齐 track 链接、考牌/选修关联；catalog 课程与 IIQE 考牌词条为占位（待资料）。",
+      "examRemoved": true
+    },
+    "lang": {
+      "default": "en",
+      "available": [
+        "zh-cn",
+        "zh-hk",
+        "en"
+      ],
+      "note": "en 优先展示；body_en/body_hk 待从知识库英文原文填充，未填时回退中文",
+      "enFilled": "10 course entries",
+      "progress": {
+        "en": "90/90 完成（课程/概念/工具/框架/纵深线/考牌，源自大纲英文原文 + 金融术语核验翻译）",
+        "zh_cn": "90/90 完成（原始提炼，金融术语已核验）",
+        "zh_hk": "90/90 完成（zhconv 简转繁 zh-hk）"
+      },
+      "verified": true
+    }
+  },
+  "entries": [
+    {
+      "slug": "track-1",
+      "type": "track",
+      "title": "风险框架与量化",
+      "number": "①",
+      "summary": "从风险治理框架到量化建模的第一条纵深线",
+      "body": "这条纵深线从「风险是什么、如何治理」走到「风险如何被量化」。它由 [[rim520]]（框架层）与 [[rim523]]（量化层）两门课构成，串联 [[iso-31000]]、[[coso-erm]]、[[three-lines-of-defense]] 等治理框架，以及 [[value-at-risk]]、[[monte-carlo]]、[[extreme-value-theory]] 等量化工具。",
+      "courses": [
+        "rim520",
+        "rim523"
+      ],
+      "title_hk": "風險框架與量化",
+      "body_en": "This track runs from “what risk is and how it is governed” to “how risk is quantified”. It spans RIM520 (framework) and RIM523 (quantification), linking ISO 31000, COSO ERM, the three lines of defense, VaR, Monte Carlo simulation and extreme value theory.",
+      "body_hk": "這條縱深線從「風險是什麼、如何治理」走到「風險如何被量化」。它由 [[rim520]]（框架層）與 [[rim523]]（量化層）兩門課構成，串聯 [[iso-31000]]、[[coso-erm]]、[[three-lines-of-defense]] 等治理框架，以及 [[value-at-risk]]、[[monte-carlo]]、[[extreme-value-theory]] 等量化工具。",
+      "title_en": "Risk Framework and Quantification",
+      "summary_en": "From risk governance frameworks to quantitative modelling",
+      "summary_hk": "從風險治理框架到量化建模的第一條縱深線"
+    },
+    {
+      "slug": "track-2",
+      "type": "track",
+      "title": "保险产品与市场深度",
+      "number": "②",
+      "summary": "理解保险产品背后的经济学与两地市场结构",
+      "body": "这条纵深线回答「保险产品为什么这样设计、市场如何运行」。它由 [[rim521]]（产品经济学）与 [[rim522]]（市场与监管）构成，核心概念包括 [[adverse-selection]]、[[moral-hazard]]、[[expected-utility]] 与 [[actuarial-pricing]]。",
+      "courses": [
+        "rim521",
+        "rim522"
+      ],
+      "title_hk": "保險產品與市場深度",
+      "body_en": "This track answers why insurance products are designed as they are and how the markets operate, spanning RIM521 (product economics) and RIM522 (markets and regulation).",
+      "body_hk": "這條縱深線回答「保險產品為什麼這樣設計、市場如何運行」。它由 [[rim521]]（產品經濟學）與 [[rim522]]（市場與監管）構成，核心概念包括 [[adverse-selection]]、[[moral-hazard]]、[[expected-utility]] 與 [[actuarial-pricing]]。",
+      "title_en": "Insurance Products and Market Depth",
+      "summary_en": "Understanding product economics and the two-market structure",
+      "summary_hk": "理解保險產品背後的經濟學與兩地市場結構"
+    },
+    {
+      "slug": "track-3",
+      "type": "track",
+      "title": "利率与财务分析",
+      "number": "③",
+      "summary": "从企业财务到债券与信用风险的量价分析",
+      "body": "这条纵深线关注利率、杠杆与信用风险的量价传导。它由 [[rim524]]（企业财务）与 [[rim537]]（债券与信用风险）构成，覆盖 [[capital-structure]]、[[financial-leverage]]、[[dcf]]、[[duration]]、[[credit-spread]] 与 [[cds]]。",
+      "courses": [
+        "rim524",
+        "rim537"
+      ],
+      "title_hk": "利率與財務分析",
+      "body_en": "This track concerns the price–quantity transmission of interest rates, leverage and credit risk, spanning RIM524 (corporate finance) and RIM537 (bond and credit risk).",
+      "body_hk": "這條縱深線關注利率、槓桿與信用風險的量價傳導。它由 [[rim524]]（企業財務）與 [[rim537]]（債券與信用風險）構成，覆蓋 [[capital-structure]]、[[financial-leverage]]、[[dcf]]、[[duration]]、[[credit-spread]] 與 [[cds]]。",
+      "title_en": "Interest Rates and Financial Analysis",
+      "summary_en": "From corporate finance to bond and credit risk",
+      "summary_hk": "從企業財務到債券與信用風險的量價分析"
+    },
+    {
+      "slug": "track-4",
+      "type": "track",
+      "title": "风险转移与财富架构",
+      "number": "④",
+      "summary": "风险如何被转移、财富如何被长期管理",
+      "body": "这条纵深线关注风险的转移与长期财富管理。它由 [[rim530]]（再保险与风险转移）与 [[rim531]]（寿险与养老）构成，覆盖 [[reinsurance]]、[[insurance-linked-securities]]、[[longevity-risk]] 与 [[actuarial-present-value]]。",
+      "courses": [
+        "rim530",
+        "rim531"
+      ],
+      "title_hk": "風險轉移與財富架構",
+      "body_en": "This track concerns risk transfer and long-term wealth management, spanning RIM530 (reinsurance and risk transfer) and RIM531 (life and pension insurance).",
+      "body_hk": "這條縱深線關注風險的轉移與長期財富管理。它由 [[rim530]]（再保險與風險轉移）與 [[rim531]]（壽險與養老）構成，覆蓋 [[reinsurance]]、[[insurance-linked-securities]]、[[longevity-risk]] 與 [[actuarial-present-value]]。",
+      "title_en": "Risk Transfer and Wealth Architecture",
+      "summary_en": "How risk is transferred and wealth managed over the long term",
+      "summary_hk": "風險如何被轉移、財富如何被長期管理"
+    },
+    {
+      "slug": "track-5",
+      "type": "track",
+      "title": "宏观洞察与数据驱动",
+      "number": "⑤",
+      "summary": "数据与新兴风险如何重塑保险的定价与治理",
+      "body": "这条纵深线面向未来，连接数据驱动方法与新兴风险。它由 [[rim536]]（大数据与保险科技）与 [[rim540]]（前沿专题）构成，覆盖 [[machine-learning-pricing]]、[[fraud-detection]]、[[emerging-risks]] 与 [[esg-insurance]]。",
+      "courses": [
+        "rim536",
+        "rim540"
+      ],
+      "title_hk": "宏觀洞察與數據驅動",
+      "body_en": "This forward-looking track connects data-driven methods and emerging risks, spanning RIM536 (big data and InsurTech) and RIM540 (frontier topics).",
+      "body_hk": "這條縱深線面向未來，連接數據驅動方法與新興風險。它由 [[rim536]]（大數據與保險科技）與 [[rim540]]（前沿專題）構成，覆蓋 [[machine-learning-pricing]]、[[fraud-detection]]、[[emerging-risks]] 與 [[esg-insurance]]。",
+      "title_en": "Macro Insight and Data-driven",
+      "summary_en": "How data and emerging risks reshape insurance pricing and governance",
+      "summary_hk": "數據與新興風險如何重塑保險的定價與治理"
+    },
+    {
+      "slug": "rim520",
+      "type": "course",
+      "title": "风险管理原理",
+      "code": "RIM520",
+      "en": "Principles of Risk Management",
+      "status": "enrolled",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "workshop": 1,
+      "summary": "风险识别、评估与应对，企业风险治理框架",
+      "body": "本课程（必修，讲师 Prof. Martin YICK）提供风险与保险管理的整体视角。内容：风险概念、风险度量、企业风险管理基本原理与合理性、风险管理组织与流程、合规概念、保险运营、风险管理主要工具。\n\n## 核心模块\n- 企业风险管理：风险类型、为什么企业要管理风险（rationale）、组织与流程、合规。\n- 风险度量：[[value-at-risk]]（公式、局限性、跨置信水平/时间段、组合 VaR）、绩效比率（Sharpe/Sortino/Treynor/Information）。\n- 风险转移工具：[[hedging]]（期货 long/short hedge、最优对冲比率、beta hedge）、远期、远期利率协议（FRA）。\n- [[operational-risk]] 与缓释。\n- 时事分析：关税政策与通胀/汇率、比特币市场影响。\n\n- 考牌关联：[[iiqe-1]]（保险原理及实务）",
+      "concepts": [
+        "risk-assessment",
+        "risk-appetite",
+        "value-at-risk",
+        "hedging",
+        "operational-risk"
+      ],
+      "aiTools": [
+        "[[ima]]",
+        "[[notebooklm]]",
+        "[[obsidian]]"
+      ],
+      "pair": "rim523",
+      "title_hk": "風險管理原理",
+      "body_en": "This course (Required, Prof. Martin YICK) provides a holistic and integrated view of risk and insurance management. Topics include the concept of risk, risk measurement, fundamentals and rationales of corporate risk management, risk management organisation and processes, compliance, insurance operations, and major risk management tools.\n\n## Core Modules\n- Corporate risk management: types of risk, rationale for managing risk, organisation and processes, compliance.\n- Risk measurement: Value at Risk (formula, limitations, portfolio VaR), performance ratios (Sharpe, Sortino, Treynor, Information).\n- Risk transfer tools: hedging (futures long/short, optimal hedge ratio, beta hedge), forwards, forward rate agreements (FRA).\n- Operational risk and mitigation.\n- Current affairs: tariff policy, inflation and exchange rates; Bitcoin market impact.",
+      "body_hk": "本課程（必修，講師 Prof. Martin YICK）提供風險與保險管理的整體視角。內容：風險概念、風險度量、企業風險管理基本原理與合理性、風險管理組織與流程、合規概念、保險運營、風險管理主要工具。\n\n## 核心模塊\n- 企業風險管理：風險類型、為什麼企業要管理風險（rationale）、組織與流程、合規。\n- 風險度量：[[value-at-risk]]（公式、局限性、跨置信水平/時間段、組合 VaR）、績效比率（Sharpe/Sortino/Treynor/Information）。\n- 風險轉移工具：[[hedging]]（期貨 long/short hedge、最優對衝比率、beta hedge）、遠期、遠期利率協議（FRA）。\n- [[operational-risk]] 與緩釋。\n- 時事分析：關税政策與通脹/匯率、比特幣市場影響。\n\n- 考牌關聯：[[iiqe-1]]（保險原理及實務）",
+      "summary_en": "Holistic view of risk and insurance management: risk concepts, measurement, corporate risk management, and key tools.",
+      "summary_hk": "風險識別、評估與應對，企業風險治理框架"
+    },
+    {
+      "slug": "rim521",
+      "type": "course",
+      "title": "经济与商业",
+      "code": "RIM521",
+      "en": "Economics and Business",
+      "status": "enrolled",
+      "track": {
+        "slug": "track-2",
+        "name": "保险产品与市场深度"
+      },
+      "workshop": 2,
+      "summary": "微观与宏观经济原理及其在商业与保险中的应用",
+      "body": "本课程（必修，讲师 Mr. Wilson CHOI）讲授经济学原理及其在商业与保险中的应用。官网现名 Economics and Business，旧名 Insurance Economics（2021/22 大纲），同一门课。\n\n## 内容模块（SET 系列）\n- 微观：基本经济概念、供求与政府干预、生产与成本、[[market-structure]] 与垄断、利润最大化。\n- 宏观：国民经济、货币政策与财政政策。\n- 国际贸易：国际市场、新贸易理论与规模报酬。\n- 信息经济学：[[adverse-selection]]、[[moral-hazard]]、信号传递（signalling）。\n- 风险与保险：风险决策经济学、保险需求（[[expected-utility]]）。\n\n- 考牌关联：[[iiqe-1]]（全牌照通用基础）",
+      "concepts": [
+        "adverse-selection",
+        "moral-hazard",
+        "expected-utility",
+        "market-structure"
+      ],
+      "aiTools": [
+        "[[deepseek]]",
+        "[[metaso]]"
+      ],
+      "pair": "rim522",
+      "title_hk": "經濟與商業",
+      "body_en": "This course (Required, Mr. Wilson CHOI) teaches economic principles and their application to business and insurance. Formerly titled “Insurance Economics” (2021/22 syllabus); officially renamed “Economics and Business”.\n\n## Content Modules\n- Microeconomics: basic concepts, demand and supply with government intervention, production and cost, market structure and monopoly, profit maximisation.\n- Macroeconomics: national economy, monetary and fiscal policy.\n- International trade: international markets, new trade theory and returns to scale.\n- Information economics: adverse selection, moral hazard, signalling.\n- Risk and insurance: economics of decision under risk, insurance demand (expected utility).",
+      "body_hk": "本課程（必修，講師 Mr. Wilson CHOI）講授經濟學原理及其在商業與保險中的應用。官網現名 Economics and Business，舊名 Insurance Economics（2021/22 大綱），同一門課。\n\n## 內容模塊（SET 系列）\n- 微觀：基本經濟概念、供求與政府干預、生產與成本、[[market-structure]] 與壟斷、利潤最大化。\n- 宏觀：國民經濟、貨幣政策與財政政策。\n- 國際貿易：國際市場、新貿易理論與規模報酬。\n- 信息經濟學：[[adverse-selection]]、[[moral-hazard]]、信號傳遞（signalling）。\n- 風險與保險：風險決策經濟學、保險需求（[[expected-utility]]）。\n\n- 考牌關聯：[[iiqe-1]]（全牌照通用基礎）",
+      "summary_en": "Economics principles applied to business and insurance: micro/macro, trade, and information economics.",
+      "summary_hk": "微觀與宏觀經濟原理及其在商業與保險中的應用"
+    },
+    {
+      "slug": "rim522",
+      "type": "course",
+      "title": "香港及中国内地保险实务",
+      "code": "RIM522",
+      "en": "Insurance Practice in Hong Kong and Mainland China",
+      "status": "enrolled",
+      "track": {
+        "slug": "track-2",
+        "name": "保险产品与市场深度"
+      },
+      "workshop": 1,
+      "summary": "香港与内地的保险实务、市场与监管",
+      "body": "本课程（必修）介绍香港及中国内地保险实务，讲师 Kelvin Cheung，教材为 Harrington & Niehaus《Risk Management and Insurance》与 Graves《McGill's Life Insurance》。\n\n## 三大内容模块\n- 保险市场：Mutual/Stock/Lloyds 所有权结构、价格监管、破产监管、法定会计要求。\n- 财产与责任保险：汽车/屋主/商业财产/商业责任保险、政府资助再保险安排、巨灾损失的资本市场工具（[[insurance-linked-securities]]）、产品责任险（[[product-liability-insurance]]）。\n- 人寿与健康保险：定期/终身/年金/健康保险、[[utmost-good-faith]] 核保、ILAS 投资相连、VHIS 自愿医保。\n\n- 考牌关联：[[iiqe-2]]（一般保险）；同领域选修：[[rim533]]（财产与意外）、[[rim534]]（保险法）",
+      "concepts": [
+        "adverse-selection",
+        "utmost-good-faith",
+        "product-liability-insurance"
+      ],
+      "aiTools": [
+        "[[ima]]",
+        "[[metaso]]",
+        "[[gemini]]"
+      ],
+      "pair": "rim521",
+      "title_hk": "香港及中國內地保險實務",
+      "body_en": "This course (Required, Mr. Kelvin Cheung) provides basic and intermediate knowledge of insurance markets, property and liability, and life and health insurance. The first segment covers the general theory of insurance markets; the second focuses on life and health insurance; the third covers business property and liability risk management, Mainland insurance law, and insurance market development in the Greater Bay Area.\n\n## Core Modules\n- Insurance markets: ownership structures (mutual, stock, Lloyd’s), price regulation, insolvency regulation, statutory accounting.\n- Property & liability: automobile, homeowners, commercial property/liability, government-sponsored reinsurance, catastrophe risk financing via capital markets (ILS).\n- Life & health: term, whole life, annuities, health insurance; underwriting; VHIS (Voluntary Health Insurance Scheme).\n- Greater Bay Area and cross-boundary insurance development.",
+      "body_hk": "本課程（必修）介紹香港及中國內地保險實務，講師 Kelvin Cheung，教材為 Harrington & Niehaus《Risk Management and Insurance》與 Graves《McGill's Life Insurance》。\n\n## 三大內容模塊\n- 保險市場：Mutual/Stock/Lloyds 所有權結構、價格監管、破產監管、法定會計要求。\n- 財產與責任保險：汽車/屋主/商業財產/商業責任保險、政府資助再保險安排、巨災損失的資本市場工具（[[insurance-linked-securities]]）、產品責任險（[[product-liability-insurance]]）。\n- 人壽與健康保險：定期/終身/年金/健康保險、[[utmost-good-faith]] 核保、ILAS 投資相連、VHIS 自願醫保。\n\n- 考牌關聯：[[iiqe-2]]（一般保險）；同領域選修：[[rim533]]（財產與意外）、[[rim534]]（保險法）",
+      "summary_en": "Insurance markets, property & liability, life & health, and Greater Bay Area market development.",
+      "summary_hk": "香港與內地的保險實務、市場與監管"
+    },
+    {
+      "slug": "rim523",
+      "type": "course",
+      "title": "风险分析与建模",
+      "code": "RIM523",
+      "en": "Risk Analysis and Modelling",
+      "status": "enrolled",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "workshop": 2,
+      "summary": "概率建模、VaR、蒙特卡洛与极值理论",
+      "body": "本课程（必修，讲师 Prof. GAO Jin）面向投行、商业银行、保险与资管的风险管理岗位，讲授概率论与数理金融原理，用于评估与度量企业运营与金融风险敞口。\n\n## 内容模块\n- Distribution 3：[[probability-distribution]]、正态分布（重点）、对数正态、[[central-limit-theorem]]（CLT）、大数定律（LLN）、正态近似。\n- Distribution 4：数据拟合检验——卡方检验、KS 检验、AD 检验（Excel/Python）。\n- [[linear-regression]]：OLS 简单与多元回归、TSS/RSS/ESS、R²、F 统计量、显著性检验。\n- 统计推断：置信区间（双尾/单尾）、对数变换。\n- 期权定价：对数正态股价 + Brownian motion（Black-Scholes 框架）。",
+      "concepts": [
+        "value-at-risk",
+        "monte-carlo",
+        "extreme-value-theory",
+        "stress-testing",
+        "probability-distribution",
+        "central-limit-theorem",
+        "linear-regression"
+      ],
+      "aiTools": [
+        "[[deepseek]]",
+        "[[auto-empirical]]",
+        "[[metaso]]"
+      ],
+      "pair": "rim520",
+      "title_hk": "風險分析與建模",
+      "body_en": "This course (Required, Prof. GAO Jin) is designed for students pursuing risk management careers in investment banks, commercial banks, insurance companies, or asset management firms. It covers modelling uncertainty and implements the principles of probability theory and mathematical finance to solve risk management problems related to the valuation and measurement of operational and financial risk exposures.\n\n## Content Modules\n- Distribution 3: probability distributions, normal and lognormal, central limit theorem (CLT), law of large numbers, normal approximation.\n- Distribution 4: fitting data to distributions — chi-squared, Kolmogorov-Smirnov and Anderson-Darling tests.\n- Linear regression: OLS (simple and multiple), TSS/RSS/ESS, R², F statistic, hypothesis testing.\n- Statistical inference: confidence intervals (two-sided and one-sided).\n- Option pricing: lognormal stock prices and Brownian motion.",
+      "body_hk": "本課程（必修，講師 Prof. GAO Jin）面向投行、商業銀行、保險與資管的風險管理崗位，講授概率論與數理金融原理，用於評估與度量企業運營與金融風險敞口。\n\n## 內容模塊\n- Distribution 3：[[probability-distribution]]、正態分佈（重點）、對數正態、[[central-limit-theorem]]（CLT）、大數定律（LLN）、正態近似。\n- Distribution 4：數據擬合檢驗——卡方檢驗、KS 檢驗、AD 檢驗（Excel/Python）。\n- [[linear-regression]]：OLS 簡單與多元回歸、TSS/RSS/ESS、R²、F 統計量、顯著性檢驗。\n- 統計推斷：置信區間（雙尾/單尾）、對數變換。\n- 期權定價：對數正態股價 + Brownian motion（Black-Scholes 框架）。",
+      "summary_en": "Probability theory and mathematical finance for valuing and measuring risk exposures.",
+      "summary_hk": "概率建模、VaR、蒙特卡洛與極值理論"
+    },
+    {
+      "slug": "rim524",
+      "type": "course",
+      "title": "金融机构会计与财务管理",
+      "code": "RIM524",
+      "en": "Accounting and Financial Management in Financial Institutions",
+      "status": "enrolled",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "workshop": 2,
+      "summary": "金融机构的会计与财务管理",
+      "body": "本课程（必修，讲师 Yinan YING）讲授金融机构的会计与财务管理。会计部分（CH1-3）覆盖财务报表与 ROE/ROA 杜邦分析；财务部分（CH4-10）覆盖时间价值、债券与股票估值、风险回报与投资决策。\n\n## 核心模块\n- 会计基础：资产负债表、利润表、ROE/ROA 与杜邦公式（需记忆；现金流量表制表不考）。\n- 时间价值：EAR vs APR、[[dcf]]、年金现值、增长年金、永续增长现值。\n- 债券估值：current yield = 年票息/现价、coupon rate = 年票息/面值（默认面值 1000）、YTM/required rate 作折现率。\n- 股票估值：按年标准、股利折现。\n- 风险与回报：[[capm]] 安全市场线、风险溢价、组合比较。\n- 投资决策与金融中介：委托金融机构投资的优劣势讨论。",
+      "concepts": [
+        "dcf",
+        "capm"
+      ],
+      "aiTools": [
+        "[[deepseek]]",
+        "[[auto-empirical]]",
+        "[[kimi]]"
+      ],
+      "pair": "rim537",
+      "title_hk": "金融機構會計與財務管理",
+      "body_en": "This course (Required, Yinan YING) covers accounting and financial management for financial institutions. The accounting part (Ch 1-3) covers financial statements and the DuPont analysis of ROE/ROA; the finance part (Ch 4-10) covers time value of money, bond and equity valuation, risk-return analysis, and investment decisions.\n\n## Core Modules\n- Accounting fundamentals: balance sheet, income statement, ROE/ROA and DuPont formulas.\n- Time value of money: EAR vs APR, DCF, annuity PV, growing annuity/perpetuity.\n- Bond valuation: current yield, coupon rate, YTM as discount rate.\n- Equity valuation: dividend discount model.\n- Risk and return: CAPM security market line, risk premium, portfolio comparison.\n- Investment decisions and financial intermediation.",
+      "body_hk": "本課程（必修，講師 Yinan YING）講授金融機構的會計與財務管理。會計部分（CH1-3）覆蓋財務報表與 ROE/ROA 杜邦分析；財務部分（CH4-10）覆蓋時間價值、債券與股票估值、風險回報與投資決策。\n\n## 核心模塊\n- 會計基礎：資產負債表、利潤表、ROE/ROA 與杜邦公式（需記憶；現金流量表制表不考）。\n- 時間價值：EAR vs APR、[[dcf]]、年金現值、增長年金、永續增長現值。\n- 債券估值：current yield = 年票息/現價、coupon rate = 年票息/面值（默認面值 1000）、YTM/required rate 作折現率。\n- 股票估值：按年標準、股利折現。\n- 風險與回報：[[capm]] 安全市場線、風險溢價、組合比較。\n- 投資決策與金融中介：委託金融機構投資的優劣勢討論。",
+      "summary_en": "Accounting and financial management for financial institutions: statements, valuation, and investment decisions.",
+      "summary_hk": "金融機構的會計與財務管理"
+    },
+    {
+      "slug": "rim530",
+      "type": "course",
+      "title": "再保险、风险转移与风险证券化",
+      "code": "RIM530",
+      "en": "Reinsurance, Risk Transfer and Risk Securitisation",
+      "status": "enrolled",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "workshop": 2,
+      "summary": "再保险、风险转移与风险证券化",
+      "body": "本课程（选修，讲师 Prof. SUN Tao）讲授再保险安排与再保组合分析的商业、法律、经济与金融原理。内容：再保需求、性质与功能、方法与类型、组合分析、程序设计、市场、定价、法律、[[insurance-linked-securities]]（ILS）与替代风险转移（ART）。\n\n## 核心概念\n- 风险转移链条：Insured → Insurer → Reinsurer → Retrocedant → Retrocessionaire。\n- 再保 =「保险人的保险」；共保是风险分担，再保是风险转移；Reciprocity（互惠分保）。\n- 为什么需要再保：资本管理、盈余平滑、巨灾保护、限制风险暴露；再保 vs 直接增资（灵活、不摊薄 ROE）。\n- 再保的风险：信用风险（再保人违约）+ 系统性风险（[[reinsurance]] 市场互联）。\n\n## 再保类型\n- Treaty vs Facultative（合约 vs 逐案审查）；比例 vs 非比例。\n- Stop Loss（基于损失率）vs Aggregate Excess of Loss（基于总损失金额）。\n- 偿债监管视角：SCR = 自有资本 − 监管要求资本；再保降低承保风险从而降低资本要求。\n- 同领域选修：[[rim538]]（寿险精算与保险数学，见 [[rim531]]）",
+      "concepts": [
+        "reinsurance",
+        "insurance-linked-securities",
+        "retention"
+      ],
+      "aiTools": [
+        "[[deepseek]]",
+        "[[metaso]]"
+      ],
+      "pair": "rim531",
+      "title_hk": "再保險、風險轉移與風險證券化",
+      "body_en": "This course (Elective, Prof. SUN Tao) provides knowledge of business, legal, economic and financial principles related to reinsurance arrangements and the practice of analysing reinsurance portfolios. Contents include reinsurance needs, nature and functions, methods and types of arrangements, portfolio analysis, program design, reinsurance markets, pricing, legal aspects, alternative risk transfer (ART), and insurance-linked securities (ILS).\n\n## Core Concepts\n- Risk transfer chain: Insured → Insurer → Reinsurer → Retrocedant → Retrocessionaire.\n- Reinsurance as “insurance for insurers”; coinsurance shares risk, reinsurance transfers risk; reciprocity.\n- Why reinsurance: capital management, earnings smoothing, catastrophe protection, limiting risk exposure; reinsurance vs raising capital.\n- Risks of reinsurance: credit risk (reinsurer default) and systemic risk.\n\n## Types\n- Treaty vs Facultative; proportional vs non-proportional.\n- Stop Loss (loss-ratio trigger) vs Aggregate Excess of Loss (total-loss trigger).",
+      "body_hk": "本課程（選修，講師 Prof. SUN Tao）講授再保險安排與再保組合分析的商業、法律、經濟與金融原理。內容：再保需求、性質與功能、方法與類型、組合分析、程序設計、市場、定價、法律、[[insurance-linked-securities]]（ILS）與替代風險轉移（ART）。\n\n## 核心概念\n- 風險轉移鏈條：Insured → Insurer → Reinsurer → Retrocedant → Retrocessionaire。\n- 再保 =「保險人的保險」；共保是風險分擔，再保是風險轉移；Reciprocity（互惠分保）。\n- 為什麼需要再保：資本管理、盈餘平滑、巨災保護、限制風險暴露；再保 vs 直接增資（靈活、不攤薄 ROE）。\n- 再保的風險：信用風險（再保人違約）+ 系統性風險（[[reinsurance]] 市場互聯）。\n\n## 再保類型\n- Treaty vs Facultative（合約 vs 逐案審查）；比例 vs 非比例。\n- Stop Loss（基於損失率）vs Aggregate Excess of Loss（基於總損失金額）。\n- 償債監管視角：SCR = 自有資本 − 監管要求資本；再保降低承保風險從而降低資本要求。\n- 同領域選修：[[rim538]]（壽險精算與保險數學，見 [[rim531]]）",
+      "summary_en": "Reinsurance arrangements, portfolio analysis, ART and insurance-linked securities.",
+      "summary_hk": "再保險、風險轉移與風險證券化"
+    },
+    {
+      "slug": "rim531",
+      "type": "course",
+      "title": "人寿与健康保险",
+      "code": "RIM531",
+      "en": "Life and Health Insurance",
+      "status": "enrolled",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "workshop": 2,
+      "summary": "人寿与健康保险的产品、定价与核保理赔",
+      "body": "本课程（选修，讲师 Prof. CHENG Jiang）讲授人寿、健康与养老保险，覆盖商业与社会两个层面。内容：寿险需求分析、寿险健康险经济学、精算视角、保单类型、保单与所有权分析、合同分析、商业与社会保险框架、法律法规、香港 MPF 与医疗体系。\n\n## 核心模块\n- 产品与需求：term/whole life/annuity/health，满足储蓄、保障与养老需求（[[longevity-risk]]）。\n- 精算定价：净趸缴保费（NSP）与 [[level-premium]]、[[mortality-table]]（2001 CSO）、预定利率。\n- 合同条款：等待期、复效条款、终身限额——控制 [[moral-hazard]] 与 [[adverse-selection]]。\n- 公共 vs 商业医疗：风险池（公共）vs 风险定价（商业）互补。\n- 香港强积金（MPF）与医疗体系。\n- 考牌关联：[[iiqe-3]]（长期保险）；同领域选修：[[rim538]]（寿险精算与保险数学）",
+      "concepts": [
+        "mortality-table",
+        "actuarial-present-value",
+        "longevity-risk",
+        "level-premium",
+        "moral-hazard",
+        "adverse-selection"
+      ],
+      "aiTools": [
+        "[[deepseek]]",
+        "[[kimi]]"
+      ],
+      "pair": "rim530",
+      "title_hk": "人壽與健康保險",
+      "body_en": "This course (Elective, Prof. CHENG Jiang) provides basic knowledge of life, health and pension insurance in both commercial and social aspects. Topics include life insurance needs analysis, the economics and actuarial view of life and health insurance, types of policies, policy and ownership analysis, contract analysis, commercial and social insurance frameworks, laws and regulations, the Hong Kong MPF and healthcare system.\n\n## Core Modules\n- Products and needs: term, whole life, annuity, health; savings, protection and retirement needs.\n- Actuarial pricing: net single premium (NSP) and level premium; mortality tables (2001 CSO); assumed interest rate.\n- Contract provisions: waiting periods, reinstatement clauses, lifetime limits — controlling moral hazard and adverse selection.\n- Public vs commercial healthcare: risk pooling vs risk-based pricing.\n- Hong Kong MPF and healthcare system.",
+      "body_hk": "本課程（選修，講師 Prof. CHENG Jiang）講授人壽、健康與養老保險，覆蓋商業與社會兩個層面。內容：壽險需求分析、壽險健康險經濟學、精算視角、保單類型、保單與所有權分析、合同分析、商業與社會保險框架、法律法規、香港 MPF 與醫療體系。\n\n## 核心模塊\n- 產品與需求：term/whole life/annuity/health，滿足儲蓄、保障與養老需求（[[longevity-risk]]）。\n- 精算定價：淨躉繳保費（NSP）與 [[level-premium]]、[[mortality-table]]（2001 CSO）、預定利率。\n- 合同條款：等待期、復效條款、終身限額——控制 [[moral-hazard]] 與 [[adverse-selection]]。\n- 公共 vs 商業醫療：風險池（公共）vs 風險定價（商業）互補。\n- 香港強積金（MPF）與醫療體系。\n- 考牌關聯：[[iiqe-3]]（長期保險）；同領域選修：[[rim538]]（壽險精算與保險數學）",
+      "summary_en": "Life, health and pension insurance — products, actuarial pricing, and regulation.",
+      "summary_hk": "人壽與健康保險的產品、定價與核保理賠"
+    },
+    {
+      "slug": "rim532",
+      "type": "course",
+      "title": "香港及中国内地财务规划与服务",
+      "code": "RIM532",
+      "en": "Financial Planning and Services in Hong Kong and Mainland China",
+      "status": "enrolled",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "workshop": 0,
+      "summary": "香港及内地的财务规划与服务",
+      "body": "本课程（选修，讲师 Dr. Wong Man On）讲授香港及中国内地的个人财务规划与财务服务，目标是培养保险/银行等金融机构的专业个人财务规划师。\n\n## 核心模块\n- 个人财务报表：资产负债表（资产=负债+净资产）、偿付能力比率（净资产/总资产）、流动性比率（流动资产/流动负债）。\n- 风险与保险：寿险需求分析——倍数收入法（5–10×年薪）vs 需求分析法（收入替代+房贷+教育费用）。\n- 投资规划：资产配置（权益/债券/房产/商品）、分散化降低非系统性风险、战略资产配置。\n- [[retirement-planning]]：退休资本需求测算（通胀与回报假设）、香港 MPF 强积金。\n- 遗产规划与税务。\n\n- 考牌关联：[[iiqe-4]]（强积金）",
+      "concepts": [
+        "retirement-planning"
+      ],
+      "aiTools": [],
+      "pair": "rim531",
+      "title_hk": "香港及中國內地財務規劃與服務",
+      "body_en": "This course (Elective, Dr. Wong Man On) introduces concepts of financial planning and financial services, providing practical knowledge for everyday financial decision making. Topics include personal financial planning, investment planning, estate planning, life insurance strategies, saving for retirement, and tax issues.\n\n## Core Modules\n- Personal financial statements: balance sheet, solvency ratio, liquidity ratio.\n- Risk and insurance: life insurance needs analysis — multiple-of-earnings vs needs-based methods.\n- Investment planning: asset allocation, diversification, strategic asset allocation.\n- Retirement planning: retirement capital needs, Hong Kong MPF.\n- Estate planning and taxation.",
+      "body_hk": "本課程（選修，講師 Dr. Wong Man On）講授香港及中國內地的個人財務規劃與財務服務，目標是培養保險/銀行等金融機構的專業個人財務規劃師。\n\n## 核心模塊\n- 個人財務報表：資產負債表（資產=負債+淨資產）、償付能力比率（淨資產/總資產）、流動性比率（流動資產/流動負債）。\n- 風險與保險：壽險需求分析——倍數收入法（5–10×年薪）vs 需求分析法（收入替代+房貸+教育費用）。\n- 投資規劃：資產配置（權益/債券/房產/商品）、分散化降低非系統性風險、戰略資產配置。\n- [[retirement-planning]]：退休資本需求測算（通脹與回報假設）、香港 MPF 強積金。\n- 遺產規劃與税務。\n\n- 考牌關聯：[[iiqe-4]]（強積金）",
+      "summary_en": "Personal financial planning: statements, insurance needs, investment allocation, retirement and estate planning.",
+      "summary_hk": "香港及內地的財務規劃與服務"
+    },
+    {
+      "slug": "rim536",
+      "type": "course",
+      "title": "风险管理与保险大数据分析",
+      "code": "RIM536",
+      "en": "Big Data Analytics for Risk Management and Insurance",
+      "status": "enrolled",
+      "track": {
+        "slug": "track-5",
+        "name": "宏观洞察与数据驱动"
+      },
+      "workshop": 3,
+      "summary": "机器学习定价、反欺诈与数据隐私伦理",
+      "body": "本课程（选修，讲师 Prof. SUN Tao）讲授大数据分析在风险管理与保险中的概念、技术与应用案例。风险与保险离不开数据——大数据与技术是保险业的未来核心。\n\n## 核心模块\n- 保险价值链：承保、销售、理赔、营销、产品开发、资产管理——大数据/AI 优化每个环节。\n- 技术：fintech、预测建模、分类树、网络分析、IoT/车联网数据。\n- 应用案例：Chubb（85% 小型商业险自动化承保）、平安（95% 车险照片理赔）、Lemonade（AI 秒级索赔）、USAA（无人机理赔）、Trōv（按需 on-demand 保险）。\n- 可保性：[[machine-learning-pricing]] 与 risk pool of one（一人一池）对保险池/大数法则的挑战。",
+      "concepts": [
+        "machine-learning-pricing",
+        "fraud-detection",
+        "parametric-insurance"
+      ],
+      "aiTools": [
+        "[[auto-empirical]]",
+        "[[gemini]]",
+        "[[claude-scholar]]"
+      ],
+      "pair": "rim540",
+      "title_hk": "風險管理與保險大數據分析",
+      "body_en": "This course (Elective, Prof. SUN Tao) covers major topics of the concepts and evolution of big data analytics, the analysis techniques for big data, and in-depth case studies of big data applications in the major operations of the insurance industry. Risk management and insurance are not feasible without data.\n\n## Core Modules\n- Insurance value chain: underwriting, sales, claims, marketing, product development, asset management — optimised by big data/AI.\n- Technologies: fintech, predictive modelling, classification trees, network analysis, IoT/telematics data.\n- Applications: Chubb (85% automated small-business underwriting), Ping An (95% photo-based auto claims), Lemonade (AI claims), USAA (drone claims), Trōv (on-demand insurance).\n- Insurability: machine-learning pricing and the “risk pool of one” challenge to risk pooling.\n\n## Key Topics\n- Underwriting process: submission → triage → risk assessment → coverage & pricing → binding.\n- Claims management: loss ratio; fraud detection; parametric insurance with objective triggers.",
+      "body_hk": "本課程（選修，講師 Prof. SUN Tao）講授大數據分析在風險管理與保險中的概念、技術與應用案例。風險與保險離不開數據——大數據與技術是保險業的未來核心。\n\n## 核心模塊\n- 保險價值鏈：承保、銷售、理賠、營銷、產品開發、資產管理——大數據/AI 優化每個環節。\n- 技術：fintech、預測建模、分類樹、網絡分析、IoT/車聯網數據。\n- 應用案例：Chubb（85% 小型商業險自動化承保）、平安（95% 車險照片理賠）、Lemonade（AI 秒級索賠）、USAA（無人機理賠）、Trōv（按需 on-demand 保險）。\n- 可保性：[[machine-learning-pricing]] 與 risk pool of one（一人一池）對保險池/大數法則的挑戰。",
+      "summary_en": "Big data and technology in insurance: value chain, analytics techniques, and applications.",
+      "summary_hk": "機器學習定價、反欺詐與數據私隱倫理"
+    },
+    {
+      "slug": "rim537",
+      "type": "course",
+      "title": "债券市场与信用风险管理",
+      "code": "RIM537",
+      "en": "Bond Market and Credit Risk Management",
+      "status": "enrolled",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "workshop": 2,
+      "summary": "债券定价、信用风险与违约建模",
+      "body": "本课程覆盖债券市场与信用风险管理的标准方法、定量工具与模型，教材为 Fabozzi《Bond Markets, Analysis and Strategies》第 10 版。课程目标：识别主要固定收益证券的信用与利率风险，比较单/多因子利率模型，运用期权定价处理利率衍生品，并用市场数据检验模型、应用于利率风险对冲。前置课：[[rim523]]。\n\n## 三大内容模块\n- 市场概览：固定收益证券类型、债券市场特征、信用市场演进、无套利定价。\n- 信用风险管理：商业银行信用风险、信用评级、信用危机与证券化、违约度量、主权风险。\n- 风险度量（高级）：[[duration]] 与 [[convexity]] 分析、结构模型、计量模型、简化形式模型、组合模型、模型验证。\n\n## 关键主题\n- 利率期限结构：平行/非平行移动（陡峭化、变平、蝶形）。\n- 信用风险三类：违约、[[credit-spread]] 利差、降级（[[pd-lgd]]、[[cds]]）。\n- ESG 与绿色债券：Green Bond Principles、可持续发展挂钩贷款（SLLs）。\n- 考牌关联：[[iiqe-5]]（投资相连长期保险）；同领域选修：[[rim535]]（金融风险管理）",
+      "concepts": [
+        "duration",
+        "convexity",
+        "credit-spread",
+        "cds",
+        "pd-lgd",
+        "yield-curve"
+      ],
+      "aiTools": [
+        "[[deepseek]]",
+        "[[metaso]]",
+        "[[auto-empirical]]"
+      ],
+      "pair": "rim524",
+      "title_hk": "債券市場與信用風險管理",
+      "body_en": "This course (Elective, Prof. GAO Jin) covers standard approaches, quantitative methods and tools in the bond market and credit risk management, based on Fabozzi’s Bond Markets, Analysis and Strategies (10th ed.). Topics include measuring portfolio risk, pricing defaultable bonds, term structures, credit derivatives, securitisation, and credit crises.\n\n## Three Content Modules\n- Market overview: fixed income security types, bond market features, evolution of credit markets, no-arbitrage pricing.\n- Credit risk management: bank credit risk, credit ratings, credit crises and securitisation, default measures, sovereign risk.\n- Risk measurement (advanced): duration and convexity, structural models, econometric models, reduced-form models, portfolio models, model validation.\n\n## Key Themes\n- Term structure: parallel/non-parallel shifts (steepening, flattening, butterfly).\n- Credit risk: default, credit spread, downgrade (PD/LGD, CDS).\n- ESG and green bonds: Green Bond Principles, sustainability-linked loans (SLLs).",
+      "body_hk": "本課程覆蓋債券市場與信用風險管理的標準方法、定量工具與模型，教材為 Fabozzi《Bond Markets, Analysis and Strategies》第 10 版。課程目標：識別主要固定收益證券的信用與利率風險，比較單/多因子利率模型，運用期權定價處理利率衍生品，並用市場數據檢驗模型、應用於利率風險對衝。前置課：[[rim523]]。\n\n## 三大內容模塊\n- 市場概覽：固定收益證券類型、債券市場特徵、信用市場演進、無套利定價。\n- 信用風險管理：商業銀行信用風險、信用評級、信用危機與證券化、違約度量、主權風險。\n- 風險度量（高級）：[[duration]] 與 [[convexity]] 分析、結構模型、計量模型、簡化形式模型、組合模型、模型驗證。\n\n## 關鍵主題\n- 利率期限結構：平行/非平行移動（陡峭化、變平、蝶形）。\n- 信用風險三類：違約、[[credit-spread]] 利差、降級（[[pd-lgd]]、[[cds]]）。\n- ESG 與綠色債券：Green Bond Principles、可持續發展掛鈎貸款（SLLs）。\n- 考牌關聯：[[iiqe-5]]（投資相連長期保險）；同領域選修：[[rim535]]（金融風險管理）",
+      "summary_en": "Bond market analysis and credit risk management: pricing, term structure, and credit risk measures.",
+      "summary_hk": "債券定價、信用風險與違約建模"
+    },
+    {
+      "slug": "rim533",
+      "type": "course",
+      "title": "财产与意外保险",
+      "code": "RIM533",
+      "en": "Property and Casualty Insurance",
+      "status": "catalog",
+      "track": {
+        "slug": "track-2",
+        "name": "保险产品与市场深度"
+      },
+      "workshop": 0,
+      "summary": "官网选修·未修读（待补资料）",
+      "body": "官网课程·内容待从课程资料萃取。",
+      "concepts": [],
+      "aiTools": [],
+      "pair": "rim522",
+      "title_hk": "財產與意外保險",
+      "body_en": "Official elective not yet taken; content to be added from course materials.",
+      "body_hk": "官網課程·內容待從課程資料萃取。",
+      "summary_hk": "官網選修·未修讀（待補資料）",
+      "summary_en": "Property and casualty insurance: coverage for property damage and liability"
+    },
+    {
+      "slug": "rim534",
+      "type": "course",
+      "title": "香港及中国内地保险法",
+      "code": "RIM534",
+      "en": "Insurance Law in Hong Kong and Mainland China",
+      "status": "catalog",
+      "track": {
+        "slug": "track-2",
+        "name": "保险产品与市场深度"
+      },
+      "workshop": 0,
+      "summary": "官网选修·未修读（待补资料）",
+      "body": "官网课程·内容待从课程资料萃取。",
+      "concepts": [],
+      "aiTools": [],
+      "pair": "rim522",
+      "title_hk": "香港及中國內地保險法",
+      "body_en": "Official elective not yet taken; content to be added from course materials.",
+      "body_hk": "官網課程·內容待從課程資料萃取。",
+      "summary_hk": "官網選修·未修讀（待補資料）",
+      "summary_en": "Insurance law in Hong Kong and mainland China"
+    },
+    {
+      "slug": "rim535",
+      "type": "course",
+      "title": "金融风险管理",
+      "code": "RIM535",
+      "en": "Financial Risk Management",
+      "status": "catalog",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "workshop": 0,
+      "summary": "官网选修·未修读（待补资料）",
+      "body": "官网课程·内容待从课程资料萃取。",
+      "concepts": [],
+      "aiTools": [],
+      "pair": "rim537",
+      "title_hk": "金融風險管理",
+      "body_en": "Official elective not yet taken; content to be added from course materials.",
+      "body_hk": "官網課程·內容待從課程資料萃取。",
+      "summary_hk": "官網選修·未修讀（待補資料）",
+      "summary_en": "Financial risk management: measuring and managing market/credit/operational risk"
+    },
+    {
+      "slug": "rim538",
+      "type": "course",
+      "title": "寿险精算与保险数学",
+      "code": "RIM538",
+      "en": "Life Contingencies and Insurance Mathematics",
+      "status": "catalog",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "workshop": 0,
+      "summary": "官网选修·未修读（待补资料）",
+      "body": "官网课程·内容待从课程资料萃取。",
+      "concepts": [],
+      "aiTools": [],
+      "pair": "rim531",
+      "title_hk": "壽險精算與保險數學",
+      "body_en": "Official elective not yet taken; content to be added from course materials.",
+      "body_hk": "官網課程·內容待從課程資料萃取。",
+      "summary_hk": "官網選修·未修讀（待補資料）",
+      "summary_en": "Life contingencies and insurance mathematics (actuarial)"
+    },
+    {
+      "slug": "rim539",
+      "type": "course",
+      "title": "费率厘定与短期模型",
+      "code": "RIM539",
+      "en": "Ratemaking and Short-term Models",
+      "status": "catalog",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "workshop": 0,
+      "summary": "官网选修·未修读（待补资料）",
+      "body": "官网课程·内容待从课程资料萃取。",
+      "concepts": [],
+      "aiTools": [],
+      "pair": "rim523",
+      "title_hk": "費率釐定與短期模型",
+      "body_en": "Official elective not yet taken; content to be added from course materials.",
+      "body_hk": "官網課程·內容待從課程資料萃取。",
+      "summary_hk": "官網選修·未修讀（待補資料）",
+      "summary_en": "Ratemaking and short-term (non-life) actuarial models"
+    },
+    {
+      "slug": "rim540",
+      "type": "course",
+      "title": "风险与保险管理专题研讨",
+      "code": "RIM540",
+      "en": "Seminars for Risk and Insurance Management",
+      "status": "catalog",
+      "track": {
+        "slug": "track-5",
+        "name": "宏观洞察与数据驱动"
+      },
+      "workshop": 4,
+      "summary": "官网选修·未修读（待补资料）",
+      "body": "本课程是综合专题，覆盖 [[emerging-risks]]（气候/网络/疫情）与 [[esg-insurance]]，并引入 Agent 化研究：用 [[metaso]] 深度研究、[[openclaw]] 编排工作流、[[nuwa-skill]] 蒸馏方法论。",
+      "concepts": [
+        "emerging-risks",
+        "esg-insurance"
+      ],
+      "aiTools": [
+        "[[metaso]]",
+        "[[openclaw]]",
+        "[[nuwa-skill]]"
+      ],
+      "pair": "rim536",
+      "title_hk": "風險與保險管理專題研討",
+      "body_en": "Official elective not yet taken; content to be added from course materials.",
+      "body_hk": "本課程是綜合專題，覆蓋 [[emerging-risks]]（氣候/網絡/疫情）與 [[esg-insurance]]，並引入 Agent 化研究：用 [[metaso]] 深度研究、[[openclaw]] 編排工作流、[[nuwa-skill]] 蒸餾方法論。",
+      "summary_hk": "官網選修·未修讀（待補資料）",
+      "summary_en": "Frontier seminars on risk and insurance management"
+    },
+    {
+      "slug": "risk-appetite",
+      "type": "concept",
+      "title": "风险偏好与容忍度",
+      "en": "Risk Appetite & Tolerance",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "组织愿意承担多少风险、偏离到何种程度仍可接受",
+      "body": "风险偏好是组织为实现目标愿意承受的风险总量，容忍度则是围绕偏好可接受的偏离幅度。它是 [[rim520]] 从 [[risk-assessment]] 走向治理落地的关键概念，决定风险应对策略的选择。",
+      "courses": [
+        "rim520"
+      ],
+      "title_hk": "風險偏好與容忍度",
+      "body_en": "Risk appetite is the total risk an organisation is willing to accept in pursuit of its objectives; tolerance is the acceptable deviation around it. It drives the choice of risk responses in RIM520.",
+      "body_hk": "風險偏好是組織為實現目標願意承受的風險總量，容忍度則是圍繞偏好可接受的偏離幅度。它是 [[rim520]] 從 [[risk-assessment]] 走向治理落地的關鍵概念，決定風險應對策略的選擇。",
+      "summary_en": "The amount of risk an organisation is willing to accept",
+      "summary_hk": "組織願意承擔多少風險、偏離到何種程度仍可接受"
+    },
+    {
+      "slug": "risk-assessment",
+      "type": "concept",
+      "title": "风险识别与评估",
+      "en": "Risk Identification & Assessment",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "识别风险来源并评估其发生概率与影响",
+      "body": "风险识别与评估是风险管理的起点，先找出风险来源，再评估其概率与影响。它遵循 [[iso-31000]] 的流程，并配合 [[risk-appetite]] 决定应对方式。",
+      "courses": [
+        "rim520"
+      ],
+      "title_hk": "風險識別與評估",
+      "body_en": "Risk identification and assessment is the starting point of risk management: identify sources, then evaluate probability and impact. It follows the ISO 31000 process and pairs with risk appetite.",
+      "body_hk": "風險識別與評估是風險管理的起點，先找出風險來源，再評估其概率與影響。它遵循 [[iso-31000]] 的流程，並配合 [[risk-appetite]] 決定應對方式。",
+      "summary_en": "Identifying risk sources and evaluating likelihood and impact",
+      "summary_hk": "識別風險來源並評估其發生概率與影響"
+    },
+    {
+      "slug": "value-at-risk",
+      "type": "concept",
+      "title": "VaR 与尾部风险",
+      "en": "Value at Risk",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "在一定置信水平下，组合可能遭受的最大损失",
+      "body": "VaR 在给定置信水平与持有期下度量最大潜在损失，是 [[rim523]] 与 [[rim520]] 的核心风险度量。\n\n## 公式与考点\n- 参数法/历史模拟/蒙特卡洛三种计算；跨置信水平与时间段换算（RIM520）。\n- 组合 VaR：考虑各资产权重与相关性。\n- 局限性：对分布假设敏感、可能忽略尾部极端损失、组合不满足次可加性。\n\n## 关联\n[[monte-carlo]] · [[extreme-value-theory]] · [[stress-testing]] · [[rim523]] · [[rim520]]",
+      "courses": [
+        "rim523"
+      ],
+      "title_hk": "VaR 與尾部風險",
+      "body_en": "VaR measures the maximum potential loss over a given horizon at a specified confidence level. Methods: parametric, historical simulation, Monte Carlo. Limitations: sensitive to distribution assumptions, may miss tail losses, not sub-additive.",
+      "body_hk": "VaR 在給定置信水平與持有期下度量最大潛在損失，是 [[rim523]] 與 [[rim520]] 的核心風險度量。\n\n## 公式與考點\n- 參數法/歷史模擬/蒙特卡洛三種計算；跨置信水平與時間段換算（RIM520）。\n- 組合 VaR：考慮各資產權重與相關性。\n- 局限性：對分佈假設敏感、可能忽略尾部極端損失、組合不滿足次可加性。\n\n## 關聯\n[[monte-carlo]] · [[extreme-value-theory]] · [[stress-testing]] · [[rim523]] · [[rim520]]",
+      "summary_en": "Maximum potential loss over a horizon at a given confidence level",
+      "summary_hk": "在一定置信水平下，組合可能遭受的最大損失"
+    },
+    {
+      "slug": "monte-carlo",
+      "type": "concept",
+      "title": "蒙特卡洛模拟",
+      "en": "Monte Carlo Simulation",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "用随机抽样近似复杂分布的数值方法",
+      "body": "蒙特卡洛模拟通过大量随机抽样来近似复杂分布与积分，广泛用于 [[value-at-risk]] 与 [[actuarial-pricing]]。它依赖对 [[probability-distribution]] 的正确设定。",
+      "courses": [
+        "rim523"
+      ],
+      "title_hk": "蒙特卡洛模擬",
+      "body_en": "Monte Carlo simulation approximates complex distributions and integrals by repeated random sampling, widely used in VaR and actuarial pricing. It depends on correctly specifying the probability distribution.",
+      "body_hk": "蒙特卡洛模擬通過大量隨機抽樣來近似複雜分佈與積分，廣泛用於 [[value-at-risk]] 與 [[actuarial-pricing]]。它依賴對 [[probability-distribution]] 的正確設定。",
+      "summary_en": "Numerical method approximating complex distributions by sampling",
+      "summary_hk": "用隨機抽樣近似複雜分佈的數值方法"
+    },
+    {
+      "slug": "extreme-value-theory",
+      "type": "concept",
+      "title": "极值理论",
+      "en": "Extreme Value Theory",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "专门刻画分布尾部与极端事件的统计理论",
+      "body": "极值理论关注分布尾部与极端事件，弥补 [[value-at-risk]] 对尾部刻画不足的问题。它是 [[rim523]] 中压力测试与巨灾建模的理论基础。",
+      "courses": [
+        "rim523"
+      ],
+      "title_hk": "極值理論",
+      "body_en": "Extreme value theory focuses on the distribution tails and extreme events, complementing VaR’s weakness in capturing tail risk; the theoretical basis of stress testing and catastrophe modelling.",
+      "body_hk": "極值理論關注分佈尾部與極端事件，彌補 [[value-at-risk]] 對尾部刻畫不足的問題。它是 [[rim523]] 中壓力測試與巨災建模的理論基礎。",
+      "summary_en": "Statistical theory for the distribution tails and extreme events",
+      "summary_hk": "專門刻畫分佈尾部與極端事件的統計理論"
+    },
+    {
+      "slug": "stress-testing",
+      "type": "concept",
+      "title": "压力测试与情景分析",
+      "en": "Stress Testing & Scenario Analysis",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "在极端情景下检验组合或机构的稳健性",
+      "body": "压力测试在极端情景下检验稳健性，与 [[extreme-value-theory]] 互补。它在 [[rim523]] 中用于超越历史数据的尾部情景设计。",
+      "courses": [
+        "rim523"
+      ],
+      "title_hk": "壓力測試與情景分析",
+      "body_en": "Stress testing examines robustness under extreme scenarios, complementing extreme value theory by designing tail scenarios beyond historical data.",
+      "body_hk": "壓力測試在極端情景下檢驗穩健性，與 [[extreme-value-theory]] 互補。它在 [[rim523]] 中用於超越歷史數據的尾部情景設計。",
+      "summary_en": "Testing robustness under extreme scenarios",
+      "summary_hk": "在極端情景下檢驗組合或機構的穩健性"
+    },
+    {
+      "slug": "probability-distribution",
+      "type": "concept",
+      "title": "概率分布",
+      "en": "Probability Distribution",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "刻画随机变量取值规律的数学函数",
+      "body": "概率分布是量化风险的语言，描述损失频率与严重度的分布形态。RIM523 覆盖经典分布：二项、超几何、泊松、几何、负二项、指数、正态与对数正态。\n\n## 公式要点\n- 二项：P[X=k]=C(n,k)·p^k·(1-p)^(n-k)，μ=np，σ²=np(1-p)。\n- 泊松：P[X=k]=e^(-λ)λ^k/k!，μ=σ²=λ。\n- 指数：f(t)=λe^(-λt)，E[T]=1/λ，V[T]=1/λ²。\n- 正态：f(x)=1/(σ√(2π))·e^(-(x-μ)²/(2σ²))。\n- 对数正态：Y=e^X（X~N(μ,σ²)），E(y)=e^(μ+σ²/2)，V(y)=e^(2μ+σ²)·(e^σ²-1)。\n\n## 关联\n[[monte-carlo]] · [[value-at-risk]] · [[actuarial-pricing]] · [[central-limit-theorem]] · [[rim523]]",
+      "courses": [
+        "rim523"
+      ],
+      "title_hk": "概率分佈",
+      "body_en": "A probability distribution is the language of quantifying risk, describing loss frequency and severity. RIM523 covers binomial, hypergeometric, Poisson, geometric, negative binomial, exponential, normal and lognormal distributions.",
+      "body_hk": "概率分佈是量化風險的語言，描述損失頻率與嚴重度的分佈形態。RIM523 覆蓋經典分佈：二項、超幾何、泊松、幾何、負二項、指數、正態與對數正態。\n\n## 公式要點\n- 二項：P[X=k]=C(n,k)·p^k·(1-p)^(n-k)，μ=np，σ²=np(1-p)。\n- 泊松：P[X=k]=e^(-λ)λ^k/k!，μ=σ²=λ。\n- 指數：f(t)=λe^(-λt)，E[T]=1/λ，V[T]=1/λ²。\n- 正態：f(x)=1/(σ√(2π))·e^(-(x-μ)²/(2σ²))。\n- 對數正態：Y=e^X（X~N(μ,σ²)），E(y)=e^(μ+σ²/2)，V(y)=e^(2μ+σ²)·(e^σ²-1)。\n\n## 關聯\n[[monte-carlo]] · [[value-at-risk]] · [[actuarial-pricing]] · [[central-limit-theorem]] · [[rim523]]",
+      "summary_en": "Function describing a random variable’s outcomes",
+      "summary_hk": "刻畫隨機變量取值規律的數學函數"
+    },
+    {
+      "slug": "adverse-selection",
+      "type": "concept",
+      "title": "逆向选择",
+      "en": "Adverse Selection",
+      "track": {
+        "slug": "track-2",
+        "name": "保险产品与市场深度"
+      },
+      "summary": "信息不对称下高风险者更倾向投保导致的定价问题",
+      "body": "逆向选择来自信息不对称：风险更高的人更愿意投保，推高赔付并破坏定价。它与 [[moral-hazard]] 一起构成 [[rim521]] 解释产品设计（如免赔额、核保）的核心。\n\n## 要点（RIM521 Set11）\n- 缓解：核保筛选、免赔额、信号传递（signalling，如健康告知）。\n- 与信息经济学中的市场失灵联系。",
+      "courses": [
+        "rim521",
+        "rim522"
+      ],
+      "title_hk": "逆向選擇",
+      "body_en": "Adverse selection arises from information asymmetry: higher-risk individuals are more likely to insure, raising claims and distorting pricing. Mitigation: underwriting screening, deductibles, signalling.",
+      "body_hk": "逆向選擇來自信息不對稱：風險更高的人更願意投保，推高賠付並破壞定價。它與 [[moral-hazard]] 一起構成 [[rim521]] 解釋產品設計（如免賠額、核保）的核心。\n\n## 要點（RIM521 Set11）\n- 緩解：核保篩選、免賠額、信號傳遞（signalling，如健康告知）。\n- 與信息經濟學中的市場失靈聯繫。",
+      "summary_en": "Higher-risk individuals are more likely to buy insurance",
+      "summary_hk": "信息不對稱下高風險者更傾向投保導致的定價問題"
+    },
+    {
+      "slug": "moral-hazard",
+      "type": "concept",
+      "title": "道德风险",
+      "en": "Moral Hazard",
+      "track": {
+        "slug": "track-2",
+        "name": "保险产品与市场深度"
+      },
+      "summary": "投保后行为改变导致风险上升的现象",
+      "body": "道德风险指投保后行为改变、风险上升的现象，是 [[adverse-selection]] 的「事后」对应。[[rim521]] 用免赔额与共保等机制来缓解它。",
+      "courses": [
+        "rim521"
+      ],
+      "title_hk": "道德風險",
+      "body_en": "Moral hazard is the post-insurance change in behaviour that raises risk, the ex-post counterpart of adverse selection. Mitigated by deductibles and coinsurance.",
+      "body_hk": "道德風險指投保後行為改變、風險上升的現象，是 [[adverse-selection]] 的「事後」對應。[[rim521]] 用免賠額與共保等機制來緩解它。",
+      "summary_en": "Post-insurance behaviour change increases risk",
+      "summary_hk": "投保後行為改變導致風險上升的現象"
+    },
+    {
+      "slug": "expected-utility",
+      "type": "concept",
+      "title": "期望效用理论",
+      "en": "Expected Utility Theory",
+      "track": {
+        "slug": "track-2",
+        "name": "保险产品与市场深度"
+      },
+      "summary": "用效用函数解释风险厌恶与保险需求",
+      "body": "期望效用理论用效用函数刻画风险厌恶，解释人们为何愿意为确定性付费购买保险。它是 [[rim521]] 建立保险需求与定价模型的基石。\n\n## 要点（RIM521）\n- 风险决策：比较期望值 vs 期望效用，风险厌恶者偏好确定性的期望效用。\n- 保险需求：在公平保费下，风险厌恶者购买足额保险（期望效用最大化）。",
+      "courses": [
+        "rim521"
+      ],
+      "title_hk": "期望效用理論",
+      "body_en": "Expected utility theory models risk aversion via a utility function, explaining why people pay for certainty through insurance. The cornerstone of insurance demand and pricing in RIM521.",
+      "body_hk": "期望效用理論用效用函數刻畫風險厭惡，解釋人們為何願意為確定性付費購買保險。它是 [[rim521]] 建立保險需求與定價模型的基石。\n\n## 要點（RIM521）\n- 風險決策：比較期望值 vs 期望效用，風險厭惡者偏好確定性的期望效用。\n- 保險需求：在公平保費下，風險厭惡者購買足額保險（期望效用最大化）。",
+      "summary_en": "Utility function explains risk aversion and insurance demand",
+      "summary_hk": "用效用函數解釋風險厭惡與保險需求"
+    },
+    {
+      "slug": "actuarial-pricing",
+      "type": "concept",
+      "title": "精算定价",
+      "en": "Actuarial Pricing",
+      "track": {
+        "slug": "track-2",
+        "name": "保险产品与市场深度"
+      },
+      "summary": "用纯保费加附加的方式为保险产品定价",
+      "body": "精算定价以纯保费（期望损失）加费用与利润附加构成保费，需处理 [[adverse-selection]] 与 [[moral-hazard]]。它与 [[probability-distribution]]、[[actuarial-present-value]] 紧密相关。",
+      "courses": [
+        "rim521",
+        "rim531"
+      ],
+      "title_hk": "精算定價",
+      "body_en": "Actuarial pricing sets the premium as expected loss (pure premium) plus expense and profit loadings, addressing adverse selection and moral hazard. Related to probability distributions and actuarial present value.",
+      "body_hk": "精算定價以純保費（期望損失）加費用與利潤附加構成保費，需處理 [[adverse-selection]] 與 [[moral-hazard]]。它與 [[probability-distribution]]、[[actuarial-present-value]] 緊密相關。",
+      "summary_en": "Pricing insurance as pure premium plus loadings",
+      "summary_hk": "用純保費加附加的方式為保險產品定價"
+    },
+    {
+      "slug": "duration",
+      "type": "concept",
+      "title": "久期",
+      "en": "Duration",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "summary": "衡量债券价格对利率变动的敏感度",
+      "body": "久期是债券价格对收益率变化敏感度的一阶度量，本质是现金流回收的加权平均时间。\n\n## 公式\nMacaulay 久期：D = Σ(t·PV(CF_t)) / P\n修正久期：D_mod = D / (1+y)（半年付息按每期收益率）\n价格近似：ΔP/P ≈ −D_mod × Δy\n\n## 要点\n- RIM537 CH04 利率风险核心工具，与 [[convexity]] 配合做二阶修正。\n- 组合久期 = Σ(权重 × 个券久期)（contribution to portfolio duration）。\n- 免疫策略：久期匹配使资产/负债对利率变动免疫；久期小于负债面临再投资风险，大于负债面临价格风险，需定期再平衡。\n- 不同票息/期限债券价格敏感度不同，久期是可比的利率风险度量。",
+      "courses": [
+        "rim537"
+      ],
+      "title_hk": "久期",
+      "body_en": "Duration is the first-order measure of a bond’s price sensitivity to yield changes, essentially the weighted-average time of cash flows. Macaulay duration D = Σ(t·PV(CF_t))/P; modified duration D_mod = D/(1+y); ΔP/P ≈ −D_mod·Δy.",
+      "body_hk": "久期是債券價格對收益率變化敏感度的一階度量，本質是現金流回收的加權平均時間。\n\n## 公式\nMacaulay 久期：D = Σ(t·PV(CF_t)) / P\n修正久期：D_mod = D / (1+y)（半年付息按每期收益率）\n價格近似：ΔP/P ≈ −D_mod × Δy\n\n## 要點\n- RIM537 CH04 利率風險核心工具，與 [[convexity]] 配合做二階修正。\n- 組合久期 = Σ(權重 × 個券久期)（contribution to portfolio duration）。\n- 免疫策略：久期匹配使資產/負債對利率變動免疫；久期小於負債面臨再投資風險，大於負債面臨價格風險，需定期再平衡。\n- 不同票息/期限債券價格敏感度不同，久期是可比的利率風險度量。",
+      "summary_en": "First-order measure of bond price sensitivity to rates",
+      "summary_hk": "衡量債券價格對利率變動的敏感度"
+    },
+    {
+      "slug": "convexity",
+      "type": "concept",
+      "title": "凸性",
+      "en": "Convexity",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "summary": "度量久期随利率变化的变化率，捕捉价格的非线性",
+      "body": "凸性捕捉 [[duration]] 无法描述的价格-收益率非线性（凸关系），是二阶度量。\n\n## 公式\n价格近似：ΔP/P ≈ −D_mod·Δy + ½·Convexity·(Δy)²\n半年期凸性需除以 2² 转全年。\n\n## 要点\n- RIM537 CH04：凸性形状 vs 凸性度量；不同供应商缩放方式不同。\n- 大利率变动下高凸性组合（barbell 杠铃）占优，小变动下高票息 bullet 子弹组合占优。\n- 免疫策略需久期+凸度配合。",
+      "courses": [
+        "rim537"
+      ],
+      "title_hk": "凸性",
+      "body_en": "Convexity captures the nonlinear price-yield relationship that duration misses, a second-order measure: ΔP/P ≈ −D_mod·Δy + ½·Convexity·(Δy)². Higher-convexity (barbell) portfolios outperform under large rate moves; higher-coupon bullets under small moves.",
+      "body_hk": "凸性捕捉 [[duration]] 無法描述的價格-收益率非線性（凸關係），是二階度量。\n\n## 公式\n價格近似：ΔP/P ≈ −D_mod·Δy + ½·Convexity·(Δy)²\n半年期凸性需除以 2² 轉全年。\n\n## 要點\n- RIM537 CH04：凸性形狀 vs 凸性度量；不同供應商縮放方式不同。\n- 大利率變動下高凸性組合（barbell 槓鈴）佔優，小變動下高票息 bullet 子彈組合佔優。\n- 免疫策略需久期+凸度配合。",
+      "summary_en": "Second-order capture of the price-yield nonlinearity",
+      "summary_hk": "度量久期隨利率變化的變化率，捕捉價格的非線性"
+    },
+    {
+      "slug": "credit-spread",
+      "type": "concept",
+      "title": "信用利差",
+      "en": "Credit Spread",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "summary": "风险债券相对无风险利率的额外补偿",
+      "body": "信用利差是风险债券相对无风险基准的额外补偿，反映信用与流动性风险。\n\n## 要点\n- 信用风险三类：违约风险、信用利差风险（利差扩大压低价格/跑输基准）、降级风险。\n- 流动性溢价：on-the-run 与 off-the-run 国债利差是流动性定价的例子。",
+      "courses": [
+        "rim537"
+      ],
+      "title_hk": "信用利差",
+      "body_en": "Credit spread is the extra compensation of a risky bond over the risk-free benchmark, reflecting credit and liquidity risk. Credit risk has three types: default, credit spread (widening lowers price), and downgrade risk.",
+      "body_hk": "信用利差是風險債券相對無風險基準的額外補償，反映信用與流動性風險。\n\n## 要點\n- 信用風險三類：違約風險、信用利差風險（利差擴大壓低價格/跑輸基準）、降級風險。\n- 流動性溢價：on-the-run 與 off-the-run 國債利差是流動性定價的例子。",
+      "summary_en": "Extra compensation over the risk-free rate for credit risk",
+      "summary_hk": "風險債券相對無風險利率的額外補償"
+    },
+    {
+      "slug": "cds",
+      "type": "concept",
+      "title": "信用违约互换",
+      "en": "Credit Default Swap",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "summary": "转移信用风险的衍生品合约",
+      "body": "信用违约互换（CDS）是转移信用风险的衍生品：买方支付保费换取违约保护，卖方收取保费承担违约损失。\n\n## 要点\n- RIM537：用 CDS 对冲信用风险，从 CDS 价格反推违约概率（见 [[pd-lgd]] Blackstone 案例）。\n- 信用衍生品（CDS）、证券化与信用危机的关系是课程重点。",
+      "courses": [
+        "rim537"
+      ],
+      "title_hk": "信用違約互換",
+      "body_en": "A credit default swap (CDS) transfers credit risk: the buyer pays a premium for protection against default. Used to hedge credit risk and to back out default probabilities.",
+      "body_hk": "信用違約互換（CDS）是轉移信用風險的衍生品：買方支付保費換取違約保護，賣方收取保費承擔違約損失。\n\n## 要點\n- RIM537：用 CDS 對衝信用風險，從 CDS 價格反推違約概率（見 [[pd-lgd]] Blackstone 案例）。\n- 信用衍生品（CDS）、證券化與信用危機的關係是課程重點。",
+      "summary_en": "Derivative that transfers credit risk",
+      "summary_hk": "轉移信用風險的衍生品合約"
+    },
+    {
+      "slug": "pd-lgd",
+      "type": "concept",
+      "title": "违约概率与违约损失",
+      "en": "Probability of Default & Loss Given Default",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "summary": "信用风险的两个基本参数：违约可能性与违约后损失",
+      "body": "PD（违约概率）与 LGD（违约损失率）是信用风险的两大参数，期望损失 ≈ PD × LGD × 敞口。RIM537 通过评级映射、结构化模型（如 Black-Scholes-Merton）与简化形式模型估计。\n\n## 要点（Blackstone 案例）\n- 花旗杠杆贷款组合：高级无担保贷款违约概率 14.37%，违约回收率约 44.9%。\n- B 级债券评级隐含预期违约率 5.91%，而 CDS 市场隐含 20.82%，反映市场定价分歧。",
+      "courses": [
+        "rim537"
+      ],
+      "title_hk": "違約概率與違約損失",
+      "body_en": "PD (probability of default) and LGD (loss given default) are the two key credit risk parameters; expected loss ≈ PD × LGD × exposure. Estimated via rating mapping, structural models (Black-Scholes-Merton) and reduced-form models.",
+      "body_hk": "PD（違約概率）與 LGD（違約損失率）是信用風險的兩大參數，期望損失 ≈ PD × LGD × 敞口。RIM537 通過評級映射、結構化模型（如 Black-Scholes-Merton）與簡化形式模型估計。\n\n## 要點（Blackstone 案例）\n- 花旗槓桿貸款組合：高級無擔保貸款違約概率 14.37%，違約回收率約 44.9%。\n- B 級債券評級隱含預期違約率 5.91%，而 CDS 市場隱含 20.82%，反映市場定價分歧。",
+      "summary_en": "Probability of default and loss given default",
+      "summary_hk": "信用風險的兩個基本參數：違約可能性與違約後損失"
+    },
+    {
+      "slug": "yield-curve",
+      "type": "concept",
+      "title": "收益率曲线",
+      "en": "Yield Curve",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "summary": "不同期限利率的关系曲线，是债券定价的基准",
+      "body": "收益率曲线描述利率与期限的关系。Treasury 曲线因无违约风险与高流动性成为基准（on-the-run 新券流动性优于 off-the-run 旧券）。\n\n## 要点\n- 即期利率（spot rate）与理论即期曲线：用 on/off-the-run 国债经 Bootstrap 构建。\n- 折现：每笔现金流应用对应期限的即期利率，不宜用单一收益率折现所有现金流。\n- 曲线变动三型：平行移动、陡峭化-变平（斜率）、蝶形（驼峰度），组合策略据此调整久期与凸性（bullet/barbell/ladder）。",
+      "courses": [
+        "rim537"
+      ],
+      "title_hk": "收益率曲線",
+      "body_en": "The yield curve describes the relationship between interest rates and maturities; the Treasury curve is the benchmark (on-the-run more liquid than off-the-run). Bootstrapping constructs the theoretical spot curve; each cash flow is discounted at its own-maturity spot rate.",
+      "body_hk": "收益率曲線描述利率與期限的關係。Treasury 曲線因無違約風險與高流動性成為基準（on-the-run 新券流動性優於 off-the-run 舊券）。\n\n## 要點\n- 即期利率（spot rate）與理論即期曲線：用 on/off-the-run 國債經 Bootstrap 構建。\n- 折現：每筆現金流應用對應期限的即期利率，不宜用單一收益率折現所有現金流。\n- 曲線變動三型：平行移動、陡峭化-變平（斜率）、蝶形（駝峯度），組合策略據此調整久期與凸性（bullet/barbell/ladder）。",
+      "summary_en": "Relationship between interest rates and maturities",
+      "summary_hk": "不同期限利率的關係曲線，是債券定價的基準"
+    },
+    {
+      "slug": "capital-structure",
+      "type": "concept",
+      "title": "资本结构",
+      "en": "Capital Structure",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "summary": "企业债务与权益的构成比例",
+      "body": "资本结构是债务与权益的构成，直接影响 [[financial-leverage]] 与资本成本。它是 [[rim524]] 企业财务分析的起点。",
+      "courses": [
+        "rim524"
+      ],
+      "title_hk": "資本結構",
+      "body_en": "Capital structure is the mix of debt and equity, determining financial leverage and the cost of capital — the starting point of corporate financial analysis.",
+      "body_hk": "資本結構是債務與權益的構成，直接影響 [[financial-leverage]] 與資本成本。它是 [[rim524]] 企業財務分析的起點。",
+      "summary_en": "The mix of debt and equity financing a firm",
+      "summary_hk": "企業債務與權益的構成比例"
+    },
+    {
+      "slug": "financial-leverage",
+      "type": "concept",
+      "title": "财务杠杆",
+      "en": "Financial Leverage",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "summary": "用债务放大收益与风险的程度",
+      "body": "财务杠杆用债务放大收益与风险，由 [[capital-structure]] 决定。[[rim524]] 用它评估企业的偿债能力与财务困境风险。",
+      "courses": [
+        "rim524"
+      ],
+      "title_hk": "財務槓桿",
+      "body_en": "Financial leverage uses debt to magnify returns and risk, determined by capital structure. Used to assess solvency and financial distress risk.",
+      "body_hk": "財務槓桿用債務放大收益與風險，由 [[capital-structure]] 決定。[[rim524]] 用它評估企業的償債能力與財務困境風險。",
+      "summary_en": "Using debt to magnify returns and risk",
+      "summary_hk": "用債務放大收益與風險的程度"
+    },
+    {
+      "slug": "dcf",
+      "type": "concept",
+      "title": "现金流折现",
+      "en": "Discounted Cash Flow",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "summary": "把未来现金流折现以评估资产价值",
+      "body": "现金流折现（DCF）把未来现金流折现以评估价值。RIM524 用它评估债券（票息+本金折现）与股票（股利折现）。\n\n## 公式要点（RIM524）\n- 年金现值：PV = C × [1−(1+r)^−n] / r。\n- 增长年金 / 永续增长现值：PV = C / (r−g)。\n- EAR vs APR：EAR = (1 + APR/m)^m − 1。\n- 债券价值：票息年金现值 + 面值现值（折现率 = YTM / required rate）。\n\n## 关联\n[[yield-curve]] · [[actuarial-present-value]] · [[rim524]]",
+      "courses": [
+        "rim524",
+        "rim531"
+      ],
+      "title_hk": "現金流折現",
+      "body_en": "Discounted cash flow (DCF) discounts future cash flows to value an asset. Annuity PV = C·[1−(1+r)^−n]/r; growing perpetuity PV = C/(r−g); EAR = (1+APR/m)^m − 1. Bond value = coupon annuity + face value present value.",
+      "body_hk": "現金流折現（DCF）把未來現金流折現以評估價值。RIM524 用它評估債券（票息+本金折現）與股票（股利折現）。\n\n## 公式要點（RIM524）\n- 年金現值：PV = C × [1−(1+r)^−n] / r。\n- 增長年金 / 永續增長現值：PV = C / (r−g)。\n- EAR vs APR：EAR = (1 + APR/m)^m − 1。\n- 債券價值：票息年金現值 + 面值現值（折現率 = YTM / required rate）。\n\n## 關聯\n[[yield-curve]] · [[actuarial-present-value]] · [[rim524]]",
+      "summary_en": "Discounted cash flow valuation",
+      "summary_hk": "把未來現金流折現以評估資產價值"
+    },
+    {
+      "slug": "hedging",
+      "type": "concept",
+      "title": "套期保值",
+      "en": "Hedging",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "summary": "用衍生品对冲利率、汇率等风险敞口",
+      "body": "套期保值用衍生品对冲风险敞口，RIM520 聚焦期货/远期对冲。\n\n## 要点（RIM520）\n- long hedge（预期未来买入、锁定价格）vs short hedge（预期未来卖出）。\n- 最优对冲比率 h = ρ·σ_s/σ_F（现货与期货收益相关系数 × 标准差比）；beta hedge 用资产相对市场的 beta 定比率。\n- 远期利率协议（FRA）：用时间线锁定未来利率。\n- 市场价格偏离期货定价公式 → 套利机会。",
+      "courses": [
+        "rim524"
+      ],
+      "title_hk": "套期保值",
+      "body_en": "Hedging uses derivatives to offset risk exposures. Long hedge locks a future purchase price; short hedge locks a future sale price. Optimal hedge ratio h = ρ·σ_s/σ_F; beta hedge uses the asset’s beta; FRA locks a future interest rate.",
+      "body_hk": "套期保值用衍生品對衝風險敞口，RIM520 聚焦期貨/遠期對衝。\n\n## 要點（RIM520）\n- long hedge（預期未來買入、鎖定價格）vs short hedge（預期未來賣出）。\n- 最優對衝比率 h = ρ·σ_s/σ_F（現貨與期貨收益相關係數 × 標準差比）；beta hedge 用資產相對市場的 beta 定比率。\n- 遠期利率協議（FRA）：用時間線鎖定未來利率。\n- 市場價格偏離期貨定價公式 → 套利機會。",
+      "summary_en": "Using derivatives to offset risk exposures",
+      "summary_hk": "用衍生品對衝利率、匯率等風險敞口"
+    },
+    {
+      "slug": "reinsurance",
+      "type": "concept",
+      "title": "再保险",
+      "en": "Reinsurance",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "summary": "保险公司把风险部分转移给再保险人的机制",
+      "body": "再保险是保险公司（分出人 Cedant）把部分或全部风险转移给再保险人（Reinsurer）的机制，是「保险人的保险」。\n\n## 核心（RIM530）\n- 转移链条：Insured → Insurer → Reinsurer → Retrocedant → Retrocessionaire；被保险人仅与原保险人存在合同关系。\n- 与共保（co-insurance，多家共担同一风险）不同，再保是真正的风险转移。\n- 互惠分保（Reciprocity）：两家公司互相接受对方的再保业务。\n- 用途：资本管理（降低偿债资本要求、优化 SCR）、盈余平滑、巨灾保护、限制风险暴露。\n- 风险：再保人违约的信用风险 + 市场互联的系统性风险（需分散再保伙伴、抵押品、动态监控）。\n\n## 类型\n- 合约（Treaty）vs 临时（Facultative）；比例 vs 非比例。\n- Stop Loss（损失率触发）vs Aggregate Excess of Loss（总损失金额触发，见 [[retention]]）。",
+      "courses": [
+        "rim530"
+      ],
+      "title_hk": "再保險",
+      "body_en": "Reinsurance is the transfer of part or all of an insurer’s risk to a reinsurer — “insurance for insurers”. The chain: Insured → Insurer → Reinsurer → Retrocedant → Retrocessionaire. Uses: capital management, earnings smoothing, catastrophe protection, limiting exposure. Risks: credit (reinsurer default) and systemic risk.",
+      "body_hk": "再保險是保險公司（分出人 Cedant）把部分或全部風險轉移給再保險人（Reinsurer）的機制，是「保險人的保險」。\n\n## 核心（RIM530）\n- 轉移鏈條：Insured → Insurer → Reinsurer → Retrocedant → Retrocessionaire；被保險人僅與原保險人存在合同關係。\n- 與共保（co-insurance，多家共擔同一風險）不同，再保是真正的風險轉移。\n- 互惠分保（Reciprocity）：兩家公司互相接受對方的再保業務。\n- 用途：資本管理（降低償債資本要求、優化 SCR）、盈餘平滑、巨災保護、限制風險暴露。\n- 風險：再保人違約的信用風險 + 市場互聯的系統性風險（需分散再保夥伴、抵押品、動態監控）。\n\n## 類型\n- 合約（Treaty）vs 臨時（Facultative）；比例 vs 非比例。\n- Stop Loss（損失率觸發）vs Aggregate Excess of Loss（總損失金額觸發，見 [[retention]]）。",
+      "summary_en": "The ceding insurer transfers part of its risk to a reinsurer",
+      "summary_hk": "保險公司把風險部分轉移給再保險人的機制"
+    },
+    {
+      "slug": "insurance-linked-securities",
+      "type": "concept",
+      "title": "保险连接证券",
+      "en": "Insurance-Linked Securities",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "summary": "把保险风险证券化，如巨灾债券（ILS）",
+      "body": "保险连接证券（ILS）把保险风险证券化转移给资本市场投资者，巨灾债券是典型代表，把尾部风险（巨灾）转出传统再保渠道。\n\n## 要点（RIM530）\n- ILS 是替代风险转移（ART）的核心工具，与 [[reinsurance]] 互补而非替代。\n- 用途：在巨灾风险中释放传统再保市场的容量压力；系统性风险视角下，ILS 深化了保险与资本市场的互联。\n- 管理：需要透明度与信息披露（对再保/ILS 交易对手风险的披露）。",
+      "courses": [
+        "rim530"
+      ],
+      "title_hk": "保險連接證券",
+      "body_en": "Insurance-linked securities (ILS) securitise insurance risk for capital-market investors; catastrophe bonds are the flagship. An alternative risk transfer (ART) tool complementing traditional reinsurance.",
+      "body_hk": "保險連接證券（ILS）把保險風險證券化轉移給資本市場投資者，巨災債券是典型代表，把尾部風險（巨災）轉出傳統再保渠道。\n\n## 要點（RIM530）\n- ILS 是替代風險轉移（ART）的核心工具，與 [[reinsurance]] 互補而非替代。\n- 用途：在巨災風險中釋放傳統再保市場的容量壓力；系統性風險視角下，ILS 深化了保險與資本市場的互聯。\n- 管理：需要透明度與信息披露（對再保/ILS 交易對手風險的披露）。",
+      "summary_en": "Securitised insurance risk, e.g. catastrophe bonds",
+      "summary_hk": "把保險風險證券化，如巨災債券（ILS）"
+    },
+    {
+      "slug": "mortality-table",
+      "type": "concept",
+      "title": "生命表与死亡率",
+      "en": "Life Table & Mortality",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "summary": "刻画各年龄生存/死亡概率的精算基础数据",
+      "body": "生命表（Life Table）刻画各年龄的生存与死亡概率，是寿险与年金定价的基础。RIM531 使用 2001 CSO 生命表与预定利率（如 5%）定价。\n\n## 要点\n- 死亡概率（q_x）与存活概率（p_x）驱动保费计算。\n- 利率敏感性：利率降至 3% 时保费上升（约 +5.8%）；死亡率低估导致保费下降（约 −18.5%）。\n- 终身寿险需计算至生命表极限年龄（如 120 岁）。",
+      "courses": [
+        "rim531"
+      ],
+      "title_hk": "生命表與死亡率",
+      "body_en": "A mortality (life) table gives survival and death probabilities by age, the basis of life and annuity pricing. RIM531 uses the 2001 CSO table with an assumed interest rate (e.g. 5%).",
+      "body_hk": "生命表（Life Table）刻畫各年齡的生存與死亡概率，是壽險與年金定價的基礎。RIM531 使用 2001 CSO 生命表與預定利率（如 5%）定價。\n\n## 要點\n- 死亡概率（q_x）與存活概率（p_x）驅動保費計算。\n- 利率敏感性：利率降至 3% 時保費上升（約 +5.8%）；死亡率低估導致保費下降（約 −18.5%）。\n- 終身壽險需計算至生命表極限年齡（如 120 歲）。",
+      "summary_en": "Life table of survival and death probabilities by age",
+      "summary_hk": "刻畫各年齡生存/死亡概率的精算基礎數據"
+    },
+    {
+      "slug": "actuarial-present-value",
+      "type": "concept",
+      "title": "精算现值",
+      "en": "Actuarial Present Value",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "summary": "考虑生存概率与贴现的未来给付现值",
+      "body": "精算现值（APV）把生存概率与贴现结合，计算未来给付的现值。RIM531 用它计算净趸缴保费（NSP）与 [[level-premium]]。\n\n## 要点（RIM531 计算题）\n- 单年保费：P = 1000/(1+r) × 当年死亡概率。\n- NSP = Σ(各年预期死亡赔付的现值，逐年乘以存活概率)。\n- 均衡保费：NSP = LP + LP/(1+r)·P(活到第2年) + LP/(1+r)²·P(活到第3年) + …，即保费现值 = 赔付现值。\n- 假设：2001 CSO 生命表、预定利率（如 5%）、死亡在保单年度内均匀分布。",
+      "courses": [
+        "rim531"
+      ],
+      "title_hk": "精算現值",
+      "body_en": "Actuarial present value (APV) combines survival probability and discounting to value future benefits. Single-year premium P = 1000/(1+r) × death probability; NSP = Σ present values of expected death benefits; level premium satisfies “PV of premiums = PV of benefits”.",
+      "body_hk": "精算現值（APV）把生存概率與貼現結合，計算未來給付的現值。RIM531 用它計算淨躉繳保費（NSP）與 [[level-premium]]。\n\n## 要點（RIM531 計算題）\n- 單年保費：P = 1000/(1+r) × 當年死亡概率。\n- NSP = Σ(各年預期死亡賠付的現值，逐年乘以存活概率)。\n- 均衡保費：NSP = LP + LP/(1+r)·P(活到第2年) + LP/(1+r)²·P(活到第3年) + …，即保費現值 = 賠付現值。\n- 假設：2001 CSO 生命表、預定利率（如 5%）、死亡在保單年度內均勻分佈。",
+      "summary_en": "Present value of benefits weighted by survival probability",
+      "summary_hk": "考慮生存概率與貼現的未來給付現值"
+    },
+    {
+      "slug": "longevity-risk",
+      "type": "concept",
+      "title": "长寿风险",
+      "en": "Longevity Risk",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "summary": "人们活得更久导致给付超预期的风险",
+      "body": "长寿风险指人口寿命延长导致年金给付超预期的风险，由 [[mortality-table]] 的改进趋势刻画。它是 [[rim531]] 养老与财富管理的核心挑战。",
+      "courses": [
+        "rim531"
+      ],
+      "title_hk": "長壽風險",
+      "body_en": "Longevity risk is the risk that lifespans exceed expectations, raising annuity payouts and driven by improving mortality. The core challenge of pension and wealth management.",
+      "body_hk": "長壽風險指人口壽命延長導致年金給付超預期的風險，由 [[mortality-table]] 的改進趨勢刻畫。它是 [[rim531]] 養老與財富管理的核心挑戰。",
+      "summary_en": "Risk that people live longer than expected",
+      "summary_hk": "人們活得更久導致給付超預期的風險"
+    },
+    {
+      "slug": "machine-learning-pricing",
+      "type": "concept",
+      "title": "机器学习定价",
+      "en": "Machine Learning Pricing",
+      "track": {
+        "slug": "track-5",
+        "name": "宏观洞察与数据驱动"
+      },
+      "summary": "用机器学习模型改进核保与定价",
+      "body": "机器学习定价用数据模型改进核保与费率厘定，是对传统 [[actuarial-pricing]] 的增强。RIM536 讨论其算法（分类树、预测建模）与 [[fraud-detection]]、隐私伦理的边界。\n\n## 要点（RIM536）\n- 动态定价：车联网 telematics 按驾驶行为定价（usage-based insurance, UBI）。\n- 可保性争议：risk pool of one 使每名投保人单独成池，挑战保险池与[[law-of-large-numbers]]；若单一风险池损失是随机的，可保性不受影响。",
+      "courses": [
+        "rim536"
+      ],
+      "title_hk": "機器學習定價",
+      "body_en": "Machine learning pricing uses data models to improve underwriting and ratemaking, enhancing traditional actuarial pricing. Underwriting automation (Chubb 85%); usage-based insurance via telematics; the “risk pool of one” challenges risk pooling.",
+      "body_hk": "機器學習定價用數據模型改進核保與費率釐定，是對傳統 [[actuarial-pricing]] 的增強。RIM536 討論其算法（分類樹、預測建模）與 [[fraud-detection]]、私隱倫理的邊界。\n\n## 要點（RIM536）\n- 動態定價：車聯網 telematics 按駕駛行為定價（usage-based insurance, UBI）。\n- 可保性爭議：risk pool of one 使每名投保人單獨成池，挑戰保險池與[[law-of-large-numbers]]；若單一風險池損失是隨機的，可保性不受影響。",
+      "summary_en": "Using ML models to improve underwriting and pricing",
+      "summary_hk": "用機器學習模型改進核保與定價"
+    },
+    {
+      "slug": "fraud-detection",
+      "type": "concept",
+      "title": "反欺诈",
+      "en": "Fraud Detection",
+      "track": {
+        "slug": "track-5",
+        "name": "宏观洞察与数据驱动"
+      },
+      "summary": "用数据方法识别保险欺诈行为",
+      "body": "反欺诈用数据方法识别欺诈理赔，是 RIM536 理赔管理的核心应用。\n\n## 要点（RIM536）\n- 理赔即直接盈亏线：loss ratio = 损失/保费，理赔节约直接进入利润。\n- 技术：社交媒体分析、网络分析识别团伙欺诈模式。\n- 自动化：Ping An/农夫保险用照片/视频评估处理 95% 车险全损案，无人工查勘。",
+      "courses": [
+        "rim536"
+      ],
+      "title_hk": "反欺詐",
+      "body_en": "Fraud detection uses data methods to identify fraudulent claims, central to claims management. Claims are the direct bottom line (loss ratio = losses/premium); social media and network analysis detect organised fraud.",
+      "body_hk": "反欺詐用數據方法識別欺詐理賠，是 RIM536 理賠管理的核心應用。\n\n## 要點（RIM536）\n- 理賠即直接盈虧線：loss ratio = 損失/保費，理賠節約直接進入利潤。\n- 技術：社交媒體分析、網絡分析識別團夥欺詐模式。\n- 自動化：Ping An/農夫保險用照片/視頻評估處理 95% 車險全損案，無人工查勘。",
+      "summary_en": "Data-driven identification of fraudulent claims",
+      "summary_hk": "用數據方法識別保險欺詐行為"
+    },
+    {
+      "slug": "emerging-risks",
+      "type": "concept",
+      "title": "新兴风险",
+      "en": "Emerging Risks",
+      "track": {
+        "slug": "track-5",
+        "name": "宏观洞察与数据驱动"
+      },
+      "summary": "气候、网络、疫情等难以量化建模的新风险",
+      "body": "新兴风险包括气候、网络与疫情等难以历史建模的风险，挑战传统 [[actuarial-pricing]] 与 [[extreme-value-theory]]。它是 [[rim540]] 综合专题的核心对象。",
+      "courses": [
+        "rim540"
+      ],
+      "title_hk": "新興風險",
+      "body_en": "Emerging risks (climate, cyber, pandemic) are hard to model historically, challenging traditional actuarial pricing and extreme value theory. The core subject of the frontier seminar.",
+      "body_hk": "新興風險包括氣候、網絡與疫情等難以歷史建模的風險，挑戰傳統 [[actuarial-pricing]] 與 [[extreme-value-theory]]。它是 [[rim540]] 綜合專題的核心對象。",
+      "summary_en": "New risks hard to model historically: climate, cyber, pandemic",
+      "summary_hk": "氣候、網絡、疫情等難以量化建模的新風險"
+    },
+    {
+      "slug": "esg-insurance",
+      "type": "concept",
+      "title": "ESG 与可持续保险",
+      "en": "ESG & Sustainable Insurance",
+      "track": {
+        "slug": "track-5",
+        "name": "宏观洞察与数据驱动"
+      },
+      "summary": "把环境、社会与治理因素纳入保险与投资",
+      "body": "ESG 把环境、社会与治理因素纳入保险承保与投资，与 [[emerging-risks]]（尤其气候风险）深度交织。它是 [[rim540]] 的前沿议题之一。",
+      "courses": [
+        "rim540"
+      ],
+      "title_hk": "ESG 與可持續保險",
+      "body_en": "ESG integrates environmental, social and governance factors into underwriting and investment, deeply intertwined with emerging risks (especially climate).",
+      "body_hk": "ESG 把環境、社會與治理因素納入保險承保與投資，與 [[emerging-risks]]（尤其氣候風險）深度交織。它是 [[rim540]] 的前沿議題之一。",
+      "summary_en": "Integrating environmental, social and governance factors",
+      "summary_hk": "把環境、社會與治理因素納入保險與投資"
+    },
+    {
+      "slug": "deepseek",
+      "type": "tool",
+      "title": "DeepSeek",
+      "en": "DeepSeek",
+      "category": "推理与精算引擎",
+      "summary": "擅长思维链推理与计算，可作精算建模引擎",
+      "body": "DeepSeek 以思维链推理见长，适合逐步推导 [[value-at-risk]]、[[duration]]、[[actuarial-present-value]] 等量化问题。它是 [[rim523]]、[[rim537]]、[[rim531]] 等课程的核心学习工具。",
+      "usedIn": [
+        "rim523",
+        "rim521",
+        "rim524",
+        "rim537",
+        "rim530",
+        "rim531"
+      ],
+      "title_hk": "DeepSeek",
+      "body_en": "DeepSeek excels at step-by-step (chain-of-thought) reasoning, suited to deriving quantitative problems such as VaR, duration, and actuarial present value.",
+      "body_hk": "DeepSeek 以思維鏈推理見長，適合逐步推導 [[value-at-risk]]、[[duration]]、[[actuarial-present-value]] 等量化問題。它是 [[rim523]]、[[rim537]]、[[rim531]] 等課程的核心學習工具。",
+      "summary_en": "Reasoning model, usable as an actuarial computation engine",
+      "summary_hk": "擅長思維鏈推理與計算，可作精算建模引擎"
+    },
+    {
+      "slug": "kimi",
+      "type": "tool",
+      "title": "Kimi",
+      "en": "Kimi",
+      "category": "长文档阅读",
+      "summary": "擅长长文档理解与信息提取",
+      "body": "Kimi 擅长长文档阅读与信息提取，适合处理财报、条款等长文本，是 [[rim524]] 与 [[rim531]] 审阅长文档的助手。",
+      "usedIn": [
+        "rim524",
+        "rim531"
+      ],
+      "title_hk": "Kimi",
+      "body_en": "Kimi is strong at reading and extracting information from long documents, useful for financial statements and policy wording.",
+      "body_hk": "Kimi 擅長長文檔閲讀與信息提取，適合處理財報、條款等長文本，是 [[rim524]] 與 [[rim531]] 審閲長文檔的助手。",
+      "summary_en": "Long-document reading and information extraction",
+      "summary_hk": "擅長長文檔理解與信息提取"
+    },
+    {
+      "slug": "ima",
+      "type": "tool",
+      "title": "ima 知识库",
+      "en": "ima Knowledge Base",
+      "category": "知识库",
+      "summary": "把资料沉淀为可检索的个人知识库",
+      "body": "ima 用于把课程资料沉淀为可检索知识库，是 [[rim520]]、[[rim522]] 构建法规与框架知识库的基建工具。",
+      "usedIn": [
+        "rim520",
+        "rim522"
+      ],
+      "title_hk": "ima 知識庫",
+      "body_en": "ima turns course materials into a retrievable knowledge base, the infrastructure for building regulation and framework knowledge bases.",
+      "body_hk": "ima 用於把課程資料沉澱為可檢索知識庫，是 [[rim520]]、[[rim522]] 構建法規與框架知識庫的基建工具。",
+      "summary_en": "Personal knowledge base for curating retrievable materials",
+      "summary_hk": "把資料沉澱為可檢索的個人知識庫"
+    },
+    {
+      "slug": "notebooklm",
+      "type": "tool",
+      "title": "NotebookLM",
+      "en": "NotebookLM",
+      "category": "文档分析",
+      "summary": "以文档集为基础的问答与摘要工具",
+      "body": "NotebookLM 以文档集为基础做问答与摘要，适合把 [[iso-31000]]、[[coso-erm]] 等框架文本结构化，服务 [[rim520]] 的学习。",
+      "usedIn": [
+        "rim520"
+      ],
+      "title_hk": "NotebookLM",
+      "body_en": "NotebookLM answers and summarises from a document set, useful for structuring framework texts such as ISO 31000 and COSO ERM.",
+      "body_hk": "NotebookLM 以文檔集為基礎做問答與摘要，適合把 [[iso-31000]]、[[coso-erm]] 等框架文本結構化，服務 [[rim520]] 的學習。",
+      "summary_en": "Document-set Q&A and summarisation",
+      "summary_hk": "以文檔集為基礎的問答與摘要工具"
+    },
+    {
+      "slug": "gamma",
+      "type": "tool",
+      "title": "Gamma",
+      "en": "Gamma",
+      "category": "演示文稿",
+      "summary": "快速生成结构化演示文稿",
+      "body": "Gamma 用于快速生成结构化演示文稿，可把 [[actuarial-pricing]]、[[emerging-risks]] 等概念整理成课程汇报幻灯片。",
+      "usedIn": [],
+      "title_hk": "Gamma",
+      "body_en": "Gamma generates structured presentations, useful for turning concepts into lecture decks.",
+      "body_hk": "Gamma 用於快速生成結構化演示文稿，可把 [[actuarial-pricing]]、[[emerging-risks]] 等概念整理成課程匯報幻燈片。",
+      "summary_en": "Rapid structured presentation/slide generation",
+      "summary_hk": "快速生成結構化演示文稿"
+    },
+    {
+      "slug": "seede",
+      "type": "tool",
+      "title": "Seede",
+      "en": "Seede",
+      "category": "视觉设计",
+      "summary": "快速生成海报与视觉物料",
+      "body": "Seede 用于快速生成海报与视觉物料，适合为 [[emerging-risks]] 或 [[esg-insurance]] 等专题制作学术海报。",
+      "usedIn": [],
+      "title_hk": "Seede",
+      "body_en": "Seede creates posters and visual assets, suited to academic posters on emerging risks or ESG.",
+      "body_hk": "Seede 用於快速生成海報與視覺物料，適合為 [[emerging-risks]] 或 [[esg-insurance]] 等專題製作學術海報。",
+      "summary_en": "Rapid poster and visual asset generation",
+      "summary_hk": "快速生成海報與視覺物料"
+    },
+    {
+      "slug": "grok",
+      "type": "tool",
+      "title": "Grok",
+      "en": "Grok",
+      "category": "实时情报",
+      "summary": "接入实时信息流的检索与问答",
+      "body": "Grok 接入实时信息流，适合追踪 [[rim522]] 所涉两地市场动态与 [[emerging-risks]] 的最新进展。",
+      "usedIn": [
+        "rim522"
+      ],
+      "title_hk": "Grok",
+      "body_en": "Grok taps real-time information streams, suited to tracking market and regulatory developments.",
+      "body_hk": "Grok 接入實時信息流，適合追蹤 [[rim522]] 所涉兩地市場動態與 [[emerging-risks]] 的最新進展。",
+      "summary_en": "Real-time information stream retrieval",
+      "summary_hk": "接入實時信息流的檢索與問答"
+    },
+    {
+      "slug": "yuanbao",
+      "type": "tool",
+      "title": "元宝",
+      "en": "Tencent Yuanbao",
+      "category": "中文情报",
+      "summary": "中文语境下的信息检索与问答助手",
+      "body": "元宝擅长中文语境的信息检索与问答，与 [[grok]] 互补，用于追踪内地保险市场与监管动态。",
+      "usedIn": [
+        "rim522"
+      ],
+      "title_hk": "元寶",
+      "body_en": "Yuanbao specialises in Chinese-language retrieval, complementing Grok for mainland insurance market monitoring.",
+      "body_hk": "元寶擅長中文語境的信息檢索與問答，與 [[grok]] 互補，用於追蹤內地保險市場與監管動態。",
+      "summary_en": "Chinese-context information retrieval and Q&A",
+      "summary_hk": "中文語境下的信息檢索與問答助手"
+    },
+    {
+      "slug": "feishu",
+      "type": "tool",
+      "title": "飞书",
+      "en": "Feishu",
+      "category": "协作与流程",
+      "summary": "团队协作与文档流程工具",
+      "body": "飞书用于团队协作与文档流程管理，可与 [[xunfei]]、[[kimi]] 组合，支撑 [[rim524]] 的财报审阅工作流。",
+      "usedIn": [
+        "rim524"
+      ],
+      "title_hk": "飛書",
+      "body_en": "Feishu supports team collaboration and document workflow, combinable with Xunfei and Kimi for report review.",
+      "body_hk": "飛書用於團隊協作與文檔流程管理，可與 [[xunfei]]、[[kimi]] 組合，支撐 [[rim524]] 的財報審閲工作流。",
+      "summary_en": "Team collaboration and document workflow",
+      "summary_hk": "團隊協作與文檔流程工具"
+    },
+    {
+      "slug": "xunfei",
+      "type": "tool",
+      "title": "讯飞",
+      "en": "iFlytek",
+      "category": "语音与转写",
+      "summary": "语音识别与会议转写能力",
+      "body": "讯飞以语音识别与转写见长，可把课程讲座转成文字稿，配合 [[feishu]] 做流程留痕，服务 [[rim524]] 的文档审计。",
+      "usedIn": [
+        "rim524"
+      ],
+      "title_hk": "訊飛",
+      "body_en": "iFlytek (Xunfei) excels at speech recognition and transcription, useful for turning lectures into text.",
+      "body_hk": "訊飛以語音識別與轉寫見長，可把課程講座轉成文字稿，配合 [[feishu]] 做流程留痕，服務 [[rim524]] 的文檔審計。",
+      "summary_en": "Speech recognition and transcription",
+      "summary_hk": "語音識別與會議轉寫能力"
+    },
+    {
+      "slug": "metaso",
+      "type": "tool",
+      "title": "秘塔",
+      "en": "Metaso",
+      "category": "深度研究",
+      "summary": "带引用的深度研究检索工具",
+      "body": "秘塔做带引用的深度研究，适合 [[rim530]]、[[rim540]] 的案例研究与 [[rim522]] 的监管对比，也支持 [[rim537]] 的信用事件研究。",
+      "usedIn": [
+        "rim523",
+        "rim521",
+        "rim522",
+        "rim537",
+        "rim530",
+        "rim540"
+      ],
+      "title_hk": "秘塔",
+      "body_en": "Metaso performs citation-backed deep research, suited to case studies and regulatory comparison.",
+      "body_hk": "秘塔做帶引用的深度研究，適合 [[rim530]]、[[rim540]] 的案例研究與 [[rim522]] 的監管對比，也支持 [[rim537]] 的信用事件研究。",
+      "summary_en": "Citation-backed deep research",
+      "summary_hk": "帶引用的深度研究檢索工具"
+    },
+    {
+      "slug": "gemini",
+      "type": "tool",
+      "title": "Gemini",
+      "en": "Gemini",
+      "category": "多模态",
+      "summary": "同时处理文本、图像与数据的多模态模型",
+      "body": "Gemini 以多模态见长，可处理图表、文档与影像资料，适合 [[rim536]] 的数据分析与 [[rim522]] 的资料整理。",
+      "usedIn": [
+        "rim522",
+        "rim536"
+      ],
+      "title_hk": "Gemini",
+      "body_en": "Gemini is multimodal, handling charts, documents and imagery, useful for data analysis.",
+      "body_hk": "Gemini 以多模態見長，可處理圖表、文檔與影像資料，適合 [[rim536]] 的數據分析與 [[rim522]] 的資料整理。",
+      "summary_en": "Multimodal model handling text, images and data",
+      "summary_hk": "同時處理文本、圖像與數據的多模態模型"
+    },
+    {
+      "slug": "openclaw",
+      "type": "tool",
+      "title": "OpenClaw",
+      "en": "OpenClaw",
+      "category": "Agent 工程",
+      "summary": "编排多步 Agent 工作流的框架",
+      "body": "OpenClaw 用于编排多步 Agent 工作流，是 [[rim540]] 做专题研究与内控式综述的工程工具，与 [[nuwa-skill]] 配合。",
+      "usedIn": [
+        "rim540"
+      ],
+      "title_hk": "OpenClaw",
+      "body_en": "OpenClaw orchestrates multi-step agent workflows, the engineering tool for research pipelines.",
+      "body_hk": "OpenClaw 用於編排多步 Agent 工作流，是 [[rim540]] 做專題研究與內控式綜述的工程工具，與 [[nuwa-skill]] 配合。",
+      "summary_en": "Multi-step agent workflow orchestration",
+      "summary_hk": "編排多步 Agent 工作流的框架"
+    },
+    {
+      "slug": "obsidian",
+      "type": "tool",
+      "title": "Obsidian",
+      "en": "Obsidian",
+      "category": "双链笔记",
+      "summary": "以 [[双链]] 为核心的个人知识管理工具",
+      "body": "Obsidian 以双链笔记为核心，与本站「词条 slug 互链」的语法同构，适合为 [[rim520]] 建立风险框架的 [[risk-assessment]] 知识图谱。",
+      "usedIn": [
+        "rim520"
+      ],
+      "title_hk": "Obsidian",
+      "body_en": "Obsidian is built on bidirectional links, isomorphic to this wiki’s entry-slug syntax.",
+      "body_hk": "Obsidian 以雙鏈筆記為核心，與本站「詞條 slug 互鏈」的語法同構，適合為 [[rim520]] 建立風險框架的 [[risk-assessment]] 知識圖譜。",
+      "summary_en": "Bidirectional-link note-taking / personal knowledge management",
+      "summary_hk": "以 [[雙鏈]] 為核心的個人知識管理工具"
+    },
+    {
+      "slug": "claude-scholar",
+      "type": "tool",
+      "title": "Claude Scholar",
+      "en": "Claude Scholar",
+      "category": "文献管理",
+      "summary": "面向学术写作的文献检索与管理",
+      "body": "Claude Scholar 面向学术写作做文献检索与管理，适合 [[rim536]]、[[rim540]] 的文献综述与引用验证。",
+      "usedIn": [
+        "rim536"
+      ],
+      "title_hk": "Claude Scholar",
+      "body_en": "Claude Scholar manages academic literature, suited to reviews and citation verification.",
+      "body_hk": "Claude Scholar 面向學術寫作做文獻檢索與管理，適合 [[rim536]]、[[rim540]] 的文獻綜述與引用驗證。",
+      "summary_en": "Academic literature search and management",
+      "summary_hk": "面向學術寫作的文獻檢索與管理"
+    },
+    {
+      "slug": "auto-empirical",
+      "type": "tool",
+      "title": "Auto Empirical",
+      "en": "Auto Empirical",
+      "category": "数据分析",
+      "summary": "自动化实证数据分析工具",
+      "body": "Auto Empirical 用于自动化实证数据分析，是 [[rim523]]、[[rim536]] 跑回归与建模的助手，也支撑 [[rim537]] 的信用数据研究。",
+      "usedIn": [
+        "rim523",
+        "rim524",
+        "rim537",
+        "rim536"
+      ],
+      "title_hk": "Auto Empirical",
+      "body_en": "Auto Empirical automates empirical analysis for regressions and modelling.",
+      "body_hk": "Auto Empirical 用於自動化實證數據分析，是 [[rim523]]、[[rim536]] 跑回歸與建模的助手，也支撐 [[rim537]] 的信用數據研究。",
+      "summary_en": "Automated empirical data analysis",
+      "summary_hk": "自動化實證數據分析工具"
+    },
+    {
+      "slug": "nuwa-skill",
+      "type": "tool",
+      "title": "女娲.skill",
+      "en": "Nuwa Skill Distiller",
+      "category": "技能蒸馏",
+      "summary": "把方法论蒸馏成可复用技能（skill）",
+      "body": "女娲.skill 把方法论蒸馏成可复用技能，是 [[rim540]] 第四讲「Skill 工程」的核心，与 [[openclaw]]、[[stc]] 相互衔接。",
+      "usedIn": [
+        "rim540"
+      ],
+      "title_hk": "女媧.skill",
+      "body_en": "Nuwa.skill distills methodology into reusable skills, central to the Skill Engineering lecture.",
+      "body_hk": "女媧.skill 把方法論蒸餾成可復用技能，是 [[rim540]] 第四講「Skill 工程」的核心，與 [[openclaw]]、[[stc]] 相互銜接。",
+      "summary_en": "Distilling methodology into reusable skills",
+      "summary_hk": "把方法論蒸餾成可復用技能（skill）"
+    },
+    {
+      "slug": "iso-31000",
+      "type": "framework",
+      "title": "ISO 31000",
+      "en": "ISO 31000",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "国际通用的风险管理原则与流程框架",
+      "body": "ISO 31000 提供风险管理的原则、框架与流程，是 [[rim520]] 的核心框架。它强调把 [[risk-assessment]] 嵌入治理，并与 [[coso-erm]] 对照理解。",
+      "courses": [
+        "rim520"
+      ],
+      "title_hk": "ISO 31000",
+      "body_en": "ISO 31000 provides the principles, framework and process for risk management — the core framework of RIM520. It embeds risk assessment into governance and is read alongside COSO ERM.",
+      "body_hk": "ISO 31000 提供風險管理的原則、框架與流程，是 [[rim520]] 的核心框架。它強調把 [[risk-assessment]] 嵌入治理，並與 [[coso-erm]] 對照理解。",
+      "summary_en": "International standard for risk management principles, framework and process",
+      "summary_hk": "國際通用的風險管理原則與流程框架"
+    },
+    {
+      "slug": "coso-erm",
+      "type": "framework",
+      "title": "COSO ERM",
+      "en": "COSO Enterprise Risk Management",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "企业风险管理框架，强调战略与绩效的整合",
+      "body": "COSO ERM 是面向企业的风险管理框架，强调风险与战略、绩效的整合。它与 [[iso-31000]] 互补，是 [[rim520]] 理解 [[three-lines-of-defense]] 的桥梁。",
+      "courses": [
+        "rim520"
+      ],
+      "title_hk": "COSO ERM",
+      "body_en": "COSO ERM integrates risk with strategy and performance, complementing ISO 31000 and bridging to the three lines of defense in RIM520.",
+      "body_hk": "COSO ERM 是面向企業的風險管理框架，強調風險與戰略、績效的整合。它與 [[iso-31000]] 互補，是 [[rim520]] 理解 [[three-lines-of-defense]] 的橋樑。",
+      "summary_en": "Enterprise risk management framework integrating strategy and performance",
+      "summary_hk": "企業風險管理框架，強調戰略與績效的整合"
+    },
+    {
+      "slug": "three-lines-of-defense",
+      "type": "framework",
+      "title": "三道防线",
+      "en": "Three Lines of Defense",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "业务、风险、审计三层治理的经典模型",
+      "body": "三道防线把风险治理分为业务运营、风险管理、内部审计三层，是 [[rim520]] 从 [[coso-erm]] 落地到治理结构的模型。",
+      "courses": [
+        "rim520"
+      ],
+      "title_hk": "三道防線",
+      "body_en": "The Three Lines of Defense model divides risk governance into business operations, risk management, and internal audit — the structural landing of COSO ERM in RIM520.",
+      "body_hk": "三道防線把風險治理分為業務運營、風險管理、內部審計三層，是 [[rim520]] 從 [[coso-erm]] 落地到治理結構的模型。",
+      "summary_en": "Three-layer governance model: operations, risk, audit",
+      "summary_hk": "業務、風險、審計三層治理的經典模型"
+    },
+    {
+      "slug": "rctoa",
+      "type": "framework",
+      "title": "RCTOA 分析框架",
+      "en": "RCTOA",
+      "summary": "角色-情境-任务-输出-行动的结构化分析框架",
+      "body": "RCTOA 是一个结构化分析框架，五段为角色(Role)、情境(Context)、任务(Task)、输出(Output)、行动(Action)，用于拆解案例或场景分析。注意它与 [[stc]]（提示词设计框架）用途不同。",
+      "courses": [],
+      "title_hk": "RCTOA 分析框架",
+      "body_en": "RCTOA is a structured analysis framework (Role, Context, Task, Output, Action) for deconstructing cases or scenarios. It is distinct from STC, the prompt-design framework.",
+      "body_hk": "RCTOA 是一個結構化分析框架，五段為角色(Role)、情境(Context)、任務(Task)、輸出(Output)、行動(Action)，用於拆解案例或場景分析。注意它與 [[stc]]（提示詞設計框架）用途不同。",
+      "summary_en": "Structured analysis framework: Role-Context-Task-Output-Action",
+      "summary_hk": "角色-情境-任務-輸出-行動的結構化分析框架"
+    },
+    {
+      "slug": "stc",
+      "type": "framework",
+      "title": "STC 提示词设计框架",
+      "en": "STC",
+      "summary": "把学习任务转成结构化 AI 提示词的设计框架",
+      "body": "STC 是结构化提示词设计框架，用于把模糊的学习任务转成可执行的 AI 提示词，与用于分析的 [[rctoa]] 相区分。它是本知识百科「AI 赋能学习」的方法论底座，被 [[nuwa-skill]] 用于蒸馏技能。",
+      "courses": [],
+      "title_hk": "STC 提示詞設計框架",
+      "body_en": "STC is a structured prompt-design framework that turns fuzzy tasks into executable AI prompts, distinct from RCTOA (an analysis framework). It underpins the “AI-empowered learning” methodology and is distilled by Nuwa.skill.",
+      "body_hk": "STC 是結構化提示詞設計框架，用於把模糊的學習任務轉成可執行的 AI 提示詞，與用於分析的 [[rctoa]] 相區分。它是本知識百科「AI 賦能學習」的方法論底座，被 [[nuwa-skill]] 用於蒸餾技能。",
+      "summary_en": "Structured prompt-design framework",
+      "summary_hk": "把學習任務轉成結構化 AI 提示詞的設計框架"
+    },
+    {
+      "slug": "iiqe-1",
+      "type": "credential",
+      "title": "保险原理及实务",
+      "code": "IIQE-1",
+      "en": "Principles and Practice of Insurance",
+      "status": "planned",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "workshop": 0,
+      "summary": "全牌照通用基础",
+      "body": "考牌词条：IIQE 研习资料与知识关联（待补充资料）。关联课程：[[rim520]] [[rim521]]",
+      "pair": "rim520",
+      "title_hk": "保險原理及實務",
+      "body_en": "IIQE examination entry; structure, key points and materials index to be added from IIQE study notes.",
+      "body_hk": "考牌詞條：IIQE 研習資料與知識關聯（待補充資料）。關聯課程：[[rim520]] [[rim521]]",
+      "summary_hk": "全牌照通用基礎",
+      "summary_en": "IIQE Paper 1: Principles and Practice of Insurance"
+    },
+    {
+      "slug": "iiqe-2",
+      "type": "credential",
+      "title": "一般保险",
+      "code": "IIQE-2",
+      "en": "General Insurance",
+      "status": "planned",
+      "track": {
+        "slug": "track-2",
+        "name": "保险产品与市场深度"
+      },
+      "workshop": 0,
+      "summary": "一般保险牌照",
+      "body": "考牌词条：IIQE 研习资料与知识关联（待补充资料）。关联课程：[[rim522]] [[rim533]]",
+      "pair": "rim522",
+      "title_hk": "一般保險",
+      "body_en": "IIQE examination entry; structure, key points and materials index to be added from IIQE study notes.",
+      "body_hk": "考牌詞條：IIQE 研習資料與知識關聯（待補充資料）。關聯課程：[[rim522]] [[rim533]]",
+      "summary_hk": "一般保險牌照",
+      "summary_en": "IIQE Paper 2: General Insurance"
+    },
+    {
+      "slug": "iiqe-3",
+      "type": "credential",
+      "title": "长期保险",
+      "code": "IIQE-3",
+      "en": "Long Term Insurance",
+      "status": "planned",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "workshop": 0,
+      "summary": "寿险牌照",
+      "body": "考牌词条：IIQE 研习资料与知识关联（待补充资料）。关联课程：[[rim531]]",
+      "pair": "rim531",
+      "title_hk": "長期保險",
+      "body_en": "IIQE examination entry; structure, key points and materials index to be added from IIQE study notes.",
+      "body_hk": "考牌詞條：IIQE 研習資料與知識關聯（待補充資料）。關聯課程：[[rim531]]",
+      "summary_hk": "壽險牌照",
+      "summary_en": "IIQE Paper 3: Long Term Insurance"
+    },
+    {
+      "slug": "iiqe-4",
+      "type": "credential",
+      "title": "强制性公积金计划",
+      "code": "IIQE-4",
+      "en": "Mandatory Provident Fund Schemes",
+      "status": "planned",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "workshop": 0,
+      "summary": "强积金牌照",
+      "body": "考牌词条：IIQE 研习资料与知识关联（待补充资料）。关联课程：[[rim532]]",
+      "pair": "rim532",
+      "title_hk": "強制性公積金計劃",
+      "body_en": "IIQE examination entry; structure, key points and materials index to be added from IIQE study notes.",
+      "body_hk": "考牌詞條：IIQE 研習資料與知識關聯（待補充資料）。關聯課程：[[rim532]]",
+      "summary_hk": "強積金牌照",
+      "summary_en": "IIQE Paper 4: Mandatory Provident Fund Schemes"
+    },
+    {
+      "slug": "iiqe-5",
+      "type": "credential",
+      "title": "投资相连长期保险",
+      "code": "IIQE-5",
+      "en": "Investment-linked Long Term Insurance",
+      "status": "planned",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "workshop": 0,
+      "summary": "投资连结牌照",
+      "body": "考牌词条：IIQE 研习资料与知识关联（待补充资料）。关联课程：[[rim537]] [[rim531]]",
+      "pair": "rim537",
+      "title_hk": "投資相連長期保險",
+      "body_en": "IIQE examination entry; structure, key points and materials index to be added from IIQE study notes.",
+      "body_hk": "考牌詞條：IIQE 研習資料與知識關聯（待補充資料）。關聯課程：[[rim537]] [[rim531]]",
+      "summary_hk": "投資連結牌照",
+      "summary_en": "IIQE Paper 5: Investment-linked Long Term Insurance"
+    },
+    {
+      "slug": "utmost-good-faith",
+      "type": "concept",
+      "title": "最大诚信原则",
+      "en": "Utmost Good Faith",
+      "track": {
+        "slug": "track-2",
+        "name": "保险产品与市场深度"
+      },
+      "summary": "投保人须向保险人披露一切重大事实，否则保险人可拒赔",
+      "body": "最大诚信原则要求投保人在承保时披露一切可能影响承保决策或定价的重大事实，违反时保险人可据此拒赔。\n\n## 要点（RIM522）\n- 香港（普通法）：保险人知悉风险超 30 天或保单生效超 2 年视为放弃披露权利（waiver/estoppel）。\n- 内地（大陆法）：投保时披露义务更重，waiver 原则较不发达。",
+      "courses": [
+        "rim522"
+      ],
+      "title_hk": "最大誠信原則",
+      "body_en": "Utmost good faith requires the insured to disclose all material facts at underwriting; breach allows the insurer to decline a claim. Hong Kong (common law) recognises waiver/estoppel (30-day / 2-year rules); mainland China (civil law) imposes a stricter initial disclosure duty.",
+      "body_hk": "最大誠信原則要求投保人在承保時披露一切可能影響承保決策或定價的重大事實，違反時保險人可據此拒賠。\n\n## 要點（RIM522）\n- 香港（普通法）：保險人知悉風險超 30 天或保單生效超 2 年視為放棄披露權利（waiver/estoppel）。\n- 內地（大陸法）：投保時披露義務更重，waiver 原則較不發達。",
+      "summary_en": "The insured must disclose all material facts",
+      "summary_hk": "投保人須向保險人披露一切重大事實，否則保險人可拒賠"
+    },
+    {
+      "slug": "product-liability-insurance",
+      "type": "concept",
+      "title": "产品责任保险",
+      "en": "Product Liability Insurance",
+      "track": {
+        "slug": "track-2",
+        "name": "保险产品与市场深度"
+      },
+      "summary": "承保因产品缺陷致第三方人身伤害或财产损失的法律责任",
+      "body": "产品责任保险为被保险人因出售、制造、供应或测试的产品缺陷导致第三方人身伤害或财产损失的法律责任提供赔偿。\n\n## 要点（RIM522 · 产品责任与召回）\n- 典型除外：专业责任、产品召回、产品保证、纯财务损失。\n- 召回成本需另购产品召回保险（Product Recall Insurance）。\n- 核保信息：建议书、索赔经验、质量控制的暴露分析。\n- 网络风险与产品责任：Cyber Liability Insurance 覆盖 e-business 第一/第三方风险。",
+      "courses": [
+        "rim522"
+      ],
+      "title_hk": "產品責任保險",
+      "body_en": "Product liability insurance indemnifies the insured for legal liability to third parties for bodily injury or property damage caused by products sold, manufactured or supplied. Typical exclusions: professional indemnity, recall, guarantee, pure financial loss.",
+      "body_hk": "產品責任保險為被保險人因出售、製造、供應或測試的產品缺陷導致第三方人身傷害或財產損失的法律責任提供賠償。\n\n## 要點（RIM522 · 產品責任與召回）\n- 典型除外：專業責任、產品召回、產品保證、純財務損失。\n- 召回成本需另購產品召回保險（Product Recall Insurance）。\n- 核保信息：建議書、索賠經驗、質量控制的暴露分析。\n- 網絡風險與產品責任：Cyber Liability Insurance 覆蓋 e-business 第一/第三方風險。",
+      "summary_en": "Covers liability for defective products causing injury/damage",
+      "summary_hk": "承保因產品缺陷致第三方人身傷害或財產損失的法律責任"
+    },
+    {
+      "slug": "central-limit-theorem",
+      "type": "concept",
+      "title": "中心极限定理",
+      "en": "Central Limit Theorem",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "大量独立同分布随机变量的均值随样本量增大趋近正态分布",
+      "body": "中心极限定理（CLT）：大量独立同分布随机变量的均值（或和）随样本量增大趋近正态分布。\n\n## 应用（RIM523）\n- 保险池：风险数量增加时，平均损失围绕期望值的波动减小，降低保险池无力赔付的概率。\n- 正态近似：1000 份独立同分布保单的总损失用正态近似计算盈余与保费的充分性。\n- 金融：用样本估计市场/组合回报分布，配合 [[monte-carlo]] 模拟。",
+      "courses": [
+        "rim523"
+      ],
+      "title_hk": "中心極限定理",
+      "body_en": "The central limit theorem (CLT): the mean (or sum) of many i.i.d. random variables approaches a normal distribution as the sample size grows. Applications: risk-pool stability, normal approximation, Monte Carlo simulation.",
+      "body_hk": "中心極限定理（CLT）：大量獨立同分佈隨機變量的均值（或和）隨樣本量增大趨近正態分佈。\n\n## 應用（RIM523）\n- 保險池：風險數量增加時，平均損失圍繞期望值的波動減小，降低保險池無力賠付的概率。\n- 正態近似：1000 份獨立同分佈保單的總損失用正態近似計算盈餘與保費的充分性。\n- 金融：用樣本估計市場/組合回報分佈，配合 [[monte-carlo]] 模擬。",
+      "summary_en": "Sample means approach normality as sample size grows",
+      "summary_hk": "大量獨立同分佈隨機變量的均值隨樣本量增大趨近正態分佈"
+    },
+    {
+      "slug": "linear-regression",
+      "type": "concept",
+      "title": "线性回归",
+      "en": "Linear Regression (OLS)",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "用最小二乘法拟合因变量与自变量的线性关系",
+      "body": "线性回归（OLS）用最小二乘法估计 Y=α+βX+ε，是 RIM523 期末核心考点。\n\n## 公式\nβ=Σ(X-X̄)(Y-Ȳ)/Σ(X-X̄)²，α=Ȳ-βX̄\nTSS=RSS+ESS，R²=ESS/TSS，F=(ESS/k)/(RSS/v)\n\n## 要点\n- 计算 s²=RSS/(T-2)、ESS、R²、预测值（Y₆）。\n- 多元回归显著性检验（BHP Billiton 案例：RBHP 对 Gold/Oil 指数回归）。\n- 金融应用：资产定价、风险因子暴露、业绩归因。",
+      "courses": [
+        "rim523"
+      ],
+      "title_hk": "線性回歸",
+      "body_en": "Linear regression (OLS) estimates Y = α + βX + ε. Formulas: β = Σ(X−X̄)(Y−Ȳ)/Σ(X−X̄)², α = Ȳ − βX̄; TSS = RSS + ESS, R² = ESS/TSS, F = (ESS/k)/(RSS/v).",
+      "body_hk": "線性回歸（OLS）用最小二乘法估計 Y=α+βX+ε，是 RIM523 期末核心考點。\n\n## 公式\nβ=Σ(X-X̄)(Y-Ȳ)/Σ(X-X̄)²，α=Ȳ-βX̄\nTSS=RSS+ESS，R²=ESS/TSS，F=(ESS/k)/(RSS/v)\n\n## 要點\n- 計算 s²=RSS/(T-2)、ESS、R²、預測值（Y₆）。\n- 多元回歸顯著性檢驗（BHP Billiton 案例：RBHP 對 Gold/Oil 指數回歸）。\n- 金融應用：資產定價、風險因子暴露、業績歸因。",
+      "summary_en": "OLS fit of a linear relationship between variables",
+      "summary_hk": "用最小二乘法擬合因變量與自變量的線性關係"
+    },
+    {
+      "slug": "retention",
+      "type": "concept",
+      "title": "自留额",
+      "en": "Retention",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "summary": "保险公司自行承担的风险部分，是再保设计的核心变量",
+      "body": "自留额（Retention）是保险公司决定自行承担的风险部分，超过自留额的风险通过再保转移。\n\n## 要点（RIM530）\n- 再保设计核心：自留额、起赔点与限额的权衡。\n- Stop Loss 再保：损失率超过约定阈值（如 90%–120%）后由再保人承担约定比例。\n- 聚合超赔再保：总损失超过免赔额（如 $1000 万）后由再保人承担至限额（如 $2000 万）。",
+      "courses": [
+        "rim530"
+      ],
+      "title_hk": "自留額",
+      "body_en": "Retention is the portion of risk an insurer keeps; risk above retention is ceded via reinsurance. The core design variable: retention, attachment point and limit trade-off. Stop Loss triggers on loss ratio; aggregate excess-of-loss triggers on total losses.",
+      "body_hk": "自留額（Retention）是保險公司決定自行承擔的風險部分，超過自留額的風險通過再保轉移。\n\n## 要點（RIM530）\n- 再保設計核心：自留額、起賠點與限額的權衡。\n- Stop Loss 再保：損失率超過約定閾值（如 90%–120%）後由再保人承擔約定比例。\n- 聚合超賠再保：總損失超過免賠額（如 $1000 萬）後由再保人承擔至限額（如 $2000 萬）。",
+      "summary_en": "The portion of risk an insurer keeps itself",
+      "summary_hk": "保險公司自行承擔的風險部分，是再保設計的核心變量"
+    },
+    {
+      "slug": "level-premium",
+      "type": "concept",
+      "title": "均衡保费",
+      "en": "Level Premium",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "summary": "将趸缴保费通过时间平滑分摊为每年等额的保费",
+      "body": "均衡保费（Level Premium）把净趸缴保费（NSP）通过时间平滑分摊为每年等额的缴费，需额外考虑投保人每年的存活概率（未死亡才继续缴费）。\n\n## 要点（RIM531）\n- 公式：NSP = LP + LP/(1+r)·P(活到第2年) + LP/(1+r)²·P(活到第3年) + …，即「保费现值 = 赔付现值」。\n- 与 [[actuarial-present-value]] 配合，是定期/终身寿险与年金定价的核心。",
+      "courses": [
+        "rim531"
+      ],
+      "title_hk": "均衡保費",
+      "body_en": "A level premium spreads the net single premium (NSP) into equal annual payments, additionally weighted by survival probability (the insured pays only while alive): NSP = LP + LP/(1+r)·P(alive yr 2) + ….",
+      "body_hk": "均衡保費（Level Premium）把淨躉繳保費（NSP）通過時間平滑分攤為每年等額的繳費，需額外考慮投保人每年的存活概率（未死亡才繼續繳費）。\n\n## 要點（RIM531）\n- 公式：NSP = LP + LP/(1+r)·P(活到第2年) + LP/(1+r)²·P(活到第3年) + …，即「保費現值 = 賠付現值」。\n- 與 [[actuarial-present-value]] 配合，是定期/終身壽險與年金定價的核心。",
+      "summary_en": "A constant premium spreading the single premium over time",
+      "summary_hk": "將躉繳保費通過時間平滑分攤為每年等額的保費"
+    },
+    {
+      "slug": "retirement-planning",
+      "type": "concept",
+      "title": "退休规划",
+      "en": "Retirement Planning",
+      "track": {
+        "slug": "track-4",
+        "name": "风险转移与财富架构"
+      },
+      "summary": "测算退休资本需求并安排储蓄与投资的规划过程",
+      "body": "退休规划测算退休后所需资本并安排储蓄与投资，是 RIM532 核心模块之一，与香港强积金（MPF）制度衔接。\n\n## 要点（RIM532 Top20）\n- 退休资本需求：以退休后每月开销（今日币值）为基础，考虑通胀率（如 2.5%）与投资回报率（如 4%）折现。\n- 香港 MPF：雇员与雇主各供款 5%（月收入上下限约 HK$7,100–30,000）。\n- 与 [[longevity-risk]]、[[level-premium]]（年金化）衔接，对应 [[iiqe-4]] 强积金牌照。",
+      "courses": [
+        "rim532"
+      ],
+      "title_hk": "退休規劃",
+      "body_en": "Retirement planning estimates required retirement capital and arranges savings and investment, linked to Hong Kong’s MPF (employer and employee each contribute 5%, within income bounds ≈ HK$7,100–30,000).",
+      "body_hk": "退休規劃測算退休後所需資本並安排儲蓄與投資，是 RIM532 核心模塊之一，與香港強積金（MPF）制度銜接。\n\n## 要點（RIM532 Top20）\n- 退休資本需求：以退休後每月開銷（今日幣值）為基礎，考慮通脹率（如 2.5%）與投資回報率（如 4%）折現。\n- 香港 MPF：僱員與僱主各供款 5%（月收入上下限約 HK$7,100–30,000）。\n- 與 [[longevity-risk]]、[[level-premium]]（年金化）銜接，對應 [[iiqe-4]] 強積金牌照。",
+      "summary_en": "Estimating retirement capital needs and arranging savings",
+      "summary_hk": "測算退休資本需求並安排儲蓄與投資的規划過程"
+    },
+    {
+      "slug": "parametric-insurance",
+      "type": "concept",
+      "title": "参数保险",
+      "en": "Parametric Insurance",
+      "track": {
+        "slug": "track-5",
+        "name": "宏观洞察与数据驱动"
+      },
+      "summary": "以客观触发指标自动赔付的保险，无需损失查勘",
+      "body": "参数保险以客观触发指标（如航班延误时长、地震震级、降雨量）自动触发赔付，无需现场损失查勘。\n\n## 要点（RIM536）\n- 简化理赔结算：降低成本与延迟（如 USAA 无人机评估野火索赔、Lemonade AI 秒级赔付）。\n- 与 IoT/传感器数据结合，适合巨灾与指数型风险。",
+      "courses": [
+        "rim536"
+      ],
+      "title_hk": "參數保險",
+      "body_en": "Parametric insurance pays out automatically on an objective trigger (flight delay, earthquake magnitude, rainfall), avoiding physical loss adjustment. Combined with IoT/sensor data; suited to catastrophe and index-type risks.",
+      "body_hk": "參數保險以客觀觸發指標（如航班延誤時長、地震震級、降雨量）自動觸發賠付，無需現場損失查勘。\n\n## 要點（RIM536）\n- 簡化理賠結算：降低成本與延遲（如 USAA 無人機評估野火索賠、Lemonade AI 秒級賠付）。\n- 與 IoT/傳感器數據結合，適合巨災與指數型風險。",
+      "summary_en": "Payout triggered by objective parameters, no loss adjustment",
+      "summary_hk": "以客觀觸發指標自動賠付的保險，無需損失查勘"
+    },
+    {
+      "slug": "law-of-large-numbers",
+      "type": "concept",
+      "title": "大数法则",
+      "en": "Law of Large Numbers",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "样本量越大，样本均值越趋近期望值，保险池越稳定",
+      "body": "大数法则（LLN）：随着风险单位数量增加，实际损失平均趋近期望损失，保险池更稳定。\n\n## 应用\n- 保险池（risk pooling）：保单数量越多，波动越小，降低无力赔付概率（[[rim523]]）。\n- 可保性（[[rim536]]）：risk pool of one 使每名投保人单独成池，若违背大数法则可能影响可保性。\n- 金融：配合 [[monte-carlo]] 模拟生成大量样本来估计资产价格情景。",
+      "courses": [
+        "rim523",
+        "rim536"
+      ],
+      "title_hk": "大數法則",
+      "body_en": "The law of large numbers (LLN): as the number of risk units grows, the average loss converges to the expected loss, stabilising the insurance pool. The basis of insurability and risk pooling.",
+      "body_hk": "大數法則（LLN）：隨着風險單位數量增加，實際損失平均趨近期望損失，保險池更穩定。\n\n## 應用\n- 保險池（risk pooling）：保單數量越多，波動越小，降低無力賠付概率（[[rim523]]）。\n- 可保性（[[rim536]]）：risk pool of one 使每名投保人單獨成池，若違背大數法則可能影響可保性。\n- 金融：配合 [[monte-carlo]] 模擬生成大量樣本來估計資產價格情景。",
+      "summary_en": "Sample mean converges to the expectation as sample size grows",
+      "summary_hk": "樣本量越大，樣本均值越趨近期望值，保險池越穩定"
+    },
+    {
+      "slug": "operational-risk",
+      "type": "concept",
+      "title": "操作风险",
+      "en": "Operational Risk",
+      "track": {
+        "slug": "track-1",
+        "name": "风险框架与量化"
+      },
+      "summary": "因内部流程、人员、系统或外部事件导致损失的风险",
+      "body": "操作风险指因内部流程、人员、系统缺陷或外部事件导致损失的风险（如欺诈、系统故障、流程失误）。\n\n## 要点（RIM520）\n- 缓释方法：内部控制、双人复核、系统备份与灾难恢复、员工培训。\n- 保险与银行监管关注的核心风险类别。",
+      "courses": [
+        "rim520"
+      ],
+      "title_hk": "操作風險",
+      "body_en": "Operational risk is the risk of loss from internal processes, people, systems or external events (fraud, system failure, process error). Mitigation: internal control, dual review, backup and disaster recovery, training.",
+      "body_hk": "操作風險指因內部流程、人員、系統缺陷或外部事件導致損失的風險（如欺詐、系統故障、流程失誤）。\n\n## 要點（RIM520）\n- 緩釋方法：內部控制、雙人覆核、系統備份與災難恢復、員工培訓。\n- 保險與銀行監管關注的核心風險類別。",
+      "summary_en": "Risk of loss from processes, people, systems or external events",
+      "summary_hk": "因內部流程、人員、系統或外部事件導致損失的風險"
+    },
+    {
+      "slug": "market-structure",
+      "type": "concept",
+      "title": "市场结构",
+      "en": "Market Structure",
+      "track": {
+        "slug": "track-2",
+        "name": "保险产品与市场深度"
+      },
+      "summary": "按竞争者数量与产品差异划分的市场类型",
+      "body": "市场结构按竞争者数量、产品差异与进入壁垒划分：完全竞争、垄断竞争、寡头、垄断。\n\n## 要点（RIM521 Set5-6）\n- 市场结构影响定价能力与资源配置效率。",
+      "courses": [
+        "rim521"
+      ],
+      "title_hk": "市場結構",
+      "body_en": "Market structure classifies markets by the number of competitors, product differentiation and entry barriers: perfect competition, monopolistic competition, oligopoly, monopoly. Profit maximisation: MR = MC.",
+      "body_hk": "市場結構按競爭者數量、產品差異與進入壁壘劃分：完全競爭、壟斷競爭、寡頭、壟斷。\n\n## 要點（RIM521 Set5-6）\n- 市場結構影響定價能力與資源配置效率。",
+      "summary_en": "Market types by competitor count and product differentiation",
+      "summary_hk": "按競爭者數量與產品差異劃分的市場類型"
+    },
+    {
+      "slug": "capm",
+      "type": "concept",
+      "title": "资本资产定价模型",
+      "en": "Capital Asset Pricing Model (CAPM)",
+      "track": {
+        "slug": "track-3",
+        "name": "利率与财务分析"
+      },
+      "summary": "用系统性风险（beta）决定资产的预期回报",
+      "body": "资本资产定价模型（CAPM）描述资产风险与预期回报的关系：E(R) = R_f + β·(E(R_m) − R_f)。\n\n## 要点（RIM524 CH9）\n- 安全市场线（SML）：截距为无风险利率，斜率 = 市场风险溢价，穿过市场组合。\n- 高 beta 资产的风险溢价更高；比较组合时看单位风险的超额回报。\n- 与风险度量（[[value-at-risk]]）配合评估组合。",
+      "courses": [
+        "rim524"
+      ],
+      "title_hk": "資本資產定價模型",
+      "body_en": "CAPM: E(R) = R_f + β·(E(R_m) − R_f). The security market line (SML) has intercept at the risk-free rate and slope equal to the market risk premium; higher-beta assets carry a higher risk premium.",
+      "body_hk": "資本資產定價模型（CAPM）描述資產風險與預期回報的關係：E(R) = R_f + β·(E(R_m) − R_f)。\n\n## 要點（RIM524 CH9）\n- 安全市場線（SML）：截距為無風險利率，斜率 = 市場風險溢價，穿過市場組合。\n- 高 beta 資產的風險溢價更高；比較組合時看單位風險的超額回報。\n- 與風險度量（[[value-at-risk]]）配合評估組合。",
+      "summary_en": "Expected return determined by systematic risk (beta)",
+      "summary_hk": "用系統性風險（beta）決定資產的預期回報"
+    }
+  ]
+}
