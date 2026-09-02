@@ -2,6 +2,8 @@
 
 岭南大学 MSc in Risk, Insurance and Actuarial Analytics（MScRIAA，原 MScRIM）的开放知识百科。
 
+🌐 **线上地址：https://risk-atlas.wiki**（GitHub Pages + Cloudflare）
+
 - **1031 词条**：课程（RIM520–RIM540）/ 概念 / AI 工具箱 / 框架 / 纵深线 / 考牌 / 就业岗位 / 雇主机构
 - **三语**：English（优先）/ 简体中文 / 繁體中文
 - **双链**：正文 `[[slug]]` 互链 + 自动反向链接 + 知识图谱
