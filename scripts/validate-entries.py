@@ -63,8 +63,10 @@ for i, e in enumerate(entries):
         if m not in slugs:
             warnings.append(f"悬空双链: {e.get('slug','?')} -> [[{m}]]")
 
-# en/hk 缺失（软，仅提示）
-missing_i18n = sum(1 for e in entries if not (e.get("title_en") and e.get("body_en") and e.get("summary_en")))
+# en/hk 缺失（软，仅提示）——英文标题判定：title_en 或 en 任一存在即可
+missing_i18n = sum(1 for e in entries
+                   if not ((e.get("title_en") or e.get("en"))
+                           and e.get("body_en") and e.get("summary_en")))
 missing_hk = sum(1 for e in entries if not (e.get("title_hk") and e.get("body_hk") and e.get("summary_hk")))
 
 if errors:

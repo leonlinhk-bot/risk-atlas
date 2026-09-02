@@ -40,7 +40,8 @@ curl -s https://risk-atlas.wiki/data/entries.json | python3 -c "import sys,json;
       "slug":      "唯一标识，小写连字符，如 value-at-risk",        # 必填，全局唯一
       "type":      "course|concept|tool|framework|track|credential|job|employer|channel|resource|website",  # 必填
       "title":     "简体中文标题",                                   # 必填
-      "title_en":  "English title",                                 # 建议
+      "title_en":  "English title",                                 # 建议：EN 界面主标题；缺则从 en 复制
+      "en":        "英文名（搜索/图谱/词条页副标题用）",              # 建议：与 title_en 保持同值
       "title_hk":  "繁體中文標題",                                   # 建议
       "summary":   "一句话简介（首页/列表展示）",                     # 必填
       "summary_en": "...", "summary_hk": "...",                      # 建议
