@@ -27,6 +27,17 @@ GitHub Pages 分支直连部署（`Settings → Pages → Source: Deploy from a 
 git push origin main   # 即自动上线
 ```
 
+## 更新流程（给 Harness / Hermes / 协作者）
+
+> 完整协议见 **`CLAUDE.md`**（agent 打开仓库即读）。核心三步：
+
+```bash
+git pull origin main --rebase          # 1. 先同步
+# 编辑 data/entries.json …
+python3 scripts/validate-entries.py    # 2. 校验（PASS 才能推；pre-push hook 会自动拦截坏数据）
+git add data/entries.json && git commit -m "词条: …" && git push origin main   # 3. 推送即上线（~1 分钟）
+```
+
 ## 页面一览
 
 | 页面 | 内容 |
