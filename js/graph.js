@@ -8,9 +8,14 @@
     tool: '#2e8b57',
     framework: '#8e44ad',
     track: '#d9534f',
-    credential: '#0e7490'
+    credential: '#0e7490',
+    job: '#b45309',
+    employer: '#1d4ed8',
+    channel: '#7c3aed',
+    resource: '#0d9488'
   };
-  var SIZE = { track: 46, course: 32, concept: 22, tool: 22, framework: 24, credential: 26 };
+  var SIZE = { track: 46, course: 32, concept: 22, tool: 22, framework: 24, credential: 26, job: 24, employer: 24, channel: 22, resource: 22 };
+  var KIND_SYMBOL = { skill: 'circle', tool: 'circle', mcp: 'rect', website: 'triangle', agent: 'diamond', model: 'diamond' };
 
   function buildGraph(entries, idx) {
     var nodes = entries.map(function (e) {
@@ -19,6 +24,7 @@
         name: Wiki.tr(e, 'title'),
         category: catIndex(e.type),
         symbolSize: SIZE[e.type] || 20,
+        symbol: KIND_SYMBOL[e.kind] || 'circle',
         itemStyle: { color: COLORS[e.type] }
       };
       if (e.status === 'catalog') {
@@ -41,11 +47,22 @@
         links.push({ source: e.slug, target: s });
       });
     });
+    // usedIn 边：课程 → 工具（工具词条的 usedIn 字段，让工具簇在图谱可见）
+    entries.forEach(function (e) {
+      if (!e.usedIn || !e.usedIn.length) return;
+      e.usedIn.forEach(function (c) {
+        if (!idx[c]) return;
+        var key = e.slug < c ? e.slug + '|' + c : c + '|' + e.slug;
+        if (seen[key]) return;
+        seen[key] = true;
+        links.push({ source: c, target: e.slug });
+      });
+    });
     return { nodes: nodes, links: links };
   }
 
-  var CATS = ['course', 'concept', 'tool', 'framework', 'track', 'credential'];
-  var CAT_NAMES = ['课程', '概念', '工具', '框架', '纵深线', '考牌'];
+  var CATS = ['course', 'concept', 'tool', 'framework', 'track', 'credential', 'job', 'employer', 'channel', 'resource'];
+  var CAT_NAMES = ['课程', '概念', '工具', '框架', '纵深线', '考牌', '岗位', '雇主', '渠道', '资源'];
   function catIndex(t) { var i = CATS.indexOf(t); return i === -1 ? 0 : i; }
 
   function render(entries, container) {
@@ -60,7 +77,11 @@
           formatter: function (p) {
             if (p.dataType === 'edge') return p.data.source + ' ↔ ' + p.data.target;
             var e = idx[p.data.id];
-            return e ? '<b>' + e.title + '</b><br>' + (e.summary || '') : p.data.id;
+            if (!e) return p.data.id;
+            return '<b>' + e.title + '</b>' +
+              (e.en ? '<br><i style="color:#8a94a6">' + e.en + '</i>' : '') +
+              '<br><span style="color:#0e7490;font-weight:700">' + Wiki.typeLabel(e.type) + '</span>' +
+              (e.summary ? '<br>' + e.summary : '');
           }
         },
         legend: [{

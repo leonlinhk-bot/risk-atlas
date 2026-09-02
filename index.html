@@ -16,6 +16,10 @@
       </a>
       <nav class="nav">
         <a href="index.html" class="active">首页</a>
+        <a href="weekly.html">周报</a>
+        <a href="catalog.html">课程目录</a>
+        <a href="career.html">就业情报</a>
+        <a href="companies.html">机构全景</a>
         <a href="map.html">知识地图</a>
         <a href="categories.html">分类索引</a>
         <div class="lang-switch" id="lang-switch"></div>
@@ -37,7 +41,7 @@
     <section class="about">
       <h2>关于 Risk Atlas · 风险图谱</h2>
       <p>Risk Atlas 是面向岭南大学「风险与保险管理理学硕士」的开放知识百科——该专业原名 MSc in Risk and Insurance Management（MScRIM），现更名为 MSc in Risk, Insurance and Actuarial Analytics（MScRIAA），实为同一专业，覆盖风险（Risk）、保险（Insurance）与精算分析（Actuarial Analysis）三大领域。</p>
-      <p>岭南大学 MScRIAA（原 MScRIM）课程聚焦风险管理、保险市场、精算定价与数据分析，培养能够在保险与金融机构从事风险识别、量化建模、产品设计与财富架构的专业人才。本项目把官网十六门课程（RIM520–RIM540，5 必修 + 11 选修）拆解为课程、概念、工具、框架、纵深线与考牌六类词条，并以双链（[[词条]]）连接成一张可生长的知识网络，服务「AI 赋能学习」。</p>
+      <p>岭南大学 MScRIAA（原 MScRIM）课程聚焦风险管理、保险市场、精算定价与数据分析，培养能够在保险与金融机构从事风险识别、量化建模、产品设计与财富架构的专业人才。本项目把官网十六门课程（RIM520–RIM540，5 必修 + 11 选修）拆解为课程、概念、工具、框架、纵深线与考牌六类词条，并以双链（[[词条]]）连接成一张可生长的知识网络，服务「AI 赋能学习」。工具类词条已扩展为「AI 工具箱」：skill / 工具 / agent / MCP / 网站等 16 个分类的 AI 工具合辑，经本站验证（✅ 实测）后收录，供 RIAA 学人直接拿来使用。</p>
       <p class="en">Risk Atlas — an open knowledge graph for Lingnan University's MSc in Risk, Insurance and Actuarial Analytics (MScRIAA), formerly MSc in Risk and Insurance Management (MScRIM), spanning Risk, Insurance and Actuarial Analysis.</p>
     </section>
 
@@ -67,7 +71,7 @@
       }
 
       function renderStats() {
-        var c = { course: 0, concept: 0, tool: 0, framework: 0, track: 0, credential: 0 };
+        var c = { course: 0, concept: 0, tool: 0, framework: 0, track: 0, credential: 0, job: 0, employer: 0, channel: 0, resource: 0 };
         state.entries.forEach(function (e) { c[e.type] = (c[e.type] || 0) + 1; });
         var el = document.getElementById('stats');
         el.innerHTML =
@@ -77,6 +81,10 @@
           '<span><b>' + c.tool + '</b> 工具</span>' +
           '<span><b>' + c.framework + '</b> 框架</span>' +
           '<span><b>' + c.credential + '</b> 考牌</span>' +
+          '<span><b>' + c.job + '</b> 岗位</span>' +
+          '<span><b>' + c.employer + '</b> 雇主</span>' +
+          '<span><b>' + c.channel + '</b> 渠道</span>' +
+          '<span><b>' + c.resource + '</b> 资源</span>' +
           '<span><b>' + c.track + '</b> 纵深线</span>';
       }
 
@@ -84,9 +92,13 @@
         var cats = [
           { type: 'course', label: '课程', desc: 'RIM520–RIM540 十六门课程（5 必修 + 11 选修）' },
           { type: 'concept', label: '概念', desc: '久期、信用利差、VaR 等核心概念' },
-          { type: 'tool', label: '工具', desc: 'DeepSeek、Kimi、秘塔 等 AI 工具' },
+          { type: 'tool', label: '工具', desc: 'DeepSeek、MinerU、Pagefind 等 AI 工具（AI 工具箱）' },
           { type: 'framework', label: '框架', desc: 'ISO 31000、三道防线、RCTOA 等' },
-          { type: 'credential', label: '考牌', desc: 'IIQE 卷一~卷五 保险牌照' },
+          { type: 'credential', label: '考牌', desc: 'IIQE 卷 1~5、MPFE、SOA/CAS/FRM/CFA' },
+          { type: 'job', label: '岗位', desc: '精算、核保、风控、数据等职业角色' },
+          { type: 'employer', label: '雇主', desc: '保监局、友邦、再保、精算咨询等机构' },
+          { type: 'channel', label: '渠道', desc: 'JobsDB、LinkedIn、精算协会等求职入口' },
+          { type: 'resource', label: '资源', desc: '简历/面试准备、行业组织与人脉' },
           { type: 'track', label: '纵深线', desc: '五条专业纵深线' }
         ];
         var el = document.getElementById('cat-grid');

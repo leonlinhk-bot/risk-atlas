@@ -16,6 +16,10 @@
       </a>
       <nav class="nav">
         <a href="index.html">首页</a>
+        <a href="weekly.html">周报</a>
+        <a href="catalog.html">课程目录</a>
+        <a href="career.html">就业情报</a>
+        <a href="companies.html">机构全景</a>
         <a href="map.html">知识地图</a>
         <a href="categories.html" class="active">分类索引</a>
         <div class="lang-switch" id="lang-switch"></div>
@@ -39,8 +43,8 @@
   <script>
     (function () {
       Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
-      var ORDER = ['course', 'concept', 'tool', 'framework', 'track', 'credential'];
-      var LABEL = { course: '课程', concept: '概念', tool: '工具', framework: '框架', track: '纵深线', credential: '考牌' };
+      var ORDER = ['course', 'concept', 'tool', 'framework', 'track', 'credential', 'job', 'employer', 'channel', 'resource'];
+      var LABEL = { course: '课程', concept: '概念', tool: '工具', framework: '框架', track: '纵深线', credential: '考牌', job: '岗位', employer: '雇主', channel: '渠道', resource: '资源' };
 
       function tag(d) {
         return '<span class="tag ' + Wiki.tagClass(d.type) + '">' + Wiki.typeLabel(d.type) + '</span>';
@@ -49,10 +53,22 @@
       function entryCard(e) {
         var line = e.code || e.en || (e.category ? '类别：' + e.category : '');
         var sub = e.summary || '';
+        var badge = (e.verified) ? '<span class="vbadge" title="本站在 Risk Atlas 探索/萃取流程中实测过">本站实测</span>' : '';
         return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '">' +
-          '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) +
+          '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) + badge +
           (line ? '<small>' + Wiki.escapeHtml(line) + '</small>' : '') +
           '<small>' + Wiki.escapeHtml(sub) + '</small></a>';
+      }
+
+      /* 工具区按 AI 工具箱 category 分组 */
+      function toolSections(list) {
+        var byCat = {};
+        list.forEach(function (e) { (byCat[e.category || '其他'] = byCat[e.category || '其他'] || []).push(e); });
+        var names = Object.keys(byCat).sort(function (a, b) { return byCat[b].length - byCat[a].length; });
+        return names.map(function (n) {
+          return '<div class="tool-group"><h3>' + Wiki.escapeHtml(n) + ' <span class="muted">(' + byCat[n].length + ')</span></h3>' +
+            '<div class="entry-list">' + byCat[n].map(entryCard).join('') + '</div></div>';
+        }).join('');
       }
 
       Wiki.load().then(function (data) {
@@ -65,7 +81,9 @@
           if (!list.length) return;
           html += '<section class="cat-section" id="type-' + t + '">';
           html += '<h2>' + LABEL[t] + ' <span class="muted">(' + list.length + ')</span></h2>';
-          html += '<div class="entry-list">' + list.map(entryCard).join('') + '</div>';
+          html += t === 'tool'
+            ? toolSections(list)
+            : '<div class="entry-list">' + list.map(entryCard).join('') + '</div>';
           html += '</section>';
         });
         document.getElementById('sections').innerHTML = html;

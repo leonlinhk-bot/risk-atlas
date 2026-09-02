@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>就业情报 · Risk Atlas · 风险图谱</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">R</span>
+        <span class="brand-text"><b>Risk Atlas · 风险图谱</b><small>岭南大学 · MScRIAA（原 MSc RIM）· AI 赋能风险、保险与精算</small></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="weekly.html">周报</a>
+        <a href="catalog.html">课程目录</a>
+        <a href="career.html" class="active">就业情报</a>
+        <a href="companies.html">机构全景</a>
+        <a href="map.html">知识地图</a>
+        <a href="categories.html">分类索引</a>
+        <div class="lang-switch" id="lang-switch"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">就业情报 · 香港风险/保险/精算</h1>
+    <p class="page-sub">一站式了解 · 查询 · 跟踪 · 投递：按你的职业阶段一眼找到「我要什么」；<a href="companies.html">机构全景</a>（162 家授权保险人 + 810 家经纪）。</p>
+    <div id="career"><p class="muted">加载中…</p></div>
+  </main>
+
+  <footer class="footer">
+    <span>© <b class="lingnan">Lingnan University</b></span> ·
+    <span>Risk Atlas · 风险图谱</span> ·
+    <span class="muted">纯静态 · 双链驱动</span>
+  </footer>
+
+  <script src="js/wiki.js"></script>
+  <script>
+    (function () {
+      Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
+      var root = document.getElementById('career');
+      var postingFilter = 'all'; // 最新职位阶段筛选：all/entry/mid/senior
+      var roleFilter = 'all';   // 最新职位岗位筛选：all/精算/核保/…
+
+      function tag(e) {
+        return '<span class="tag ' + Wiki.tagClass(e.type) + '">' + Wiki.typeLabel(e.type) + '</span>';
+      }
+      function link(slug, idx) {
+        var e = idx[slug];
+        return e ? '<a class="wikilink" href="' + Wiki.entryHref(slug) + '">' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</a>'
+                 : Wiki.escapeHtml(slug);
+      }
+      function joinLinks(slugs, idx) {
+        return (slugs || []).map(function (s) { return link(s, idx); }).join('、') || '<span class="muted">—</span>';
+      }
+
+      var SAL_LABEL = { entry: '起薪', mid: '3–5年', senior: '资深' };
+      var SAL_KEY = { entry: 'salary_entry', mid: 'salary_mid', senior: 'salary_senior' };
+      var LEVEL_BADGE = { entry: '应届', mid: '3–5年', senior: '资深', all: '全阶段' };
+
+      // 三阶段卡片（分流）
+      function stageCards() {
+        var cards = [
+          { id: 'stage-entry', emoji: '🎓', title: '应届生', sub: '从专业出发，我能投什么、要考什么、起薪多少', cls: 'sc-entry' },
+          { id: 'stage-mid', emoji: '📈', title: '进阶者', sub: '2–5 年，我下一步往哪升、往哪转、涨多少', cls: 'sc-mid' },
+          { id: 'stage-senior', emoji: '🏛️', title: '资深者', sub: '趋势判断 + 高级岗 + 前沿 + 人脉组织', cls: 'sc-senior' }
+        ];
+        return '<div class="stage-cards">' + cards.map(function (c) {
+          return '<a class="stage-card ' + c.cls + '" href="#' + c.id + '">' +
+            '<span class="sc-emoji">' + c.emoji + '</span>' +
+            '<b>' + c.title + '</b><small>' + c.sub + '</small><span class="sc-go">进入 →</span></a>';
+        }).join('') + '</div>';
+      }
+
+      // 阶段岗位卡（分档薪资 + 证书 + 典型雇主）
+      function stageJobCard(e, stage, idx) {
+        var sal = e[SAL_KEY[stage]] || '';
+        var creds = (e.credentials || []).map(function (c) { return link(c, idx); }).join('、');
+        var emps = (e.employers || []).slice(0, 4).map(function (s) { return link(s, idx); }).join('、');
+        return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '">' +
+          '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) +
+          (sal ? '<small>' + SAL_LABEL[stage] + '：<b>' + Wiki.escapeHtml(sal) + '</b></small>' : '') +
+          (creds ? '<small class="muted">证书：' + creds + '</small>' : '') +
+          (emps ? '<small class="muted">雇主：' + emps + '</small>' : '') +
+          '</a>';
+      }
+      function resourceCard(e) {
+        return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '">' +
+          '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) +
+          '<small>' + Wiki.escapeHtml(Wiki.tr(e, 'summary')) + '</small>' +
+          '</a>';
+      }
+
+      // 阶段区块
+      function stageSection(stage, jobs, resources, idx) {
+        var cfg = { entry: { id: 'stage-entry', emoji: '🎓', title: '应届生 · 入门路径', resCat: '应届求职准备' },
+                    mid: { id: 'stage-mid', emoji: '📈', title: '进阶者 · 成长路径', resCat: null },
+                    senior: { id: 'stage-senior', emoji: '🏛️', title: '资深者 · 行业判断', resCat: '行业组织与人脉' } }[stage];
+        var jlist = jobs.filter(function (e) { return (e.levels || []).indexOf(stage) !== -1; });
+        var rlist = cfg.resCat ? resources.filter(function (r) { return r.category === cfg.resCat; }) : [];
+        var html = '<section class="cat-section" id="' + cfg.id + '"><h2>' + cfg.emoji + ' ' + cfg.title + '</h2>';
+        html += '<h3>相关岗位 · ' + SAL_LABEL[stage] + '薪资</h3><div class="entry-list">' +
+          (jlist.length ? jlist.map(function (e) { return stageJobCard(e, stage, idx); }).join('') : '<p class="muted">暂无</p>') + '</div>';
+        if (rlist.length) {
+          html += '<h3>资源</h3><div class="entry-list">' + rlist.map(resourceCard).join('') + '</div>';
+        }
+        if (stage === 'senior') {
+          html += '<p class="muted">行业趋势看 <a href="weekly.html">RIAA 周报</a>，人才市场冷暖看下方「就业看板」。</p>';
+        }
+        html += '</section>';
+        return html;
+      }
+
+      // 最新职位 · 直达投递
+      function postingCard(p, idx) {
+        var empName = p.employer && idx[p.employer] ? Wiki.tr(idx[p.employer], 'title') : (p.company || '');
+        var jobName = p.job && idx[p.job] ? Wiki.tr(idx[p.job], 'title') : '';
+        var lv = LEVEL_BADGE[p.level] || '';
+        var chips = '';
+        if (empName) chips += '<span class="chip chip-emp">' + Wiki.escapeHtml(empName) + '</span>';
+        if (jobName) chips += '<span class="chip chip-job">' + Wiki.escapeHtml(jobName) + '</span>';
+        if (lv) chips += '<span class="chip chip-lv">' + Wiki.escapeHtml(lv) + '</span>';
+        return '<a class="entry-card posting" href="' + Wiki.escapeHtml(p.url || '#') + '" target="_blank" rel="noopener">' +
+          '<b class="posting-title">' + Wiki.escapeHtml(p.title || '') + '</b>' +
+          '<span class="posting-chips">' + chips + '</span>' +
+          '<span class="posting-foot"><small class="muted">' + Wiki.escapeHtml(p.source || '') + ' · ' + Wiki.escapeHtml(p.date || '') + '</small><span class="apply-btn">投递 →</span></span>' +
+          '</a>';
+      }
+      var ROLE_MAP = { 'actuary': '精算', 'pricing-analyst': '精算', 'underwriter': '核保', 'claims-specialist': '理赔',
+        'risk-manager': '风控', 'credit-risk-analyst': '风控', 'market-risk-analyst': '风控', 'data-scientist': '数据',
+        'reinsurance-analyst': '再保', 'catastrophe-modeler': '再保', 'compliance-officer': '合规', 'investment-analyst': '投资',
+        'insurance-broker': '经纪', 'insurance-advisor': '顾问', 'risk-consultant': '咨询' };
+      function roleOf(p) { return p.job && ROLE_MAP[p.job] ? ROLE_MAP[p.job] : '其他'; }
+      function postingsBoard(postings, idx) {
+        if (!postings || !postings.postings || !postings.postings.length) return '';
+        var list = postings.postings.filter(function (p) {
+          if (postingFilter !== 'all' && p.level !== postingFilter && p.level !== 'all') return false;
+          if (roleFilter !== 'all' && roleOf(p) !== roleFilter) return false;
+          return true;
+        });
+        var btns = ['all', 'entry', 'mid', 'senior'].map(function (lv) {
+          var label = { all: '全部', entry: '🎓 应届', mid: '📈 3–5年', senior: '🏛️ 资深' }[lv];
+          return '<button class="pf-btn' + (postingFilter === lv ? ' active' : '') + '" data-pf="' + lv + '">' + label + '</button>';
+        }).join('');
+        var roleBtns = ['all', '精算', '核保', '理赔', '风控', '数据', '再保', '合规', '投资', '经纪'].map(function (r) {
+          return '<button class="rf-btn' + (roleFilter === r ? ' active' : '') + '" data-rf="' + r + '">' + (r === 'all' ? '全部岗位' : r) + '</button>';
+        }).join('');
+        return '<section class="cat-section" id="latest"><h2>最新职位 · 直达投递 <span class="muted">(' + list.length + '/' + postings.postings.length + ')</span> <span class="fresh-badge">每日 18:08 更新</span></h2>' +
+          '<div class="pf-bar">' + btns + '<span class="pf-div"></span>' + roleBtns + '</div>' +
+          '<div class="entry-list">' + list.map(function (p) { return postingCard(p, idx); }).join('') + '</div>' +
+          '<div class="more-jobs"><span class="muted">看更多：</span>' +
+          '<a href="companies.html">🏛️ 机构全景（972 家）</a>' +
+          '<a href="https://hk.jobsdb.com" target="_blank" rel="noopener">🔎 JobsDB</a>' +
+          '<a href="https://www.linkedin.com/jobs" target="_blank" rel="noopener">💼 LinkedIn</a></div></section>';
+      }
+
+      // 就业看板
+      function dashboard(trends, idx) {
+        if (!trends || !trends.snapshot) return '';
+        var heatIcon = { 1: '🟢', 2: '🟡', 3: '🔥' };
+        var heatLabel = { 1: '低', 2: '中', 3: '高' };
+        var s = trends.snapshot;
+        var prevJobs = {}, prevEmp = {};
+        var hist = trends.history || [];
+        if (hist.length) {
+          var p = hist[hist.length - 1];
+          (p.jobs || []).forEach(function (j) { prevJobs[j.slug] = j; });
+          (p.employers || []).forEach(function (em) { prevEmp[em.slug] = em; });
+        }
+        function trendIcon(cur, prev) {
+          if (prev == null) return '<span class="muted">—</span>';
+          if (cur > prev) return '<span style="color:#c62828">↑</span>';
+          if (cur < prev) return '<span style="color:#2e7d32">↓</span>';
+          return '<span class="muted">→</span>';
+        }
+        var rows = (s.jobs || []).map(function (j) {
+          var prev = prevJobs[j.slug] ? prevJobs[j.slug].heat : null;
+          return '<tr><td>' + link(j.slug, idx) + '</td><td>' + (heatIcon[j.heat] || '') + heatLabel[j.heat] + '</td>' +
+            '<td>' + trendIcon(j.heat, prev) + '</td><td>' + Wiki.escapeHtml(j.salary || '') + '</td><td class="muted">' + Wiki.escapeHtml(j.note || '') + '</td></tr>';
+        }).join('');
+        var empRows = (s.employers || []).filter(function (em) { return em.hiring; }).map(function (em) {
+          var hot = (em.hot || []).map(function (h) { return link(h, idx); }).join('、');
+          var wasHiring = prevEmp[em.slug] ? prevEmp[em.slug].hiring : null;
+          var trend = wasHiring == null ? '<span class="muted">—</span>' : (em.hiring === wasHiring ? '<span class="muted">→</span>' : (em.hiring ? '<span style="color:#c62828">↑新开招</span>' : '<span style="color:#2e7d32">↓停招</span>'));
+          return '<tr><td>' + link(em.slug, idx) + '</td><td>' + hot + '</td><td>' + trend + '</td></tr>';
+        }).join('');
+        return '<section class="cat-section" id="dashboard"><h2>就业看板 · Dashboard</h2>' +
+          '<p class="muted">更新：' + Wiki.escapeHtml(trends.updated || '') + ' · ' + Wiki.escapeHtml(trends.method || '') + '</p>' +
+          '<h3>岗位热度与薪资参考（月薪 HKD）</h3>' +
+          '<div class="md-body"><table><thead><tr><th>岗位</th><th>热度</th><th>趋势</th><th>薪资参考</th><th>备注</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
+          '<h3>招聘中的机构</h3>' +
+          '<div class="md-body"><table><thead><tr><th>机构</th><th>热招岗位</th><th>趋势</th></tr></thead><tbody>' + empRows + '</tbody></table></div>' +
+          '</section>';
+      }
+
+      function employerCard(e, idx) {
+        return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '">' +
+          '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) +
+          '<small>' + Wiki.escapeHtml(e.en || '') + '</small>' +
+          '<small>' + Wiki.escapeHtml(Wiki.tr(e, 'summary')) + '</small>' +
+          (e.site ? '<small class="muted">🌐 官网：' + Wiki.escapeHtml(String(e.site).replace(/^https?:\/\//, '')) + '</small>' : '') +
+          '</a>';
+      }
+      function channelCard(e) {
+        return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '">' +
+          '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) +
+          (e.category ? '<small>' + Wiki.escapeHtml(e.category) + '</small>' : '') +
+          '<small>' + Wiki.escapeHtml(Wiki.tr(e, 'summary')) + '</small>' +
+          (e.source ? '<small class="muted">入口：' + Wiki.escapeHtml(String(e.source).replace(/^https?:\/\//, '')) + '</small>' : '') + '</a>';
+      }
+      function credCard(e, idx) {
+        return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '">' +
+          '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) +
+          (e.code ? '<small>' + Wiki.escapeHtml(e.code) + '</small>' : '') +
+          '<small>' + Wiki.escapeHtml(Wiki.tr(e, 'summary')) + '</small></a>';
+      }
+
+      var store = {};
+      Promise.all([
+        Wiki.load(),
+        fetch('data/career-trends.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
+        fetch('data/job-postings.json').then(function (r) { return r.json(); }).catch(function () { return null; })
+      ]).then(function (rs) {
+        store.entries = rs[0].entries; store.trends = rs[1]; store.postings = rs[2];
+        build();
+      }).catch(function (err) {
+        root.innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(err.message) + '</p>';
+      });
+
+      function build() {
+        var entries = store.entries, trends = store.trends, postings = store.postings;
+        var idx = Wiki.index(entries);
+        var jobs = entries.filter(function (e) { return e.type === 'job'; });
+        var employers = entries.filter(function (e) { return e.type === 'employer'; });
+        var channels = entries.filter(function (e) { return e.type === 'channel'; });
+        var creds = entries.filter(function (e) { return e.type === 'credential'; });
+        var resources = entries.filter(function (e) { return e.type === 'resource'; });
+
+        var html = '<nav class="career-toc">' +
+          '<a href="#latest">最新职位</a>' +
+          '<a href="#stage-entry">应届</a>' +
+          '<a href="#stage-mid">进阶</a>' +
+          '<a href="#stage-senior">资深</a>' +
+          '<a href="#dashboard">看板</a>' +
+          '<a href="#employers">雇主</a>' +
+          '<a href="#channels">渠道</a>' +
+          '<a href="#credentials">证书</a>' +
+          '</nav>';
+
+        html += postingsBoard(postings, idx);   // 最新职位置顶
+        html += stageCards();
+        html += stageSection('entry', jobs, resources, idx);
+        html += stageSection('mid', jobs, resources, idx);
+        html += stageSection('senior', jobs, resources, idx);
+        html += dashboard(trends, idx);
+
+        // 雇主（折叠）
+        var empByCat = {};
+        employers.forEach(function (em) { (empByCat[em.category || '其他'] = empByCat[em.category || '其他'] || []).push(em); });
+        html += '<details class="career-fold" id="employers"><summary>🏢 雇主 · Employers <span class="muted">(' + employers.length + ')</span></summary>';
+        Object.keys(empByCat).sort().forEach(function (c) {
+          html += '<h3>' + Wiki.escapeHtml(c) + '</h3><div class="entry-list">' + empByCat[c].map(function (em) { return employerCard(em, idx); }).join('') + '</div>';
+        });
+        html += '</details>';
+
+        // 求职渠道（折叠）
+        var chByCat = {};
+        channels.forEach(function (ch) { (chByCat[ch.category || '其他'] = chByCat[ch.category || '其他'] || []).push(ch); });
+        html += '<details class="career-fold" id="channels"><summary>🔗 求职渠道 · Job Channels <span class="muted">(' + channels.length + ')</span></summary>';
+        Object.keys(chByCat).sort().forEach(function (c) {
+          html += '<h3>' + Wiki.escapeHtml(c) + '</h3><div class="entry-list">' + chByCat[c].map(channelCard).join('') + '</div>';
+        });
+        html += '</details>';
+
+        // 证书（折叠）
+        html += '<details class="career-fold" id="credentials"><summary>🎓 证书与牌照 · Credentials <span class="muted">(' + creds.length + ')</span></summary>' +
+          '<div class="entry-list">' + creds.map(function (c) { return credCard(c, idx); }).join('') + '</div></details>';
+
+        root.innerHTML = html;
+        if (location.hash) { var t = document.querySelector(location.hash); if (t) setTimeout(function () { t.scrollIntoView(); }, 0); }
+      }
+
+      root.addEventListener('click', function (e) {
+        var b = e.target.closest ? e.target.closest('.pf-btn') : null;
+        var r = e.target.closest ? e.target.closest('.rf-btn') : null;
+        if (b && store.entries) { postingFilter = b.getAttribute('data-pf'); build(); }
+        if (r && store.entries) { roleFilter = r.getAttribute('data-rf'); build(); }
+      });
+    })();
+  </script>
+</body>
+</html>

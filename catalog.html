@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>课程目录 · Risk Atlas</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">R</span>
+        <span class="brand-text"><b>Risk Atlas · 风险图谱</b><small>岭南大学 · MScRIAA（原 MSc RIM）· AI 赋能风险、保险与精算</small></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="weekly.html">周报</a>
+        <a href="catalog.html" class="active">课程目录</a>
+        <a href="career.html">就业情报</a>
+        <a href="companies.html">机构全景</a>
+        <a href="map.html">知识地图</a>
+        <a href="categories.html">分类索引</a>
+        <div class="lang-switch" id="lang-switch"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">课程目录 · 长期跟踪</h1>
+    <p class="page-sub">以官网 Curriculum 为准（英文版权威）· 编号依据 ima 修读记录 / 第三方课程列表 / 顺序推断交叉校验</p>
+    <div id="catalog"><p class="muted">加载中…</p></div>
+  </main>
+
+  <footer class="footer">
+    <span>© <b class="lingnan">Lingnan University</b></span> ·
+    <span>Risk Atlas · 风险图谱</span> ·
+    <span class="muted">纯静态 · 双链驱动</span>
+  </footer>
+
+  <script src="js/wiki.js"></script>
+  <script>
+    (function () {
+      Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
+      var root = document.getElementById('catalog');
+      var CROSS = [
+        { code: 'FIN531', en: 'Derivative Securities', zh: '衍生证券', program: '金融学硕士（MScFIN）选修' },
+        { code: 'FIN540', en: 'Venture Capital and Private Equity', zh: '风险投资与私募股权', program: '金融学硕士（MScFIN）选修' },
+        { code: 'ACC*', en: 'Introduction to Python Programming', zh: 'Python 程式设计入门', program: '会计学硕士（MAcc）选修' }
+      ];
+
+      function statusBadge(e) {
+        return e.status === 'catalog'
+          ? '<span class="status-badge status-catalog">在册未读</span>'
+          : '<span class="status-badge status-enrolled">已修读</span>';
+      }
+      function courseRow(e) {
+        return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '">' +
+          '<b>' + Wiki.escapeHtml(e.code) + ' · ' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + statusBadge(e) +
+          '<small class="muted">' + Wiki.escapeHtml(e.en) + '</small>' +
+          (e.source ? '<small class="muted">依据：' + Wiki.escapeHtml(e.source) + '</small>' : '') +
+          (e.modules && e.modules.length ? '<small class="muted">模块：' + Wiki.trModules(e).map(Wiki.escapeHtml).join(' · ') + '</small>' : '') +
+          (e.modules_note ? '<small class="muted">ℹ️ ' + Wiki.escapeHtml(Wiki.tr(e, 'modules_note')) + '</small>' : '') +
+          '</a>';
+      }
+
+      Wiki.load().then(function (data) {
+        var courses = data.entries.filter(function (e) { return e.type === 'course'; });
+        var core = courses.filter(function (e) { return /RIM52[0-4]/.test(e.code); });
+        var elective = courses.filter(function (e) { return /RIM53[0-9]|RIM54[0-9]/.test(e.code); });
+
+        var html = '';
+        html += '<section class="cat-section"><h2>必修课程 Core <span class="muted">(5 门 · 15 学分)</span></h2><div class="entry-list">' + core.map(courseRow).join('') + '</div></section>';
+        html += '<section class="cat-section"><h2>选修课程 Elective <span class="muted">(11 门 · 任选 5 · 15 学分)</span></h2><div class="entry-list">' + elective.map(courseRow).join('') + '</div></section>';
+        html += '<section class="cat-section"><h2>跨项目选修 <span class="muted">(3 门 · 非 RIM 编号)</span></h2><div class="entry-list">' +
+          CROSS.map(function (c) {
+            return '<div class="entry-card"><b>' + Wiki.escapeHtml(c.code) + ' · ' + Wiki.escapeHtml(c.zh) + '</b><small class="muted">' + Wiki.escapeHtml(c.en) + '</small><small class="muted">' + Wiki.escapeHtml(c.program) + '</small></div>';
+          }).join('') + '</div></section>';
+        html += '<p class="muted">注：选修课「开设与否取决于学生需求及学系教师的教学安排」；RIM538/539/540 为官网新增课程（旧版列表未含），编号为顺序推断，待学校正式课表核实。</p>';
+        root.innerHTML = html;
+      }).catch(function (err) {
+        root.innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(err.message) + '</p>';
+      });
+    })();
+  </script>
+</body>
+</html>

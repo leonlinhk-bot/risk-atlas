@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIAA 周报 · Risk Atlas</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">R</span>
+        <span class="brand-text"><b>Risk Atlas · 风险图谱</b><small>岭南大学 · MScRIAA（原 MSc RIM）· AI 赋能风险、保险与精算</small></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="weekly.html" class="active">周报</a>
+        <a href="catalog.html">课程目录</a>
+        <a href="career.html">就业情报</a>
+        <a href="companies.html">机构全景</a>
+        <a href="map.html">知识地图</a>
+        <a href="categories.html">分类索引</a>
+        <div class="lang-switch" id="lang-switch"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title" id="page-title">RIAA 专业纵深周报</h1>
+    <p class="page-sub" id="page-sub">研究锚点 · 五条纵深线 × MSc RIM 课程轮换深研 × 五牌照覆盖</p>
+    <div id="weekly"><p class="muted">加载中…</p></div>
+  </main>
+
+  <footer class="footer">
+    <span>© <b class="lingnan">Lingnan University</b></span> ·
+    <span>Risk Atlas · 风险图谱</span> ·
+    <span class="muted">纯静态 · 双链驱动</span>
+  </footer>
+
+  <script src="js/wiki.js"></script>
+  <script>
+    (function () {
+      Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
+      var root = document.getElementById('weekly');
+      var week = (new URLSearchParams(location.search)).get('week');
+
+      function courseLink(slug, idx) {
+        var c = idx[slug];
+        return c ? '<a class="wikilink" href="' + Wiki.entryHref(slug) + '">' + Wiki.escapeHtml(Wiki.tr(c, 'title')) + '</a>'
+                 : '<span class="muted">（课程映射待确认）</span>';
+      }
+
+      function relatedCourses(r, idx) {
+        var list = r.courses;
+        if (!list || !list.length) list = [{ slug: r.course, role: 'primary' }];
+        var items = list.map(function (c) {
+          var e = idx[c.slug];
+          var name = e ? Wiki.tr(e, 'title') : c.slug;
+          var code = e && e.code ? e.code : '';
+          var role = c.role === 'primary'
+            ? '<span class="wrole wrole-primary">深研</span>'
+            : '<span class="wrole wrole-cited">引用</span>';
+          var label = code ? (code + ' · ' + name) : name;
+          return e
+            ? '<a class="backlink-item" href="' + Wiki.entryHref(c.slug) + '">' + role + '<span>' + Wiki.escapeHtml(label) + '</span></a>'
+            : '<span class="backlink-item">' + role + Wiki.escapeHtml(label) + '</span>';
+        }).join('');
+        return '<div class="block"><h2>相关课程</h2><div class="backlink-list">' + items + '</div></div>';
+      }
+
+      function tag(e) {
+        return '<span class="tag ' + Wiki.tagClass(e.type) + '">' + Wiki.typeLabel(e.type) + '</span>';
+      }
+      function relatedConcepts(r, idx) {
+        var slugs = (r.concepts || []).concat(r.frameworks || []);
+        if (!slugs.length) return '';
+        var items = slugs.map(function (s) {
+          var e = idx[s];
+          return e
+            ? '<a class="backlink-item" href="' + Wiki.entryHref(s) + '">' + tag(e) + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</a>'
+            : '<span class="backlink-item">' + Wiki.escapeHtml(s) + '</span>';
+        }).join('');
+        return '<div class="block"><h2>相关概念与框架</h2><div class="backlink-list">' + items + '</div></div>';
+      }
+
+      var VERTICALS = ['风险框架与量化', '保险产品与市场深度', '利率与财务分析', '风险转移与财富架构', '宏观洞察与数据驱动'];
+
+      function buildToc(bodyMd) {
+        var heads = [];
+        var re = /^##\s+(.*)$/gm, m;
+        while ((m = re.exec(bodyMd))) heads.push(m[1].trim());
+        if (!heads.length) return '';
+        return heads.map(function (h, i) {
+          var vi = -1;
+          for (var k = 0; k < VERTICALS.length; k++) if (h.indexOf(VERTICALS[k]) !== -1) { vi = k; break; }
+          if (vi >= 0) {
+            return '<a class="toc-item toc-vl" href="#sec-' + i + '"><span class="toc-num">' + (vi + 1) + '</span>' + VERTICALS[vi] + '</a>';
+          }
+          var label = h.replace(/^[^\p{Script=Han}]+/u, '').slice(0, 14);
+          return '<a class="toc-item" href="#sec-' + i + '">' + Wiki.escapeHtml(label) + '</a>';
+        }).join('');
+      }
+
+      function deepDive(r, idx) {
+        var c = idx[r.course];
+        if (!c) return '';
+        var nConcept = (r.concepts || []).length;
+        var nCite = (r.courses || []).filter(function (x) { return x.role === 'cited'; }).length;
+        return '<div class="wk-dd">' +
+          '<span class="wrole wrole-primary">深研</span>' +
+          '<span class="wk-dd-course">' + (c.code ? '<b>' + Wiki.escapeHtml(c.code) + '</b> · ' : '') + Wiki.escapeHtml(Wiki.tr(c, 'title')) + '</span>' +
+          (r.topic ? '<span class="wk-dd-topic">' + Wiki.escapeHtml(r.topic) + '</span>' : '') +
+          '<span class="wk-dd-meta">' + nConcept + ' 概念' + (nCite ? ' · ' + nCite + ' 课程引用' : '') + '</span>' +
+          '</div>';
+      }
+
+      function renderList(wk, idx) {
+        document.getElementById('page-title').textContent = 'RIAA 专业纵深周报';
+        document.getElementById('page-sub').textContent = '共 ' + wk.reports.length + ' 期 · 五条纵深线 × 课程轮换深研 × 五牌照覆盖';
+        var reports = wk.reports.slice().reverse();
+        root.innerHTML = '<div class="entry-list">' + reports.map(function (r) {
+          var attr = (r.attribution && r.attribution !== '完整课程') ? '<small class="muted">归属：' + Wiki.escapeHtml(r.attribution) + '</small>' : '';
+          return '<a class="entry-card" href="weekly.html?week=' + encodeURIComponent(r.slug) + '">' +
+            '<b>📐 ' + Wiki.escapeHtml(r.title || r.slug) + '</b>' +
+            deepDive(r, idx) + attr +
+            (r.note ? '<small class="muted">⚠️ ' + Wiki.escapeHtml(r.note) + '</small>' : '') +
+            '</a>';
+        }).join('') + '</div>';
+      }
+
+      function renderDetail(r, idx) {
+        fetch('data/reports/' + r.file).then(function (res) { return res.text(); }).then(function (md) {
+          var t = md.match(/^#\s+(.*)$/m);
+          var title = t ? t[1] : (r.title || r.slug);
+          // 去掉正文里的首个 # 标题行，避免与头图重复
+          var bodyMd = md.replace(/^#\s+[^\n]*\n*/, '');
+          var hero = '<div class="wk-hero">' +
+            '<div class="wk-hero-eyebrow">Risk · Insurance · Actuarial Analysis</div>' +
+            '<div class="wk-hero-title">' + Wiki.escapeHtml(title) + '</div>' +
+            '<div class="wk-hero-sub">' + (r.topic ? Wiki.escapeHtml(r.topic) + ' · ' : '') + '本期深研：' + courseLink(r.course, idx) +
+            (r.attribution && r.attribution !== '完整课程' ? ' <span style="color:#9fb3d1">（' + Wiki.escapeHtml(r.attribution) + '）</span>' : '') + '</div>' +
+            '</div>';
+          var toc = buildToc(bodyMd);
+          var tocHtml = toc ? '<aside class="wk-side"><div class="wk-toc"><div class="wk-toc-title">本期目录 · 五纵深线</div>' + toc + '</div></aside>' : '';
+          var head = '<div class="crumb"><a href="weekly.html">周报</a> › ' + Wiki.escapeHtml(title) + '</div>';
+          root.innerHTML = head +
+            '<div class="wk-layout">' +
+              '<div class="wk-main">' + hero + relatedCourses(r, idx) + relatedConcepts(r, idx) +
+                '<article class="article"><div class="md-body">' + Wiki.renderMarkdown(bodyMd, idx) + '</div></article>' +
+              '</div>' + tocHtml +
+            '</div>';
+          document.title = title + ' · Risk Atlas';
+          document.getElementById('page-title').textContent = title;
+          document.getElementById('page-sub').textContent = '';
+        }).catch(function (e) {
+          root.innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(e.message) + '</p>';
+        });
+      }
+
+      Promise.all([
+        fetch('data/weekly.json').then(function (r) { return r.json(); }),
+        Wiki.load()
+      ]).then(function (rs) {
+        var wk = rs[0], entries = rs[1].entries, idx = Wiki.index(entries);
+        if (week) {
+          var r = wk.reports.find(function (x) { return x.slug === week; });
+          if (r) renderDetail(r, idx); else root.innerHTML = '<p class="muted">未找到该期周报。</p>';
+        } else {
+          renderList(wk, idx);
+        }
+      }).catch(function (e) {
+        root.innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(e.message) + '</p>';
+      });
+    })();
+  </script>
+</body>
+</html>

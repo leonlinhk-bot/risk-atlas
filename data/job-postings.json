@@ -1,0 +1,218 @@
+{
+  "updated": "2026-08-27 18:08",
+  "note": "具体在招职位，直达投递/详情页；每日 18:08 更新（由 update-job-postings.cjs 刷新）。首期为手工抓取自公开招聘信息。",
+  "postings": [
+    {
+      "title": "Qualified / Part Qualified Actuary (all levels), Actuarial, Risk Consulting",
+      "employer": "kpmg",
+      "job": "actuary",
+      "company": "KPMG",
+      "url": "https://jobs.ctgoodjobs.hk/zh/job/10236282/qualified-part-qualified-actuary-all-levels-actuarial-risk-consulting-mj005430",
+      "date": "2026-08-27",
+      "source": "CTgoodjobs",
+      "level": "all"
+    },
+    {
+      "title": "FSO Risk Consulting - FSRM (Insurance Risk) - Senior or above",
+      "employer": "ey",
+      "job": "risk-consultant",
+      "company": "EY",
+      "url": "https://careers.ey.com/ey/job/Hong-Kong-FSO-Consulting-BC-Insurance-Risk-%28FSRM%29-ManagerSr_Associate-Hong-Kong-Hong/856625001/",
+      "date": "2026-08-27",
+      "source": "EY Careers",
+      "level": "senior"
+    },
+    {
+      "title": "Risk Actuary, Insurance",
+      "employer": "hsbc-life",
+      "job": "actuary",
+      "company": "HSBC",
+      "url": "https://www.glassdoor.com.hk/job-listing/risk-actuary-insurance-hsbc-JV_IC4359832_KO0,22_KE23,27.htm?jl=1010239859622",
+      "date": "2026-08-27",
+      "source": "Glassdoor",
+      "level": "mid"
+    },
+    {
+      "title": "2026 Actuarial Intern (General Insurance)",
+      "job": "actuary",
+      "company": "General Insurance（talent.gov.hk）",
+      "url": "https://www.talent.gov.hk/jobDetail/EFINANCE23977968?lang=zh_CN",
+      "date": "2026-08-27",
+      "source": "talent.gov.hk",
+      "level": "entry"
+    },
+    {
+      "title": "Senior Manager, Risk Management (Insurance Distribution)",
+      "job": "risk-manager",
+      "company": "Insurance（talent.gov.hk）",
+      "url": "https://www.talent.gov.hk/jobDetail/EFINANCE24600117?lang=zh_CN",
+      "date": "2026-08-27",
+      "source": "talent.gov.hk",
+      "level": "senior"
+    },
+    {
+      "title": "Head of Financial & Enterprise Risk (Insurance)",
+      "job": "risk-manager",
+      "company": "Insurance（talent.gov.hk）",
+      "url": "https://www.talent.gov.hk/jobDetail/EFINANCE24189125?lang=zh_CN",
+      "date": "2026-08-27",
+      "source": "talent.gov.hk",
+      "level": "senior"
+    },
+    {
+      "title": "Junior Treaty Underwriter（再保部合约分入·初级核保人）",
+      "job": "underwriter",
+      "company": "中国人保（香港）",
+      "url": "https://hk.joblum.com/job/junior-treaty-underwriter-zai-bao-bu-he-yue-fen/4013749",
+      "date": "2026-08-30",
+      "level": "entry",
+      "source": "joblum"
+    },
+    {
+      "title": "中国太平在招职位汇总（太平人寿/太平保险）",
+      "employer": "china-taiping",
+      "company": "China Taiping",
+      "url": "https://hk.jobsdb.com/china-taiping-life-insurance-hong-kong-company-limited-jobs-in-insurance-superannuation",
+      "date": "2026-08-30",
+      "level": "all",
+      "source": "JobsDB"
+    },
+    {
+      "title": "(Senior) Actuarial Analyst - EB pricing",
+      "employer": "axa",
+      "job": "actuary",
+      "company": "AXA",
+      "url": "https://www.glassdoor.de/job-listing/senior-actuarial-analyst-eb-pricing-axa-JV_KO0,35_KE36,39.htm?jl=1010145872105",
+      "date": "2026-08-30",
+      "level": "mid",
+      "source": "Glassdoor"
+    },
+    {
+      "title": "Actuarial Analyst, Asia Pacific Actuarial Group",
+      "employer": "allied-world",
+      "job": "actuary",
+      "company": "Allied World",
+      "url": "https://hk.joblum.com/job/actuarial-analyst-asia-pacific-actuarial-group/3977096",
+      "date": "2026-08-30",
+      "level": "entry",
+      "source": "joblum"
+    },
+    {
+      "title": "Reinsurance Analyst",
+      "employer": "gallagher",
+      "job": "reinsurance-analyst",
+      "company": "AJG (Gallagher)",
+      "url": "https://jobs.ajg.com/ajg-home/jobs/50131",
+      "date": "2026-08-30",
+      "level": "mid",
+      "source": "AJG Careers"
+    },
+    {
+      "title": "Reinsurance Actuarial Analyst (P&C Insurance)",
+      "employer": "guy-carpenter",
+      "job": "reinsurance-analyst",
+      "company": "Guy Carpenter",
+      "url": "https://www.glassdoor.com/job-listing/reinsurance-actuarial-analyst-pc-insurance-guy-carpenter-JV_KO0,42_KE43,56.htm?jl=1009810137686",
+      "date": "2026-08-30",
+      "level": "mid",
+      "source": "Glassdoor"
+    },
+    {
+      "title": "Senior Officer, Compliance (one-year contract)",
+      "employer": "zurich",
+      "job": "compliance-officer",
+      "company": "Zurich Insurance",
+      "url": "https://www.glassdoor.com.hk/job-listing/senior-officer-compliance-one-year-contract-zurich-insurance-JV_KO0,43_KE44,60.htm?jl=1010032548325",
+      "date": "2026-08-30",
+      "level": "mid",
+      "source": "Glassdoor"
+    },
+    {
+      "title": "Data Analyst / Analytics Associate (Finance & Actuarial Report)",
+      "job": "data-scientist",
+      "company": "保险客户（Michael Page）",
+      "url": "https://www.michaelpage.com.hk/job-detail/data-analyst-analytics-associate-finance-actuarial-report/ref/jn-082026-7092269",
+      "date": "2026-08-30",
+      "level": "mid",
+      "source": "Michael Page"
+    },
+    {
+      "title": "Senior Analyst, ALM, Asia",
+      "employer": "sun-life",
+      "job": "investment-analyst",
+      "company": "Sun Life",
+      "url": "https://www.glassdoor.com.hk/job-listing/senior-analyst-alm-asia-sun-life-JV_KO0,23_KE24,32.htm?jl=1010200508221",
+      "date": "2026-08-30",
+      "level": "mid",
+      "source": "Glassdoor"
+    },
+    {
+      "title": "Reinsurance Analyst (Causeway Bay)",
+      "employer": "gallagher",
+      "job": "reinsurance-analyst",
+      "company": "Gallagher Re",
+      "url": "https://www.glassdoor.ca/job-listing/reinsurance-analyst-gallagher-re-JV_IC2307201_KO0,19_KE20,32.htm?jl=1010060029983",
+      "date": "2026-08-30",
+      "level": "mid",
+      "source": "Glassdoor"
+    },
+    {
+      "title": "Actuarial Internship Program 2026/2027 (6.5 months)",
+      "employer": "manulife",
+      "job": "actuary",
+      "company": "Manulife",
+      "url": "https://hk.expertini.com/job/manulife-65-months-actuarial-internship-program-20262027-hong-kong-manulife-abfb3b3d4d324e749bf4cfb918041b5b105.pdf",
+      "date": "2026-08-30",
+      "level": "entry",
+      "source": "Manulife"
+    },
+    {
+      "title": "Claims Specialist, Hong Kong",
+      "employer": "swiss-re",
+      "job": "claims-specialist",
+      "company": "Swiss Re",
+      "url": "https://jobs.ctgoodjobs.hk/job/10212440-ctfi/claims-specialist-hong-kong-hongkongsar-hk",
+      "date": "2026-08-30",
+      "level": "mid",
+      "source": "CTgoodjobs"
+    },
+    {
+      "title": "泰康人寿（香港筹备）运营部·核保岗",
+      "employer": "tai-kang-life",
+      "job": "underwriter",
+      "company": "泰康人寿（香港筹备）",
+      "url": "http://hk.jrzp.com/job2991440.shtml",
+      "date": "2026-08-30",
+      "level": "mid",
+      "source": "jrzp"
+    },
+    {
+      "title": "Data Analyst - Agency Platform / Insurance (50k-70k)",
+      "job": "data-scientist",
+      "company": "保险客户（ConnectedGroup）",
+      "url": "https://jobs.ctgoodjobs.hk/job/10237025/data-analyst-agency-platform-insurance-50k-to-70k",
+      "date": "2026-08-30",
+      "level": "mid",
+      "source": "CTgoodjobs"
+    },
+    {
+      "title": "Senior Compliance Manager - Insurance & Investment",
+      "job": "compliance-officer",
+      "company": "保险/投资客户",
+      "url": "https://gongzuo.hk/senior-compliance/senior-compliance-manager-insurance-investment_i3977097776",
+      "date": "2026-08-31",
+      "level": "senior",
+      "source": "gongzuo.hk"
+    },
+    {
+      "title": "More Academy Internship Programme",
+      "employer": "heng-an-standard",
+      "job": "actuary",
+      "company": "恒安標準人壽",
+      "url": "https://www.glassdoor.it/job-listing/more-academy-internship-programme-%E6%81%92%E5%AE%89%E6%A8%99%E5%87%86%E4%BA%BA%E5%A3%BD-JV_IC2309086_KO0,33_KE34,40.htm?jl=1010187766367",
+      "date": "2026-08-31",
+      "level": "entry",
+      "source": "Glassdoor"
+    }
+  ]
+}

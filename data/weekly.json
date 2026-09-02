@@ -1,0 +1,491 @@
+{
+  "reports": [
+    {
+      "slug": "w01",
+      "title": "RIAA 周报 · 2026 第1期",
+      "course": "rim537",
+      "file": "w01.md",
+      "topic": "债券市场与信用风险管理",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim537",
+          "role": "primary"
+        },
+        {
+          "slug": "rim520",
+          "role": "cited"
+        },
+        {
+          "slug": "rim530",
+          "role": "cited"
+        },
+        {
+          "slug": "rim531",
+          "role": "cited"
+        },
+        {
+          "slug": "rim536",
+          "role": "cited"
+        }
+      ],
+      "concepts": [
+        "duration",
+        "reinsurance",
+        "retirement-planning",
+        "operational-risk",
+        "gn16",
+        "credit-risk",
+        "glm"
+      ],
+      "frameworks": []
+    },
+    {
+      "slug": "w21",
+      "title": "RIAA 周报 · 2026 W21",
+      "course": "rim537",
+      "file": "w21.md",
+      "topic": "债券与信用风险管理",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim537",
+          "role": "primary"
+        },
+        {
+          "slug": "rim520",
+          "role": "cited"
+        },
+        {
+          "slug": "rim521",
+          "role": "cited"
+        },
+        {
+          "slug": "rim522",
+          "role": "cited"
+        },
+        {
+          "slug": "rim523",
+          "role": "cited"
+        },
+        {
+          "slug": "rim530",
+          "role": "cited"
+        },
+        {
+          "slug": "rim531",
+          "role": "cited"
+        }
+      ],
+      "concepts": [
+        "risk-appetite",
+        "risk-assessment",
+        "value-at-risk",
+        "stress-testing",
+        "adverse-selection",
+        "duration",
+        "convexity",
+        "pd-lgd",
+        "hedging",
+        "reinsurance",
+        "insurance-linked-securities",
+        "operational-risk",
+        "gn16",
+        "credit-risk"
+      ],
+      "frameworks": [
+        "rbc",
+        "orsa"
+      ]
+    },
+    {
+      "slug": "w22",
+      "title": "RIAA 周报 · 2026 W22",
+      "course": "rim535",
+      "file": "w22.md",
+      "topic": "衍生品与风险管理",
+      "attribution": "衍生品对冲模块延展（归属 RIM535 金融风险管理，亦可溯源 RIM537 利率衍生品章节）",
+      "courses": [
+        {
+          "slug": "rim535",
+          "role": "primary"
+        },
+        {
+          "slug": "rim520",
+          "role": "cited"
+        },
+        {
+          "slug": "rim521",
+          "role": "cited"
+        },
+        {
+          "slug": "rim522",
+          "role": "cited"
+        },
+        {
+          "slug": "rim523",
+          "role": "cited"
+        },
+        {
+          "slug": "rim530",
+          "role": "cited"
+        },
+        {
+          "slug": "rim531",
+          "role": "cited"
+        },
+        {
+          "slug": "rim537",
+          "role": "cited"
+        }
+      ],
+      "concepts": [
+        "risk-assessment",
+        "value-at-risk",
+        "stress-testing",
+        "adverse-selection",
+        "duration",
+        "convexity",
+        "cds",
+        "hedging",
+        "reinsurance",
+        "insurance-linked-securities",
+        "credit-risk",
+        "interest-rate-swap"
+      ],
+      "frameworks": [
+        "rbc",
+        "orsa"
+      ]
+    },
+    {
+      "slug": "w23a",
+      "title": "RIAA 周报 · 2026-06-07",
+      "course": "rim537",
+      "file": "w23a.md",
+      "topic": "债券与信用风险管理",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim537",
+          "role": "primary"
+        }
+      ],
+      "concepts": [
+        "duration",
+        "credit-spread",
+        "cds",
+        "yield-curve",
+        "reinsurance",
+        "esg-insurance",
+        "gn16",
+        "credit-risk"
+      ],
+      "frameworks": [
+        "rbc",
+        "orsa"
+      ]
+    },
+    {
+      "slug": "w23b",
+      "title": "RIAA 周报 · 2026 W23",
+      "course": "rim520",
+      "file": "w23b.md",
+      "topic": "企业风险管理（ERM）",
+      "attribution": "企业风险管理(ERM)模块延展（归属 RIM520 风险管理原理；周报原编号 RIM539 为误用，官网 RIM539=寿险精算）",
+      "courses": [
+        {
+          "slug": "rim520",
+          "role": "primary"
+        },
+        {
+          "slug": "rim522",
+          "role": "cited"
+        },
+        {
+          "slug": "rim523",
+          "role": "cited"
+        },
+        {
+          "slug": "rim530",
+          "role": "cited"
+        },
+        {
+          "slug": "rim531",
+          "role": "cited"
+        },
+        {
+          "slug": "rim537",
+          "role": "cited"
+        }
+      ],
+      "concepts": [
+        "risk-assessment",
+        "value-at-risk",
+        "stress-testing",
+        "duration",
+        "convexity",
+        "credit-spread",
+        "yield-curve",
+        "hedging",
+        "reinsurance",
+        "insurance-linked-securities",
+        "operational-risk",
+        "gn16",
+        "credit-risk"
+      ],
+      "frameworks": [
+        "three-lines-of-defense",
+        "rbc"
+      ]
+    },
+    {
+      "slug": "w25",
+      "title": "RIAA 周报 · 2026-06-21",
+      "course": "rim537",
+      "file": "w25.md",
+      "topic": "债券与信用风险管理",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim537",
+          "role": "primary"
+        }
+      ],
+      "concepts": [
+        "risk-appetite",
+        "value-at-risk",
+        "stress-testing",
+        "duration",
+        "convexity",
+        "credit-spread",
+        "pd-lgd",
+        "yield-curve",
+        "hedging",
+        "reinsurance",
+        "longevity-risk",
+        "fraud-detection",
+        "esg-insurance",
+        "market-structure",
+        "gn16",
+        "immunization",
+        "credit-risk"
+      ],
+      "frameworks": [
+        "rbc"
+      ]
+    },
+    {
+      "slug": "w26",
+      "title": "RIAA 周报 · 2026-06-28",
+      "course": "rim531",
+      "file": "w26.md",
+      "topic": "人寿与健康保险",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim531",
+          "role": "primary"
+        }
+      ],
+      "concepts": [
+        "value-at-risk",
+        "adverse-selection",
+        "moral-hazard",
+        "actuarial-pricing",
+        "duration",
+        "hedging",
+        "reinsurance",
+        "insurance-linked-securities",
+        "mortality-table",
+        "longevity-risk",
+        "level-premium",
+        "gn16"
+      ],
+      "frameworks": [
+        "rbc"
+      ]
+    },
+    {
+      "slug": "w27",
+      "title": "RIAA 周报 · 2026-07-04",
+      "course": "rim520",
+      "file": "w27.md",
+      "topic": "风险管理原理",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim520",
+          "role": "primary"
+        }
+      ],
+      "concepts": [
+        "risk-assessment",
+        "value-at-risk",
+        "stress-testing",
+        "duration",
+        "hedging",
+        "reinsurance",
+        "insurance-linked-securities",
+        "emerging-risks",
+        "operational-risk",
+        "gn16",
+        "credit-risk",
+        "glm"
+      ],
+      "frameworks": [
+        "three-lines-of-defense",
+        "rbc",
+        "orsa"
+      ]
+    },
+    {
+      "slug": "w29",
+      "title": "RIAA 周报 · 2026-07-16",
+      "course": "rim537",
+      "file": "w29.md",
+      "topic": "债券与信用风险管理",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim537",
+          "role": "primary"
+        }
+      ],
+      "concepts": [
+        "stress-testing",
+        "duration",
+        "convexity",
+        "credit-spread",
+        "pd-lgd",
+        "yield-curve",
+        "reinsurance",
+        "gn16",
+        "immunization",
+        "credit-risk"
+      ],
+      "frameworks": [
+        "rbc"
+      ]
+    },
+    {
+      "slug": "w31",
+      "title": "RIAA 周报 · 2026-07-27",
+      "course": "rim531",
+      "file": "w31.md",
+      "topic": "人寿与健康保险",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim531",
+          "role": "primary"
+        },
+        {
+          "slug": "rim537",
+          "role": "cited"
+        }
+      ],
+      "concepts": [
+        "risk-appetite",
+        "risk-assessment",
+        "value-at-risk",
+        "stress-testing",
+        "hedging",
+        "reinsurance",
+        "mortality-table",
+        "fraud-detection",
+        "market-structure",
+        "credit-risk"
+      ],
+      "frameworks": [
+        "rbc"
+      ]
+    },
+    {
+      "slug": "w33",
+      "title": "RIAA 周报 · 2026-08-16",
+      "course": "rim536",
+      "file": "w33.md",
+      "topic": "大数据分析与风险管理",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim536",
+          "role": "primary"
+        },
+        {
+          "slug": "rim537",
+          "role": "cited"
+        }
+      ],
+      "concepts": [
+        "stress-testing",
+        "yield-curve",
+        "financial-leverage",
+        "machine-learning-pricing",
+        "fraud-detection",
+        "linear-regression",
+        "retirement-planning",
+        "law-of-large-numbers",
+        "glm",
+        "bias-variance-tradeoff"
+      ],
+      "frameworks": [
+        "rbc",
+        "crisp-dm"
+      ]
+    },
+    {
+      "slug": "w35",
+      "title": "RIAA 周报 · 2026 W35",
+      "course": "rim521",
+      "file": "w35.md",
+      "topic": "经济与商业（保险需求与市场结构）",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim521",
+          "role": "primary"
+        },
+        {
+          "slug": "rim520",
+          "role": "cited"
+        },
+        {
+          "slug": "rim522",
+          "role": "cited"
+        },
+        {
+          "slug": "rim523",
+          "role": "cited"
+        },
+        {
+          "slug": "rim530",
+          "role": "cited"
+        },
+        {
+          "slug": "rim536",
+          "role": "cited"
+        },
+        {
+          "slug": "rim537",
+          "role": "cited"
+        }
+      ],
+      "concepts": [
+        "actuarial-pricing",
+        "duration",
+        "hedging",
+        "reinsurance",
+        "law-of-large-numbers",
+        "market-structure",
+        "gn16",
+        "credit-risk",
+        "glm"
+      ],
+      "frameworks": [
+        "rbc"
+      ]
+    }
+  ]
+}

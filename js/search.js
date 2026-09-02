@@ -10,9 +10,13 @@
     return entries.map(function (e) {
       var hay = [
         e.title, e.en, e.code, e.summary, stripLinks(e.body),
-        (e.track && e.track.name) || ''
+        (e.track && e.track.name) || '',
+        (e.modules || []).join(' '),
+        (e.modules_en || []).join(' '),
+        (e.modules_hk || []).join(' '),
+        (e.aliases || []).join(' ')
       ].join(' ').toLowerCase();
-      return { slug: e.slug, title: e.title, code: e.code || '', type: e.type, summary: e.summary, hay: hay };
+      return { slug: e.slug, title: e.title, code: e.code || '', type: e.type, summary: e.summary, aliases: e.aliases || [], hay: hay };
     });
   }
 
@@ -27,6 +31,7 @@
     else if (title.indexOf(q) !== -1) s += 60;
     if (en.indexOf(q) !== -1) s += 35;
     if (code === q || slug === q) s += 90;
+    if ((doc.aliases || []).some(function (a) { return a.toLowerCase().indexOf(q) !== -1; })) s += 30;
     if (doc.summary && doc.summary.toLowerCase().indexOf(q) !== -1) s += 25;
     if (doc.hay.indexOf(q) !== -1) s += 12;
     return s;

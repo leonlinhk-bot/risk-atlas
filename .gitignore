@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# 数据备份（只推 entries.json 本体）
+data/*.bak*
+
+# 本地缓存
+*.tmp

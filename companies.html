@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>机构全景 · 香港保险/经纪 · Risk Atlas</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">R</span>
+        <span class="brand-text"><b>Risk Atlas · 风险图谱</b><small>岭南大学 · MScRIAA（原 MSc RIM）· AI 赋能风险、保险与精算</small></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="weekly.html">周报</a>
+        <a href="catalog.html">课程目录</a>
+        <a href="career.html">就业情报</a>
+        <a href="companies.html" class="active">机构全景</a>
+        <a href="map.html">知识地图</a>
+        <a href="categories.html">分类索引</a>
+        <div class="lang-switch" id="lang-switch"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">香港保险 / 经纪机构全景</h1>
+    <p class="page-sub">授权保险人 162 家 + 保险经纪 810 家（大水哥&小龙虾整理 2026-04）——可搜索、按类型/规模分层浏览。</p>
+    <input id="cfilter" type="search" placeholder="🔍 搜索公司名（中/英）…" style="width:100%;padding:10px 14px;border:1px solid var(--line);border-radius:10px;font-size:14px;margin-bottom:16px;" />
+    <div id="clist"><p class="muted">加载中…</p></div>
+  </main>
+
+  <footer class="footer">
+    <span>© <b class="lingnan">Lingnan University</b></span> ·
+    <span>Risk Atlas · 风险图谱</span> ·
+    <span class="muted">纯静态 · 双链驱动</span>
+  </footer>
+
+  <script src="js/wiki.js"></script>
+  <script>
+    (function () {
+      Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
+      var box = document.getElementById('cfilter');
+      var root = document.getElementById('clist');
+      var data = null;
+      var entryMap = {};
+
+      function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+      // 公司名 → 雇主词条（best-effort 匹配）
+      function buildEntryMap(entries) {
+        entries.filter(function (e) { return e.type === 'employer'; }).forEach(function (e) {
+          var keys = [e.en ? e.en.toLowerCase() : '', e.slug.replace(/-/g, ' ')];
+          entryMap[e.slug] = keys;
+        });
+      }
+      function matchCompany(name) {
+        var n = name.toLowerCase();
+        for (var slug in entryMap) {
+          for (var i = 0; i < entryMap[slug].length; i++) {
+            var k = entryMap[slug][i];
+            if (k && k.length >= 3 && n.indexOf(k) !== -1) return slug;
+          }
+        }
+        return null;
+      }
+      function coLink(name) {
+        var slug = null;
+        var n = name.toLowerCase();
+        if (n.indexOf("willis") !== -1 || n.indexOf("towers watson") !== -1) slug = "wtw";
+        for (var zh in ZH_MAP) { if (name.indexOf(zh) !== -1) { slug = ZH_MAP[zh]; break; } }
+        if (!slug) slug = matchCompany(name);
+        return slug ? '<a class="wikilink" href="' + Wiki.entryHref(slug) + '">' + esc(name) + '</a> <span class="muted">· 词条</span>'
+                    : esc(name);
+      }
+      var ZH_MAP = { '中國太平': 'china-taiping', '中國人壽': 'china-life-overseas', '中國平安': 'ping-an-hk', '中國海外保險': 'china-overseas-ins', '中國再保險': 'china-re', '中銀集團保險': 'boc-group-insurance', '中銀人壽': 'boc-life', '瑞士再保險': 'swiss-re', '通用再保險': 'gen-re', '慕尼黑': 'munich-re', '漢諾威': 'hannover-re', '友邦': 'aia', '美亞': 'aig-hk', '世聯': 'allied-world', '忠意': 'generali', '安達': 'chubb', '萬通': 'yf-life', '大新': 'dah-sing', '周大福': 'ctf-life', '三井住友': 'msig', '損保': 'sompo', '東京海上': 'tokio-marine', 'QBE': 'qbe', '保柏': 'bupa', '藍十字': 'blue-cross', '香港人壽': 'hong-kong-life', '信安': 'principal-hk', '培基': 'peak-re', 'SCOR': 'scor', '立橋': 'well-link-life', '恒安標準': 'heng-an-standard', '亞太保險': 'asia-insurance', '匯豐': 'hsbc-life', '恒生': 'hang-seng-insurance', '安盛': 'axa', '宏利': 'manulife', '保誠': 'prudential', '永明': 'sun-life', '富衛': 'fwd', '保泰': 'bowtie', '蘇黎世': 'zurich', '安聯': 'allianz', '大都會': 'metlife' };
+
+      var TYPE_ZH = { 'General': '一般保险', 'Long Term': '长期（人寿）保险', 'Composite': '综合保险', 'Special Purpose': '特殊目的保险' };
+      function typeZh(t) {
+        var zh = TYPE_ZH[t.replace(/ \(.*\)$/, '')] || t.replace(/ \(.*\)$/, '');
+        if (t.indexOf('(R)') !== -1) zh += ' · 再保险';
+        if (t.indexOf('(C)') !== -1) zh += ' · 专属自保';
+        if (t.indexOf('(F)') !== -1) zh += ' · 非本地';
+        return zh;
+      }
+
+      function render(q) {
+        q = (q || '').trim().toLowerCase();
+        var html = '';
+        var hit = 0;
+
+        // 保险公司（按类型分组）
+        var byType = {};
+        data.insurers.forEach(function (c) {
+          if (q && c.name.toLowerCase().indexOf(q) === -1 && (c.place || '').toLowerCase().indexOf(q) === -1) return;
+          hit++;
+          (byType[c.type] = byType[c.type] || []).push(c);
+        });
+        html += '<section class="cat-section"><h2>授权保险公司 <span class="muted">(' + data.insurers.length + ')</span></h2>';
+        Object.keys(byType).sort().forEach(function (t) {
+          html += '<details class="career-fold" ' + (byType[t].length <= 20 ? 'open' : '') + '><summary>' + esc(typeZh(t)) + ' <span class="muted">(' + byType[t].length + ')</span></summary><table class="co-tbl">';
+          byType[t].forEach(function (c) {
+            html += '<tr><td>' + coLink(c.name) + '<br><span class="muted">' + esc(c.place) + '</span></td>' +
+              (c.site && c.site !== '—' ? '<td><a href="' + esc(c.site) + '" target="_blank" rel="noopener">🌐 官网</a></td>' : '<td></td>') +
+              (c.email ? '<td class="muted">' + esc(c.email) + '</td>' : '<td></td>') + '</tr>';
+          });
+          html += '</table></details>';
+        });
+        html += '</section>';
+
+        // 经纪公司（按规模分层）
+        var byTier = {};
+        data.brokers.forEach(function (b) {
+          if (q && b.en.toLowerCase().indexOf(q) === -1 && (b.zh || '').toLowerCase().indexOf(q) === -1) return;
+          hit++;
+          (byTier[b.tier] = byTier[b.tier] || []).push(b);
+        });
+        var TIER = { 'Tier 1 - 全球顶级': 'Tier 1 · 全球顶级', 'Tier 2 - 区域重要': 'Tier 2 · 区域重要', 'Tier 3 - 香港知名': 'Tier 3 · 香港知名', 'Tier 4 - 一般经纪': 'Tier 4 · 一般经纪' };
+        html += '<section class="cat-section"><h2>保险经纪公司 <span class="muted">(' + data.brokers.length + ')</span></h2>';
+        Object.keys(byTier).sort().forEach(function (t) {
+          html += '<details class="career-fold" ' + (t.indexOf('Tier 1') === 0 ? 'open' : '') + '><summary>' + esc(TIER[t] || t) + ' <span class="muted">(' + byTier[t].length + ')</span></summary><table class="co-tbl">';
+          byTier[t].forEach(function (b) {
+            html += '<tr><td>' + coLink(b.en) + (b.zh && b.zh !== b.en ? '<br><span class="muted">' + esc(b.zh) + '</span>' : '') + '</td>' +
+              '<td class="muted">' + esc(b.size || '') + '</td></tr>';
+          });
+          html += '</table></details>';
+        });
+        html += '</section>';
+
+        root.innerHTML = q ? '<p class="muted">命中 ' + hit + ' 家</p>' + html : html;
+      }
+
+      Promise.all([
+        fetch('data/companies.json').then(function (r) { return r.json(); }),
+        Wiki.load()
+      ]).then(function (rs) {
+        data = rs[0];
+        buildEntryMap(rs[1].entries);
+        render('');
+      }).catch(function (e) {
+        root.innerHTML = '<p class="muted">加载失败：' + esc(e.message) + '</p>';
+      });
+
+      box.addEventListener('input', function () {
+        if (data) render(box.value);
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -16,6 +16,8 @@
       </a>
       <nav class="nav">
         <a href="index.html">首页</a>
+        <a href="weekly.html">周报</a>
+        <a href="catalog.html">课程目录</a>
         <a href="map.html">知识地图</a>
         <a href="categories.html">分类索引</a>
         <div class="lang-switch" id="lang-switch"></div>
@@ -71,7 +73,12 @@
           rows += row('纵深线', trackLink(tr2));
           if (e.courses && e.courses.length) rows += row('相关课程', slugLinks(e.courses, idx));
         } else if (e.type === 'tool') {
+          if (e.kind) rows += row('形态', '<span class="kbadge">' + Wiki.escapeHtml(e.kind) + '</span>');
           if (e.category) rows += row('类别', e.category);
+          if (e.verified) rows += row('验证', '<span class="vbadge">本站实测</span>');
+          if (e.source) rows += row('来源', '<a class="wikilink" href="' + Wiki.escapeHtml(e.source) + '" target="_blank" rel="noopener">' + Wiki.escapeHtml(String(e.source).replace(/^https?:\/\//, '').slice(0, 48)) + '</a>');
+          if (e.official_docs) rows += row('官方文档', '<a class="wikilink" href="' + Wiki.escapeHtml(e.official_docs) + '" target="_blank" rel="noopener">' + Wiki.escapeHtml(String(e.official_docs).replace(/^https?:\/\//, '').slice(0, 48)) + '</a>');
+          if (e.official_download) rows += row('获取方式', '<code>' + Wiki.escapeHtml(e.official_download) + '</code>');
           if (e.usedIn && e.usedIn.length) rows += row('用于课程', slugLinks(e.usedIn, idx));
         } else if (e.type === 'track') {
           if (e.number) rows += row('编号', e.number);
@@ -82,11 +89,54 @@
           var tr3 = Wiki.trackRef(e, idx);
           rows += row('纵深线', trackLink(tr3));
           if (e.pair && idx[e.pair]) rows += row('主课程', '<a class="wikilink" href="' + Wiki.entryHref(e.pair) + '">' + Wiki.escapeHtml(Wiki.tr(idx[e.pair], 'title')) + '</a>');
+        } else if (e.type === 'job') {
+          if (e.en) rows += row('英文', e.en);
+          var tr4 = Wiki.trackRef(e, idx);
+          rows += row('纵深线', trackLink(tr4));
+          if (e.courses && e.courses.length) rows += row('相关课程', slugLinks(e.courses, idx));
+          if (e.credentials && e.credentials.length) rows += row('证书/牌照', slugLinks(e.credentials, idx));
+          if (e.employers && e.employers.length) rows += row('典型雇主', slugLinks(e.employers, idx));
+        } else if (e.type === 'employer') {
+          if (e.en) rows += row('英文', e.en);
+          if (e.category) rows += row('类别', e.category);
+        } else if (e.type === 'channel') {
+          if (e.en) rows += row('英文', e.en);
+          if (e.category) rows += row('类别', e.category);
+          if (e.source) rows += row('入口', '<a class="wikilink" href="' + Wiki.escapeHtml(e.source) + '" target="_blank" rel="noopener">' + Wiki.escapeHtml(String(e.source).replace(/^https?:\/\//, '').slice(0, 48)) + '</a>');
+        } else if (e.type === 'resource') {
+          if (e.en) rows += row('英文', e.en);
+          if (e.category) rows += row('类别', e.category);
+          if (e.source) rows += row('入口', '<a class="wikilink" href="' + Wiki.escapeHtml(e.source) + '" target="_blank" rel="noopener">' + Wiki.escapeHtml(String(e.source).replace(/^https?:\/\//, '').slice(0, 48)) + '</a>');
         }
         return '<div class="infobox"><div class="ib-title">词条信息</div><table>' + rows + '</table></div>';
       }
 
-      function renderEntry(e, entries, idx) {
+      function weeklyBlock(e, wkMap) {
+        var refs = e.weekly_refs;
+        if (!refs || !refs.length) {
+          refs = (e.covered_in_weekly || []).map(function (w) { return { weekly: w, role: 'primary' }; });
+        }
+        if (!refs.length) return '';
+        var items = refs.map(function (r) {
+          var w = wkMap[r.weekly];
+          var label = w ? (w.topic || w.title || r.weekly) : r.weekly;
+          var role = r.role === 'primary'
+            ? '<span class="wrole wrole-primary">深研</span>'
+            : '<span class="wrole wrole-cited">引用</span>';
+          return '<a class="backlink-item" href="weekly.html?week=' + encodeURIComponent(r.weekly) + '">' + role +
+            '<span>' + Wiki.escapeHtml(label) + ' <span class="muted">· ' + Wiki.escapeHtml(r.weekly) + '</span></span></a>';
+        }).join('');
+        return '<div class="block"><h2>RIAA 周报关联</h2><div class="backlink-list">' + items + '</div></div>';
+      }
+
+      function badgeHtml(e) {
+        var b = '';
+        if (e.kind) b += '<span class="kbadge">' + Wiki.escapeHtml(e.kind) + '</span>';
+        if (e.verified) b += '<span class="vbadge" title="本站在 Risk Atlas 探索/萃取流程中实测过">本站实测</span>';
+        return b;
+      }
+
+      function renderEntry(e, entries, idx, wkMap) {
         var back = Wiki.backlinks(entries, e.slug);
         var tr = Wiki.trackRef(e, idx);
         var crumb = '<a href="index.html">首页</a> › <a href="categories.html#type-' + e.type + '">' + Wiki.typeLabel(e.type) + '</a>' +
@@ -98,12 +148,23 @@
         html += '<div class="wiki-main"><article class="article">';
         html += '<h1 class="entry-title">' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</h1>';
         if (e.code || e.en) {
-          html += '<div class="entry-sub">' + [e.code, e.en].filter(Boolean).map(Wiki.escapeHtml).join(' · ') + ' ' + tag(e) + '</div>';
+          html += '<div class="entry-sub">' + [e.code, e.en].filter(Boolean).map(Wiki.escapeHtml).join(' · ') + ' ' + tag(e) + badgeHtml(e) + '</div>';
         } else {
-          html += '<div class="entry-sub">' + tag(e) + '</div>';
+          html += '<div class="entry-sub">' + tag(e) + badgeHtml(e) + '</div>';
         }
-        html += '<div class="entry-body">' + Wiki.renderBody(Wiki.trBody(e), idx) + '</div>';
+        html += '<div class="entry-body">' + Wiki.renderMarkdown(Wiki.trBody(e), idx) + '</div>';
         html += '</article>';
+
+        if (e.modules && e.modules.length) {
+          var mnote = e.modules_note ? '<div class="modules-note">ℹ️ ' + Wiki.escapeHtml(Wiki.tr(e, 'modules_note')) + '</div>' : '';
+          html += '<div class="block"><h2>内容模块</h2>' + mnote + '<div class="backlink-list">' +
+            Wiki.trModules(e).map(function (m) {
+              return '<span class="backlink-item">' + Wiki.escapeHtml(m) + '</span>';
+            }).join('') + '</div></div>';
+        }
+
+        var weeklyHtml = weeklyBlock(e, wkMap);
+        if (weeklyHtml) html += weeklyHtml;
 
         if (back.length) {
           html += '<div class="block"><h2>反向链接</h2><div class="backlink-list">' +
@@ -136,13 +197,19 @@
           }).join('') + '</div>';
       }
 
-      Wiki.load().then(function (data) {
+      Promise.all([
+        Wiki.load(),
+        fetch('data/weekly.json').then(function (r) { return r.json(); }).catch(function () { return { reports: [] }; })
+      ]).then(function (rs) {
+        var data = rs[0], wk = rs[1];
         var entries = data.entries;
         var idx = Wiki.index(entries);
+        var wkMap = {};
+        (wk.reports || []).forEach(function (r) { wkMap[r.slug] = r; });
         if (!slug) { renderLanding(entries, idx); return; }
         var e = idx[slug];
         if (!e) { renderMissing(); return; }
-        renderEntry(e, entries, idx);
+        renderEntry(e, entries, idx, wkMap);
       }).catch(function (err) {
         main.innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(err.message) + '</p>';
       });
