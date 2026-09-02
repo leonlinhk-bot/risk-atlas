@@ -19,7 +19,11 @@ python3 -m http.server 8000
 
 ## 部署
 
-本仓库已配置 GitHub Actions（`.github/workflows/deploy-pages.yml`），push 到 `main` 分支即自动部署到 GitHub Pages。需在仓库 Settings → Pages 将 Source 设为 **GitHub Actions**。
+GitHub Pages 分支直连部署（`Settings → Pages → Source: Deploy from a branch → main / (root)`）。
+
+```bash
+git push origin main   # 即自动上线
+```
 
 ## 页面一览
 
