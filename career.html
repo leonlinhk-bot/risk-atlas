@@ -59,7 +59,6 @@
         return (slugs || []).map(function (s) { return link(s, idx); }).join('、') || '<span class="muted">—</span>';
       }
 
-      var SAL_LABEL = { entry: '起薪', mid: '3–5年', senior: '资深' };
       var SAL_KEY = { entry: 'salary_entry', mid: 'salary_mid', senior: 'salary_senior' };
       var LEVEL_BADGE = { entry: '应届', mid: '3–5年', senior: '资深', all: '全阶段' };
 
@@ -77,43 +76,45 @@
         }).join('') + '</div>';
       }
 
-      // 阶段岗位卡（分档薪资 + 证书 + 典型雇主）
-      function stageJobCard(e, stage, idx) {
-        var sal = e[SAL_KEY[stage]] || '';
-        var creds = (e.credentials || []).map(function (c) { return link(c, idx); }).join('、');
-        var emps = (e.employers || []).slice(0, 4).map(function (s) { return link(s, idx); }).join('、');
-        return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '">' +
-          '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) +
-          (sal ? '<small>' + SAL_LABEL[stage] + '：<b>' + Wiki.escapeHtml(sal) + '</b></small>' : '') +
-          (creds ? '<small class="muted">证书：' + creds + '</small>' : '') +
-          (emps ? '<small class="muted">雇主：' + emps + '</small>' : '') +
-          '</a>';
-      }
-      function resourceCard(e) {
-        return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '">' +
-          '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) +
-          '<small>' + Wiki.escapeHtml(Wiki.tr(e, 'summary')) + '</small>' +
-          '</a>';
-      }
-
-      // 阶段区块
+      // 阶段区块：岗位总览表（一列 = 一个信息维度，按行对齐、可横向滚动）
       function stageSection(stage, jobs, resources, idx) {
-        var cfg = { entry: { id: 'stage-entry', emoji: '🎓', title: '应届生 · 入门路径', resCat: '应届求职准备' },
-                    mid: { id: 'stage-mid', emoji: '📈', title: '进阶者 · 成长路径', resCat: null },
-                    senior: { id: 'stage-senior', emoji: '🏛️', title: '资深者 · 行业判断', resCat: '行业组织与人脉' } }[stage];
+        var cfg = {
+          entry: { id: 'stage-entry', emoji: '🎓', title: '应届生 · 入门路径', resCat: '应届求职准备',
+            salHead: '应届起薪',
+            desc: '适合应届毕业与 0–2 年经验：先选方向，再看薪酬与入门牌照。每行 = 一个岗位，点岗位名可看完整介绍与课程衔接。' },
+          mid: { id: 'stage-mid', emoji: '📈', title: '进阶者 · 成长路径', resCat: null,
+            salHead: '3–5 年月薪',
+            desc: '适合 2–5 年经验：看同一岗位的进阶薪酬与晋升所需证书；想转方向，可对照不同岗位之间的牌照差距。' },
+          senior: { id: 'stage-senior', emoji: '🏛️', title: '资深者 · 行业判断', resCat: '行业组织与人脉',
+            salHead: '资深月薪',
+            desc: '适合 5 年以上经验：资深岗位的薪酬带宽与行业位置；行业冷暖看下方「就业看板」与 RIAA 周报。' }
+        }[stage];
         var jlist = jobs.filter(function (e) { return (e.levels || []).indexOf(stage) !== -1; });
         var rlist = cfg.resCat ? resources.filter(function (r) { return r.category === cfg.resCat; }) : [];
-        var html = '<section class="cat-section" id="' + cfg.id + '"><h2>' + cfg.emoji + ' ' + cfg.title + '</h2>';
-        html += '<h3>相关岗位 · ' + SAL_LABEL[stage] + '薪资</h3><div class="entry-list">' +
-          (jlist.length ? jlist.map(function (e) { return stageJobCard(e, stage, idx); }).join('') : '<p class="muted">暂无</p>') + '</div>';
-        if (rlist.length) {
-          html += '<h3>资源</h3><div class="entry-list">' + rlist.map(resourceCard).join('') + '</div>';
-        }
-        if (stage === 'senior') {
-          html += '<p class="muted">行业趋势看 <a href="weekly.html">RIAA 周报</a>，人才市场冷暖看下方「就业看板」。</p>';
-        }
-        html += '</section>';
-        return html;
+        var head = '<tr><th>岗位</th><th>' + cfg.salHead + '（HKD/月）</th><th>证书 / 牌照</th><th>典型雇主</th></tr>';
+        var body = jlist.length ? jlist.map(function (e) {
+          var credsAll = e.credentials || [];
+          var creds = credsAll.slice(0, 3).map(function (c) { return link(c, idx); }).join('、');
+          if (credsAll.length > 3) creds += ' <span class="muted">等 ' + credsAll.length + ' 项</span>';
+          var emps = (e.employers || []).slice(0, 4).map(function (s) { return link(s, idx); }).join('、');
+          return '<tr><td class="role-name"><a class="wikilink" href="' + Wiki.entryHref(e.slug) + '">' +
+            Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</a>' +
+            (e.en ? '<span class="role-en">' + Wiki.escapeHtml(e.en) + '</span>' : '') + '</td>' +
+            '<td class="role-sal">' + Wiki.escapeHtml(e[SAL_KEY[stage]] || '—') + '</td>' +
+            '<td>' + (creds || '<span class="muted">—</span>') + '</td>' +
+            '<td>' + (emps || '<span class="muted">—</span>') + '</td></tr>';
+        }).join('') : '<tr><td colspan="4" class="muted">本阶段暂无已收录岗位</td></tr>';
+        var res = rlist.length ? '<h3>本阶段资源</h3><div class="stage-res">' +
+          rlist.map(function (r) {
+            return '<a class="chip-link" href="' + Wiki.entryHref(r.slug) + '">' + Wiki.escapeHtml(Wiki.tr(r, 'title')) + '</a>';
+          }).join('') + '</div>' : '';
+        var tip = stage === 'senior' ? '<p class="muted stage-tip">行业趋势看 <a href="weekly.html">RIAA 周报</a>，人才市场冷暖看下方「就业看板」。</p>' : '';
+        return '<section class="cat-section stage-block st-' + stage + '" id="' + cfg.id + '">' +
+          '<h2>' + cfg.emoji + ' ' + cfg.title + '</h2>' +
+          '<p class="stage-desc">' + cfg.desc + '（薪资为月薪 HKD 参考，「佣金」项为提成制）</p>' +
+          '<div class="role-tbl-wrap"><table class="role-tbl">' +
+          '<thead>' + head + '</thead><tbody>' + body + '</tbody></table></div>' +
+          res + tip + '</section>';
       }
 
       // 最新职位 · 直达投递
