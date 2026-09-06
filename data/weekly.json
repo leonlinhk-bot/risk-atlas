@@ -486,6 +486,66 @@
       "frameworks": [
         "rbc"
       ]
+    },
+    {
+      "slug": "w36",
+      "title": "RIAA 周报 · 2026 W36",
+      "course": "rim522",
+      "file": "w36.md",
+      "topic": "保险实务分析（香港与内地保险实务）",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim522",
+          "role": "primary"
+        },
+        {
+          "slug": "rim520",
+          "role": "cited"
+        },
+        {
+          "slug": "rim530",
+          "role": "cited"
+        },
+        {
+          "slug": "rim531",
+          "role": "cited"
+        },
+        {
+          "slug": "rim532",
+          "role": "cited"
+        },
+        {
+          "slug": "rim534",
+          "role": "cited"
+        },
+        {
+          "slug": "rim535",
+          "role": "cited"
+        },
+        {
+          "slug": "rim536",
+          "role": "cited"
+        },
+        {
+          "slug": "rim537",
+          "role": "cited"
+        }
+      ],
+      "concepts": [
+        "monte-carlo",
+        "stress-testing",
+        "duration",
+        "reinsurance",
+        "insurance-linked-securities",
+        "parametric-insurance",
+        "operational-risk",
+        "credit-risk"
+      ],
+      "frameworks": [
+        "three-lines-of-defense",
+        "rbc"
+      ]
     }
   ]
 }
