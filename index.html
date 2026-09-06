@@ -47,15 +47,17 @@
     <section class="about" id="about">
       <h2>关于 Risk Atlas · 风险图谱</h2>
       <p>Risk Atlas 是面向岭南大学「风险与保险管理理学硕士」的开放知识百科——该专业原名 MSc in Risk and Insurance Management（MScRIM），现更名为 MSc in Risk, Insurance and Actuarial Analytics（MScRIAA），实为同一专业，覆盖风险（Risk）、保险（Insurance）与精算分析（Actuarial Analysis）三大领域。</p>
-      <p>这座知识库已从最初的「课程笔记」长成四层结构：<b>① 学习导览</b>——首页 ①→⑥ 渐进路线，从零起步；<b>② 课程与概念</b>——官网十六门课程（RIM520–RIM540，5 必修 + 11 选修）拆解为课程、概念、工具、网站、框架、纵深线、考牌、岗位、雇主、渠道与资源等十一类词条，以双链（[[词条]]）互连成一张可生长的知识网络；<b>③ 行业与工具</b>——「AI 工具箱」已收录近千项实测 AI 工具（精算专业、学习备考、巨灾气候、保险科技、Agent/MCP、RAG 等 40+ 细分分类）+ 每周一篇 RIAA 周报；<b>④ 出路与全景</b>——就业情报（岗位 × 考牌 × 雇主 × 渠道 × 每日职位）与机构全景（162 家授权保险人 + 810 家经纪行）。所有词条最终汇入「知识宇宙」可视化图谱；词条总数与分类统计见页首，随内容持续更新。</p>
+      <p>这座知识库已从最初的「课程笔记」长成四层结构：<b>① 学习导览</b>——首页 ①→⑥ 渐进路线，从零起步；<b>② 课程与概念</b>——官网十六门课程（RIM520–RIM540，5 必修 + 11 选修）拆解为课程、概念、工具、框架、纵深线、考牌、岗位、雇主、渠道与资源等十类词条，以双链（[[词条]]）互连成一张可生长的知识网络；<b>③ 行业与工具</b>——「AI 工具箱」已收录近千项实测 AI 工具（精算专业、学习备考、巨灾气候、保险科技、Agent/MCP、RAG 等 40+ 细分分类）+ 每周一篇 RIAA 周报；<b>④ 出路与全景</b>——就业情报（岗位 × 考牌 × 雇主 × 渠道 × 每日职位）与机构全景（162 家授权保险人 + 810 家经纪行）。所有词条最终汇入「知识宇宙」可视化图谱；词条总数与分类统计见页首，随内容持续更新。</p>
       <p class="en">Risk Atlas — an open knowledge graph for Lingnan University's MSc in Risk, Insurance and Actuarial Analytics (MScRIAA), formerly MSc in Risk and Insurance Management (MScRIM), spanning Risk, Insurance and Actuarial Analysis.</p>
     </section>
 
     <section class="cat-grid" id="cat-grid"></section>
 
-    <section class="popular" id="popular">
-      <h2>热门词条</h2>
-      <div class="popular-list" id="popular"></div>
+    <section class="fresh">
+      <h2 class="guide-head">🆕 每周上新 · 更新合集</h2>
+      <p class="guide-sub">本站内容随 RIAA 周报每周上新：课程深研 + 行业追踪，AI 工具箱与就业数据同步跟进。最近的一期在最上面，点标题直接读。</p>
+      <div class="fr-list" id="fresh-list"><p class="muted">加载中…</p></div>
+      <p class="fr-more"><span class="muted">更多入口：</span><a href="weekly.html">全部周报</a><a href="career.html">就业情报（职位每日更新）</a><a href="map.html">知识宇宙</a><a href="categories.html">分类索引</a></p>
     </section>
   </main>
 
@@ -85,8 +87,7 @@
           '<span><b>' + state.entries.length + '</b> 词条</span>' +
           '<span><b>' + c.course + '</b> 课程</span>' +
           '<span><b>' + c.concept + '</b> 概念</span>' +
-          '<span><b>' + c.tool + '</b> 工具</span>' +
-          '<span><b>' + c.website + '</b> 网站</span>' +
+          '<span><b>' + (c.tool + (c.website || 0)) + '</b> 工具</span>' +
           '<span><b>' + c.framework + '</b> 框架</span>' +
           '<span><b>' + c.credential + '</b> 考牌</span>' +
           '<span><b>' + c.job + '</b> 岗位</span>' +
@@ -100,8 +101,7 @@
         var cats = [
           { type: 'course', label: '课程', desc: 'RIM520–RIM540 十六门课程（5 必修 + 11 选修）' },
           { type: 'concept', label: '概念', desc: '久期、信用利差、VaR 等核心概念' },
-          { type: 'tool', label: '工具', desc: 'DeepSeek、MinerU、Pagefind 等 AI 工具（AI 工具箱）' },
-          { type: 'website', label: '网站', desc: 'VHIS、EIOPA 统计、GDACS 等经实测收录的行业/数据网站' },
+          { type: 'tool', label: '工具', desc: 'DeepSeek、MinerU、Pagefind 等 AI 工具与实测网站（AI 工具箱）' },
           { type: 'framework', label: '框架', desc: 'ISO 31000、三道防线、RCTOA 等' },
           { type: 'credential', label: '考牌', desc: 'IIQE 卷 1/2/3/5、MPFE、SOA/CAS/IFoA、FRM/CFA' },
           { type: 'job', label: '岗位', desc: '精算、核保、风控、数据等职业角色' },
@@ -118,25 +118,39 @@
         }).join('');
       }
 
-      function renderPopular() {
-        var deg = Wiki.inDegreeMap(state.entries);
-        var ranked = state.entries.slice()
-          .filter(function (e) { return e.type !== 'track'; })
-          .sort(function (a, b) { return (deg[b.slug] || 0) - (deg[a.slug] || 0); })
-          .slice(0, 9);
-        var el = document.getElementById('popular');
-        el.innerHTML = ranked.map(function (e) {
-          return '<a class="pop-item" href="' + Wiki.entryHref(e.slug) + '">' +
-            '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) +
-            '<small>' + Wiki.escapeHtml(e.summary || '') + '</small></a>';
-        }).join('');
+      /* 每周上新 · 更新合集：按 wNN 从新到旧排列周报时间线 */
+      function weekKey(r) {
+        var m = /^w(\d+)([a-z]?)$/i.exec(r.slug || '');
+        return m ? parseInt(m[1], 10) * 26 + (m[2] ? m[2].charCodeAt(0) - 96 : 0) : 0;
+      }
+      function freshRow(r, idx, hot) {
+        var prim = (r.courses || []).filter(function (c) { return c.role === 'primary'; })[0];
+        var ce = prim && idx[prim.slug] ? idx[prim.slug] : null;
+        var cLink = ce ? '<a class="wikilink" href="' + Wiki.entryHref(ce.slug) + '">' +
+          Wiki.escapeHtml(ce.code || String(ce.slug).toUpperCase()) + '</a>' : '';
+        var meta = [r.title || '', cLink ? '深研 ' + cLink : ''].filter(Boolean).join(' · ');
+        return '<div class="fr-row' + (hot ? ' fr-hot' : '') + '">' +
+          '<span class="fr-wk">' + Wiki.escapeHtml(String(r.slug || '').toUpperCase()) + '</span>' +
+          '<div class="fr-main"><b><a class="wikilink" href="weekly.html?week=' + encodeURIComponent(r.slug) + '">' +
+          Wiki.escapeHtml(r.topic || r.title || r.slug) + '</a></b>' +
+          '<small class="muted">' + meta + '</small></div>' +
+          '<a class="fr-go" href="weekly.html?week=' + encodeURIComponent(r.slug) + '">读这篇 →</a></div>';
+      }
+      function renderFresh(weekly) {
+        var el = document.getElementById('fresh-list');
+        if (!el) return;
+        var reports = weekly && weekly.reports ? weekly.reports.slice() : [];
+        reports.sort(function (a, b) { return weekKey(b) - weekKey(a); });
+        el.innerHTML = reports.length
+          ? reports.map(function (r, i) { return freshRow(r, state.idx, i === 0); }).join('')
+          : '<p class="muted">周报尚未发布；可先逛上方导览或 <a href="weekly.html">周报页</a>。</p>';
       }
 
       /* 新手指引 · 学习导览（步骤 ①→⑥，词条胶囊实时从 entries 取标题） */
       var START_CONCEPTS = ['value-at-risk', 'duration', 'credit-risk', 'operational-risk', 'reinsurance', 'risk-appetite'];
       var TRACK_SLUGS = ['track-1', 'track-2', 'track-3', 'track-4', 'track-5'];
       var GUIDE = [
-        { t: '先花一分钟，认识这座库', d: '它把 MScRIAA 拆成课程、概念、工具、网站、框架、考牌等十一类词条，用 [[双链]] 相连——点任意蓝色词条即可跳转。',
+        { t: '先花一分钟，认识这座库', d: '它把 MScRIAA 拆成课程、概念、工具、框架、考牌等十类词条，用 [[双链]] 相连——点任意蓝色词条即可跳转。',
           links: [{ label: '关于这座库', href: '#about' }, { label: '分类索引', href: 'categories.html' }] },
         { t: '五条纵深线，选一条逛', d: '每条线 = 一条由浅入深的阅读路线，各对应一个专业方向；点进去能看到它串联的课程与概念。',
           chips: TRACK_SLUGS },
@@ -175,12 +189,16 @@
         }).join('');
       }
 
-      Wiki.load().then(function (entries) {
-        state.entries = entries.entries;
+      Promise.all([
+        Wiki.load(),
+        fetch('data/weekly.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+      ]).then(function (rs) {
+        var data = rs[0];
+        state.entries = data.entries;
         state.idx = Wiki.index(state.entries);
         renderStats();
         renderCatGrid();
-        renderPopular();
+        renderFresh(rs[1]);
         renderGuide();
         Search.attach(
           document.getElementById('search-input'),

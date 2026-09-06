@@ -29,7 +29,7 @@
 
   <main class="container">
     <h1 class="page-title">分类索引</h1>
-    <p class="page-sub">按十一类词条浏览全部内容：课程 / 概念 / 工具 / 网站 / 框架 / 纵深线 / 考牌 / 岗位 / 雇主 / 渠道 / 资源。</p>
+    <p class="page-sub">按十类词条浏览全部内容：课程 / 概念 / 工具 / 框架 / 纵深线 / 考牌 / 岗位 / 雇主 / 渠道 / 资源（实测网站并入「工具·AI 工具箱」）。</p>
     <div id="sections"><p class="muted">加载中…</p></div>
   </main>
 
@@ -44,8 +44,8 @@
   <script>
     (function () {
       Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
-      var ORDER = ['course', 'concept', 'tool', 'website', 'framework', 'track', 'credential', 'job', 'employer', 'channel', 'resource'];
-      var LABEL = { course: '课程', concept: '概念', tool: '工具', website: '网站', framework: '框架', track: '纵深线', credential: '考牌', job: '岗位', employer: '雇主', channel: '渠道', resource: '资源' };
+      var ORDER = ['course', 'concept', 'tool', 'framework', 'track', 'credential', 'job', 'employer', 'channel', 'resource'];
+      var LABEL = { course: '课程', concept: '概念', tool: '工具', framework: '框架', track: '纵深线', credential: '考牌', job: '岗位', employer: '雇主', channel: '渠道', resource: '资源' };
 
       function tag(d) {
         return '<span class="tag ' + Wiki.tagClass(d.type) + '">' + Wiki.typeLabel(d.type) + '</span>';
@@ -78,7 +78,7 @@
         entries.forEach(function (e) { (groups[e.type] = groups[e.type] || []).push(e); });
         var html = '';
         ORDER.forEach(function (t) {
-          var list = groups[t] || [];
+          var list = (t === 'tool') ? (groups['tool'] || []).concat(groups['website'] || []) : (groups[t] || []);
           if (!list.length) return;
           html += '<section class="cat-section" id="type-' + t + '">';
           html += '<h2>' + LABEL[t] + ' <span class="muted">(' + list.length + ')</span></h2>';

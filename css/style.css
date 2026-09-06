@@ -381,6 +381,27 @@ a:hover { text-decoration: underline; }
 @media (max-width: 900px) { .gd-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .gd-grid { grid-template-columns: 1fr; } }
 
+/* ---------- 首页 · 每周上新 / 更新合集 ---------- */
+.fresh { margin-bottom: 26px; }
+.fr-list { display: flex; flex-direction: column; }
+.fr-row { display: flex; align-items: center; gap: 14px; padding: 11px 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 8px; }
+.fr-row:hover { border-color: var(--gold); box-shadow: 0 3px 10px rgba(10, 31, 61, .05); }
+.fr-hot { border-color: #f0d48a; background: #fffbea; }
+.fr-wk { flex: 0 0 58px; text-align: center; font-weight: 800; font-size: 12.5px; color: #fff; background: #0a1f3d; border-radius: 8px; padding: 4px 0; letter-spacing: .3px; }
+.fr-hot .fr-wk { background: #c9a227; color: #3b2f00; }
+.fr-main { flex: 1 1 auto; min-width: 0; }
+.fr-main b { font-size: 15px; line-height: 1.5; }
+.fr-main small { display: block; margin-top: 2px; }
+.fr-go { flex: 0 0 auto; font-size: 12.5px; font-weight: 700; color: var(--gold-dark); white-space: nowrap; }
+.fr-more { margin: 10px 0 2px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.fr-more a { padding: 4px 12px; border-radius: 20px; background: #f2f5f9; color: #475569; font-size: 12.5px; font-weight: 600; }
+.fr-more a:hover { background: #0a1f3d; color: #fff; text-decoration: none; }
+@media (max-width: 560px) {
+  .fr-row { flex-wrap: wrap; gap: 6px 10px; }
+  .fr-wk { flex-basis: 54px; }
+  .fr-go { margin-left: 68px; }
+}
+
 /* ---------- 专业介绍 ---------- */
 .about {
   background: var(--paper);
