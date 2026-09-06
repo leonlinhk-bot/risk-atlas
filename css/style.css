@@ -452,3 +452,29 @@ a:hover { text-decoration: underline; }
 .crumb { color: var(--muted); font-size: 13.5px; margin-bottom: 10px; }
 .crumb a { color: var(--blue-600); }
 .muted { color: var(--muted); }
+
+/* ---------- 访问提示（大陆 ICP 提示说明条） ---------- */
+.visit-note {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  background: #fff8e6; color: #5b4a12;
+  border-bottom: 1px solid #f0d48a;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .10);
+  font-size: 13.5px; line-height: 1.65;
+}
+.vn-inner {
+  position: relative; max-width: 1080px; margin: 0 auto;
+  padding: 9px 54px 9px 16px;
+}
+.vn-inner b { color: #7a5c00; }
+.vn-inner p { margin: 3px 0 0; }
+.vn-en { color: #8a7a45; font-size: 12.5px; }
+.vn-close {
+  position: absolute; top: 50%; right: 12px; transform: translateY(-50%);
+  width: 28px; height: 28px; border-radius: 50%; border: none;
+  background: transparent; color: #8a6d1a; font-size: 15px; cursor: pointer; line-height: 1;
+}
+.vn-close:hover { background: #f3e2b5; }
+@media (max-width: 720px) {
+  .visit-note { font-size: 12.5px; }
+  .vn-inner { padding-top: 8px; padding-bottom: 8px; }
+}
