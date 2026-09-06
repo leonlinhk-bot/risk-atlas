@@ -100,7 +100,7 @@
         } else if (e.type === 'employer') {
           if (e.en) rows += row('英文', e.en);
           if (e.category) rows += row('类别', e.category);
-        } else if (e.type === 'channel') {
+        } else if (e.type === 'channel' || e.type === 'website') {
           if (e.en) rows += row('英文', e.en);
           if (e.category) rows += row('类别', e.category);
           if (e.source) rows += row('入口', '<a class="wikilink" href="' + Wiki.escapeHtml(e.source) + '" target="_blank" rel="noopener">' + Wiki.escapeHtml(String(e.source).replace(/^https?:\/\//, '').slice(0, 48)) + '</a>');

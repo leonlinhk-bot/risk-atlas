@@ -56,7 +56,7 @@ curl -s https://risk-atlas.wiki/data/entries.json | python3 -c "import sys,json;
 
 - 语言惯例：简体中文为主，`*_en` / `*_hk` 字段同步维护；新增词条暂时缺 en/hk 可用简中暂代，但别留空。
 - 正文双链 `[[slug]]` 尽量指向**已存在**的词条（校验脚本会对悬空链接发警告）。
-- 词条类型与首页统计一致：`course 课程 / concept 概念 / tool 工具(AI 工具箱) / framework 框架 / track 纵深线 / credential 考牌 / job 岗位 / employer 雇主 / channel 渠道 / resource 资源`。
+- 词条类型与首页统计一致（共十一类）：`course 课程 / concept 概念 / tool 工具(AI 工具箱) / website 网站(实测行业/数据/学习网站) / framework 框架 / track 纵深线 / credential 考牌 / job 岗位 / employer 雇主 / channel 渠道 / resource 资源`。
 
 ## 禁区（违反会弄坏线上或仓库）
 

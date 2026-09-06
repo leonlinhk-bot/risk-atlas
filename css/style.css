@@ -253,6 +253,7 @@ a:hover { text-decoration: underline; }
 .tag-employer { background: #dbe7fb; color: #1d4ed8; }
 .tag-channel  { background: #eadff2; color: #6b3f92; }
 .tag-resource { background: #d3f0ea; color: #0d748a; }
+.tag-website { background: #e0f2fe; color: #0369a1; }
 
 /* 最新职位 · 模块化卡片 */
 .posting { display: flex; flex-direction: column; gap: 8px; }

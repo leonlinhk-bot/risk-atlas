@@ -12,9 +12,10 @@
     job: '#b45309',
     employer: '#1d4ed8',
     channel: '#7c3aed',
-    resource: '#0d9488'
+    resource: '#0d9488',
+    website: '#0ea5e9'
   };
-  var SIZE = { track: 46, course: 32, concept: 22, tool: 22, framework: 24, credential: 26, job: 24, employer: 24, channel: 22, resource: 22 };
+  var SIZE = { track: 46, course: 32, concept: 22, tool: 22, framework: 24, credential: 26, job: 24, employer: 24, channel: 22, resource: 22, website: 22 };
   var KIND_SYMBOL = { skill: 'circle', tool: 'circle', mcp: 'rect', website: 'triangle', agent: 'diamond', model: 'diamond' };
 
   function buildGraph(entries, idx) {
@@ -61,8 +62,8 @@
     return { nodes: nodes, links: links };
   }
 
-  var CATS = ['course', 'concept', 'tool', 'framework', 'track', 'credential', 'job', 'employer', 'channel', 'resource'];
-  var CAT_NAMES = ['课程', '概念', '工具', '框架', '纵深线', '考牌', '岗位', '雇主', '渠道', '资源'];
+  var CATS = ['course', 'concept', 'tool', 'website', 'framework', 'track', 'credential', 'job', 'employer', 'channel', 'resource'];
+  var CAT_NAMES = ['课程', '概念', '工具', '网站', '框架', '纵深线', '考牌', '岗位', '雇主', '渠道', '资源'];
   function catIndex(t) { var i = CATS.indexOf(t); return i === -1 ? 0 : i; }
 
   function render(entries, container) {

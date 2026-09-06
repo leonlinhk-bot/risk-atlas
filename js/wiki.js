@@ -14,7 +14,8 @@
     job: '岗位',
     employer: '雇主',
     channel: '渠道',
-    resource: '资源'
+    resource: '资源',
+    website: '网站'
   };
 
   var TYPE_TAG_CLASS = {
@@ -27,7 +28,8 @@
     job: 'tag-job',
     employer: 'tag-employer',
     channel: 'tag-channel',
-    resource: 'tag-resource'
+    resource: 'tag-resource',
+    website: 'tag-website'
   };
 
   function fetchJSON(url) {
