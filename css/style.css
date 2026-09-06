@@ -361,6 +361,25 @@ a:hover { text-decoration: underline; }
 .hero .stats { margin-top: 18px; display: flex; gap: 22px; flex-wrap: wrap; opacity: .92; font-size: 14px; }
 .hero .stats b { color: var(--gold-light); font-size: 18px; }
 
+/* ---------- 首页 · 新手指引 / 学习导览 ---------- */
+.guide { margin: 0 0 26px; }
+.guide-head { font-family: var(--serif); color: var(--blue-900); font-size: 21px; border-left: 4px solid var(--gold); padding-left: 10px; margin: 0 0 6px; }
+.guide-sub { color: var(--muted); font-size: 13.5px; line-height: 1.7; margin: 0 0 14px; max-width: 860px; }
+.gd-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.gd-step { display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 14px 15px 13px; transition: box-shadow .15s, border-color .15s; }
+.gd-step:hover { border-color: var(--gold); box-shadow: 0 4px 14px rgba(10,31,61,.06); }
+.gd-top { display: flex; align-items: center; gap: 9px; margin-bottom: 7px; }
+.gd-num { flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%; background: linear-gradient(135deg, #1e3a5f, #0a1f3d); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 12.5px; font-weight: 800; }
+.gd-top b { color: var(--blue-800); font-size: 15px; line-height: 1.35; }
+.gd-step p { margin: 0 0 11px; color: #5b6b82; font-size: 13px; line-height: 1.65; }
+.gd-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; align-content: flex-start; }
+.gd-links .chip-link { white-space: normal; line-height: 1.5; }
+.gd-links .chip-track { background: #fbe0d6; border-color: #f3c9b4; color: #b4451c; }
+.gd-go { background: #0a1f3d; border-color: #0a1f3d; color: #fff; }
+.gd-go:hover { background: #14356a; border-color: #14356a; text-decoration: none; }
+@media (max-width: 900px) { .gd-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .gd-grid { grid-template-columns: 1fr; } }
+
 /* ---------- 专业介绍 ---------- */
 .about {
   background: var(--paper);

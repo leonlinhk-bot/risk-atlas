@@ -20,7 +20,7 @@
         <a href="catalog.html">课程目录</a>
         <a href="career.html">就业情报</a>
         <a href="companies.html">机构全景</a>
-        <a href="map.html">知识地图</a>
+        <a href="map.html">知识宇宙</a>
         <a href="categories.html">分类索引</a>
         <div class="lang-switch" id="lang-switch"></div>
       </nav>
@@ -30,7 +30,7 @@
   <main class="container">
     <section class="hero">
       <h1>一个可生长的知识百科</h1>
-      <p>以双链（[[词条]]）为骨架，把 MSc RIM 的十门课程拆解成课程、概念、工具、框架与纵深线相互咬合的知识网络，服务「AI 赋能学习」。</p>
+      <p>以双链（[[词条]]）为骨架，把 MScRIAA 的官网十六门课程（5 必修 + 11 选修）拆解成课程、概念、工具、框架与纵深线相互咬合的知识网络，服务「AI 赋能学习」。信息很多？从下方「新手指引」出发，一步步逛。</p>
       <div class="searchbox">
         <input id="search-input" type="search" placeholder="搜索词条：如 久期、VaR、RIM537、DeepSeek…" autocomplete="off" />
         <div id="search-results" class="search-results"></div>
@@ -38,7 +38,13 @@
       <div class="stats" id="stats"></div>
     </section>
 
-    <section class="about">
+    <section class="guide">
+      <h2 class="guide-head">🚀 新手指引 · 学习导览</h2>
+      <p class="guide-sub">本库内容很密，不需要一次读完。跟着 ① → ⑥ 走：先懂全貌，再进细节，把风险、保险与精算一点点装进脑子里——每一步都有去处。</p>
+      <div class="gd-grid" id="guide"></div>
+    </section>
+
+    <section class="about" id="about">
       <h2>关于 Risk Atlas · 风险图谱</h2>
       <p>Risk Atlas 是面向岭南大学「风险与保险管理理学硕士」的开放知识百科——该专业原名 MSc in Risk and Insurance Management（MScRIM），现更名为 MSc in Risk, Insurance and Actuarial Analytics（MScRIAA），实为同一专业，覆盖风险（Risk）、保险（Insurance）与精算分析（Actuarial Analysis）三大领域。</p>
       <p>岭南大学 MScRIAA（原 MScRIM）课程聚焦风险管理、保险市场、精算定价与数据分析，培养能够在保险与金融机构从事风险识别、量化建模、产品设计与财富架构的专业人才。本项目把官网十六门课程（RIM520–RIM540，5 必修 + 11 选修）拆解为课程、概念、工具、框架、纵深线与考牌六类词条，并以双链（[[词条]]）连接成一张可生长的知识网络，服务「AI 赋能学习」。工具类词条已扩展为「AI 工具箱」：skill / 工具 / agent / MCP / 网站等 16 个分类的 AI 工具合辑，经本站验证（✅ 实测）后收录，供 RIAA 学人直接拿来使用。</p>
@@ -47,7 +53,7 @@
 
     <section class="cat-grid" id="cat-grid"></section>
 
-    <section class="popular">
+    <section class="popular" id="popular">
       <h2>热门词条</h2>
       <div class="popular-list" id="popular"></div>
     </section>
@@ -123,12 +129,56 @@
         }).join('');
       }
 
+      /* 新手指引 · 学习导览（步骤 ①→⑥，词条胶囊实时从 entries 取标题） */
+      var START_CONCEPTS = ['value-at-risk', 'duration', 'credit-risk', 'operational-risk', 'reinsurance', 'risk-appetite'];
+      var TRACK_SLUGS = ['track-1', 'track-2', 'track-3', 'track-4', 'track-5'];
+      var GUIDE = [
+        { t: '先花一分钟，认识这座库', d: '它把 MScRIAA 拆成课程、概念、工具、框架、考牌等十类词条，用 [[双链]] 相连——点任意蓝色词条即可跳转。',
+          links: [{ label: '关于这座库', href: '#about' }, { label: '分类索引', href: 'categories.html' }] },
+        { t: '五条纵深线，选一条逛', d: '每条线 = 一条由浅入深的阅读路线，各对应一个专业方向；点进去能看到它串联的课程与概念。',
+          chips: TRACK_SLUGS },
+        { t: '从 6 个高频概念起步', d: '先读最常被引用的基础概念；正文里的双链会领着你一步步走得更远。',
+          chips: START_CONCEPTS },
+        { t: '每周一篇周报，跟着行业走', d: '把课本概念放回真实市场：利率、再保、AI 落地……每周短小一篇，读得动、跟得上。',
+          links: [{ label: 'RIAA 周报', href: 'weekly.html' }] },
+        { t: '动手时，来 AI 工具箱', d: '做报告、读研报、跑分析——按任务找经过实测的工具，拿来即用。',
+          links: [{ label: 'AI 工具箱 · 工具', href: 'categories.html#type-tool' }] },
+        { t: '最后，看看这条路通向哪', d: '课程 → 岗位 → 雇主 → 投递，配上考牌与薪酬参考，把知识落成职业路径。',
+          links: [{ label: '就业情报', href: 'career.html' }, { label: '证书与牌照', href: 'career.html#credentials' }] }
+      ];
+
+      function renderGuide() {
+        var el = document.getElementById('guide');
+        if (!el) return;
+        el.innerHTML = GUIDE.map(function (g, i) {
+          var links = '';
+          if (g.chips) {
+            links += g.chips.map(function (slug) {
+              var e = state.idx[slug];
+              if (!e) return '';
+              var cls = e.type === 'track' ? ' chip-track' : '';
+              var pre = e.type === 'track' ? (e.number || '') + ' ' : '';
+              return '<a class="chip-link' + cls + '" href="' + Wiki.entryHref(slug) + '">' + pre + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</a>';
+            }).join('');
+          }
+          links += (g.links || []).map(function (l) {
+            return '<a class="chip-link gd-go" href="' + l.href + '">' + Wiki.escapeHtml(l.label) + '</a>';
+          }).join('');
+          if (!links) links = '<span class="muted">整理中…</span>';
+          return '<div class="gd-step">' +
+            '<div class="gd-top"><span class="gd-num">' + (i + 1) + '</span><b>' + Wiki.escapeHtml(g.t) + '</b></div>' +
+            '<p>' + Wiki.escapeHtml(g.d) + '</p>' +
+            '<div class="gd-links">' + links + '</div></div>';
+        }).join('');
+      }
+
       Wiki.load().then(function (entries) {
         state.entries = entries.entries;
         state.idx = Wiki.index(state.entries);
         renderStats();
         renderCatGrid();
         renderPopular();
+        renderGuide();
         Search.attach(
           document.getElementById('search-input'),
           document.getElementById('search-results'),

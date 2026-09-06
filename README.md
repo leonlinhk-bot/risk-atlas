@@ -48,4 +48,4 @@ git add data/entries.json && git commit -m "词条: …" && git push origin main
 | career.html | 就业情报（职业趋势 / 岗位 / 招聘渠道） |
 | companies.html | 机构全景（保险公司与经纪行） |
 | weekly.html | 周报（data/reports/） |
-| map.html | 知识地图 |
+| map.html | 知识宇宙 |
