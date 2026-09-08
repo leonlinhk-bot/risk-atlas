@@ -20900,7 +20900,7 @@
     },
     {
       "slug": "actuarialdatascience",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "学习资源",
       "title": "Actuarial Data Science (网站)",
@@ -22120,7 +22120,7 @@
     },
     {
       "slug": "oldinsurancemaps",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "数据资源",
       "title": "OldInsuranceMaps",
@@ -23640,7 +23640,7 @@
     },
     {
       "slug": "gdacs",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "数据资源",
       "title": "GDACS（全球灾害预警协调系统）",
@@ -23720,7 +23720,7 @@
     },
     {
       "slug": "vhis-standard-premium",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "数据资源",
       "title": "VHIS 自愿医保标准保费（HK 数据）",
@@ -23740,7 +23740,7 @@
     },
     {
       "slug": "mpf-fund-platform",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "数据资源",
       "title": "MPF Fund Platform（积金局基金平台）",
@@ -23760,7 +23760,7 @@
     },
     {
       "slug": "tii-taiwan-insurance",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "数据资源",
       "title": "台湾保险事业发展中心（TII）",
@@ -23780,7 +23780,7 @@
     },
     {
       "slug": "irdai-market-statistics",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "数据资源",
       "title": "IRDAI 印度保险市场数据",
@@ -23800,7 +23800,7 @@
     },
     {
       "slug": "eiopa-insurance-statistics",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "数据资源",
       "title": "EIOPA 欧洲保险统计",
@@ -23820,7 +23820,7 @@
     },
     {
       "slug": "apra-insurance-statistics",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "数据资源",
       "title": "APRA 澳洲保险统计",
@@ -23840,7 +23840,7 @@
     },
     {
       "slug": "fss-korea-insurance",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "数据资源",
       "title": "FSS 韩国保险统计",
@@ -23860,7 +23860,7 @@
     },
     {
       "slug": "osfi-canada-data",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "数据资源",
       "title": "OSFI 加拿大金融数据（含保险）",
@@ -24140,7 +24140,7 @@
     },
     {
       "slug": "actuarial-open-book",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "学习资源",
       "title": "Actuarial Open Source Book（开源精算教材）",
@@ -24160,7 +24160,7 @@
     },
     {
       "slug": "cas-research-tools",
-      "type": "website",
+      "type": "tool",
       "kind": "website",
       "category": "学习资源",
       "title": "CAS Research Resources（产险精算工具库）",
