@@ -24257,6 +24257,54 @@
       "summary_hk": "CAS 官方研究項目的精算 AI agent（hugolatendresse/aria，2026 活躍）：AI for Reserving/Indications/Analysis——能做精算工作的編碼 agent",
       "body_en": "ARIA (hugolatendresse/aria, active 2026-08) is the actuarial AI agent listed in the official CAS research-papers directory (casact/research-papers) — 'AI for Reserving, Indications and Analysis': it designs and empirically evaluates an actuarial coding agent (an agent doing reserving/indications/analysis actuarial work), with a companion paper and the actuarial-agent-evals test harness. For RIAA: the official-research representative of actuarial coding agents (CAS-supported, in the same list as [[team-analyst]] (CAS Team Analyst tool) and [[llm-claims-analysis]] (CAS LLM claims analysis)) — a window into the frontier of actuary-AI collaboration (agents taking over coding/analysis with actuary oversight) and CAS's official position on agentified actuarial work.",
       "body_hk": "ARIA（hugolatendresse/aria，2026-08 活躍）是 CAS 研究論文官方目錄（casact/research-papers）列出的精算 AI agent——'AI for Reserving, Indications and Analysis'：設計並實證評估精算編碼 agent，配套論文與 actuarial-agent-evals 測試框架。對 RIAA：精算領域 coding agent 的官方研究代表（CAS 支持，與 [[team-analyst]]（CAS Team Analyst 工具）、[[llm-claims-analysis]]（CAS LLM 理賠分析）同列）——理解精算師-AI 協作（agent 承擔編碼/分析、精算師監督）的前沿形態。"
+    },
+    {
+      "slug": "price-forbes",
+      "type": "employer",
+      "title": "Price Forbes",
+      "title_en": "Price Forbes",
+      "en": "Price Forbes",
+      "category": "保险经纪",
+      "site": "https://www.priceforbes.com/",
+      "summary": "Ardonagh 集团旗下全球特殊风险与批发保险经纪，香港为亚太核心枢纽之一，近年随亚洲扩张持续增员。",
+      "summary_en": "Ardonagh Group's global special-risks / wholesale broker; Hong Kong is a key APAC hub.",
+      "body": "Price Forbes 是 Ardonagh 集团旗下特殊风险与批发经纪行，香港主体 Price Forbes Hong Kong Limited 面向企业/特殊风险与批发市场（财险、责任、金融险、海事、能源，衔接伦敦 Lloyd's 市场）。2025–26 集团以新加坡 + 香港为双枢纽扩编亚洲团队，并投资内地经纪 Sino Insurance。\n\n## 招聘方向\n经纪助理/顾问、承保与（再）保险分析、理赔客户服务、运营与合规——分析与数据岗对精算/风控背景开放（[[insurance-broker]]、[[underwriter]]）。",
+      "title_hk": "Price Forbes",
+      "summary_hk": "Ardonagh 集團旗下全球特殊風險與批發保險經紀，香港為亞太核心樞紐之一，近年隨亞洲擴張持續增員。",
+      "body_en": "Price Forbes is Ardonagh Group's specialty and wholesale broker; its Hong Kong entity, Price Forbes Hong Kong Limited, serves corporate and special risks (P&C, liability, financial lines, marine, energy) linked to the London Lloyd's market. The group is expanding its Asia team on Singapore + Hong Kong hubs and has invested in mainland broker Sino Insurance.\n\n## Careers\nBroking assistants/consultants, underwriting and (re)insurance analysis, claims and client service, operations and compliance — analytical/data roles are open to actuarial and risk backgrounds ([[insurance-broker]], [[underwriter]]).",
+      "body_hk": "Price Forbes 是 Ardonagh 集團旗下特殊風險與批發經紀行，香港主體 Price Forbes Hong Kong Limited 面向企業／特殊風險與批發市場（財險、責任、金融險、海事、能源，銜接倫敦 Lloyd's 市場）。2025–26 集團以新加坡＋香港為雙樞紐擴編亞洲團隊，並投資內地經紀 Sino Insurance。\n\n## 招聘方向\n經紀助理／顧問、承保與（再）保險分析、理賠客戶服務、營運與合規——分析與數據崗對精算／風控背景開放（[[insurance-broker]]、[[underwriter]]）。"
+    },
+    {
+      "slug": "ccw-global",
+      "type": "employer",
+      "title": "CCW Global",
+      "title_en": "CCW Global",
+      "en": "CCW Global",
+      "category": "保险经纪",
+      "site": "https://hk.ccw-global.com/",
+      "summary": "持香港保监局保险经纪牌照（FB1643）的国际保险经纪，香港办公室专注个人/企业医疗健康与一般保险经纪及员工福利，持续在港招聘。",
+      "summary_en": "IA-licensed international insurance broker (FB1643) in HK, focused on health & general insurance broking.",
+      "body": "CCW Global Limited 为持香港保监局牌照（FB1643）的国际保险经纪，香港办公室为在港及跨境客户提供医疗健康/人寿/一般保险的多公司方案比较、经纪服务与员工福利安排。\n\n## 招聘方向\n保险经纪/顾问、健康险核保支持、理赔与客户服务、数据/运营分析（[[insurance-broker]]、[[insurance-advisor]]）。",
+      "title_hk": "CCW Global",
+      "summary_hk": "持香港保監局保險經紀牌照（FB1643）的國際保險經紀，香港辦公室專注個人／企業醫療健康與一般保險經紀及員工福利，持續在港招聘。",
+      "body_en": "CCW Global Limited is an international insurance broker licensed by the Hong Kong Insurance Authority (FB1643). Its Hong Kong office arranges multi-company comparison, broking and employee benefits in health/life/general insurance for local and cross-border clients.\n\n## Careers\nInsurance broking/advisory, health underwriting support, claims and client service, data/operations analysis ([[insurance-broker]], [[insurance-advisor]]).",
+      "body_hk": "CCW Global Limited 為持香港保監局牌照（FB1643）的國際保險經紀，香港辦公室為在港及跨境客戶提供醫療健康／人壽／一般保險的多公司方案比較、經紀服務與員工福利安排。\n\n## 招聘方向\n保險經紀／顧問、健康險核保支援、理賠與客戶服務、數據／營運分析（[[insurance-broker]]、[[insurance-advisor]]）。"
+    },
+    {
+      "slug": "miller-insurance",
+      "type": "employer",
+      "title": "Miller（米勒）",
+      "title_en": "Miller",
+      "en": "Miller",
+      "category": "再保险经纪",
+      "site": "https://www.miller-insurance.com/",
+      "summary": "伦敦市场起家的专业险与再保险经纪（Talanx/HDI 旗下），香港设持牌经纪主体，亚洲条约再保与金融险团队近年扩充。",
+      "summary_en": "London-market specialty & reinsurance broker (Talanx/HDI group) with a licensed HK entity.",
+      "body": "Miller Insurance Services (Hong Kong) Limited 为专业险与再保险经纪 Miller 的香港持牌主体（伦敦市场起家、Talanx/HDI 旗下）；亚洲条约再保险与金融险团队近年扩张（部分亚太职能以新加坡为中心，招聘前建议向其香港办公室确认现况）。\n\n## 招聘方向\n再保险经纪/分析、核保分析、理赔、运营合规（[[insurance-broker]]、[[reinsurance-analyst]]）。",
+      "title_hk": "Miller（米勒）",
+      "summary_hk": "倫敦市場起家的專業險與再保險經紀（Talanx/HDI 旗下），香港設持牌主體，亞洲條約再保與金融險團隊近年擴充。",
+      "body_en": "Miller Insurance Services (Hong Kong) Limited is the licensed Hong Kong entity of Miller, a London-market specialty and reinsurance broker within the Talanx/HDI group. Its Asian treaty reinsurance and financial lines teams have expanded in recent years (some APAC functions centre on Singapore — confirm current openings with the HK office before applying).\n\n## Careers\nReinsurance broking/analysis, underwriting analysis, claims, operations and compliance ([[insurance-broker]], [[reinsurance-analyst]]).",
+      "body_hk": "Miller Insurance Services (Hong Kong) Limited 為專業險與再保險經紀 Miller 的香港持牌主體（倫敦市場起家、Talanx/HDI 旗下）；亞洲條約再保險與金融險團隊近年擴張（部分亞太職能以新加坡為中心，應徵前建議向其香港辦公室確認現況）。\n\n## 招聘方向\n再保險經紀／分析、核保分析、理賠、營運合規（[[insurance-broker]]、[[reinsurance-analyst]]）。"
     }
   ]
 }
