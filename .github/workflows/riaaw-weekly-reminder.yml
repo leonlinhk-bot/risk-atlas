@@ -1,0 +1,47 @@
+name: RIAAW Weekly Reminder (Sun 18:08 HKT)
+on:
+  schedule:
+    - cron: '8 10 * * 0'   # UTC 10:08 周日 = HKT 18:08
+  workflow_dispatch: {}
+
+permissions:
+  issues: write
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open weekly reminder issue (dedup by date)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // HKT 日期（UTC+8）
+            const hkt = new Date(Date.now() + 8 * 3600e3);
+            const today = hkt.toISOString().slice(0, 10);
+            const { owner, repo } = context.repo;
+
+            // 当日防重复：查已有 open issue（label=reminder），标题含今日日期则跳过
+            const { data: existing } = await github.rest.issues.listForRepo({
+              owner, repo,
+              state: 'open',
+              labels: 'reminder',
+              per_page: 100
+            });
+            const dup = existing.find(i => i.title.includes(today));
+            if (dup) {
+              console.log(`⚠️ 今日提醒已存在 (#${dup.number})，跳过创建`);
+              return;
+            }
+
+            const { data: issue } = await github.rest.issues.create({
+              owner, repo,
+              title: `🔄 RIAA 周报值班提醒 · ${today}`,
+              labels: ['ops', 'riaaw', 'reminder'],
+              body: [
+                '## 值班任务（周日 18:08，覆盖周一至周日）',
+                '1. 本期深研课程：见 `ima-materials/RIAAW-rotation-calendar.md` 日历。',
+                '2. 按 `ima-materials/RIAAW-SOP.md` 流程：五纵深线检索 → 写 `data/reports/wNN.md` → 更新 `weekly.json` → 跑 link-weekly-courses.cjs / build-concept-links.cjs → validate-entries.py → push。',
+                '3. 完成后在本 Issue 留言 SHA 与期号；无效则次日复核。'
+              ].join('\n')
+            });
+            console.log(`✅ 已创建提醒 Issue #${issue.number}`);
