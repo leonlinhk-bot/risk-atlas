@@ -39,9 +39,9 @@ jobs:
               labels: ['ops', 'riaaw', 'reminder'],
               body: [
                 '## 值班任务（周日 18:08，覆盖周一至周日）',
-                '1. 本期深研课程：见 `ima-materials/RIAAW-rotation-calendar.md` 日历。',
-                '2. 按 `ima-materials/RIAAW-SOP.md` 流程：五纵深线检索 → 写 `data/reports/wNN.md` → 更新 `weekly.json` → 跑 link-weekly-courses.cjs / build-concept-links.cjs → validate-entries.py → push。',
-                '3. 完成后在本 Issue 留言 SHA 与期号；无效则次日复核。'
+                '1. 本期深研课程：见 `ima-materials/RIAAW-rotation-calendar.md` 日历（w37 起 rim523）。',
+                '2. 按 `ima-materials/RIAAW-SOP.md` 流程：五纵深线检索 → 写 `wiki-site/data/reports/wNN.md` → 更新 `wiki-site/data/weekly.json` → 跑 `ima-materials/link-weekly-courses.cjs` 与 `ima-materials/build-concept-links.cjs` → `wiki-site/scripts/validate-entries.py`（PASS）→ git push。',
+                '3. 完成后在本 Issue 留言 commit SHA 与期号；无效则次日复核。'
               ].join('\n')
             });
             console.log(`✅ 已创建提醒 Issue #${issue.number}`);

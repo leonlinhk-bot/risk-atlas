@@ -41,7 +41,7 @@ jobs:
                 '## 值班任务（每日 18:08）',
                 '1. 按 `ima-materials/career-daily-update.md` SOP 扫描渠道变化（岗位热度/开招停招/薪资），只记变化。',
                 '2. 过期/失效投递从 `wiki-site/data/job-postings.json` 移除；新增有效投递补充。',
-                '3. 跑 update-career-trends.cjs / update-job-postings.cjs → 校验 → push；完成后留言。'
+                '3. 跑 `ima-materials/update-career-trends.cjs` / `ima-materials/update-job-postings.cjs` 落盘 → 校验（涉及词条则 `wiki-site/scripts/validate-entries.py`）→ git push；完成后在本 Issue 留言。'
               ].join('\n')
             });
             console.log(`✅ 已创建提醒 Issue #${issue.number}`);
