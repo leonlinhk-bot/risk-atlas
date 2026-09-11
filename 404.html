@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="/" />
+  <title>页面不存在 · Risk Atlas · 风险图谱</title>
+  <link rel="stylesheet" href="css/style.css?v=1795d6d3" />
+</head>
+<body>
+  <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">R</span>
+        <span class="brand-text"><b>Risk Atlas · 风险图谱</b><small>岭南大学 · MScRIAA（原 MSc RIM）· AI 赋能风险、保险与精算</small></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="weekly.html">周报</a>
+        <a href="catalog.html">课程目录</a>
+        <a href="career.html">就业情报</a>
+        <a href="companies.html">机构全景</a>
+        <a href="map.html">知识宇宙</a>
+        <a href="categories.html">分类索引</a>
+        <div class="lang-switch" id="lang-switch"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">页面不存在 · 404</h1>
+    <p class="page-sub">这个地址可能已更改、被合并，或该词条尚未收录。可以直接搜索，或从下面的入口继续逛。</p>
+
+    <section class="hero" style="padding:26px 28px">
+      <h1 style="font-size:24px">换个方式找找看</h1>
+      <p style="margin-bottom:14px">支持中文、英文与课程编号（如 久期、VaR、RIM537、Pagefind、再保险）。</p>
+      <div class="searchbox">
+        <input id="search-input" type="search" placeholder="搜索词条：如 久期、VaR、RIM537、DeepSeek…" autocomplete="off" />
+        <div id="search-results" class="search-results"></div>
+      </div>
+    </section>
+
+    <section class="cat-grid">
+      <a class="cat-card" href="index.html"><span class="tag tag-course">首页</span><b>首页</b><small>新手指引 · 统计 · 每周上新</small></a>
+      <a class="cat-card" href="catalog.html"><span class="tag tag-course">课程</span><b>课程目录</b><small>RIM520–RIM540 十六门课程</small></a>
+      <a class="cat-card" href="categories.html#type-concept"><span class="tag tag-concept">概念</span><b>分类索引</b><small>十类词条全量浏览</small></a>
+      <a class="cat-card" href="weekly.html"><span class="tag tag-resource">周报</span><b>RIAA 周报</b><small>每周行业纵深 + 课程深研</small></a>
+      <a class="cat-card" href="career.html"><span class="tag tag-job">就业</span><b>就业情报</b><small>岗位 · 考牌 · 雇主 · 投递</small></a>
+      <a class="cat-card" href="companies.html"><span class="tag tag-employer">机构</span><b>机构全景</b><small>154 保险人 + 810 经纪</small></a>
+      <a class="cat-card" href="map.html"><span class="tag tag-tool">宇宙</span><b>知识宇宙</b><small>词条互链可视化图谱</small></a>
+      <a class="cat-card" href="wiki.html?slug=value-at-risk"><span class="tag tag-concept">示例</span><b>VaR 与尾部风险</b><small>点开一个词条看看长什么样</small></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <b class="lingnan">Lingnan University</b></span> ·
+    <span>Risk Atlas · 风险图谱</span> ·
+    <span class="muted">纯静态 · 双链驱动</span>
+  </footer>
+
+  <script src="js/wiki.js?v=bba3228a"></script>
+  <script src="js/notice.js?v=06b6a6bc"></script>
+  <script src="js/search.js?v=457861ab"></script>
+  <script>
+    (function () {
+      Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
+      fetch('/data/index.json').then(function (r) { return r.json(); }).then(function (d) {
+        Search.attach(
+          document.getElementById('search-input'),
+          document.getElementById('search-results'),
+          d.entries,
+          { fullLoader: function () { return fetch('/data/entries.json').then(function (r) { return r.json(); }).then(function (x) { return x.entries; }); } }
+        );
+      }).catch(function (err) {
+        document.getElementById('search-results').innerHTML = '<div class="sr-empty">搜索索引加载失败：' + Wiki.escapeHtml(err.message) + '</div>';
+      });
+    })();
+  </script>
+</body>
+</html>

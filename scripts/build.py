@@ -10,6 +10,7 @@
   python3 scripts/build.py          # 生成（覆盖）
   python3 scripts/build.py --check  # 只校验生成物是否与当前一致（CI 用，过期则 exit 1）
 """
+import datetime
 import json
 import os
 import re
@@ -20,6 +21,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENTRIES = os.path.join(ROOT, 'data', 'entries.json')
 INDEX = os.path.join(ROOT, 'data', 'index.json')
 GRAPH = os.path.join(ROOT, 'data', 'graph.json')
+SITEMAP = os.path.join(ROOT, 'sitemap.xml')
+SITE = 'https://risk-atlas.wiki'
+STATIC_PATHS = ['/', '/weekly.html', '/catalog.html', '/career.html',
+                '/companies.html', '/map.html', '/categories.html']
 
 # 列表页/搜索所需字段白名单（正文与其他仅供 wiki 详情页使用的字段不进入 index.json）
 BASE_FIELDS = ['slug', 'type', 'title', 'title_en', 'title_hk', 'en',
@@ -105,6 +110,45 @@ def build_graph(doc):
     return {'generated_from': 'entries.json', 'nodes': nodes, 'links': links}
 
 
+def build_sitemap(doc):
+    """生成 sitemap.xml：静态页 + 全部词条 + 全部周报"""
+    lastmod = datetime.date.fromtimestamp(os.path.getmtime(ENTRIES)).isoformat()
+    urls = []
+    for p in STATIC_PATHS:
+        urls.append((SITE + p, lastmod))
+    for e in doc['entries']:
+        urls.append((SITE + '/wiki.html?slug=' + e['slug'], None))
+    wk_path = os.path.join(ROOT, 'data', 'weekly.json')
+    if os.path.exists(wk_path):
+        with open(wk_path, encoding='utf-8') as f:
+            for r in json.load(f).get('reports', []):
+                urls.append((SITE + '/weekly.html?week=' + r['slug'], None))
+    out = ['<?xml version="1.0" encoding="UTF-8"?>',
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for loc, mod in urls:
+        out.append('  <url><loc>' + loc.replace('&', '&amp;') + '</loc>' +
+                   (('<lastmod>' + mod + '</lastmod>') if mod else '') + '</url>')
+    out.append('</urlset>')
+    return '\n'.join(out) + '\n'
+
+
+def write_raw_or_check(path, text, check):
+    data = text.encode('utf-8')
+    old = None
+    if os.path.exists(path):
+        with open(path, 'rb') as f:
+            old = f.read()
+    changed = old != data
+    if check:
+        print(('  [过期] ' if changed else '  [一致] ') + os.path.relpath(path, ROOT))
+        return changed
+    if changed:
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(text)
+    print(f"  {'已更新' if changed else '无变化'} {os.path.relpath(path, ROOT)}: {len(data):,} B")
+    return changed
+
+
 def gz(data: bytes) -> int:
     return len(gzip.compress(data, 9))
 
@@ -137,6 +181,7 @@ def main():
     stale = False
     stale |= write_or_check(INDEX, build_index(doc), check)
     stale |= write_or_check(GRAPH, build_graph(doc), check)
+    stale |= write_raw_or_check(SITEMAP, build_sitemap(doc), check)
     if check and stale:
         print("✗ 生成物与 entries.json 不同步 —— 请运行 python3 scripts/build.py 并提交")
         return 1
