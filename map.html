@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>知识宇宙 · Risk Atlas · 风险图谱</title>
-  <link rel="stylesheet" href="css/style.css?v=1cc0cacb" />
+  <link rel="stylesheet" href="css/style.css?v=1795d6d3" />
 </head>
 <body>
   <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
@@ -42,6 +42,29 @@
       <span class="lg"><span class="dot" style="background:#7c3aed"></span>渠道</span>
       <span class="lg"><span class="dot" style="background:#0d9488"></span>资源</span>
     </div>
+    <div class="gctl">
+      <div class="gctl-row">
+        <span class="gctl-lab">显示规模</span>
+        <button class="gc-btn" data-limit="120">核心 120</button>
+        <button class="gc-btn active" data-limit="300">300</button>
+        <button class="gc-btn" data-limit="0">全部（较慢）</button>
+      </div>
+      <div class="gctl-row">
+        <span class="gctl-lab">类型筛选</span>
+        <button class="gc-btn gt-btn active" data-type="all">全部</button>
+        <button class="gc-btn gt-btn" data-type="course">课程</button>
+        <button class="gc-btn gt-btn" data-type="concept">概念</button>
+        <button class="gc-btn gt-btn" data-type="tool">工具</button>
+        <button class="gc-btn gt-btn" data-type="framework">框架</button>
+        <button class="gc-btn gt-btn" data-type="track">纵深线</button>
+        <button class="gc-btn gt-btn" data-type="credential">考牌</button>
+        <button class="gc-btn gt-btn" data-type="job">岗位</button>
+        <button class="gc-btn gt-btn" data-type="employer">雇主</button>
+        <button class="gc-btn gt-btn" data-type="channel">渠道</button>
+        <button class="gc-btn gt-btn" data-type="resource">资源</button>
+      </div>
+      <div class="gctl-stat muted" id="gstat">加载中…</div>
+    </div>
     <div id="graph"></div>
   </main>
 
@@ -57,11 +80,36 @@
   <script src="js/graph.js?v=7fc899e0"></script>
   <script>
     Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
+    var gd = null, gLimit = 300, gTypes = [];
+    function draw() {
+      var el = document.getElementById('graph');
+      var s = Graph.renderData(gd, el, { limit: gLimit, types: gTypes });
+      document.getElementById('gstat').textContent =
+        '已显示 ' + s.shown + ' / ' + s.total + ' 个词条 · ' + s.links.length + ' 条连线' +
+        (gLimit ? '（按连接度取 top-' + gLimit + '，切换「全部」可看完整网络）' : '（全量渲染，首次布局较慢）');
+    }
     fetch('data/graph.json').then(function (r) {
       if (!r.ok) throw new Error('graph.json ' + r.status);
       return r.json();
     }).then(function (g) {
-      Graph.renderData(g, document.getElementById('graph'));
+      gd = g;
+      draw();
+      document.querySelector('.gctl').addEventListener('click', function (ev) {
+        var btn = ev.target.closest ? ev.target.closest('.gc-btn') : null;
+        if (!btn) return;
+        if (btn.hasAttribute('data-limit')) {
+          gLimit = parseInt(btn.getAttribute('data-limit'), 10) || 0;
+          Array.prototype.forEach.call(document.querySelectorAll('.gc-btn[data-limit]'), function (x) { x.classList.remove('active'); });
+          btn.classList.add('active');
+          draw();
+        } else if (btn.hasAttribute('data-type')) {
+          var t = btn.getAttribute('data-type');
+          Array.prototype.forEach.call(document.querySelectorAll('.gt-btn'), function (x) { x.classList.remove('active'); });
+          btn.classList.add('active');
+          gTypes = (t === 'all') ? [] : [t];
+          draw();
+        }
+      });
     }).catch(function (err) {
       var el = document.getElementById('graph');
       el.classList.add('graph-fallback');
