@@ -162,7 +162,7 @@
 
       Promise.all([
         fetch('data/weekly.json').then(function (r) { return r.json(); }),
-        Wiki.load()
+        Wiki.loadIndex()
       ]).then(function (rs) {
         var wk = rs[0], entries = rs[1].entries, idx = Wiki.index(entries);
         if (week) {

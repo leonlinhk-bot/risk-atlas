@@ -10,6 +10,15 @@
 - **就业情报**：职业路径、机构全景（保险公司 / 经纪行名单）、周报速览
 - **纯静态**：无后端，加词条 = 在 `data/entries.json` 加一个对象
 
+## 数据构建（派生文件）
+
+```bash
+python3 scripts/build.py     # data/index.json（列表页精简索引）+ data/graph.json（知识宇宙图）
+python3 scripts/stamp.py     # HTML 资源指纹（css/js ?v=）
+```
+
+改动 `data/entries.json` 后必须重跑这两条并与数据一起提交；`--check` 参数可用于 CI 校验是否过期。
+
 ## 本地预览
 
 ```bash

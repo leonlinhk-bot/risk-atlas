@@ -39,9 +39,14 @@
     });
   }
 
-  /* 载入 entries.json */
+  /* 载入 entries.json（全量，含正文；wiki 详情页使用） */
   function load() {
     return fetchJSON('data/entries.json');
+  }
+
+  /* 载入 data/index.json（精简索引；列表页/搜索首屏使用） */
+  function loadIndex() {
+    return fetchJSON('data/index.json');
   }
 
   /* 建立 slug -> entry 索引 */
@@ -282,6 +287,7 @@
 
   window.Wiki = {
     load: load,
+    loadIndex: loadIndex,
     index: index,
     renderLinks: renderLinks,
     renderBody: renderBody,

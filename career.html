@@ -224,7 +224,7 @@
 
       var store = {};
       Promise.all([
-        Wiki.load(),
+        Wiki.loadIndex(),
         fetch('data/career-trends.json').then(function (r) { return r.json(); }).catch(function () { return null; }),
         fetch('data/job-postings.json').then(function (r) { return r.json(); }).catch(function () { return null; })
       ]).then(function (rs) {

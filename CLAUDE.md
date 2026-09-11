@@ -24,6 +24,17 @@ git commit -m "词条: <改动摘要，如 新增 AI 工具 xx / 补全 RIM537 �
 git push origin main
 ```
 
+### 生成物同步（改 entries.json 后必做）
+
+```bash
+python3 scripts/build.py     # 生成 data/index.json（列表页精简索引）与 data/graph.json（知识宇宙预计算图）
+python3 scripts/stamp.py     # 给 HTML 里的 css/js 引用打内容指纹 ?v=
+```
+
+- `data/index.json` / `data/graph.json` 是派生文件，**必须与 entries.json 一起提交**（否则线上列表页读到旧数据）。
+- 校验是否同步：`python3 scripts/build.py --check`、`python3 scripts/stamp.py --check`（过期返回 1，适合未来 CI）。
+- 列表页（首页/课程目录/分类索引/就业情报/机构全景/周报）读 `index.json`；`wiki.html` 详情页仍读全量 `entries.json`；`map.html` 读 `graph.json`。
+
 推送成功后可用以下命令抽查线上是否已更新：
 
 ```bash

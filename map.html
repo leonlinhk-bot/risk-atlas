@@ -57,8 +57,11 @@
   <script src="js/graph.js"></script>
   <script>
     Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
-    Wiki.load().then(function (data) {
-      Graph.render(data.entries, document.getElementById('graph'));
+    fetch('data/graph.json').then(function (r) {
+      if (!r.ok) throw new Error('graph.json ' + r.status);
+      return r.json();
+    }).then(function (g) {
+      Graph.renderData(g, document.getElementById('graph'));
     }).catch(function (err) {
       var el = document.getElementById('graph');
       el.classList.add('graph-fallback');

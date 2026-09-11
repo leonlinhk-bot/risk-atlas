@@ -137,7 +137,7 @@
 
       Promise.all([
         fetch('data/companies.json').then(function (r) { return r.json(); }),
-        Wiki.load()
+        Wiki.loadIndex()
       ]).then(function (rs) {
         data = rs[0];
         buildEntryMap(rs[1].entries);

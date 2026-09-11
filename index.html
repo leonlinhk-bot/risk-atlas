@@ -190,7 +190,7 @@
       }
 
       Promise.all([
-        Wiki.load(),
+        Wiki.loadIndex(),
         fetch('data/weekly.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
       ]).then(function (rs) {
         var data = rs[0];
@@ -203,7 +203,8 @@
         Search.attach(
           document.getElementById('search-input'),
           document.getElementById('search-results'),
-          state.entries
+          state.entries,
+          { fullLoader: function () { return Wiki.load().then(function (r) { return r.entries; }); } }
         );
       }).catch(function (err) {
         document.getElementById('stats').textContent = '加载失败：' + err.message;
