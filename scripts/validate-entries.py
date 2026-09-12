@@ -59,7 +59,9 @@ for i, e in enumerate(entries):
         errors.append(f"entries[{i}] slug={e.get('slug','?')} type 非法: {t}（允许: {sorted(ALLOWED_TYPES)}）")
     # 悬空双链（软）——须在完整 slug 表建成后扫描
     body = e.get("body") or ""
-    for m in re.findall(r"\[\[([^\]]+)\]\]", body):
+    # 与渲染器/wiki.js 一致：支持 [[slug]] 与 [[slug|显示文本]] 两种写法
+    for m in re.findall(r"\[\[([^\]|]+)(?:\|[^\]]+)?\]\]", body):
+        m = m.strip()
         if m not in slugs:
             warnings.append(f"悬空双链: {e.get('slug','?')} -> [[{m}]]")
 
