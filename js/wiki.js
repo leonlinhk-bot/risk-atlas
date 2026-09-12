@@ -270,9 +270,23 @@
   }
 
   /* ---- 三语支持（默认英文优先，缺失回退中文）---- */
-  function currentLang() {
-    try { return window.localStorage.getItem('riskatlas.lang') || 'en'; } catch (e) { return 'en'; }
+  /* 默认语言：优先用户上次选择；其次按浏览器语言（中文环境默认简中、港澳台默认繁中）；兜底简中（站点 chrome 为中文） */
+  function detectLang() {
+    try {
+      var stored = window.localStorage.getItem('riskatlas.lang');
+      if (stored) return stored;
+    } catch (e) {}
+    try {
+      var nav = String((window.navigator && (navigator.language || (navigator.languages && navigator.languages[0]))) || '').toLowerCase();
+      if (nav.indexOf('zh') === 0) {
+        if (nav.indexOf('hk') !== -1 || nav.indexOf('tw') !== -1 || nav.indexOf('mo') !== -1 || nav.indexOf('hant') !== -1) return 'zh-hk';
+        return 'zh-cn';
+      }
+      if (nav) return 'en';
+    } catch (e) {}
+    return 'zh-cn';
   }
+  function currentLang() { return detectLang(); }
   function tr(e, field) {
     if (!e) return '';
     var lang = currentLang();
