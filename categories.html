@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'none'" />
   <title>分类索引 · Risk Atlas · 风险图谱</title>
-  <link rel="stylesheet" href="css/style.css?v=ce69fcab" />
+  <link rel="stylesheet" href="css/style.css?v=fb6785e2" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳到主内容</a>
@@ -60,13 +60,19 @@
           '<small>' + Wiki.escapeHtml(sub) + '</small></a>';
       }
 
-      /* 工具区按 AI 工具箱 category 分组 */
+      /* 工具区按 AI 工具箱 category 分组；顶部加分类锚点导航（便于在 1300+ 工具中快速定位） */
       function toolSections(list) {
         var byCat = {};
         list.forEach(function (e) { (byCat[e.category || '其他'] = byCat[e.category || '其他'] || []).push(e); });
         var names = Object.keys(byCat).sort(function (a, b) { return byCat[b].length - byCat[a].length; });
-        return names.map(function (n) {
-          return '<div class="tool-group"><h3>' + Wiki.escapeHtml(n) + ' <span class="muted">(' + byCat[n].length + ')</span></h3>' +
+        var nav = '<div class="cat-nav" aria-label="工具分类导航">' +
+          names.map(function (n, i) {
+            return '<a href="#tool-cat-' + i + '">' + Wiki.escapeHtml(n) +
+              ' <span class="muted">' + byCat[n].length + '</span></a>';
+          }).join('') + '</div>';
+        return nav + names.map(function (n, i) {
+          return '<div class="tool-group" id="tool-cat-' + i + '"><h3>' + Wiki.escapeHtml(n) +
+            ' <span class="muted">(' + byCat[n].length + ')</span></h3>' +
             '<div class="entry-list">' + byCat[n].map(entryCard).join('') + '</div></div>';
         }).join('');
       }

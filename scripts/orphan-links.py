@@ -67,9 +67,97 @@ def naive_links(entries):
     return d
 
 
+SIB_REPORT = os.path.join(os.path.dirname(ROOT), 'ima-materials', 'orphan-siblings-report.md')
+
+
+def siblings(entries, idx, indeg, apply_mode):
+    """同类互链（方案 B2）：按 category 环形互链 + 中心枢纽链接。
+
+    规则：
+    - 只处理 tool 类孤儿（零入链）
+    - 同一 category 内：按入度降序排列；每个成员链接「环上后 3 位」+「本类入度最高的 1-2 个枢纽」
+    - 成员数 <4 的分类跳过（无法形成无自链的环）
+    - 每个条目最多追加 5 条链接；已在正文出现过的链接不重复加
+    """
+    from collections import defaultdict
+    cats = defaultdict(list)
+    for e in entries:
+        if e['type'] == 'tool' and indeg[e['slug']] == 0:
+            cats[e.get('category') or '其他'].append(e)
+
+    lines = ['# 孤儿工具「同类互链」候选报告（方案 B2 · dry-run）\n',
+             f'> 脚本：`scripts/orphan-links.py --siblings`｜孤儿工具 {sum(len(v) for v in cats.values())} 条，覆盖 {len(cats)} 个分类\n',
+             '## 概览\n']
+    plan = []
+    skipped = []
+    for cat, members in sorted(cats.items(), key=lambda kv: -len(kv[1])):
+        if len(members) < 4:
+            skipped.append((cat, len(members)))
+            continue
+        ordered = sorted(members, key=lambda e: (-indeg[e['slug']], e['slug']))
+        hubs = ordered[:2]
+        for i, e in enumerate(ordered):
+            targets = []
+            for k in (1, 2, 3):
+                t = ordered[(i + k) % len(ordered)]
+                if t['slug'] != e['slug'] and t['slug'] not in targets:
+                    targets.append(t['slug'])
+            for h in hubs:
+                if h['slug'] != e['slug'] and h['slug'] not in targets:
+                    targets.append(h['slug'])
+            plan.append((cat, e['slug'], targets[:5]))
+
+    would_receive = set()
+    for _cat, _src, targets in plan:
+        for t in targets:
+            would_receive.add(t)
+    all_orphan_tools = {e['slug'] for v in cats.values() for e in v}
+    covered = len(all_orphan_tools & would_receive)
+
+    lines.append(f'- 将追加同类互链的条目：**{len(plan)}** 条（每条约 3–5 个链接）')
+    lines.append(f'- 预计获得入链的孤儿工具：**{covered} / {len(all_orphan_tools)}**')
+    lines.append(f'- 跳过（分类成员 <4）：{len(skipped)} 个分类 → {skipped[:6]}')
+    lines.append('\n## 样本（前 12 条）\n')
+    lines.append('| 孤儿工具 | 分类 | 拟链接到（slug） |')
+    lines.append('|---|---|---|')
+    for cat, src, targets in plan[:12]:
+        lines.append(f'| `{src}` | {cat} | ' + '、'.join('`' + t + '`' for t in targets) + ' |')
+    lines.append('\n## 说明\n')
+    lines.append('- 「环形互链」保证同类孤儿彼此获得入链（每条被环上 3 个同伴指向）；「中心枢纽」链接提升导航质量。')
+    lines.append('- 追加形式为独立段落：`## 同类工具\n[[a]]、[[b]]、[[c]]`（三语同步；不修改原有正文）。')
+    lines.append('- 默认仅出报告；确认后运行 `--siblings --apply` 写入。')
+    with open(SIB_REPORT, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(lines) + '\n')
+    print(f'✓ 报告已写入 {os.path.relpath(SIB_REPORT, os.path.dirname(ROOT))}')
+    print(f'  拟追加 {len(plan)} 条 | 预计获得入链 {covered}/{len(all_orphan_tools)} | 跳过分类 {len(skipped)}')
+
+    if apply_mode:
+        LAB = {'zh': '## 同类工具', 'en': '## Similar tools', 'hk': '## 同類工具'}
+        added = 0
+        for cat, src, targets in plan:
+            e = idx[src]
+            block_zh = LAB['zh'] + '\n' + '、'.join('[[' + t + ']]' for t in targets)
+            block_en = LAB['en'] + '\n' + '、'.join('[[' + t + ']]' for t in targets)
+            block_hk = LAB['hk'] + '\n' + '、'.join('[[' + t + ']]' for t in targets)
+            for field, block in (('body', block_zh), ('body_en', block_en), ('body_hk', block_hk)):
+                cur = e.get(field) or ''
+                if LAB['zh'] in cur or LAB['en'] in cur or LAB['hk'] in cur:
+                    continue
+                e[field] = (cur.rstrip() + '\n\n' + block) if cur.strip() else block
+            added += 1
+        doc2 = json.load(open(ENTRIES, encoding='utf-8'))
+        doc2['entries'] = entries
+        json.dump(doc2, open(ENTRIES, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
+        with open(ENTRIES, 'a', encoding='utf-8') as f:
+            f.write('\n')
+        print(f'✓ 已为 {added} 条条目追加「同类工具」段落（请跑 validate-entries.py + build.py 后提交）')
+    return 0
+
+
 def main():
     args = sys.argv[1:]
     apply_mode = '--apply' in args
+    siblings_mode = '--siblings' in args
     max_per_orphan = 5
     max_per_target = 3
     for i, a in enumerate(args):
@@ -158,6 +246,8 @@ def main():
     print(f'  零入链 {len(orphans)} → 有候选 {len(have_cand)}（新增链接 {total_links}）→ 仍孤立 {still_stranded}')
     print('  类型分布：', dict(by_type))
 
+    if siblings_mode:
+        return siblings(entries, idx, indeg, apply_mode)
     if apply_mode:
         added = 0
         for slug, lst in cand.items():

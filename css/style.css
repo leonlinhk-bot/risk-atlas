@@ -488,6 +488,14 @@ a:hover { text-decoration: underline; }
 .skip-link:focus { left: 0; }
 a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
+
+/* ---------- 分类索引 · 工具分类导航 ---------- */
+.cat-nav { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 14px; }
+.cat-nav a { padding: 4px 11px; border-radius: 20px; background: #f2f5f9; color: #475569; font-size: 12.5px; font-weight: 600; }
+.cat-nav a:hover { background: #0a1f3d; color: #fff; text-decoration: none; }
+.cat-nav a .muted { color: inherit; opacity: .6; font-size: 11.5px; }
+.tool-group { scroll-margin-top: 80px; }
+
 /* ---------- 杂项 ---------- */
 .footer { text-align: center; color: var(--muted); font-size: 13px; padding: 28px 20px 40px; }
 .footer .lingnan { color: var(--lingnan-red); font-weight: 700; }
