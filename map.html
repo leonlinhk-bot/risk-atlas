@@ -75,9 +75,9 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
-  <script src="js/wiki.js?v=bba3228a"></script>
+  <script src="js/wiki.js?v=40b0dd7f"></script>
   <script src="js/notice.js?v=06b6a6bc"></script>
-  <script src="js/graph.js?v=7fc899e0"></script>
+  <script src="js/graph.js?v=d9575271"></script>
   <script>
     Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
     var gd = null, gLimit = 300, gTypes = [];
@@ -88,10 +88,7 @@
         '已显示 ' + s.shown + ' / ' + s.total + ' 个词条 · ' + s.links.length + ' 条连线' +
         (gLimit ? '（按连接度取 top-' + gLimit + '，切换「全部」可看完整网络）' : '（全量渲染，首次布局较慢）');
     }
-    fetch('data/graph.json').then(function (r) {
-      if (!r.ok) throw new Error('graph.json ' + r.status);
-      return r.json();
-    }).then(function (g) {
+    Wiki.loadGraph().then(function (g) {
       gd = g;
       draw();
       document.querySelector('.gctl').addEventListener('click', function (ev) {

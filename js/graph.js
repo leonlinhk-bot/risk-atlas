@@ -29,6 +29,9 @@
 
   function lang() { try { return (window.Wiki && Wiki.currentLang) ? Wiki.currentLang() : 'en'; } catch (e) { return 'en'; } }
   function pick(n, base) {
+    // 语言化 graph 文件已把标题/摘要解析成 title/summary；旧版文件字段回退
+    if (base === 'title') return n.title || n.title_en || n.title_hk || '';
+    if (base === 'summary') return n.summary || n.summary_en || '';
     var l = lang();
     var f = l === 'zh-hk' ? base + '_hk' : (l === 'en' ? base + '_en' : base);
     return n[f] || n[base] || '';

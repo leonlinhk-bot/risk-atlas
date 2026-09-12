@@ -21,6 +21,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENTRIES = os.path.join(ROOT, 'data', 'entries.json')
 INDEX = os.path.join(ROOT, 'data', 'index.json')
 GRAPH = os.path.join(ROOT, 'data', 'graph.json')
+# 语言化派生文件（每次只加载当前语言，体积约为合并版 1/3）
+LANG_OUT = {
+    'zh-cn': ('data/index.json', 'data/graph.json'),          # 同时作为向后兼容的默认文件
+    'en':    ('data/index.en.json', 'data/graph.en.json'),
+    'hk':    ('data/index.hk.json', 'data/graph.hk.json'),
+}
 SITEMAP = os.path.join(ROOT, 'sitemap.xml')
 SITE = 'https://risk-atlas.wiki'
 STATIC_PATHS = ['/', '/weekly.html', '/catalog.html', '/career.html',
@@ -47,10 +53,16 @@ LINK_RE = re.compile(r'\[\[([^\]|]+)(?:\|[^\]]+)?\]\]')
 
 
 # 列表页展示用的文本截断上限（正文仍在 entries.json / wiki 详情页，不受影响）
-TRUNC = {'title': 100, 'title_en': 100, 'title_hk': 100,
-         'summary': 150, 'summary_en': 150, 'summary_hk': 150}
-GRAPH_TRUNC = {'title': 100, 'title_en': 100, 'title_hk': 100,
-               'summary': 140, 'summary_en': 140}
+TRUNC = {'title': 90, 'title_en': 90, 'title_hk': 90,
+         'summary': 120, 'summary_en': 120, 'summary_hk': 120}
+GRAPH_TRUNC = {'title': 90, 'title_en': 90, 'title_hk': 90,
+               'summary': 110, 'summary_en': 110}
+# 每种语言的派生文件只保留「该语言的标题/摘要 + en」，砍掉另外两种语言，体积约 1/3
+LANG_FIELDS = {
+    'zh-cn': {'title': 'title', 'summary': 'summary'},
+    'en':    {'title': 'title_en', 'summary': 'summary_en'},
+    'hk':    {'title': 'title_hk', 'summary': 'summary_hk'},
+}
 
 
 def clip(s, n):
@@ -64,11 +76,29 @@ def load_entries():
         return json.load(f)
 
 
-def build_index(doc):
+def build_index(doc, lang='zh-cn'):
     out = []
+    tf, sf = LANG_FIELDS[lang]['title'], LANG_FIELDS[lang]['summary']
+    drop = set()
+    for k, v in LANG_FIELDS.items():
+        if k == lang:
+            continue
+        drop.add(v['title'])
+        drop.add(v['summary'])
     for e in doc['entries']:
         keep = BASE_FIELDS + EXTRA_FIELDS.get(e.get('type'), [])
         slim = {k: e[k] for k in keep if k in e and e[k] not in (None, '', [], {})}
+        for f in list(slim.keys()):
+            if f in drop:
+                del slim[f]
+        # 把当前语言的标题/摘要同时写入 title/summary（页面与搜索直接消费这两个字段）
+        if lang != 'zh-cn':
+            t = e.get(tf) or e.get('title') or ''
+            sm = e.get(sf) or e.get('summary') or ''
+            if t:
+                slim['title'] = t
+            if sm:
+                slim['summary'] = sm
         for f, n in TRUNC.items():
             if f in slim:
                 slim[f] = clip(slim[f], n)
@@ -80,20 +110,19 @@ def build_index(doc):
     }
 
 
-def build_graph(doc):
+def build_graph(doc, lang='zh-cn'):
     entries = doc['entries']
+    tfield = LANG_FIELDS[lang]['title']
+    sfield = LANG_FIELDS[lang]['summary']
     have = {e['slug'] for e in entries}
     nodes = []
     for e in entries:
         nodes.append({
             'id': e['slug'],
             'type': e['type'],
-            'title': clip(e.get('title', ''), GRAPH_TRUNC['title']),
-            'title_en': clip(e.get('title_en') or e.get('en') or '', GRAPH_TRUNC['title_en']),
-            'title_hk': clip(e.get('title_hk') or e.get('title', ''), GRAPH_TRUNC['title_hk']),
+            'title': clip(e.get(tfield) or e.get('title') or '', GRAPH_TRUNC['title']),
             'en': clip(e.get('en') or e.get('title_en') or '', GRAPH_TRUNC['title_en']),
-            'summary': clip(e.get('summary', ''), GRAPH_TRUNC['summary']),
-            'summary_en': clip(e.get('summary_en') or e.get('summary', ''), GRAPH_TRUNC['summary_en']),
+            'summary': clip(e.get(sfield) or e.get('summary') or '', GRAPH_TRUNC['summary']),
             'kind': e.get('kind'),
             'status': e.get('status'),
             'degree': 0,
@@ -195,8 +224,9 @@ def main():
         raw = f.read()
     print(f"源: entries.json {len(raw):,} B 原始 / {gz(raw):,} B gzip | {len(doc['entries'])} 词条")
     stale = False
-    stale |= write_or_check(INDEX, build_index(doc), check)
-    stale |= write_or_check(GRAPH, build_graph(doc), check)
+    for lang, (ipath, gpath) in LANG_OUT.items():
+        stale |= write_or_check(os.path.join(ROOT, ipath), build_index(doc, lang), check)
+        stale |= write_or_check(os.path.join(ROOT, gpath), build_graph(doc, lang), check)
     stale |= write_raw_or_check(SITEMAP, build_sitemap(doc), check)
     if check and stale:
         print("✗ 生成物与 entries.json 不同步 —— 请运行 python3 scripts/build.py 并提交")

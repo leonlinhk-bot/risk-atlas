@@ -44,9 +44,22 @@
     return fetchJSON('data/entries.json');
   }
 
-  /* 载入 data/index.json（精简索引；列表页/搜索首屏使用） */
+  /* 当前语言对应的派生文件后缀（zh-cn 用默认文件） */
+  function langSuffix() {
+    var l = currentLang();
+    return l === 'en' ? '.en' : (l === 'zh-hk' ? '.hk' : '');
+  }
+
+  /* 载入精简索引（列表页/搜索首屏使用）：只取当前语言，失败回退默认文件 */
   function loadIndex() {
-    return fetchJSON('data/index.json');
+    return fetchJSON('data/index' + langSuffix() + '.json')
+      .catch(function () { return fetchJSON('data/index.json'); });
+  }
+
+  /* 载入知识宇宙预计算图：同上按语言取，失败回退 */
+  function loadGraph() {
+    return fetchJSON('data/graph' + langSuffix() + '.json')
+      .catch(function () { return fetchJSON('data/graph.json'); });
   }
 
   /* 建立 slug -> entry 索引 */
@@ -288,6 +301,7 @@
   window.Wiki = {
     load: load,
     loadIndex: loadIndex,
+    loadGraph: loadGraph,
     index: index,
     renderLinks: renderLinks,
     renderBody: renderBody,
