@@ -89,12 +89,25 @@ code404=$(curl -s -o /dev/null -w '%{http_code}' --max-time 25 "$SITE/no-such-pa
 if [ "$code404" = "404" ]; then echo "  OK   404 页          404（品牌化）"; else echo "  FAIL 404 页          $code404"; PAGE_FAIL=1; fi
 
 echo "→ 数据计数："
+
+# 带重试的远程取数（大文件 + 连续请求易被限速，故压缩传输 + 3 次退避重试）
+fetch_retry() {  # $1=url  $2=处理命令（读 stdin）
+  local url="$1" proc="$2" out='' i=1
+  while [ "$i" -le 3 ]; do
+    out=$(curl -s --compressed --max-time 60 "$url" 2>/dev/null | eval "$proc" 2>/dev/null)
+    [ -n "$out" ] && { echo "$out"; return 0; }
+    sleep 5; i=$((i + 1))
+  done
+  echo '?'; return 1
+}
+
 LOCAL_ENTRIES=$(python3 -c "import json;print(len(json.load(open('data/entries.json'))['entries']))" 2>/dev/null || echo '?')
-REMOTE_ENTRIES=$(curl -s --max-time 30 "$SITE/data/entries.json" | python3 -c "import sys,json;print(len(json.load(sys.stdin)['entries']))" 2>/dev/null || echo '?')
-[ "$LOCAL_ENTRIES" = "$REMOTE_ENTRIES" ] && echo "  OK   词条数 $REMOTE_ENTRIES" || { echo "  FAIL 词条数 本地 $LOCAL_ENTRIES / 线上 $REMOTE_ENTRIES"; PAGE_FAIL=1; }
+REMOTE_ENTRIES=$(fetch_retry "$SITE/data/entries.json" "python3 -c \"import sys,json;print(len(json.load(sys.stdin)['entries']))\"")
+[ "$LOCAL_ENTRIES" = "$REMOTE_ENTRIES" ] && echo "  OK   词条数 ${REMOTE_ENTRIES}" || { echo "  FAIL 词条数 本地 ${LOCAL_ENTRIES} / 线上 ${REMOTE_ENTRIES}"; PAGE_FAIL=1; }
+
 LOCAL_SM=$(grep -c '<loc>' sitemap.xml 2>/dev/null || echo '?')
-REMOTE_SM=$(curl -s --max-time 30 "$SITE/sitemap.xml" | grep -c '<loc>' || echo '?')
-[ "$LOCAL_SM" = "$REMOTE_SM" ] && echo "  OK   sitemap URL $REMOTE_SM" || { echo "  FAIL sitemap 本地 $LOCAL_SM / 线上 $REMOTE_SM"; PAGE_FAIL=1; }
+REMOTE_SM=$(fetch_retry "$SITE/sitemap.xml" "grep -c '<loc>'")
+[ "$LOCAL_SM" = "$REMOTE_SM" ] && echo "  OK   sitemap URL ${REMOTE_SM}" || { echo "  FAIL sitemap 本地 ${LOCAL_SM} / 线上 ${REMOTE_SM}"; PAGE_FAIL=1; }
 
 if [ ${#FAILED[@]} -gt 0 ] || [ "$PAGE_FAIL" -ne 0 ]; then
   echo "✗ 核验未通过"; exit 1
