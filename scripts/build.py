@@ -68,6 +68,12 @@ LANG_FIELDS = {
 }
 
 
+def clean_title(s, n=60):
+    t = re.sub(r'\*\*|__|`', '', str(s or ''))
+    t = re.sub(r'\s+', ' ', t).strip()
+    return clip(t, n)
+
+
 def clip(s, n):
     if not isinstance(s, str) or len(s) <= n:
         return s
@@ -123,7 +129,7 @@ def build_graph(doc, lang='zh-cn'):
         nodes.append({
             'id': e['slug'],
             'type': e['type'],
-            'title': clip(e.get(tfield) or e.get('title') or '', GRAPH_TRUNC['title']),
+            'title': clean_title(e.get(tfield) or e.get('title') or '', 60),
             'en': clip(e.get('en') or e.get('title_en') or '', GRAPH_TRUNC['title_en']),
             'summary': clip(e.get(sfield) or e.get('summary') or '', GRAPH_TRUNC['summary']),
             'kind': e.get('kind'),
@@ -169,8 +175,8 @@ def build_search(doc, lang='zh-cn'):
         rec = {
             's': e['slug'],
             't': e['type'],
-            'n': clip(e.get(tf) or e.get('title') or '', 80),
-            'e': clip(e.get('en') or e.get('title_en') or '', 80),
+            'n': clean_title(e.get(tf) or e.get('title') or '', 60),
+            'e': clean_title(e.get('en') or e.get('title_en') or '', 60),
         }
         # 跨语言标题：保证「EN 界面搜中文」「中文界面搜英文」仍能命中（正文级跨语言不再保留）
         if lang == 'en':

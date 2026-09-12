@@ -33,7 +33,7 @@
   </footer>
 
   <script src="js/nav.js?v=330b2eed"></script>
-  <script src="js/wiki.js?v=5b9dc51c"></script>
+  <script src="js/wiki.js?v=25f80e49"></script>
   <script src="js/notice.js?v=06b6a6bc"></script>
   <script>
     (function () {
@@ -47,7 +47,7 @@
       }
       function link(slug, idx) {
         var e = idx[slug];
-        return e ? '<a class="wikilink" href="' + Wiki.entryHref(slug) + '">' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</a>'
+        return e ? '<a class="wikilink" href="' + Wiki.entryHref(slug) + '">' + Wiki.escapeHtml(Wiki.compactTitle(Wiki.tr(e, 'title'), 34)) + '</a>'
                  : Wiki.escapeHtml(slug);
       }
       function joinLinks(slugs, idx) {

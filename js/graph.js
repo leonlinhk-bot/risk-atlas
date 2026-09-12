@@ -68,7 +68,7 @@
     var data = nodes.map(function (n) {
       return {
         id: n.id,
-        name: pick(n, 'title'),
+        name: (window.Wiki && Wiki.compactTitle) ? Wiki.compactTitle(pick(n, 'title'), 22) : pick(n, 'title'),
         category: catIndex(n.type),
         symbolSize: SIZE[n.type] || 20,
         symbol: KIND_SYMBOL[n.kind] || 'circle',

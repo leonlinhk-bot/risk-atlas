@@ -123,7 +123,7 @@
           var a = document.createElement('a');
           a.className = 'sr-item';
           a.href = 'wiki.html?slug=' + encodeURIComponent(d.slug);
-          a.innerHTML = '<b>' + window.Wiki.escapeHtml(d.title) + '</b> ' +
+          a.innerHTML = '<b>' + window.Wiki.escapeHtml(window.Wiki.compactTitle(d.title, 46)) + '</b> ' +
             (d.titleEn && d.titleEn !== d.title ? '<span class="muted">' + window.Wiki.escapeHtml(d.titleEn) + '</span> ' : '') +
             (d.code ? '<span class="muted">' + d.code + '</span> ' : '') +
             typeTag(d) +

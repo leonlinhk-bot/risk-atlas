@@ -31,7 +31,7 @@
   </footer>
 
   <script src="js/nav.js?v=330b2eed"></script>
-  <script src="js/wiki.js?v=5b9dc51c"></script>
+  <script src="js/wiki.js?v=25f80e49"></script>
   <script src="js/notice.js?v=06b6a6bc"></script>
   <script>
     (function () {
@@ -145,7 +145,9 @@
         html += '<div class="crumb">' + crumb + '</div>';
         html += '<div class="wiki-layout">';
         html += '<div class="wiki-main"><article class="article">';
-        html += '<h1 class="entry-title">' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</h1>';
+        var fullTitle = Wiki.tr(e, 'title');
+        html += '<h1 class="entry-title" title="' + Wiki.escapeHtml(fullTitle) + '">' +
+          Wiki.escapeHtml(Wiki.compactTitle(fullTitle, 90)) + '</h1>';
         if (e.code || e.en) {
           html += '<div class="entry-sub">' + [e.code, e.en].filter(Boolean).map(Wiki.escapeHtml).join(' · ') + ' ' + tag(e) + badgeHtml(e) + '</div>';
         } else {
@@ -168,7 +170,7 @@
         if (back.length) {
           html += '<div class="block"><h2>反向链接</h2><div class="backlink-list">' +
             back.map(function (b) {
-              return '<a class="backlink-item" href="' + Wiki.entryHref(b.slug) + '">' + tag(b) + Wiki.escapeHtml(Wiki.tr(b, 'title')) + '</a>';
+              return '<a class="backlink-item" href="' + Wiki.entryHref(b.slug) + '">' + tag(b) + Wiki.escapeHtml(Wiki.compactTitle(Wiki.tr(b, 'title'), 32)) + '</a>';
             }).join('') + '</div></div>';
         }
         html += '</div>'; // wiki-main

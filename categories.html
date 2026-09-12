@@ -33,7 +33,7 @@
   </footer>
 
   <script src="js/nav.js?v=330b2eed"></script>
-  <script src="js/wiki.js?v=5b9dc51c"></script>
+  <script src="js/wiki.js?v=25f80e49"></script>
   <script src="js/notice.js?v=06b6a6bc"></script>
   <script>
     (function () {
@@ -55,7 +55,7 @@
           badge = '<span class="vbadge-muted" title="尚未在本站实测（来源与可用性待验证）">未实测</span>';
         }
         return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '">' +
-          '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) + badge +
+          '<b>' + Wiki.escapeHtml(Wiki.compactTitle(Wiki.tr(e, 'title'), 46)) + '</b> ' + tag(e) + badge +
           (line ? '<small>' + Wiki.escapeHtml(line) + '</small>' : '') +
           '<small>' + Wiki.escapeHtml(sub) + '</small></a>';
       }

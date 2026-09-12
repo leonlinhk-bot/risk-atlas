@@ -80,7 +80,7 @@
     if (text == null) return '';
     return String(text).replace(LINK_RE, function (m, slug, label) {
       slug = slug.trim();
-      var display = label ? label.trim() : (idx[slug] ? idx[slug].title : slug);
+      var display = label ? label.trim() : (idx[slug] ? compactTitle(idx[slug].title, 40) : slug);
       if (idx[slug]) {
         return '<a class="wikilink" href="wiki.html?slug=' + encodeURIComponent(slug) + '">' + escapeHtml(display) + '</a>';
       }
@@ -166,6 +166,20 @@
     var slug = typeof t === 'object' ? t.slug : t;
     var e = idx && idx[slug];
     return { slug: slug, name: e ? tr(e, 'title') : (typeof t === 'object' ? t.name : slug) };
+  }
+
+  /* 紧凑标题：去掉 markdown 记号、压缩空白、超长截断（列表/链接/图标签用；词条页 H1 用完整标题） */
+  function compactTitle(s, n) {
+    var t = String(s == null ? '' : s)
+      .replace(/\*\*|__|`/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+    n = n || 40;
+    if (t.length <= n) return t;
+    var cut = t.slice(0, n);
+    var sp = cut.lastIndexOf(' ');
+    if (sp > n * 0.6) cut = cut.slice(0, sp);
+    return cut.replace(/[，、：:；;,\-–—]+$/, '') + '…';
   }
 
   function escapeHtml(s) {
@@ -339,6 +353,7 @@
     tagClass: tagClass,
     trackRef: trackRef,
     entryHref: entryHref,
+    compactTitle: compactTitle,
     escapeHtml: escapeHtml,
     outgoingSlugs: outgoingSlugs,
     renderMarkdown: renderMarkdown,
