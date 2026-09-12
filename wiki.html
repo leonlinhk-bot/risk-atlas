@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'none'" />
   <title>Risk Atlas · 风险图谱 · 岭南大学</title>
-  <link rel="stylesheet" href="css/style.css?v=058b4344" />
+  <link rel="stylesheet" href="css/style.css?v=ce69fcab" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳到主内容</a>
@@ -72,7 +72,8 @@
         } else if (e.type === 'tool') {
           if (e.kind) rows += row('形态', '<span class="kbadge">' + Wiki.escapeHtml(e.kind) + '</span>');
           if (e.category) rows += row('类别', e.category);
-          if (e.verified) rows += row('验证', '<span class="vbadge">本站实测</span>');
+          if (e.verified) rows += row('验证', '<span class="vbadge" title="本站在 Risk Atlas 探索/萃取流程中实测过">本站实测</span>');
+          else rows += row('验证', '<span class="vbadge-muted" title="尚未在本站实测（来源与可用性待验证）">未实测</span>');
           if (e.source) rows += row('来源', '<a class="wikilink" href="' + Wiki.escapeHtml(e.source) + '" target="_blank" rel="noopener">' + Wiki.escapeHtml(String(e.source).replace(/^https?:\/\//, '').slice(0, 48)) + '</a>');
           if (e.official_docs) rows += row('官方文档', '<a class="wikilink" href="' + Wiki.escapeHtml(e.official_docs) + '" target="_blank" rel="noopener">' + Wiki.escapeHtml(String(e.official_docs).replace(/^https?:\/\//, '').slice(0, 48)) + '</a>');
           if (e.official_download) rows += row('获取方式', '<code>' + Wiki.escapeHtml(e.official_download) + '</code>');
@@ -130,6 +131,7 @@
         var b = '';
         if (e.kind) b += '<span class="kbadge">' + Wiki.escapeHtml(e.kind) + '</span>';
         if (e.verified) b += '<span class="vbadge" title="本站在 Risk Atlas 探索/萃取流程中实测过">本站实测</span>';
+        else if (e.type === 'tool') b += '<span class="vbadge-muted" title="尚未在本站实测（来源与可用性待验证）">未实测</span>';
         return b;
       }
 

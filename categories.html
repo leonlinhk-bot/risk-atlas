@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'none'" />
   <title>分类索引 · Risk Atlas · 风险图谱</title>
-  <link rel="stylesheet" href="css/style.css?v=058b4344" />
+  <link rel="stylesheet" href="css/style.css?v=ce69fcab" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳到主内容</a>
@@ -48,7 +48,12 @@
       function entryCard(e) {
         var line = e.code || e.en || (e.category ? '类别：' + e.category : '');
         var sub = e.summary || '';
-        var badge = (e.verified) ? '<span class="vbadge" title="本站在 Risk Atlas 探索/萃取流程中实测过">本站实测</span>' : '';
+        var badge = '';
+        if (e.verified) {
+          badge = '<span class="vbadge" title="本站在 Risk Atlas 探索/萃取流程中实测过">本站实测</span>';
+        } else if (e.type === 'tool') {
+          badge = '<span class="vbadge-muted" title="尚未在本站实测（来源与可用性待验证）">未实测</span>';
+        }
         return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '">' +
           '<b>' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b> ' + tag(e) + badge +
           (line ? '<small>' + Wiki.escapeHtml(line) + '</small>' : '') +
