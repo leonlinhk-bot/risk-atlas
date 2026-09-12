@@ -46,6 +46,19 @@ EXTRA_FIELDS = {
 LINK_RE = re.compile(r'\[\[([^\]|]+)(?:\|[^\]]+)?\]\]')
 
 
+# 列表页展示用的文本截断上限（正文仍在 entries.json / wiki 详情页，不受影响）
+TRUNC = {'title': 100, 'title_en': 100, 'title_hk': 100,
+         'summary': 150, 'summary_en': 150, 'summary_hk': 150}
+GRAPH_TRUNC = {'title': 100, 'title_en': 100, 'title_hk': 100,
+               'summary': 140, 'summary_en': 140}
+
+
+def clip(s, n):
+    if not isinstance(s, str) or len(s) <= n:
+        return s
+    return s[:n - 1].rstrip() + '…'
+
+
 def load_entries():
     with open(ENTRIES, encoding='utf-8') as f:
         return json.load(f)
@@ -56,6 +69,9 @@ def build_index(doc):
     for e in doc['entries']:
         keep = BASE_FIELDS + EXTRA_FIELDS.get(e.get('type'), [])
         slim = {k: e[k] for k in keep if k in e and e[k] not in (None, '', [], {})}
+        for f, n in TRUNC.items():
+            if f in slim:
+                slim[f] = clip(slim[f], n)
         out.append(slim)
     return {
         'site': doc.get('site', {}),
@@ -72,12 +88,12 @@ def build_graph(doc):
         nodes.append({
             'id': e['slug'],
             'type': e['type'],
-            'title': e.get('title', ''),
-            'title_en': e.get('title_en') or e.get('en') or '',
-            'title_hk': e.get('title_hk') or e.get('title', ''),
-            'en': e.get('en') or e.get('title_en') or '',
-            'summary': e.get('summary', ''),
-            'summary_en': e.get('summary_en') or e.get('summary', ''),
+            'title': clip(e.get('title', ''), GRAPH_TRUNC['title']),
+            'title_en': clip(e.get('title_en') or e.get('en') or '', GRAPH_TRUNC['title_en']),
+            'title_hk': clip(e.get('title_hk') or e.get('title', ''), GRAPH_TRUNC['title_hk']),
+            'en': clip(e.get('en') or e.get('title_en') or '', GRAPH_TRUNC['title_en']),
+            'summary': clip(e.get('summary', ''), GRAPH_TRUNC['summary']),
+            'summary_en': clip(e.get('summary_en') or e.get('summary', ''), GRAPH_TRUNC['summary_en']),
             'kind': e.get('kind'),
             'status': e.get('status'),
             'degree': 0,
