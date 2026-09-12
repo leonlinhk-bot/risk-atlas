@@ -35,6 +35,13 @@ python3 scripts/stamp.py     # 给 HTML 里的 css/js 引用打内容指纹 ?v=
 - 校验是否同步：`python3 scripts/build.py --check`、`python3 scripts/stamp.py --check`（过期返回 1，适合未来 CI）。
 - 页面取数：列表页（首页/课程目录/分类索引/就业情报/机构全景/周报）读当前语言的 `index.<lang>.json`；搜索首次输入懒加载 `search.<lang>.json`（**不再拉全量**）；`map.html` 读 `graph.<lang>.json`；`wiki.html` 详情页仍读全量 `entries.json`（仅详情页）。
 
+推送后自动核验（推荐，替代人工 sleep + shasum）：
+
+```bash
+bash scripts/verify-live.sh          # 默认等待 180s，轮询比对 31 个文件 + 10 个页面状态 + 404 + 词条数 + sitemap 计数
+bash scripts/verify-live.sh --wait 0 index.html css/style.css   # 只核指定文件、不等待
+```
+
 推送成功后可用以下命令抽查线上是否已更新：
 
 ```bash

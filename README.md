@@ -45,6 +45,7 @@ git pull origin main --rebase          # 1. 先同步
 # 编辑 data/entries.json …
 python3 scripts/validate-entries.py    # 2. 校验（PASS 才能推；pre-push hook 会自动拦截坏数据）
 git add data/entries.json && git commit -m "词条: …" && git push origin main   # 3. 推送即上线（~1 分钟）
+bash scripts/verify-live.sh       # 4. 自动核验线上与本地一致（含页面状态/404/计数）
 ```
 
 ## 页面一览
