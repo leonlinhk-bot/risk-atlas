@@ -27,6 +27,9 @@ LANG_OUT = {
     'en':    ('data/index.en.json', 'data/graph.en.json'),
     'hk':    ('data/index.hk.json', 'data/graph.hk.json'),
 }
+# 搜索语料（懒加载用；取代整份 entries.json）：短键压缩字段名
+SEARCH_OUT = {'zh-cn': 'data/search.json', 'en': 'data/search.en.json', 'hk': 'data/search.hk.json'}
+BODY_EXCERPT = 80    # 正文摘录字符数（正文全文仍在 entries.json / 词条页）
 SITEMAP = os.path.join(ROOT, 'sitemap.xml')
 SITE = 'https://risk-atlas.wiki'
 STATIC_PATHS = ['/', '/weekly.html', '/catalog.html', '/career.html',
@@ -155,6 +158,37 @@ def build_graph(doc, lang='zh-cn'):
     return {'generated_from': 'entries.json', 'nodes': nodes, 'links': links}
 
 
+def build_search(doc, lang='zh-cn'):
+    """语言化搜索语料：slug/type/title/en/code/summary/正文摘录/别名（短键）"""
+    tf = LANG_FIELDS[lang]['title']
+    bf = {'zh-cn': 'body', 'en': 'body_en', 'hk': 'body_hk'}[lang]
+    out = []
+    for e in doc['entries']:
+        body = re.sub(r'\s+', ' ', re.sub(r'\[\[[^\]]*\]\]', ' ', e.get(bf) or e.get('body') or '')).strip()
+        # 摘要不进语料：搜索结果用页面已加载的 index 里的 summary（查询时按 slug 合并）
+        rec = {
+            's': e['slug'],
+            't': e['type'],
+            'n': clip(e.get(tf) or e.get('title') or '', 80),
+            'e': clip(e.get('en') or e.get('title_en') or '', 80),
+        }
+        # 跨语言标题：保证「EN 界面搜中文」「中文界面搜英文」仍能命中（正文级跨语言不再保留）
+        if lang == 'en':
+            cross = e.get('title') or ''
+        else:
+            cross = e.get('title_en') or e.get('en') or ''
+        if cross and cross != rec['n']:
+            rec['x'] = clip(cross, 60)
+        if e.get('code'):
+            rec['c'] = e['code']
+        if e.get('aliases'):
+            rec['a'] = e['aliases'][:6]
+        if body:
+            rec['b'] = clip(body, BODY_EXCERPT)
+        out.append(rec)
+    return {'generated_from': 'entries.json', 'lang': lang, 'entries': out}
+
+
 def build_sitemap(doc):
     """生成 sitemap.xml：静态页 + 全部词条 + 全部周报"""
     lastmod = datetime.date.fromtimestamp(os.path.getmtime(ENTRIES)).isoformat()
@@ -227,6 +261,8 @@ def main():
     for lang, (ipath, gpath) in LANG_OUT.items():
         stale |= write_or_check(os.path.join(ROOT, ipath), build_index(doc, lang), check)
         stale |= write_or_check(os.path.join(ROOT, gpath), build_graph(doc, lang), check)
+    for lang, spath in SEARCH_OUT.items():
+        stale |= write_or_check(os.path.join(ROOT, spath), build_search(doc, lang), check)
     stale |= write_raw_or_check(SITEMAP, build_sitemap(doc), check)
     if check and stale:
         print("✗ 生成物与 entries.json 不同步 —— 请运行 python3 scripts/build.py 并提交")

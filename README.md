@@ -13,7 +13,7 @@
 ## 数据构建（派生文件）
 
 ```bash
-python3 scripts/build.py     # data/index.json（列表页精简索引）+ data/graph.json（知识宇宙图）
+python3 scripts/build.py     # data/index.<lang>.json（列表页索引）+ data/graph.<lang>.json（宇宙图）+ data/search.<lang>.json（搜索语料）
 python3 scripts/stamp.py     # HTML 资源指纹（css/js ?v=）
 ```
 

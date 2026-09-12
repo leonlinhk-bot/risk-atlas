@@ -52,9 +52,9 @@
   </footer>
 
   <script src="js/nav.js?v=330b2eed"></script>
-  <script src="js/wiki.js?v=2a30f4e2"></script>
+  <script src="js/wiki.js?v=aa0fc2bd"></script>
   <script src="js/notice.js?v=06b6a6bc"></script>
-  <script src="js/search.js?v=457861ab"></script>
+  <script src="js/search.js?v=f7cd5c4e"></script>
   <script>
     (function () {
       Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
@@ -63,7 +63,7 @@
           document.getElementById('search-input'),
           document.getElementById('search-results'),
           d.entries,
-          { fullLoader: function () { return fetch('/data/entries.json').then(function (r) { return r.json(); }).then(function (x) { return x.entries; }); } }
+          { fullLoader: function () { return Wiki.loadSearch().then(function (r) { return r.entries; }); } }
         );
       }).catch(function (err) {
         document.getElementById('search-results').innerHTML = '<div class="sr-empty">搜索索引加载失败：' + Wiki.escapeHtml(err.message) + '</div>';

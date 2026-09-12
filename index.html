@@ -60,9 +60,9 @@
   </footer>
 
   <script src="js/nav.js?v=330b2eed"></script>
-  <script src="js/wiki.js?v=2a30f4e2"></script>
+  <script src="js/wiki.js?v=aa0fc2bd"></script>
   <script src="js/notice.js?v=06b6a6bc"></script>
-  <script src="js/search.js?v=457861ab"></script>
+  <script src="js/search.js?v=f7cd5c4e"></script>
   <script>
     (function () {
       Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
@@ -197,7 +197,7 @@
           document.getElementById('search-input'),
           document.getElementById('search-results'),
           state.entries,
-          { fullLoader: function () { return Wiki.load().then(function (r) { return r.entries; }); } }
+          { fullLoader: function () { return Wiki.loadSearch().then(function (r) { return r.entries; }); } }
         );
       }).catch(function (err) {
         document.getElementById('stats').textContent = '加载失败：' + err.message;

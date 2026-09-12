@@ -56,6 +56,12 @@
       .catch(function () { return fetchJSON('data/index.json'); });
   }
 
+  /* 载入搜索语料（懒加载）：只取当前语言，失败回退默认文件 */
+  function loadSearch() {
+    return fetchJSON('data/search' + langSuffix() + '.json')
+      .catch(function () { return fetchJSON('data/search.json'); });
+  }
+
   /* 载入知识宇宙预计算图：同上按语言取，失败回退 */
   function loadGraph() {
     return fetchJSON('data/graph' + langSuffix() + '.json')
@@ -309,6 +315,7 @@
     load: load,
     loadIndex: loadIndex,
     loadGraph: loadGraph,
+    loadSearch: loadSearch,
     index: index,
     renderLinks: renderLinks,
     renderBody: renderBody,
