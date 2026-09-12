@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>知识宇宙 · Risk Atlas · 风险图谱</title>
-  <link rel="stylesheet" href="css/style.css?v=1795d6d3" />
+  <link rel="stylesheet" href="css/style.css?v=058b4344" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳到主内容</a>
   <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
   <header class="topbar">
     <div class="topbar-inner">
@@ -18,7 +19,7 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container" id="main-content">
     <h1 class="page-title">知识宇宙</h1>
     <p class="page-sub">五条纵深线为骨干，课程 ↔ 概念 ↔ 工具 ↔ 框架相互咬合。拖拽节点、滚轮缩放、点击节点进入词条。</p>
     <div class="legend">
@@ -34,29 +35,29 @@
       <span class="lg"><span class="dot" style="background:#0d9488"></span>资源</span>
     </div>
     <div class="gctl">
-      <div class="gctl-row">
+      <div class="gctl-row" role="group" aria-label="显示规模">
         <span class="gctl-lab">显示规模</span>
-        <button class="gc-btn" data-limit="120">核心 120</button>
-        <button class="gc-btn active" data-limit="300">300</button>
-        <button class="gc-btn" data-limit="0">全部（较慢）</button>
+        <button class="gc-btn" data-limit="120" aria-pressed="false">核心 120</button>
+        <button class="gc-btn active" data-limit="300" aria-pressed="true">300</button>
+        <button class="gc-btn" data-limit="0" aria-pressed="false">全部（较慢）</button>
       </div>
-      <div class="gctl-row">
+      <div class="gctl-row" role="group" aria-label="类型筛选">
         <span class="gctl-lab">类型筛选</span>
-        <button class="gc-btn gt-btn active" data-type="all">全部</button>
-        <button class="gc-btn gt-btn" data-type="course">课程</button>
-        <button class="gc-btn gt-btn" data-type="concept">概念</button>
-        <button class="gc-btn gt-btn" data-type="tool">工具</button>
-        <button class="gc-btn gt-btn" data-type="framework">框架</button>
-        <button class="gc-btn gt-btn" data-type="track">纵深线</button>
-        <button class="gc-btn gt-btn" data-type="credential">考牌</button>
-        <button class="gc-btn gt-btn" data-type="job">岗位</button>
-        <button class="gc-btn gt-btn" data-type="employer">雇主</button>
-        <button class="gc-btn gt-btn" data-type="channel">渠道</button>
-        <button class="gc-btn gt-btn" data-type="resource">资源</button>
+        <button class="gc-btn gt-btn active" data-type="all" aria-pressed="true">全部</button>
+        <button class="gc-btn gt-btn" data-type="course" aria-pressed="false">课程</button>
+        <button class="gc-btn gt-btn" data-type="concept" aria-pressed="false">概念</button>
+        <button class="gc-btn gt-btn" data-type="tool" aria-pressed="false">工具</button>
+        <button class="gc-btn gt-btn" data-type="framework" aria-pressed="false">框架</button>
+        <button class="gc-btn gt-btn" data-type="track" aria-pressed="false">纵深线</button>
+        <button class="gc-btn gt-btn" data-type="credential" aria-pressed="false">考牌</button>
+        <button class="gc-btn gt-btn" data-type="job" aria-pressed="false">岗位</button>
+        <button class="gc-btn gt-btn" data-type="employer" aria-pressed="false">雇主</button>
+        <button class="gc-btn gt-btn" data-type="channel" aria-pressed="false">渠道</button>
+        <button class="gc-btn gt-btn" data-type="resource" aria-pressed="false">资源</button>
       </div>
       <div class="gctl-stat muted" id="gstat">加载中…</div>
     </div>
-    <div id="graph"></div>
+    <div id="graph" aria-label="知识宇宙：词条互链可视化（点击节点进入词条）"></div>
   </main>
 
   <footer class="footer">
@@ -67,7 +68,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
   <script src="js/nav.js?v=330b2eed"></script>
-  <script src="js/wiki.js?v=40b0dd7f"></script>
+  <script src="js/wiki.js?v=2a30f4e2"></script>
   <script src="js/notice.js?v=06b6a6bc"></script>
   <script src="js/graph.js?v=d9575271"></script>
   <script>
@@ -88,13 +89,13 @@
         if (!btn) return;
         if (btn.hasAttribute('data-limit')) {
           gLimit = parseInt(btn.getAttribute('data-limit'), 10) || 0;
-          Array.prototype.forEach.call(document.querySelectorAll('.gc-btn[data-limit]'), function (x) { x.classList.remove('active'); });
-          btn.classList.add('active');
+          Array.prototype.forEach.call(document.querySelectorAll('.gc-btn[data-limit]'), function (x) { x.classList.remove('active'); x.setAttribute('aria-pressed', 'false'); });
+          btn.classList.add('active'); btn.setAttribute('aria-pressed', 'true');
           draw();
         } else if (btn.hasAttribute('data-type')) {
           var t = btn.getAttribute('data-type');
-          Array.prototype.forEach.call(document.querySelectorAll('.gt-btn'), function (x) { x.classList.remove('active'); });
-          btn.classList.add('active');
+          Array.prototype.forEach.call(document.querySelectorAll('.gt-btn'), function (x) { x.classList.remove('active'); x.setAttribute('aria-pressed', 'false'); });
+          btn.classList.add('active'); btn.setAttribute('aria-pressed', 'true');
           gTypes = (t === 'all') ? [] : [t];
           draw();
         }

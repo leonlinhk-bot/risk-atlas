@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Risk Atlas · 风险图谱 · 岭南大学</title>
-  <link rel="stylesheet" href="css/style.css?v=1795d6d3" />
+  <link rel="stylesheet" href="css/style.css?v=058b4344" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳到主内容</a>
   <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
   <header class="topbar">
     <div class="topbar-inner">
@@ -29,7 +30,7 @@
   </footer>
 
   <script src="js/nav.js?v=330b2eed"></script>
-  <script src="js/wiki.js?v=40b0dd7f"></script>
+  <script src="js/wiki.js?v=2a30f4e2"></script>
   <script src="js/notice.js?v=06b6a6bc"></script>
   <script>
     (function () {
@@ -186,7 +187,7 @@
         var courses = entries.filter(function (e) { return e.type === 'course'; });
         document.title = '词条 · Risk Atlas · 风险图谱';
         main.innerHTML = '<div class="crumb"><a href="index.html">首页</a> › 词条</div>' +
-          '<h1 class="page-title">请选择一个词条</h1><p class="page-sub">以下是十门核心课程，点击进入；或在首页搜索任意词条。</p>' +
+          '<h1 class="page-title">请选择一个词条</h1><p class="page-sub">以下是十六门核心课程，点击进入；或在首页搜索任意词条。</p>' +
           '<div class="entry-list">' + courses.map(function (e) {
             return '<a class="entry-card" href="' + Wiki.entryHref(e.slug) + '"><b>' + e.code + ' · ' + Wiki.escapeHtml(Wiki.tr(e, 'title')) + '</b><small>' + Wiki.escapeHtml(e.summary || '') + '</small></a>';
           }).join('') + '</div>';

@@ -282,11 +282,18 @@
     if (lang === 'zh-hk' && Array.isArray(e.modules_hk) && e.modules_hk.length) return e.modules_hk;
     return Array.isArray(e.modules) ? e.modules : [];
   }
+  var LANG_LABEL = { 'zh-cn': '简体中文', 'zh-hk': '繁體中文', 'en': 'English' };
+  var LANG_HTML = { 'zh-cn': 'zh-CN', 'zh-hk': 'zh-Hant-HK', 'en': 'en' };
   function attachLangSwitcher(container) {
     var langs = [['zh-cn', '简'], ['zh-hk', '繁'], ['en', 'EN']];
     var cur = currentLang();
+    if (!container) return;
+    try { document.documentElement.setAttribute('lang', LANG_HTML[cur] || 'zh-CN'); } catch (e) {}
     container.innerHTML = langs.map(function (l) {
-      return '<a class="lang-btn' + (l[0] === cur ? ' active' : '') + '" href="#" data-lang="' + l[0] + '">' + l[1] + '</a>';
+      var label = LANG_LABEL[l[0]] || l[1];
+      return '<a class="lang-btn' + (l[0] === cur ? ' active' : '') + '" href="#" data-lang="' + l[0] +
+        '" title="' + label + '" aria-label="切换到' + label + '"' +
+        (l[0] === cur ? ' aria-current="true"' : '') + '>' + l[1] + '</a>';
     }).join('');
     container.addEventListener('click', function (ev) {
       var a = ev.target && ev.target.closest ? ev.target.closest('.lang-btn') : null;

@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Risk Atlas · 风险图谱 · 岭南大学</title>
-  <link rel="stylesheet" href="css/style.css?v=1795d6d3" />
+  <link rel="stylesheet" href="css/style.css?v=058b4344" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳到主内容</a>
   <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
   <header class="topbar">
     <div class="topbar-inner">
@@ -18,13 +19,13 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container" id="main-content">
     <section class="hero">
       <h1>一个可生长的知识百科</h1>
       <p>以双链（[[词条]]）为骨架，把 MScRIAA 的官网十六门课程（5 必修 + 11 选修）拆解成课程、概念、工具、框架与纵深线相互咬合的知识网络，服务「AI 赋能学习」。信息很多？从下方「新手指引」出发，一步步逛。</p>
-      <div class="searchbox">
-        <input id="search-input" type="search" placeholder="搜索词条：如 久期、VaR、RIM537、DeepSeek…" autocomplete="off" />
-        <div id="search-results" class="search-results"></div>
+      <div class="searchbox" role="search">
+        <input id="search-input" aria-label="搜索词条（支持中文、英文与课程编号）" type="search" placeholder="搜索词条：如 久期、VaR、RIM537、DeepSeek…" autocomplete="off" />
+        <div id="search-results" class="search-results" aria-live="polite"></div>
       </div>
       <div class="stats" id="stats"></div>
     </section>
@@ -59,7 +60,7 @@
   </footer>
 
   <script src="js/nav.js?v=330b2eed"></script>
-  <script src="js/wiki.js?v=40b0dd7f"></script>
+  <script src="js/wiki.js?v=2a30f4e2"></script>
   <script src="js/notice.js?v=06b6a6bc"></script>
   <script src="js/search.js?v=457861ab"></script>
   <script>

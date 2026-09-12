@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <base href="/" />
   <title>页面不存在 · Risk Atlas · 风险图谱</title>
-  <link rel="stylesheet" href="css/style.css?v=1795d6d3" />
+  <link rel="stylesheet" href="css/style.css?v=058b4344" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳到主内容</a>
   <div class="identity-strip"><span class="identity-text">Lingnan University · Risk, Insurance and Actuarial Analysis</span></div>
   <header class="topbar">
     <div class="topbar-inner">
@@ -19,16 +20,16 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container" id="main-content">
     <h1 class="page-title">页面不存在 · 404</h1>
     <p class="page-sub">这个地址可能已更改、被合并，或该词条尚未收录。可以直接搜索，或从下面的入口继续逛。</p>
 
     <section class="hero" style="padding:26px 28px">
       <h1 style="font-size:24px">换个方式找找看</h1>
       <p style="margin-bottom:14px">支持中文、英文与课程编号（如 久期、VaR、RIM537、Pagefind、再保险）。</p>
-      <div class="searchbox">
-        <input id="search-input" type="search" placeholder="搜索词条：如 久期、VaR、RIM537、DeepSeek…" autocomplete="off" />
-        <div id="search-results" class="search-results"></div>
+      <div class="searchbox" role="search">
+        <input id="search-input" aria-label="搜索词条（支持中文、英文与课程编号）" type="search" placeholder="搜索词条：如 久期、VaR、RIM537、DeepSeek…" autocomplete="off" />
+        <div id="search-results" class="search-results" aria-live="polite"></div>
       </div>
     </section>
 
@@ -51,7 +52,7 @@
   </footer>
 
   <script src="js/nav.js?v=330b2eed"></script>
-  <script src="js/wiki.js?v=40b0dd7f"></script>
+  <script src="js/wiki.js?v=2a30f4e2"></script>
   <script src="js/notice.js?v=06b6a6bc"></script>
   <script src="js/search.js?v=457861ab"></script>
   <script>
