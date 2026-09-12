@@ -152,7 +152,8 @@
       "title_en": "Risk Framework and Quantification",
       "summary_en": "From risk governance frameworks to quantitative modelling",
       "summary_hk": "從風險治理框架到量化建模的第一條縱深線",
-      "en": "Risk Framework and Quantification"
+      "en": "Risk Framework and Quantification",
+      "category": "学习与备考"
     },
     {
       "slug": "track-2",
@@ -171,7 +172,8 @@
       "title_en": "Insurance Products and Market Depth",
       "summary_en": "Understanding product economics and the two-market structure",
       "summary_hk": "理解保險產品背後的經濟學與兩地市場結構",
-      "en": "Insurance Products and Market Depth"
+      "en": "Insurance Products and Market Depth",
+      "category": "学习与备考"
     },
     {
       "slug": "track-3",
@@ -190,7 +192,8 @@
       "title_en": "Interest Rates and Financial Analysis",
       "summary_en": "From corporate finance to bond and credit risk",
       "summary_hk": "從企業財務到債券與信用風險的量價分析",
-      "en": "Interest Rates and Financial Analysis"
+      "en": "Interest Rates and Financial Analysis",
+      "category": "学习与备考"
     },
     {
       "slug": "track-4",
@@ -209,7 +212,8 @@
       "title_en": "Risk Transfer and Wealth Architecture",
       "summary_en": "How risk is transferred and wealth managed over the long term",
       "summary_hk": "風險如何被轉移、財富如何被長期管理",
-      "en": "Risk Transfer and Wealth Architecture"
+      "en": "Risk Transfer and Wealth Architecture",
+      "category": "学习与备考"
     },
     {
       "slug": "track-5",
@@ -228,7 +232,8 @@
       "title_en": "Macro Insight and Data-driven",
       "summary_en": "How data and emerging risks reshape insurance pricing and governance",
       "summary_hk": "數據與新興風險如何重塑保險的定價與治理",
-      "en": "Macro Insight and Data-driven"
+      "en": "Macro Insight and Data-driven",
+      "category": "学习与备考"
     },
     {
       "slug": "rim520",
@@ -318,7 +323,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "rim521",
@@ -380,7 +386,8 @@
           "weekly": "w22",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "rim522",
@@ -453,7 +460,8 @@
           "weekly": "w35",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "rim523",
@@ -523,7 +531,8 @@
           "weekly": "w35",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "rim524",
@@ -567,7 +576,8 @@
       "modules_hk": [
         "會計(財務報表)",
         "財務管理(估值與投資決策)"
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "rim530",
@@ -640,7 +650,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "rim531",
@@ -727,7 +738,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "rim532",
@@ -778,7 +790,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "rim536",
@@ -847,7 +860,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "rim537",
@@ -957,7 +971,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "rim533",
@@ -1009,7 +1024,8 @@
       ],
       "modules_note": "非官方 Indicative Content（依据标准教材大纲整理，待官方课程大纲核实）",
       "modules_note_en": "Unofficial Indicative Content (compiled from standard textbook syllabi; pending official outline verification)",
-      "modules_note_hk": "非官方 Indicative Content（依據標準教材大綱整理，待官方課程大綱核實）"
+      "modules_note_hk": "非官方 Indicative Content（依據標準教材大綱整理，待官方課程大綱核實）",
+      "category": "学习与备考"
     },
     {
       "slug": "rim534",
@@ -1067,7 +1083,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "rim535",
@@ -1132,7 +1149,8 @@
       ],
       "modules_note": "非官方 Indicative Content（依据标准教材大纲整理，待官方课程大纲核实）",
       "modules_note_en": "Unofficial Indicative Content (compiled from standard textbook syllabi; pending official outline verification)",
-      "modules_note_hk": "非官方 Indicative Content（依據標準教材大綱整理，待官方課程大綱核實）"
+      "modules_note_hk": "非官方 Indicative Content（依據標準教材大綱整理，待官方課程大綱核實）",
+      "category": "学习与备考"
     },
     {
       "slug": "rim538",
@@ -1188,7 +1206,8 @@
       ],
       "modules_note": "非官方 Indicative Content（依据标准教材大纲整理，待官方课程大纲核实）",
       "modules_note_en": "Unofficial Indicative Content (compiled from standard textbook syllabi; pending official outline verification)",
-      "modules_note_hk": "非官方 Indicative Content（依據標準教材大綱整理，待官方課程大綱核實）"
+      "modules_note_hk": "非官方 Indicative Content（依據標準教材大綱整理，待官方課程大綱核實）",
+      "category": "学习与备考"
     },
     {
       "slug": "rim539",
@@ -1243,7 +1262,8 @@
       ],
       "modules_note": "非官方 Indicative Content（依据标准教材大纲整理，待官方课程大纲核实）",
       "modules_note_en": "Unofficial Indicative Content (compiled from standard textbook syllabi; pending official outline verification)",
-      "modules_note_hk": "非官方 Indicative Content（依據標準教材大綱整理，待官方課程大綱核實）"
+      "modules_note_hk": "非官方 Indicative Content（依據標準教材大綱整理，待官方課程大綱核實）",
+      "category": "学习与备考"
     },
     {
       "slug": "rim540",
@@ -1295,7 +1315,8 @@
       ],
       "modules_note": "非官方 Indicative Content（依据标准教材大纲整理，待官方课程大纲核实）",
       "modules_note_en": "Unofficial Indicative Content (compiled from standard textbook syllabi; pending official outline verification)",
-      "modules_note_hk": "非官方 Indicative Content（依據標準教材大綱整理，待官方課程大綱核實）"
+      "modules_note_hk": "非官方 Indicative Content（依據標準教材大綱整理，待官方課程大綱核實）",
+      "category": "学习与备考"
     },
     {
       "slug": "risk-appetite",
@@ -1330,7 +1351,8 @@
           "weekly": "w31",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "risk-assessment",
@@ -1373,7 +1395,8 @@
           "weekly": "w31",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "value-at-risk",
@@ -1429,7 +1452,8 @@
           "weekly": "w31",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "monte-carlo",
@@ -1460,7 +1484,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "extreme-value-theory",
@@ -1486,7 +1511,8 @@
         "极端值",
         "极端值理论",
         "EVT"
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "stress-testing",
@@ -1545,7 +1571,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "probability-distribution",
@@ -1566,7 +1593,8 @@
       "body_en": "A probability distribution is the language of quantifying risk, describing loss frequency and severity. RIM523 covers binomial, hypergeometric, Poisson, geometric, negative binomial, exponential, normal and lognormal distributions.",
       "body_hk": "概率分佈是量化風險的語言，描述損失頻率與嚴重度的分佈形態。RIM523 覆蓋經典分佈：二項、超幾何、泊松、幾何、負二項、指數、正態與對數正態。\n\n## 公式要點\n- 二項：P[X=k]=C(n,k)·p^k·(1-p)^(n-k)，μ=np，σ²=np(1-p)。\n- 泊松：P[X=k]=e^(-λ)λ^k/k!，μ=σ²=λ。\n- 指數：f(t)=λe^(-λt)，E[T]=1/λ，V[T]=1/λ²。\n- 正態：f(x)=1/(σ√(2π))·e^(-(x-μ)²/(2σ²))。\n- 對數正態：Y=e^X（X~N(μ,σ²)），E(y)=e^(μ+σ²/2)，V(y)=e^(2μ+σ²)·(e^σ²-1)。\n\n## 關聯\n[[monte-carlo]] · [[value-at-risk]] · [[actuarial-pricing]] · [[central-limit-theorem]] · [[rim523]]",
       "summary_en": "Function describing a random variable’s outcomes",
-      "summary_hk": "刻畫隨機變量取值規律的數學函數"
+      "summary_hk": "刻畫隨機變量取值規律的數學函數",
+      "category": "学习与备考"
     },
     {
       "slug": "adverse-selection",
@@ -1602,7 +1630,8 @@
           "weekly": "w26",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "moral-hazard",
@@ -1629,7 +1658,8 @@
           "weekly": "w26",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "expected-utility",
@@ -1650,7 +1680,8 @@
       "body_en": "Expected utility theory models risk aversion via a utility function, explaining why people pay for certainty through insurance. The cornerstone of insurance demand and pricing in RIM521.",
       "body_hk": "期望效用理論用效用函數刻畫風險厭惡，解釋人們為何願意為確定性付費購買保險。它是 [[rim521]] 建立保險需求與定價模型的基石。\n\n## 要點（RIM521）\n- 風險決策：比較期望值 vs 期望效用，風險厭惡者偏好確定性的期望效用。\n- 保險需求：在公平保費下，風險厭惡者購買足額保險（期望效用最大化）。",
       "summary_en": "Utility function explains risk aversion and insurance demand",
-      "summary_hk": "用效用函數解釋風險厭惡與保險需求"
+      "summary_hk": "用效用函數解釋風險厭惡與保險需求",
+      "category": "学习与备考"
     },
     {
       "slug": "actuarial-pricing",
@@ -1682,7 +1713,8 @@
           "weekly": "w35",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "duration",
@@ -1749,7 +1781,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "convexity",
@@ -1792,7 +1825,8 @@
           "weekly": "w29",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "credit-spread",
@@ -1835,7 +1869,8 @@
           "weekly": "w29",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "cds",
@@ -1866,7 +1901,8 @@
           "weekly": "w23a",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "pd-lgd",
@@ -1901,7 +1937,8 @@
           "weekly": "w29",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "yield-curve",
@@ -1948,7 +1985,8 @@
           "weekly": "w33",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "capital-structure",
@@ -1969,7 +2007,8 @@
       "body_en": "Capital structure is the mix of debt and equity, determining financial leverage and the cost of capital — the starting point of corporate financial analysis.",
       "body_hk": "資本結構是債務與權益的構成，直接影響 [[financial-leverage]] 與資本成本。它是 [[rim524]] 企業財務分析的起點。",
       "summary_en": "The mix of debt and equity financing a firm",
-      "summary_hk": "企業債務與權益的構成比例"
+      "summary_hk": "企業債務與權益的構成比例",
+      "category": "学习与备考"
     },
     {
       "slug": "financial-leverage",
@@ -1996,7 +2035,8 @@
           "weekly": "w33",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "dcf",
@@ -2018,7 +2058,8 @@
       "body_en": "Discounted cash flow (DCF) discounts future cash flows to value an asset. Annuity PV = C·[1−(1+r)^−n]/r; growing perpetuity PV = C/(r−g); EAR = (1+APR/m)^m − 1. Bond value = coupon annuity + face value present value.",
       "body_hk": "現金流折現（DCF）把未來現金流折現以評估價值。RIM524 用它評估債券（票息+本金折現）與股票（股利折現）。\n\n## 公式要點（RIM524）\n- 年金現值：PV = C × [1−(1+r)^−n] / r。\n- 增長年金 / 永續增長現值：PV = C / (r−g)。\n- EAR vs APR：EAR = (1 + APR/m)^m − 1。\n- 債券價值：票息年金現值 + 面值現值（折現率 = YTM / required rate）。\n\n## 關聯\n[[yield-curve]] · [[actuarial-present-value]] · [[rim524]]",
       "summary_en": "Discounted cash flow valuation",
-      "summary_hk": "把未來現金流折現以評估資產價值"
+      "summary_hk": "把未來現金流折現以評估資產價值",
+      "category": "学习与备考"
     },
     {
       "slug": "hedging",
@@ -2073,7 +2114,8 @@
           "weekly": "w35",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "reinsurance",
@@ -2144,7 +2186,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "insurance-linked-securities",
@@ -2191,7 +2234,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "mortality-table",
@@ -2222,7 +2266,8 @@
           "weekly": "w31",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "actuarial-present-value",
@@ -2247,7 +2292,8 @@
       "aliases": [
         "APV",
         "精算折现"
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "longevity-risk",
@@ -2278,7 +2324,8 @@
           "weekly": "w26",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "machine-learning-pricing",
@@ -2309,7 +2356,8 @@
           "weekly": "w33",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "fraud-detection",
@@ -2344,7 +2392,8 @@
           "weekly": "w33",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "emerging-risks",
@@ -2371,7 +2420,8 @@
           "weekly": "w27",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "esg-insurance",
@@ -2402,7 +2452,8 @@
           "weekly": "w25",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "deepseek",
@@ -2433,7 +2484,7 @@
       "title": "Kimi",
       "title_en": "Kimi",
       "en": "Kimi",
-      "category": "长文档阅读",
+      "category": "文档解析与萃取",
       "summary": "擅长长文档理解与信息提取",
       "body": "Kimi 擅长长文档阅读与信息提取，适合处理财报、条款等长文本，是 [[rim524]] 与 [[rim531]] 审阅长文档的助手。",
       "usedIn": [
@@ -2452,7 +2503,7 @@
       "title": "ima 知识库",
       "title_en": "ima Knowledge Base",
       "en": "ima Knowledge Base",
-      "category": "知识库",
+      "category": "Wiki 与知识管理",
       "summary": "把资料沉淀为可检索的个人知识库",
       "body": "ima 用于把课程资料沉淀为可检索知识库，是 [[rim520]]、[[rim522]] 构建法规与框架知识库的基建工具。",
       "usedIn": [
@@ -2471,7 +2522,7 @@
       "title": "NotebookLM",
       "title_en": "NotebookLM",
       "en": "NotebookLM",
-      "category": "文档分析",
+      "category": "文档解析与萃取",
       "summary": "以文档集为基础的问答与摘要工具",
       "body": "NotebookLM 以文档集为基础做问答与摘要，适合把 [[iso-31000]]、[[coso-erm]] 等框架文本结构化，服务 [[rim520]] 的学习。",
       "usedIn": [
@@ -2489,7 +2540,7 @@
       "title": "Gamma",
       "title_en": "Gamma",
       "en": "Gamma",
-      "category": "演示文稿",
+      "category": "视觉与演示",
       "summary": "快速生成结构化演示文稿",
       "body": "Gamma 用于快速生成结构化演示文稿，可把 [[actuarial-pricing]]、[[emerging-risks]] 等概念整理成课程汇报幻灯片。",
       "usedIn": [],
@@ -2505,7 +2556,7 @@
       "title": "Seede",
       "title_en": "Seede",
       "en": "Seede",
-      "category": "视觉设计",
+      "category": "视觉与演示",
       "summary": "快速生成海报与视觉物料",
       "body": "Seede 用于快速生成海报与视觉物料，适合为 [[emerging-risks]] 或 [[esg-insurance]] 等专题制作学术海报。",
       "usedIn": [],
@@ -2539,7 +2590,7 @@
       "title": "元宝",
       "title_en": "Tencent Yuanbao",
       "en": "Tencent Yuanbao",
-      "category": "中文情报",
+      "category": "实时情报",
       "summary": "中文语境下的信息检索与问答助手",
       "body": "元宝擅长中文语境的信息检索与问答，与 [[grok]] 互补，用于追踪内地保险市场与监管动态。",
       "usedIn": [
@@ -2557,7 +2608,7 @@
       "title": "飞书",
       "title_en": "Feishu",
       "en": "Feishu",
-      "category": "协作与流程",
+      "category": "AI 应用",
       "summary": "团队协作与文档流程工具",
       "body": "飞书用于团队协作与文档流程管理，可与 [[xunfei]]、[[kimi]] 组合，支撑 [[rim524]] 的财报审阅工作流。",
       "usedIn": [
@@ -2575,7 +2626,7 @@
       "title": "讯飞",
       "title_en": "iFlytek",
       "en": "iFlytek",
-      "category": "语音与转写",
+      "category": "音视频与转写",
       "summary": "语音识别与会议转写能力",
       "body": "讯飞以语音识别与转写见长，可把课程讲座转成文字稿，配合 [[feishu]] 做流程留痕，服务 [[rim524]] 的文档审计。",
       "usedIn": [
@@ -2593,7 +2644,7 @@
       "title": "秘塔",
       "title_en": "Metaso",
       "en": "Metaso",
-      "category": "深度研究",
+      "category": "学术研究",
       "summary": "带引用的深度研究检索工具",
       "body": "秘塔做带引用的深度研究，适合 [[rim530]]、[[rim538]] 的案例研究与 [[rim522]] 的监管对比，也支持 [[rim537]] 的信用事件研究。",
       "usedIn": [
@@ -2616,7 +2667,7 @@
       "title": "Gemini",
       "title_en": "Gemini",
       "en": "Gemini",
-      "category": "多模态",
+      "category": "AI 应用",
       "summary": "同时处理文本、图像与数据的多模态模型",
       "body": "Gemini 以多模态见长，可处理图表、文档与影像资料，适合 [[rim536]] 的数据分析与 [[rim522]] 的资料整理。",
       "usedIn": [
@@ -2635,7 +2686,7 @@
       "title": "OpenClaw",
       "title_en": "OpenClaw",
       "en": "OpenClaw",
-      "category": "Agent 工程",
+      "category": "Agent 搭建平台",
       "summary": "编排多步 Agent 工作流的框架",
       "body": "OpenClaw 用于编排多步 Agent 工作流，是 [[rim538]] 做专题研究与内控式综述的工程工具，与 [[nuwa-skill]] 配合。",
       "usedIn": [
@@ -2653,7 +2704,7 @@
       "title": "Obsidian",
       "title_en": "Obsidian",
       "en": "Obsidian",
-      "category": "双链笔记",
+      "category": "Wiki 与知识管理",
       "summary": "以 [[双链]] 为核心的个人知识管理工具",
       "body": "Obsidian 以双链笔记为核心，与本站「词条 slug 互链」的语法同构，适合为 [[rim520]] 建立风险框架的 [[risk-assessment]] 知识图谱。",
       "usedIn": [
@@ -2671,7 +2722,7 @@
       "title": "Claude Scholar",
       "title_en": "Claude Scholar",
       "en": "Claude Scholar",
-      "category": "文献管理",
+      "category": "Wiki 与知识管理",
       "summary": "面向学术写作的文献检索与管理",
       "body": "Claude Scholar 面向学术写作做文献检索与管理，适合 [[rim536]]、[[rim538]] 的文献综述与引用验证。",
       "usedIn": [
@@ -2689,7 +2740,7 @@
       "title": "Auto Empirical",
       "title_en": "Auto Empirical",
       "en": "Auto Empirical",
-      "category": "数据分析",
+      "category": "数据分析与可视化",
       "summary": "自动化实证数据分析工具",
       "body": "Auto Empirical 用于自动化实证数据分析，是 [[rim523]]、[[rim536]] 跑回归与建模的助手，也支撑 [[rim537]] 的信用数据研究。",
       "usedIn": [
@@ -2710,7 +2761,7 @@
       "title": "女娲.skill",
       "title_en": "Nuwa Skill Distiller",
       "en": "Nuwa Skill Distiller",
-      "category": "技能蒸馏",
+      "category": "Agent 搭建平台",
       "summary": "把方法论蒸馏成可复用技能（skill）",
       "body": "女娲.skill 把方法论蒸馏成可复用技能，是 [[rim538]] 第四讲「Skill 工程」的核心，与 [[openclaw]]、[[stc]] 相互衔接。",
       "usedIn": [
@@ -2741,7 +2792,8 @@
       "body_en": "ISO 31000 provides the principles, framework and process for risk management — the core framework of RIM520. It embeds risk assessment into governance and is read alongside COSO ERM. The risk manager ([[risk-manager]]) executes the ERM framework.",
       "body_hk": "ISO 31000 提供風險管理的原則、框架與流程，是 [[rim520]] 的核心框架。它強調把 [[risk-assessment]] 嵌入治理，並與 [[coso-erm]] 對照理解。 風險管理經理（[[risk-manager]]）是 ERM 框架的執行者。",
       "summary_en": "International standard for risk management principles, framework and process",
-      "summary_hk": "國際通用的風險管理原則與流程框架"
+      "summary_hk": "國際通用的風險管理原則與流程框架",
+      "category": "数据与标准"
     },
     {
       "slug": "coso-erm",
@@ -2762,7 +2814,8 @@
       "body_en": "COSO ERM integrates risk with strategy and performance, complementing ISO 31000 and bridging to the three lines of defense in RIM520.",
       "body_hk": "COSO ERM 是面向企業的風險管理框架，強調風險與戰略、績效的整合。它與 [[iso-31000]] 互補，是 [[rim520]] 理解 [[three-lines-of-defense]] 的橋樑。",
       "summary_en": "Enterprise risk management framework integrating strategy and performance",
-      "summary_hk": "企業風險管理框架，強調戰略與績效的整合"
+      "summary_hk": "企業風險管理框架，強調戰略與績效的整合",
+      "category": "数据与标准"
     },
     {
       "slug": "three-lines-of-defense",
@@ -2797,7 +2850,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "数据与标准"
     },
     {
       "slug": "rctoa",
@@ -2812,7 +2866,8 @@
       "body_en": "RCTOA is a structured analysis framework (Role, Context, Task, Output, Action) for deconstructing cases or scenarios. It is distinct from STC, the prompt-design framework.",
       "body_hk": "RCTOA 是一個結構化分析框架，五段為角色(Role)、情境(Context)、任務(Task)、輸出(Output)、行動(Action)，用於拆解案例或場景分析。注意它與 [[stc]]（提示詞設計框架）用途不同。",
       "summary_en": "Structured analysis framework: Role-Context-Task-Output-Action",
-      "summary_hk": "角色-情境-任務-輸出-行動的結構化分析框架"
+      "summary_hk": "角色-情境-任務-輸出-行動的結構化分析框架",
+      "category": "数据与标准"
     },
     {
       "slug": "stc",
@@ -2827,7 +2882,8 @@
       "body_en": "STC is a structured prompt-design framework that turns fuzzy tasks into executable AI prompts, distinct from RCTOA (an analysis framework). It underpins the “AI-empowered learning” methodology and is distilled by Nuwa.skill.",
       "body_hk": "STC 是結構化提示詞設計框架，用於把模糊的學習任務轉成可執行的 AI 提示詞，與用於分析的 [[rctoa]] 相區分。它是本知識百科「AI 賦能學習」的方法論底座，被 [[nuwa-skill]] 用於蒸餾技能。",
       "summary_en": "Structured prompt-design framework",
-      "summary_hk": "把學習任務轉成結構化 AI 提示詞的設計框架"
+      "summary_hk": "把學習任務轉成結構化 AI 提示詞的設計框架",
+      "category": "数据与标准"
     },
     {
       "slug": "iiqe-1",
@@ -2849,7 +2905,8 @@
       "body_en": "IIQE Paper 1: Principles and Practice of Insurance, compulsory for all candidates. It is the common foundation for life, general and investment-linked licences. Related courses: [[rim520]] [[rim521]].",
       "body_hk": "IIQE 卷一：保險原理及實務，是所有人必考的基礎卷，對應壽險/一般險/投連牌照的通用基礎。關聯課程：[[rim520]] [[rim521]]。",
       "summary_hk": "保險原理及實務（所有人必考）",
-      "summary_en": "Principles and Practice of Insurance (compulsory for all)"
+      "summary_en": "Principles and Practice of Insurance (compulsory for all)",
+      "category": "学习与备考"
     },
     {
       "slug": "iiqe-2",
@@ -2871,7 +2928,8 @@
       "body_en": "IIQE Paper 2: General Insurance (GI). To practise general insurance, Papers 1 + 2 are required. Related courses: [[rim522]] [[rim533]].",
       "body_hk": "IIQE 卷二：一般保險（GI）。從事一般保險業務需考卷一 + 卷二。關聯課程：[[rim522]] [[rim533]]（財產與意外）。",
       "summary_hk": "一般保險牌照卷（卷一+卷二）",
-      "summary_en": "General Insurance licence (Papers 1 + 2)"
+      "summary_en": "General Insurance licence (Papers 1 + 2)",
+      "category": "学习与备考"
     },
     {
       "slug": "iiqe-3",
@@ -2893,7 +2951,8 @@
       "body_en": "IIQE Paper 3: Long Term Insurance (LT). To practise life and annuity business, Papers 1 + 3 are required. Related course: [[rim531]]. It is a prerequisite for [[iiqe-5]] (Investment-linked Long Term Insurance).",
       "body_hk": "IIQE 卷三：長期保險（LT），做人壽、年金等長期業務需考卷一 + 卷三。關聯課程：[[rim531]]（人壽與健康保險）。 它是 [[iiqe-5]]（投資相連長期保險）的前置卷。",
       "summary_hk": "長期保險（壽險/年金）牌照卷（卷一+卷三）",
-      "summary_en": "Long Term Insurance licence (Papers 1 + 3)"
+      "summary_en": "Long Term Insurance licence (Papers 1 + 3)",
+      "category": "学习与备考"
     },
     {
       "slug": "mpfe",
@@ -2915,7 +2974,8 @@
       "body_en": "The MPFE (Mandatory Provident Fund Schemes Examination) qualifies MPF intermediaries. Since 2 May 2013 it has been independent of the IIQE (no longer IIQE Paper 4), corresponding to the MPF licence. Related course: [[rim532]].",
       "body_hk": "MPFE（強制性公積金計劃考試）是強積金中介人的資格考試，2013 年 5 月 2 日起已獨立於 IIQE（不再作為 IIQE 卷四），對應強積金（MPF）牌照。關聯課程：[[rim532]]（財務規劃與服務）。",
       "summary_hk": "強積金中介人資格考試（2013 年起獨立於 IIQE）",
-      "summary_en": "Mandatory Provident Fund Schemes Examination (independent of IIQE since 2013)"
+      "summary_en": "Mandatory Provident Fund Schemes Examination (independent of IIQE since 2013)",
+      "category": "学习与备考"
     },
     {
       "slug": "iiqe-5",
@@ -2937,7 +2997,8 @@
       "body_en": "IIQE Paper 5: Investment-linked Long Term Insurance (IL). To sell ILAS, Papers [[iiqe-1]] + [[iiqe-3]] + 5 are required. Related courses: [[rim537]] [[rim531]].",
       "body_hk": "IIQE 卷五：投資相連長期保險（IL）。要賣 ILAS 投連險需 [[iiqe-1]]（卷一）+ [[iiqe-3]]（卷三）+ 卷五。關聯課程：[[rim537]]（債券）、[[rim531]]（人壽）。",
       "summary_hk": "投資相連長期保險（ILAS）牌照卷（卷一+卷三+卷五）",
-      "summary_en": "Investment-linked Long Term Insurance licence (Papers 1+3+5)"
+      "summary_en": "Investment-linked Long Term Insurance licence (Papers 1+3+5)",
+      "category": "学习与备考"
     },
     {
       "slug": "utmost-good-faith",
@@ -2958,7 +3019,8 @@
       "body_en": "Utmost good faith requires the insured to disclose all material facts at underwriting; breach allows the insurer to decline a claim. Hong Kong (common law) recognises waiver/estoppel (30-day / 2-year rules); mainland China (civil law) imposes a stricter initial disclosure duty.",
       "body_hk": "最大誠信原則要求投保人在承保時披露一切可能影響承保決策或定價的重大事實，違反時保險人可據此拒賠。\n\n## 要點（RIM522）\n- 香港（普通法）：保險人知悉風險超 30 天或保單生效超 2 年視為放棄披露權利（waiver/estoppel）。\n- 內地（大陸法）：投保時披露義務更重，waiver 原則較不發達。",
       "summary_en": "The insured must disclose all material facts",
-      "summary_hk": "投保人須向保險人披露一切重大事實，否則保險人可拒賠"
+      "summary_hk": "投保人須向保險人披露一切重大事實，否則保險人可拒賠",
+      "category": "学习与备考"
     },
     {
       "slug": "product-liability-insurance",
@@ -2979,7 +3041,8 @@
       "body_en": "Product liability insurance indemnifies the insured for legal liability to third parties for bodily injury or property damage caused by products sold, manufactured or supplied. Typical exclusions: professional indemnity, recall, guarantee, pure financial loss.",
       "body_hk": "產品責任保險為被保險人因出售、製造、供應或測試的產品缺陷導致第三方人身傷害或財產損失的法律責任提供賠償。\n\n## 要點（RIM522 · 產品責任與召回）\n- 典型除外：專業責任、產品召回、產品保證、純財務損失。\n- 召回成本需另購產品召回保險（Product Recall Insurance）。\n- 核保信息：建議書、索賠經驗、質量控制的暴露分析。\n- 網絡風險與產品責任：Cyber Liability Insurance 覆蓋 e-business 第一/第三方風險。",
       "summary_en": "Covers liability for defective products causing injury/damage",
-      "summary_hk": "承保因產品缺陷致第三方人身傷害或財產損失的法律責任"
+      "summary_hk": "承保因產品缺陷致第三方人身傷害或財產損失的法律責任",
+      "category": "学习与备考"
     },
     {
       "slug": "central-limit-theorem",
@@ -3000,7 +3063,8 @@
       "body_en": "The central limit theorem (CLT): the mean (or sum) of many i.i.d. random variables approaches a normal distribution as the sample size grows. Applications: risk-pool stability, normal approximation, Monte Carlo simulation.",
       "body_hk": "中心極限定理（CLT）：大量獨立同分佈隨機變量的均值（或和）隨樣本量增大趨近正態分佈。\n\n## 應用（RIM523）\n- 保險池：風險數量增加時，平均損失圍繞期望值的波動減小，降低保險池無力賠付的概率。\n- 正態近似：1000 份獨立同分佈保單的總損失用正態近似計算盈餘與保費的充分性。\n- 金融：用樣本估計市場/組合回報分佈，配合 [[monte-carlo]] 模擬。",
       "summary_en": "Sample means approach normality as sample size grows",
-      "summary_hk": "大量獨立同分佈隨機變量的均值隨樣本量增大趨近正態分佈"
+      "summary_hk": "大量獨立同分佈隨機變量的均值隨樣本量增大趨近正態分佈",
+      "category": "学习与备考"
     },
     {
       "slug": "linear-regression",
@@ -3027,7 +3091,8 @@
           "weekly": "w33",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "retention",
@@ -3048,7 +3113,8 @@
       "body_en": "Retention is the portion of risk an insurer keeps; risk above retention is ceded via reinsurance. The core design variable: retention, attachment point and limit trade-off. Stop Loss triggers on loss ratio; aggregate excess-of-loss triggers on total losses.",
       "body_hk": "自留額（Retention）是保險公司決定自行承擔的風險部分，超過自留額的風險通過再保轉移。\n\n## 要點（RIM530）\n- 再保設計核心：自留額、起賠點與限額的權衡。\n- Stop Loss 再保：損失率超過約定閾值（如 90%–120%）後由再保人承擔約定比例。\n- 聚合超賠再保：總損失超過免賠額（如 $1000 萬）後由再保人承擔至限額（如 $2000 萬）。",
       "summary_en": "The portion of risk an insurer keeps itself",
-      "summary_hk": "保險公司自行承擔的風險部分，是再保設計的核心變量"
+      "summary_hk": "保險公司自行承擔的風險部分，是再保設計的核心變量",
+      "category": "学习与备考"
     },
     {
       "slug": "level-premium",
@@ -3075,7 +3141,8 @@
           "weekly": "w26",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "retirement-planning",
@@ -3106,7 +3173,8 @@
           "weekly": "w33",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "parametric-insurance",
@@ -3133,7 +3201,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "law-of-large-numbers",
@@ -3165,7 +3234,8 @@
           "weekly": "w35",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "operational-risk",
@@ -3208,7 +3278,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "market-structure",
@@ -3243,7 +3314,8 @@
           "weekly": "w35",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "capm",
@@ -3264,7 +3336,8 @@
       "body_en": "CAPM: E(R) = R_f + β·(E(R_m) − R_f). The security market line (SML) has intercept at the risk-free rate and slope equal to the market risk premium; higher-beta assets carry a higher risk premium.",
       "body_hk": "資本資產定價模型（CAPM）描述資產風險與預期回報的關係：E(R) = R_f + β·(E(R_m) − R_f)。\n\n## 要點（RIM524 CH9）\n- 安全市場線（SML）：截距為無風險利率，斜率 = 市場風險溢價，穿過市場組合。\n- 高 beta 資產的風險溢價更高；比較組合時看單位風險的超額回報。\n- 與風險度量（[[value-at-risk]]）配合評估組合。",
       "summary_en": "Expected return determined by systematic risk (beta)",
-      "summary_hk": "用系統性風險（beta）決定資產的預期回報"
+      "summary_hk": "用系統性風險（beta）決定資產的預期回報",
+      "category": "学习与备考"
     },
     {
       "slug": "mineru",
@@ -3316,7 +3389,7 @@
       "slug": "pagefind",
       "type": "tool",
       "kind": "tool",
-      "category": "搜索与图谱",
+      "category": "RAG 与检索增强",
       "title": "Pagefind",
       "summary": "静态站全文搜索事实标准，CJK 分词内置，三语按 lang 自动分索引",
       "body": "Pagefind 是静态站搜索的事实标准（Lunr 已 abandon）。本站实证（2026-08-21）：直接索引只见 6 页/177 词，预渲染 90 个词条静态页后升至 96 页/1841 词，中文检索正常；三语页面（lang=zh-CN/en/zh-Hant）可自动建独立索引。",
@@ -3765,7 +3838,7 @@
       "slug": "prompt-engineering",
       "type": "tool",
       "kind": "skill",
-      "category": "提示词工程",
+      "category": "Agent 搭建平台",
       "title": "Prompt Engineering",
       "summary": "提示词模式库：few-shot/思维链/结构化输出等实战技巧",
       "body": "提示词工程 skill（agentic-awesome-skills 收录）系统整理 few-shot、思维链、结构化输出等模式，用于改进提示与调试 agent 行为。对培训课：是「提示词」模块的现成教材；对本站萃取流程：你的 gen-*.cjs 与 IFA 去主观化规则本质上就是提示词工程实践，可对照升级。适用模型见 [[deepseek]]、[[gemini]]，agent 场景关联 [[openclaw]]。",
@@ -3977,7 +4050,7 @@
       "slug": "perplexity",
       "type": "tool",
       "kind": "website",
-      "category": "搜索与图谱",
+      "category": "RAG 与检索增强",
       "title": "Perplexity",
       "summary": "AI 搜索标杆（2026 日活 300 万）：带引用的对话式搜索 + Deep Research",
       "body": "Perplexity 是 AI 搜索标杆（2026 年日活 300 万）：对话式搜索带引用来源，Deep Research 模式生成调研报告。对本站：与站内 [[metaso]]（秘塔）互为对照——Perplexity 国际化、秘塔中文场景强；考牌论述/课程论文找引用时两者都是比传统搜索更快的起点。",
@@ -4040,7 +4113,7 @@
       "slug": "napkin",
       "type": "tool",
       "kind": "website",
-      "category": "AI 绘图与图表",
+      "category": "视觉与演示",
       "title": "Napkin AI",
       "summary": "文字一键转信息图/示意图（含 MCP 服务）：框架词条与课件的视觉化",
       "body": "Napkin AI 把一段文字自动转成信息图/示意图（流程图、对比图、时间线），2026 年已提供 MCP 服务（@mindstone-engineering/mcp-server-napkin）供 agent 调用。对本站：[[iso-31000]]、[[coso-erm]]、[[three-lines-of-defense]] 等框架词条的示意图批量生成；与 [[gamma]]（PPT）+ [[heygen]]（视频）组成培训课视觉生产链。",
@@ -4127,7 +4200,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "数据与标准"
     },
     {
       "slug": "orsa",
@@ -4167,7 +4241,8 @@
           "weekly": "w27",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "数据与标准"
     },
     {
       "slug": "gn16",
@@ -4227,7 +4302,8 @@
           "weekly": "w35",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "immunization",
@@ -4258,7 +4334,8 @@
           "weekly": "w29",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "credit-risk",
@@ -4325,7 +4402,8 @@
           "weekly": "w36",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "interest-rate-swap",
@@ -4353,7 +4431,8 @@
           "weekly": "w22",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "glm",
@@ -4393,7 +4472,8 @@
           "weekly": "w35",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "bias-variance-tradeoff",
@@ -4420,7 +4500,8 @@
           "weekly": "w33",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "学习与备考"
     },
     {
       "slug": "crisp-dm",
@@ -4447,7 +4528,8 @@
           "weekly": "w33",
           "role": "cited"
         }
-      ]
+      ],
+      "category": "数据与标准"
     },
     {
       "slug": "actuary",
@@ -4491,7 +4573,8 @@
       ],
       "salary_entry": "25–40k",
       "salary_mid": "40–65k",
-      "salary_senior": "65–100k+"
+      "salary_senior": "65–100k+",
+      "category": "招聘与求职"
     },
     {
       "slug": "underwriter",
@@ -4533,7 +4616,8 @@
       ],
       "salary_entry": "20–35k",
       "salary_mid": "35–55k",
-      "salary_senior": "55–80k"
+      "salary_senior": "55–80k",
+      "category": "招聘与求职"
     },
     {
       "slug": "claims-specialist",
@@ -4572,7 +4656,8 @@
       ],
       "salary_entry": "18–30k",
       "salary_mid": "30–45k",
-      "salary_senior": "45–70k"
+      "salary_senior": "45–70k",
+      "category": "招聘与求职"
     },
     {
       "slug": "risk-manager",
@@ -4613,7 +4698,8 @@
       "salary_senior": "70–120k",
       "aliases": [
         "风险经理"
-      ]
+      ],
+      "category": "招聘与求职"
     },
     {
       "slug": "credit-risk-analyst",
@@ -4650,7 +4736,8 @@
       ],
       "salary_entry": "25–40k",
       "salary_mid": "40–65k",
-      "salary_senior": "65–100k"
+      "salary_senior": "65–100k",
+      "category": "招聘与求职"
     },
     {
       "slug": "market-risk-analyst",
@@ -4687,7 +4774,8 @@
       ],
       "salary_entry": "25–40k",
       "salary_mid": "40–65k",
-      "salary_senior": "65–100k"
+      "salary_senior": "65–100k",
+      "category": "招聘与求职"
     },
     {
       "slug": "data-scientist",
@@ -4723,7 +4811,8 @@
       ],
       "salary_entry": "25–45k",
       "salary_mid": "45–70k",
-      "salary_senior": "70–110k"
+      "salary_senior": "70–110k",
+      "category": "招聘与求职"
     },
     {
       "slug": "compliance-officer",
@@ -4762,7 +4851,8 @@
       ],
       "salary_entry": "22–38k",
       "salary_mid": "38–60k",
-      "salary_senior": "60–90k"
+      "salary_senior": "60–90k",
+      "category": "招聘与求职"
     },
     {
       "slug": "reinsurance-analyst",
@@ -4797,7 +4887,8 @@
       ],
       "salary_entry": "25–40k",
       "salary_mid": "40–60k",
-      "salary_senior": "60–90k"
+      "salary_senior": "60–90k",
+      "category": "招聘与求职"
     },
     {
       "slug": "pricing-analyst",
@@ -4837,7 +4928,8 @@
       ],
       "salary_entry": "25–45k",
       "salary_mid": "45–70k",
-      "salary_senior": "70–110k"
+      "salary_senior": "70–110k",
+      "category": "招聘与求职"
     },
     {
       "slug": "catastrophe-modeler",
@@ -4873,7 +4965,8 @@
       ],
       "salary_entry": "—",
       "salary_mid": "40–65k",
-      "salary_senior": "65–100k"
+      "salary_senior": "65–100k",
+      "category": "招聘与求职"
     },
     {
       "slug": "investment-analyst",
@@ -4911,7 +5004,8 @@
       ],
       "salary_entry": "25–45k",
       "salary_mid": "45–75k",
-      "salary_senior": "75–120k"
+      "salary_senior": "75–120k",
+      "category": "招聘与求职"
     },
     {
       "slug": "insurance-advisor",
@@ -4953,7 +5047,8 @@
       ],
       "salary_entry": "佣金+底薪",
       "salary_mid": "佣金+底薪",
-      "salary_senior": "团队佣金+管理"
+      "salary_senior": "团队佣金+管理",
+      "category": "招聘与求职"
     },
     {
       "slug": "risk-consultant",
@@ -4991,7 +5086,8 @@
       ],
       "salary_entry": "—",
       "salary_mid": "40–70k",
-      "salary_senior": "70–120k"
+      "salary_senior": "70–120k",
+      "category": "招聘与求职"
     },
     {
       "slug": "ia",
@@ -5207,7 +5303,7 @@
       "title": "怡安（Aon）",
       "title_en": "Aon",
       "en": "Aon",
-      "category": "精算咨询/经纪",
+      "category": "精算咨询",
       "summary": "全球保险经纪与咨询集团，提供再保险经纪、风险咨询与资本方案。",
       "summary_en": "Global brokerage and consultancy for reinsurance, risk advisory and capital solutions.",
       "body": "怡安（Aon）提供再保险经纪、风险咨询与资本方案，与 [[reinsurance]]、[[catastrophe-modeler]] 相关。\n\n## 招聘方向\n再保险经纪、风险咨询、巨灾建模。",
@@ -5236,7 +5332,8 @@
       "body_en": "SOA is the North American life/health/retirement actuarial track, aligning with life contingencies and ratemaking. Path: ASA then FSA. Actuarial career opportunities are listed at [[soa-jobs]] (SOA Career Center).",
       "title_hk": "北美精算師",
       "body_hk": "SOA 是北美壽險/健康/養老方向精算師體系，對應 [[rim539]] 壽險精算、[[rim540]] 費率制定。\n\n## 路徑\n準精算（ASA）→ 正精算（FSA）。 精算職業機會見 [[soa-jobs]]（SOA 職業中心）。",
-      "summary_hk": "北美壽險/健康/養老方向精算師考試體系（準精算 ASA → 正精算 FSA）。"
+      "summary_hk": "北美壽險/健康/養老方向精算師考試體系（準精算 ASA → 正精算 FSA）。",
+      "category": "学习与备考"
     },
     {
       "slug": "cas",
@@ -5257,7 +5354,8 @@
       "body_en": "CAS is the North American property/casualty actuarial track, aligning with ratemaking and P&C insurance. Path: ACAS then FCAS. Property/casualty actuarial opportunities are listed at [[cas-jobs]] (CAS Careers).",
       "title_hk": "非壽險精算師",
       "body_hk": "CAS 是北美財險/責任險方向精算師體系，對應 [[rim540]] 費率制定、[[rim533]] 財產與意外險。\n\n## 路徑\n準精算（ACAS）→ 正精算（FCAS）。 非壽險精算職業機會見 [[cas-jobs]]（CAS 就業）。",
-      "summary_hk": "北美財險/責任險方向精算師考試體系（ACAS → FCAS）。"
+      "summary_hk": "北美財險/責任險方向精算師考試體系（ACAS → FCAS）。",
+      "category": "学习与备考"
     },
     {
       "slug": "ifoa",
@@ -5278,7 +5376,8 @@
       "body_en": "IFoA is the UK actuarial track covering life, non-life, investment and pensions, aligning with life contingencies and ratemaking. Actuarial opportunities are listed at [[ifoa-jobs]] (IFoA Careers).",
       "title_hk": "英國精算師",
       "body_hk": "IFoA 是英國精算師體系，覆蓋壽險/非壽險/投資/養老金，對應 [[rim539]]、[[rim540]]。 精算職業機會見 [[ifoa-jobs]]（IFoA 就業）。",
-      "summary_hk": "英國精算師學會考試體系，覆蓋壽險/非壽險/投資與養老金。"
+      "summary_hk": "英國精算師學會考試體系，覆蓋壽險/非壽險/投資與養老金。",
+      "category": "学习与备考"
     },
     {
       "slug": "frm",
@@ -5299,7 +5398,8 @@
       "body_en": "FRM, awarded by GARP, covers VaR, credit and operational risk and regulation, aligning with financial risk management.",
       "title_hk": "金融風險管理師",
       "body_hk": "FRM 由 GARP 頒發，覆蓋 [[value-at-risk]]、[[credit-risk]]、[[operational-risk]] 與監管，對應 [[rim535]] 金融風險管理。",
-      "summary_hk": "GARP 頒發的金融風險管理證書，覆蓋市場/信用/操作風險與風險計量。"
+      "summary_hk": "GARP 頒發的金融風險管理證書，覆蓋市場/信用/操作風險與風險計量。",
+      "category": "学习与备考"
     },
     {
       "slug": "cfa",
@@ -5320,7 +5420,8 @@
       "body_en": "CFA covers financial reporting, DCF, portfolio management and asset allocation, aligning with accounting and bond/credit courses.",
       "title_hk": "特許金融分析師",
       "body_hk": "CFA 覆蓋財務報表、[[dcf]]、組合管理與資產配置，對應 [[rim524]]、[[rim537]]。",
-      "summary_hk": "CFA 協會頒發的投資管理證書，覆蓋財報、組合管理與資產配置。"
+      "summary_hk": "CFA 協會頒發的投資管理證書，覆蓋財報、組合管理與資產配置。",
+      "category": "学习与备考"
     },
     {
       "slug": "jobsdb",
@@ -5328,7 +5429,7 @@
       "title": "JobsDB",
       "title_en": "JobsDB Hong Kong",
       "en": "JobsDB Hong Kong",
-      "category": "综合招聘平台",
+      "category": "招聘与求职",
       "source": "https://hk.jobsdb.com",
       "summary": "香港最大的综合招聘平台之一，覆盖保险/银行/精算等全行业职位。",
       "summary_en": "One of Hong Kong’s largest job boards, covering insurance, banking and actuarial roles.",
@@ -5344,7 +5445,7 @@
       "title": "LinkedIn Jobs",
       "title_en": "LinkedIn Jobs",
       "en": "LinkedIn Jobs",
-      "category": "职业社交/招聘",
+      "category": "招聘与求职",
       "source": "https://www.linkedin.com/jobs",
       "summary": "全球职业社交平台的招聘板块，可关注目标公司并接收职位推送。",
       "summary_en": "Job board of the global professional network; follow target companies for alerts.",
@@ -5360,7 +5461,7 @@
       "title": "eFinancialCareers",
       "title_en": "eFinancialCareers Hong Kong",
       "en": "eFinancialCareers Hong Kong",
-      "category": "金融专业招聘",
+      "category": "招聘与求职",
       "source": "https://www.efinancialcareers.hk",
       "summary": "金融/银行/保险垂直招聘平台，精算与风险岗集中。",
       "summary_en": "Finance, banking and insurance vertical job board with many actuarial and risk roles.",
@@ -5376,7 +5477,7 @@
       "title": "CTgoodjobs",
       "title_en": "CTgoodjobs",
       "en": "CTgoodjobs",
-      "category": "综合招聘平台",
+      "category": "招聘与求职",
       "source": "https://www.ctgoodjobs.hk",
       "summary": "香港本地综合招聘平台，保险与银行职位覆盖广。",
       "summary_en": "Local Hong Kong job board with broad insurance and banking coverage.",
@@ -5392,7 +5493,7 @@
       "title": "Indeed HK",
       "title_en": "Indeed Hong Kong",
       "en": "Indeed Hong Kong",
-      "category": "综合招聘平台",
+      "category": "招聘与求职",
       "source": "https://hk.indeed.com",
       "summary": "全球职位搜索引擎，聚合多来源职位。",
       "summary_en": "Global job search engine aggregating listings from multiple sources.",
@@ -5408,7 +5509,7 @@
       "title": "Glassdoor",
       "title_en": "Glassdoor",
       "en": "Glassdoor",
-      "category": "薪资/公司评价",
+      "category": "招聘与求职",
       "source": "https://www.glassdoor.com.hk",
       "summary": "查公司评价与薪资区间的平台，用于判断雇主与谈薪。",
       "summary_en": "Company reviews and salary data, useful for evaluating employers and negotiating.",
@@ -5424,7 +5525,7 @@
       "title": "香港政府职位（CSB）",
       "title_en": "Civil Service Bureau — Government Jobs",
       "en": "Civil Service Bureau — Government Jobs",
-      "category": "政府/监管招聘",
+      "category": "招聘与求职",
       "source": "https://www.csb.gov.hk",
       "summary": "香港公务员事务局职位，含监管/统计/精算相关公务员岗位。",
       "summary_en": "Hong Kong Civil Service Bureau jobs, including regulatory, statistical and actuarial civil-service roles.",
@@ -5440,7 +5541,7 @@
       "title": "保监局招聘",
       "title_en": "Insurance Authority — Careers",
       "en": "Insurance Authority — Careers",
-      "category": "监管机构招聘",
+      "category": "招聘与求职",
       "source": "https://www.ia.org.hk",
       "summary": "香港保监局官方招聘，含监管/政策/精算/法务岗。",
       "summary_en": "Insurance Authority official careers: supervision, policy, actuarial and legal roles.",
@@ -5504,7 +5605,7 @@
       "title": "Actuarial Jobs 聚合",
       "title_en": "Actuarial Jobs (Aggregator)",
       "en": "Actuarial Jobs (Aggregator)",
-      "category": "精算聚合",
+      "category": "招聘与求职",
       "source": "https://www.actuarial-jobs.com",
       "summary": "精算垂直职位聚合站，汇总全球精算岗。",
       "summary_en": "Actuarial-specific job aggregator compiling actuarial roles globally.",
@@ -5584,7 +5685,7 @@
       "title": "美世",
       "title_en": "Mercer",
       "en": "Mercer",
-      "category": "精算/福利咨询",
+      "category": "精算咨询",
       "summary": "全球人力与精算咨询公司，专注退休、健康与福利精算。",
       "summary_en": "Global HR and actuarial consultancy focused on retirement, health and benefits.",
       "body": "美世（Mercer）专注退休/健康/福利精算，与 [[retirement-planning]]、[[actuary]] 相关。\n\n## 招聘方向\n退休精算、福利咨询、健康精算。",
@@ -5648,7 +5749,7 @@
       "title": "保泰",
       "title_en": "Bowtie",
       "en": "Bowtie",
-      "category": "InsurTech/健康险",
+      "category": "保险科技",
       "summary": "香港首个虚拟保险公司，主打纯线上健康险。",
       "summary_en": "Hong Kong’s first virtual insurer, focused on pure-digital health insurance.",
       "body": "保泰（Bowtie）是香港首个虚拟保险公司，重度依赖 [[data-scientist]]、[[machine-learning-pricing]] 与数字核保。\n\n## 招聘方向\n数据、精算、产品、工程。 招聘信息见 [[linkedin]] 等求职渠道。",
@@ -5680,7 +5781,7 @@
       "title": "永明金融",
       "title_en": "Sun Life",
       "en": "Sun Life",
-      "category": "人寿保险/强积金",
+      "category": "人寿保险",
       "summary": "加拿大保险与资管集团，香港寿险与强积金业务。",
       "summary_en": "Canadian insurance and asset manager with Hong Kong life and MPF businesses.",
       "body": "永明（Sun Life）香港覆盖寿险与强积金（[[mpfe]]）。\n\n## 招聘方向\n精算、投资、强积金、渠道。 招聘信息见 [[linkedin]] 等求职渠道。",
@@ -5919,7 +6020,7 @@
       "slug": "seo-hreflang",
       "type": "tool",
       "kind": "skill",
-      "category": "搜索与图谱",
+      "category": "RAG 与检索增强",
       "title": "SEO Hreflang",
       "summary": "三语 SEO：hreflang 校验/生成，多语言站避免重复内容惩罚",
       "body": "SEO Hreflang skill（claude-seo 系列）负责 hreflang 校验与生成（HTML/HTTP header/XML sitemap 三形态）。对本站：预渲染出三语页面后的下一步——加 hreflang + sitemap 让 Google 正确索引 EN/简/繁三套页面，避免重复内容惩罚；与 [[pagefind]]（站内搜索）构成「搜索基建 + SEO 基建」组合。",
@@ -13202,7 +13303,7 @@
       "title": "OneDegree",
       "title_en": "OneDegree",
       "en": "OneDegree",
-      "category": "InsurTech",
+      "category": "保险科技",
       "summary": "香港虚拟保险公司，主打纯线上财产险与数字保险。",
       "summary_en": "Hong Kong virtual insurer focused on digital P&C insurance.",
       "body": "OneDegree 是香港虚拟保险公司，重度依赖[[data-scientist]]与数字核保。\n\n## 招聘方向\n数据、精算、产品、工程。",
@@ -13568,7 +13669,8 @@
       ],
       "title_hk": "保險經紀（客户經理）",
       "body_hk": "保險經紀代表客户向保險人安排保險/再保險（[[reinsurance]]），負責方案設計、市場談判與續保。\n\n## 要點\n- 涉及 [[rim522]] 保險實務、[[rim530]] 再保險、[[rim533]] 財產意外。\n- 牌照：[[iiqe-1]] + [[iiqe-2]]（一般險）或 [[iiqe-3]]（長期）。\n- 典型僱主：[[marsh]]、[[howden]]、[[lockton]]、[[gallagher]]、[[aon]]。",
-      "summary_hk": "代表客户與保險人洽談保險/再保險安排，負責方案設計、談判與續保。"
+      "summary_hk": "代表客户與保險人洽談保險/再保險安排，負責方案設計、談判與續保。",
+      "category": "招聘与求职"
     },
     {
       "slug": "insurance-severity",
@@ -24011,7 +24113,7 @@
       "slug": "oasis-opendatatransform",
       "type": "tool",
       "kind": "tool",
-      "category": "巨灾与自然灾害",
+      "category": "巨灾与气候",
       "title": "OpenDataTransform (Oasis)",
       "summary": "Oasis 官方巨灾数据转换工具（12★）：暴露数据在 OED 与其他格式间互转的 Python 库",
       "body": "OpenDataTransform（OasisLMF 官方，12★，Python）是开源的巨灾数据转换库：把暴露（exposure）数据在 OED（Open Exposure Data）与其他数据格式之间相互转换——标准化接入 Oasis 损失建模平台的数据前置工具。对 RIAA：与 [[ods-open-exposure-data]]（OED 标准本体）配套的实现层——理解巨灾暴露数据的格式转换与清洗是 Oasis 建模（[[oasislmf]]、[[oasis-risk-explorer]]）pipeline 的实际入口。",
@@ -24032,7 +24134,7 @@
       "slug": "uclfitter",
       "type": "tool",
       "kind": "tool",
-      "category": "巨灾与自然灾害",
+      "category": "巨灾与气候",
       "title": "UCLFitter (FITTER 海啸模型)",
       "summary": "Oasis 首个高分辨率印尼海啸风险模型（6★，2025）：经济与非经济损失估计的开源模型",
       "body": "UCLFitter（OasisLMF/UCL，6★，2025-12 活跃）即 FITTER：首个高分辨率印尼海啸风险模型——估算海啸引发的经济与非经济损失，作为 Oasis 框架下的开源损失模型（与 UCL 合作）。对 RIAA：区域化海啸巨灾建模的新开源实现——补充 Oasis 生态中地震（OpenQuake 侧）、风暴（[[typhoon-cat-model]]）之外的海啸 perils；损失估计与 [[climada]]、[[physrisk]] 的灾害物理侧对照。",
@@ -24074,7 +24176,7 @@
       "slug": "lisflood",
       "type": "tool",
       "kind": "tool",
-      "category": "巨灾与自然灾害",
+      "category": "巨灾与气候",
       "title": "LISFLOOD (ECMWF/JRC 洪水模型)",
       "summary": "欧盟官方分布式水文模型（ec-jrc，167★）：驱动 EFAS/GloFAS 泛欧与全球洪水预警的开源引擎",
       "body": "lisflood-code（European Commission JRC，167★，2026-09 活跃）是 LISFLOOD OS：欧盟委员会联合研究中心开发的开源分布式水文模型——模拟降雨-径流与河道洪水，是欧洲洪水预警系统 EFAS 与全球洪水预警系统 GloFAS 的水文核心。家族：lisflood-utilities(32★)/calibration(15★)/usecases(24★)/lisvap(14★)。对 RIAA：政府/超国家机构开源洪水模型的主参考——理解 EFAS/GloFAS 预报背后的水文引擎；与 [[ml-flood]]（ECMWF ML 侧）、[[databricks-flood-prediction]]（数据工程侧）、[[floodmodeller-api]] 互补成洪水建模全景。",
@@ -24095,7 +24197,7 @@
       "slug": "thinkhazard",
       "type": "tool",
       "kind": "tool",
-      "category": "巨灾与自然灾害",
+      "category": "巨灾与气候",
       "title": "ThinkHazard! (GFDRR/WorldBank)",
       "summary": "11 种自然灾害全球等级查询工具（GFDRR，47★）：任意地点给出低/中/高灾害等级与减灾建议",
       "body": "thinkhazard（GFDRR/WorldBank，47★，2026-05 活跃）是 ThinkHazard!：开源 Web 工具——输入任意地理位置，输出 11 种自然灾害（洪水/地震/滑坡/火山/干旱/海啸/极端温度等）的低/中/高危险等级与减灾技术建议，服务于发展项目的风险筛选。对 RIAA：保险/再保险项目初筛的自然灾害等级参照——巨灾风险的国家/地区横向比较起点（与 [[physrisk]] 的工程风险、[[climada]] 的损失建模不同，它聚焦危害等级查询）；灾害组合视角覆盖 [[usgs-earthquake-api]] 类单灾种 API 之外的统一入口。",
@@ -24116,7 +24218,7 @@
       "slug": "un-spider-radar-flood-mapping",
       "type": "tool",
       "kind": "tool",
-      "category": "巨灾与自然灾害",
+      "category": "巨灾与气候",
       "title": "Radar Flood Mapping (UN-SPIDER)",
       "summary": "UN-SPIDER 官方 SAR 雷达洪水制图教程（44★）：Sentinel-1 洪水淹没范围提取 Jupyter 流程",
       "body": "radar-based-flood-mapping（UN-SPIDER，44★）是联合国 UN-SPIDER 官方的星载 SAR（合成孔径雷达）洪水制图 notebook：基于 Sentinel-1 雷达影像的洪水淹没范围提取——云无关的洪水监测方法，配套方法说明。对 RIAA：灾害应急的遥感洪水制图标准方法——理解 '雷达看水'（SAR 对水的低后向散射）原理与 GEE/Sentinel 流程；洪水保险理赔/巨灾响应（[[lisflood]] 预报、[[databricks-flood-prediction]] 分析）的观测验证层。",
@@ -24158,7 +24260,7 @@
       "slug": "ccdr-tools",
       "type": "tool",
       "kind": "tool",
-      "category": "巨灾与自然灾害",
+      "category": "巨灾与气候",
       "title": "CCDR Tools (World Bank 气候风险)",
       "summary": "世界银行气候与灾害风险地理分析工具（GFDRR，33★）：CCDR 国家气候发展报告的 GeoAnalytics",
       "body": "CCDR-tools（GFDRR/WorldBank，33★，2026-07 活跃）是世界银行 Country Climate and Development Report (CCDR) 的 GeoAnalytics 工具：用于国家/区域尺度的气候与灾害风险空间分析——气候物理风险、暴露与适应性评估的 Python 分析栈。对 RIAA：国家层面气候风险报告的复现性分析工具——理解 CCDR 系列报告的风险地图怎么算出来；宏观气候风险（与 [[climada]] 损失建模、[[physrisk]] 前瞻风险结合）的机构级参考。",
@@ -24179,7 +24281,7 @@
       "slug": "pyincore",
       "type": "tool",
       "kind": "tool",
-      "category": "巨灾与自然灾害",
+      "category": "巨灾与气候",
       "title": "pyIncore (IN-CORE 社区韧性)",
       "summary": "社区韧性建模环境 IN-CORE 的 Python 接口（27★，2026 活跃）：基础设施互联+灾后恢复时序建模",
       "body": "pyincore（IN-CORE，27★，2026-09 活跃）是 IN-CORE（Interdependent Networked Community Resilience Modeling Environment）的 Python 客户端——面向社区韧性建模：评估灾害对相互依赖的基础设施系统的影响与灾后恢复过程（不止峰值损失，含恢复时序）。对 RIAA：超越单次损失估计的韧性（resilience）建模参考——基础设施互联失效与恢复曲线对保险/再保险的长期风险视角；与 [[lisflood]]（物理水文）、[[openquake-engine]]（地震）、[[thinkhazard]]（等级）互补成灾害-损失-恢复全链。",
@@ -24200,7 +24302,7 @@
       "slug": "gem-vmtk",
       "type": "tool",
       "kind": "tool",
-      "category": "巨灾与自然灾害",
+      "category": "巨灾与气候",
       "title": "VMTK (GEM 脆弱性建模工具包)",
       "summary": "GEM 全球地震模型基金会脆弱性建模工具包（35★）：脆弱性/易损性曲线创建与数据管理",
       "body": "VMTK-Vulnerability-Modellers-ToolKit（GEM Foundation，35★）是 GEM（全球地震模型基金会）的脆弱性建模工具包：支持创建与管理脆弱性（vulnerability）与易损性模型/曲线——GEM 风险计算中暴露-脆弱性层的关键工具。对 RIAA：脆弱性曲线的方法论参考（与 [[openquake-engine]] 的工程计算方法配套）——理解灾损率/脆弱性函数怎么从数据与专家判断构建；[[risk-data-library-standard]] 语境下的脆弱性数据结构。",
@@ -24368,7 +24470,7 @@
       "slug": "oasis-piwind",
       "type": "tool",
       "kind": "tool",
-      "category": "巨灾与自然灾害",
+      "category": "巨灾与气候",
       "title": "Oasis PiWind (toy UK 风暴模型)",
       "summary": "Oasis 官方教学用 toy UK 风暴损失模型（33★）：理解开源自托管巨灾建模全流程的入门样例",
       "body": "OasisPiWind（OasisLMF 官方，33★，2026-08 活跃）是 Oasis 平台的 toy UK windstorm 模型：配套 Oasis 教程的标准示例——包含暴露、脆弱性与事件数据，跑通『模型→损失』全流程。对 RIAA：巨灾建模入门的首选 toy model——在 [[oasislmf]] 框架内理解事件损失表（ELT）/均值损失等输出结构；与 [[oasis-risk-explorer]]（平台 UI）、[[oasis-opendatatransform]]（数据前置）构成 Oasis 学习链。",
@@ -25221,7 +25323,7 @@
       "title": "Miller（米勒）",
       "title_en": "Miller",
       "en": "Miller",
-      "category": "再保险经纪",
+      "category": "保险经纪",
       "site": "https://www.miller-insurance.com/",
       "summary": "伦敦市场起家的专业险与再保险经纪（Talanx/HDI 旗下），香港设持牌经纪主体，亚洲条约再保与金融险团队近年扩充。",
       "summary_en": "London-market specialty & reinsurance broker (Talanx/HDI group) with a licensed HK entity.",
