@@ -33,7 +33,7 @@ python3 scripts/stamp.py     # 给 HTML 里的 css/js 引用打内容指纹 ?v=
 
 - `data/index*.json` / `data/graph*.json` / `data/search*.json` 是派生文件，**必须与 entries.json 一起提交**（否则线上读到旧数据）；均按语言拆分（zh-cn 为默认文件，en/hk 为后缀文件）。
 - 校验是否同步：`python3 scripts/build.py --check`、`python3 scripts/stamp.py --check`（过期返回 1，适合未来 CI）。
-- 列表页（首页/课程目录/分类索引/就业情报/机构全景/周报）读 `index.json`；`wiki.html` 详情页仍读全量 `entries.json`；`map.html` 读 `graph.json`。
+- 页面取数：列表页（首页/课程目录/分类索引/就业情报/机构全景/周报）读当前语言的 `index.<lang>.json`；搜索首次输入懒加载 `search.<lang>.json`（**不再拉全量**）；`map.html` 读 `graph.<lang>.json`；`wiki.html` 详情页仍读全量 `entries.json`（仅详情页）。
 
 推送成功后可用以下命令抽查线上是否已更新：
 
