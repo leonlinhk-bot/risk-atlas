@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31 18:08",
+  "updated": "2026-09-12 18:08",
   "method": "人工汇总定性参考（非实时抓取）；岗位热度/招聘公司为每日 18:08 更新；薪资为月薪 HKD 市场参考区间，按年度/实际调研周期更新（非每日）；趋势为相邻快照对比，首期为基线。",
   "snapshot": {
     "jobs": [
@@ -7,85 +7,85 @@
         "slug": "actuary",
         "heat": 3,
         "salary": "25–90k",
-        "note": "Manulife 精算实习 2026/2027、AXA/KPMG/AWAC 精算岗在招"
+        "note": "AXA 精算实习 9/8、KPMG 精算风险咨询 8/31、Zurich 寿险定价 8/28、太平精算实习 9/10 集中放量"
       },
       {
         "slug": "underwriter",
-        "heat": 2,
-        "salary": "25–50k",
-        "note": "人保(香港)/泰康 核保岗在招"
+        "heat": 3,
+        "salary": "25–55k",
+        "note": "Swiss Re 一周内 Senior/Engineering Underwriter 双开；Chubb 网络科技核保——本周放量最明显"
       },
       {
         "slug": "claims-specialist",
         "heat": 2,
         "salary": "20–40k",
-        "note": "Swiss Re 理赔岗在招"
+        "note": "Swiss Re 理赔岗 9/1 刷新、中国太平海事理赔 AGM 9/11 在招"
       },
       {
         "slug": "risk-manager",
         "heat": 3,
         "salary": "40–70k",
-        "note": "RBC/ORSA 合规推动 ERM 需求"
+        "note": "AXA 寿险健康风险 Senior Manager 9/11 重刊；RBC/ORSA 推动 ERM 需求"
       },
       {
         "slug": "credit-risk-analyst",
         "heat": 2,
         "salary": "35–65k",
-        "note": "债券/信用风险岗集中于银行与保险资管"
+        "note": "信用/债券风险岗集中于银行与保险资管，本周无新增"
       },
       {
         "slug": "market-risk-analyst",
         "heat": 2,
         "salary": "35–65k",
-        "note": "利率/汇率风险对冲岗"
+        "note": "利率/汇率风险对冲岗稳定，本周无新增"
       },
       {
         "slug": "data-scientist",
         "heat": 3,
         "salary": "30–60k",
-        "note": "保险数据分析岗在招（Michael Page/ConnectedGroup 50-70k）"
+        "note": "Michael Page 精算报告数据岗 8/28、ConnectedGroup 代理平台数据岗 8/24 仍在招"
       },
       {
         "slug": "compliance-officer",
-        "heat": 2,
-        "salary": "25–50k",
-        "note": "Zurich 合规岗在招"
+        "heat": 3,
+        "salary": "25–55k",
+        "note": "Zurich 合规合约岗 8/25、AXA 风险合规、BOC Life 风控合约岗同期在招"
       },
       {
         "slug": "reinsurance-analyst",
         "heat": 3,
-        "salary": "30–55k",
-        "note": "Gallagher Re/AJG/Guy Carpenter/人保 再保岗集中↑"
+        "salary": "30–60k",
+        "note": "Swiss Re Head L&H Contracts APAC 9/9、Aon 再保精算 9/10——再保侧一周三岗扩张"
       },
       {
         "slug": "pricing-analyst",
         "heat": 2,
         "salary": "30–60k",
-        "note": "产品定价与盈利性分析"
+        "note": "产品定价与盈利性分析稳定；Zurich 寿险定价精算 8/28 在招"
       },
       {
         "slug": "catastrophe-modeler",
         "heat": 1,
         "salary": "35–65k",
-        "note": "细分专业，集中于再保险"
+        "note": "细分专业，集中于再保险与巨灾建模"
       },
       {
         "slug": "investment-analyst",
         "heat": 2,
         "salary": "30–60k",
-        "note": "Sun Life ALM 分析师在招"
+        "note": "Sun Life ALM 岗已从索引消失（岗位生命周期短），本周以精算/定价岗为主"
       },
       {
         "slug": "insurance-advisor",
         "heat": 3,
         "salary": "佣金+底薪",
-        "note": "前线顾问需求量大、流动性高"
+        "note": "前线顾问需求量大、流动性高（常年在招）"
       },
       {
         "slug": "risk-consultant",
-        "heat": 2,
+        "heat": 3,
         "salary": "35–70k",
-        "note": "四大/精算咨询 ERM 与资本模型"
+        "note": "KPMG 精算风险咨询 Manager/Associate Director 8/31 在招，四大咨询需求回升"
       }
     ],
     "employers": [
@@ -134,6 +134,7 @@
         "slug": "swiss-re",
         "hiring": true,
         "hot": [
+          "underwriter",
           "reinsurance-analyst",
           "claims-specialist"
         ]
@@ -198,6 +199,45 @@
         "hot": [
           "data-scientist",
           "actuary"
+        ]
+      },
+      {
+        "slug": "axa",
+        "hiring": true,
+        "hot": [
+          "actuary",
+          "risk-manager"
+        ]
+      },
+      {
+        "slug": "zurich",
+        "hiring": true,
+        "hot": [
+          "compliance-officer",
+          "actuary"
+        ]
+      },
+      {
+        "slug": "kpmg",
+        "hiring": true,
+        "hot": [
+          "risk-consultant",
+          "actuary"
+        ]
+      },
+      {
+        "slug": "chubb",
+        "hiring": true,
+        "hot": [
+          "underwriter"
+        ]
+      },
+      {
+        "slug": "china-taiping",
+        "hiring": true,
+        "hot": [
+          "actuary",
+          "claims-specialist"
         ]
       }
     ]
@@ -339,6 +379,208 @@
           "hot": [
             "reinsurance-analyst",
             "catastrophe-modeler"
+          ]
+        },
+        {
+          "slug": "wtw",
+          "hiring": true,
+          "hot": [
+            "actuary",
+            "risk-consultant"
+          ]
+        },
+        {
+          "slug": "milliman",
+          "hiring": true,
+          "hot": [
+            "actuary",
+            "pricing-analyst"
+          ]
+        },
+        {
+          "slug": "aon",
+          "hiring": true,
+          "hot": [
+            "reinsurance-analyst",
+            "catastrophe-modeler"
+          ]
+        },
+        {
+          "slug": "ia",
+          "hiring": true,
+          "hot": [
+            "compliance-officer"
+          ]
+        },
+        {
+          "slug": "mpfa",
+          "hiring": true,
+          "hot": [
+            "investment-analyst"
+          ]
+        },
+        {
+          "slug": "hkma",
+          "hiring": true,
+          "hot": [
+            "credit-risk-analyst",
+            "market-risk-analyst"
+          ]
+        },
+        {
+          "slug": "bowtie",
+          "hiring": true,
+          "hot": [
+            "data-scientist",
+            "actuary"
+          ]
+        },
+        {
+          "slug": "fwd",
+          "hiring": true,
+          "hot": [
+            "data-scientist",
+            "actuary"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-31 18:08",
+      "jobs": [
+        {
+          "slug": "actuary",
+          "heat": 3,
+          "salary": "25–90k",
+          "note": "Manulife 精算实习 2026/2027、AXA/KPMG/AWAC 精算岗在招"
+        },
+        {
+          "slug": "underwriter",
+          "heat": 2,
+          "salary": "25–50k",
+          "note": "人保(香港)/泰康 核保岗在招"
+        },
+        {
+          "slug": "claims-specialist",
+          "heat": 2,
+          "salary": "20–40k",
+          "note": "Swiss Re 理赔岗在招"
+        },
+        {
+          "slug": "risk-manager",
+          "heat": 3,
+          "salary": "40–70k",
+          "note": "RBC/ORSA 合规推动 ERM 需求"
+        },
+        {
+          "slug": "credit-risk-analyst",
+          "heat": 2,
+          "salary": "35–65k",
+          "note": "债券/信用风险岗集中于银行与保险资管"
+        },
+        {
+          "slug": "market-risk-analyst",
+          "heat": 2,
+          "salary": "35–65k",
+          "note": "利率/汇率风险对冲岗"
+        },
+        {
+          "slug": "data-scientist",
+          "heat": 3,
+          "salary": "30–60k",
+          "note": "保险数据分析岗在招（Michael Page/ConnectedGroup 50-70k）"
+        },
+        {
+          "slug": "compliance-officer",
+          "heat": 2,
+          "salary": "25–50k",
+          "note": "Zurich 合规岗在招"
+        },
+        {
+          "slug": "reinsurance-analyst",
+          "heat": 3,
+          "salary": "30–55k",
+          "note": "Gallagher Re/AJG/Guy Carpenter/人保 再保岗集中↑"
+        },
+        {
+          "slug": "pricing-analyst",
+          "heat": 2,
+          "salary": "30–60k",
+          "note": "产品定价与盈利性分析"
+        },
+        {
+          "slug": "catastrophe-modeler",
+          "heat": 1,
+          "salary": "35–65k",
+          "note": "细分专业，集中于再保险"
+        },
+        {
+          "slug": "investment-analyst",
+          "heat": 2,
+          "salary": "30–60k",
+          "note": "Sun Life ALM 分析师在招"
+        },
+        {
+          "slug": "insurance-advisor",
+          "heat": 3,
+          "salary": "佣金+底薪",
+          "note": "前线顾问需求量大、流动性高"
+        },
+        {
+          "slug": "risk-consultant",
+          "heat": 2,
+          "salary": "35–70k",
+          "note": "四大/精算咨询 ERM 与资本模型"
+        }
+      ],
+      "employers": [
+        {
+          "slug": "aia",
+          "hiring": true,
+          "hot": [
+            "actuary",
+            "underwriter",
+            "data-scientist"
+          ]
+        },
+        {
+          "slug": "prudential",
+          "hiring": true,
+          "hot": [
+            "actuary",
+            "risk-manager"
+          ]
+        },
+        {
+          "slug": "manulife",
+          "hiring": true,
+          "hot": [
+            "actuary",
+            "investment-analyst"
+          ]
+        },
+        {
+          "slug": "hsbc-life",
+          "hiring": true,
+          "hot": [
+            "credit-risk-analyst",
+            "market-risk-analyst"
+          ]
+        },
+        {
+          "slug": "munich-re",
+          "hiring": true,
+          "hot": [
+            "reinsurance-analyst",
+            "catastrophe-modeler"
+          ]
+        },
+        {
+          "slug": "swiss-re",
+          "hiring": true,
+          "hot": [
+            "reinsurance-analyst",
+            "claims-specialist"
           ]
         },
         {
