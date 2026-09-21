@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://risk-atlas.wiki/</loc><lastmod>2026-09-13</lastmod></url>
-  <url><loc>https://risk-atlas.wiki/weekly.html</loc><lastmod>2026-09-13</lastmod></url>
-  <url><loc>https://risk-atlas.wiki/catalog.html</loc><lastmod>2026-09-13</lastmod></url>
-  <url><loc>https://risk-atlas.wiki/career.html</loc><lastmod>2026-09-13</lastmod></url>
-  <url><loc>https://risk-atlas.wiki/companies.html</loc><lastmod>2026-09-13</lastmod></url>
-  <url><loc>https://risk-atlas.wiki/map.html</loc><lastmod>2026-09-13</lastmod></url>
-  <url><loc>https://risk-atlas.wiki/categories.html</loc><lastmod>2026-09-13</lastmod></url>
+  <url><loc>https://risk-atlas.wiki/</loc><lastmod>2026-09-22</lastmod></url>
+  <url><loc>https://risk-atlas.wiki/weekly.html</loc><lastmod>2026-09-22</lastmod></url>
+  <url><loc>https://risk-atlas.wiki/catalog.html</loc><lastmod>2026-09-22</lastmod></url>
+  <url><loc>https://risk-atlas.wiki/career.html</loc><lastmod>2026-09-22</lastmod></url>
+  <url><loc>https://risk-atlas.wiki/companies.html</loc><lastmod>2026-09-22</lastmod></url>
+  <url><loc>https://risk-atlas.wiki/map.html</loc><lastmod>2026-09-22</lastmod></url>
+  <url><loc>https://risk-atlas.wiki/categories.html</loc><lastmod>2026-09-22</lastmod></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=track-1</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=track-2</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=track-3</loc></url>
@@ -187,7 +187,6 @@
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=soa-jobs</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=cas-jobs</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=ifoa-jobs</loc></url>
-  <url><loc>https://risk-atlas.wiki/wiki.html?slug=actuarial-jobs</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=pwc</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=kpmg</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=ey</loc></url>
@@ -791,7 +790,6 @@
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=llmware-industry-bert-insurance</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=open-insurance-llm</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=insurance-voice-qwen</loc></url>
-  <url><loc>https://risk-atlas.wiki/wiki.html?slug=raw-workshops</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=tmval</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=r-actuarial-unam</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=aws-insurance-underwriting-genai</loc></url>
@@ -1563,6 +1561,22 @@
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=dataset-vial-bogota</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=actuarial-news-dashboard</loc></url>
   <url><loc>https://risk-atlas.wiki/wiki.html?slug=boa-insurance-crm</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=mortality-lapse-experience-study</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=kidi-insurance-statistics</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=fhir-payer-implementation-guides</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=xbrl-grounded-llm-oracle</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=acli</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=quita-credit-life-onchain</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=ttcircle-cargo-insurance-simulator</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=pli-rpli-calculator</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=iaai-insurance-auto-auction-dataset</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=california-flood-risk-reduction-report</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=nocoo-surety</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=credit-risk-insurance-lakehouse</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=agentic-actuarial-testbed</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=delayed-retirement-incentives-spain</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=var-study-preregistered-audit</loc></url>
+  <url><loc>https://risk-atlas.wiki/wiki.html?slug=saudi-motor-loss-ratio-review-package</loc></url>
   <url><loc>https://risk-atlas.wiki/weekly.html?week=w01</loc></url>
   <url><loc>https://risk-atlas.wiki/weekly.html?week=w21</loc></url>
   <url><loc>https://risk-atlas.wiki/weekly.html?week=w22</loc></url>
