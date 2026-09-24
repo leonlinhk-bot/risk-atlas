@@ -55,7 +55,9 @@ while :; do
   MISMATCH=0
   for f in "${PENDING[@]}"; do
     local_sum=$(shasum -a 256 "$f" | awk '{print $1}')
-    remote_sum=$(curl -s --max-time 30 "$SITE/$f?cb=$(date +%s%N)" | shasum -a 256 | awk '{print $1}')
+    # 必须 --compressed：Cloudflare 对 robots.txt / data/entries.json 等会无条件回 gzip，
+    # 不加该参数拿到的是压缩字节，哈希必然不一致（假阴性）。
+    remote_sum=$(curl -s --compressed --max-time 60 "$SITE/$f?cb=$(date +%s%N)" | shasum -a 256 | awk '{print $1}')
     if [ "$local_sum" = "$remote_sum" ]; then
       [ "$ATTEMPT" -eq 1 ] && echo "  OK   $f"
     else
