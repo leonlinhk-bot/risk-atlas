@@ -332,6 +332,14 @@
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
       ],
       "category": "学习与备考",
@@ -473,6 +481,14 @@
         {
           "weekly": "w35",
           "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
       ],
       "category": "学习与备考",
@@ -546,6 +562,14 @@
         {
           "weekly": "w35",
           "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
       ],
       "category": "学习与备考",
@@ -597,7 +621,17 @@
       ],
       "category": "学习与备考",
       "sourceKind": "课程条目（站内自建）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：课程条目（站内自建）），未做链接核实"
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：课程条目（站内自建）），未做链接核实",
+      "weekly_refs": [
+        {
+          "weekly": "w38",
+          "role": "primary"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
+        }
+      ]
     },
     {
       "slug": "rim530",
@@ -647,6 +681,10 @@
       ],
       "weekly_refs": [
         {
+          "weekly": "w39",
+          "role": "primary"
+        },
+        {
           "weekly": "w01",
           "role": "cited"
         },
@@ -668,6 +706,10 @@
         },
         {
           "weekly": "w36",
+          "role": "cited"
+        },
+        {
+          "weekly": "w38",
           "role": "cited"
         }
       ],
@@ -758,6 +800,14 @@
         },
         {
           "weekly": "w36",
+          "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
+        },
+        {
+          "weekly": "w39",
           "role": "cited"
         }
       ],
@@ -885,6 +935,14 @@
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
       ],
       "category": "学习与备考",
@@ -998,6 +1056,14 @@
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
       ],
       "category": "学习与备考",
@@ -1057,7 +1123,13 @@
       "modules_note_hk": "非官方 Indicative Content（依據標準教材大綱整理，待官方課程大綱核實）",
       "category": "学习与备考",
       "sourceKind": "课程条目（站内自建）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：课程条目（站内自建）），未做链接核实"
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：课程条目（站内自建）），未做链接核实",
+      "weekly_refs": [
+        {
+          "weekly": "w39",
+          "role": "cited"
+        }
+      ]
     },
     {
       "slug": "rim534",
@@ -1113,6 +1185,10 @@
       "weekly_refs": [
         {
           "weekly": "w36",
+          "role": "cited"
+        },
+        {
+          "weekly": "w39",
           "role": "cited"
         }
       ],
@@ -1178,6 +1254,14 @@
         },
         {
           "weekly": "w36",
+          "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
+        },
+        {
+          "weekly": "w39",
           "role": "cited"
         }
       ],
@@ -1380,6 +1464,9 @@
       "body_hk": "風險偏好是組織為實現目標願意承受的風險總量，容忍度則是圍繞偏好可接受的偏離幅度。它是 [[rim520]] 從 [[risk-assessment]] 走向治理落地的關鍵概念，決定風險應對策略的選擇。",
       "summary_en": "The amount of risk an organisation is willing to accept",
       "summary_hk": "組織願意承擔多少風險、偏離到何種程度仍可接受",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w21",
@@ -1393,10 +1480,7 @@
           "weekly": "w31",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "risk-assessment",
@@ -1418,6 +1502,9 @@
       "body_hk": "風險識別與評估是風險管理的起點，先找出風險來源，再評估其概率與影響。它遵循 [[iso-31000]] 的流程，並配合 [[risk-appetite]] 決定應對方式。",
       "summary_en": "Identifying risk sources and evaluating likelihood and impact",
       "summary_hk": "識別風險來源並評估其發生概率與影響",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w21",
@@ -1438,11 +1525,12 @@
         {
           "weekly": "w31",
           "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "value-at-risk",
@@ -1469,6 +1557,9 @@
         "在险价值",
         "VAR"
       ],
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w21",
@@ -1498,10 +1589,7 @@
           "weekly": "w31",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "monte-carlo",
@@ -1527,15 +1615,19 @@
         "蒙地卡罗",
         "蒙特卡洛"
       ],
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "extreme-value-theory",
@@ -1586,6 +1678,9 @@
       "body_hk": "壓力測試在極端情景下檢驗穩健性，與 [[extreme-value-theory]] 互補。它在 [[rim523]] 中用於超越歷史數據的尾部情景設計。",
       "summary_en": "Testing robustness under extreme scenarios",
       "summary_hk": "在極端情景下檢驗組合或機構的穩健性",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w21",
@@ -1622,11 +1717,12 @@
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "probability-distribution",
@@ -1673,6 +1769,9 @@
       "body_hk": "逆向選擇來自信息不對稱：風險更高的人更願意投保，推高賠付並破壞定價。它與 [[moral-hazard]] 一起構成 [[rim521]] 解釋產品設計（如免賠額、核保）的核心。\n\n## 要點（RIM521 Set11）\n- 緩解：核保篩選、免賠額、信號傳遞（signalling，如健康告知）。\n- 與信息經濟學中的市場失靈聯繫。",
       "summary_en": "Higher-risk individuals are more likely to buy insurance",
       "summary_hk": "信息不對稱下高風險者更傾向投保導致的定價問題",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w21",
@@ -1686,10 +1785,7 @@
           "weekly": "w26",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "moral-hazard",
@@ -1711,15 +1807,15 @@
       "body_hk": "道德風險指投保後行為改變、風險上升的現象，是 [[adverse-selection]] 的「事後」對應。[[rim521]] 用免賠額與共保等機制來緩解它。",
       "summary_en": "Post-insurance behaviour change increases risk",
       "summary_hk": "投保後行為改變導致風險上升的現象",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w26",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "expected-utility",
@@ -1766,6 +1862,9 @@
       "body_hk": "精算定價以純保費（期望損失）加費用與利潤附加構成保費，需處理 [[adverse-selection]] 與 [[moral-hazard]]。它與 [[probability-distribution]]、[[actuarial-present-value]] 緊密相關。 分紅與定價披露受 [[gn16]]（分紅實現率）約束。",
       "summary_en": "Pricing insurance as pure premium plus loadings",
       "summary_hk": "用純保費加附加的方式為保險產品定價",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w26",
@@ -1775,10 +1874,7 @@
           "weekly": "w35",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "duration",
@@ -1800,6 +1896,9 @@
       "body_hk": "久期是債券價格對收益率變化敏感度的一階度量，本質是現金流回收的加權平均時間。\n\n## 公式\nMacaulay 久期：D = Σ(t·PV(CF_t)) / P\n修正久期：D_mod = D / (1+y)（半年付息按每期收益率）\n價格近似：ΔP/P ≈ −D_mod × Δy\n\n## 要點\n- RIM537 CH04 利率風險核心工具，與 [[convexity]] 配合做二階修正。\n- 組合久期 = Σ(權重 × 個券久期)（contribution to portfolio duration）。\n- 免疫策略：久期匹配使資產/負債對利率變動免疫；久期小於負債面臨再投資風險，大於負債面臨價格風險，需定期再平衡。\n- 不同票息/期限債券價格敏感度不同，久期是可比的利率風險度量。 [[immunization]]（免疫策略）即久期/凸性匹配的組合應用。",
       "summary_en": "First-order measure of bond price sensitivity to rates",
       "summary_hk": "衡量債券價格對利率變動的敏感度",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w01",
@@ -1844,11 +1943,12 @@
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "convexity",
@@ -1870,6 +1970,9 @@
       "body_hk": "凸性捕捉 [[duration]] 無法描述的價格-收益率非線性（凸關係），是二階度量。\n\n## 公式\n價格近似：ΔP/P ≈ −D_mod·Δy + ½·Convexity·(Δy)²\n半年期凸性需除以 2² 轉全年。\n\n## 要點\n- RIM537 CH04：凸性形狀 vs 凸性度量；不同供應商縮放方式不同。\n- 大利率變動下高凸性組合（barbell 槓鈴）佔優，小變動下高票息 bullet 子彈組合佔優。\n- 免疫策略需久期+凸度配合。 [[immunization]]（免疫策略）即久期/凸性匹配的組合應用。",
       "summary_en": "Second-order capture of the price-yield nonlinearity",
       "summary_hk": "度量久期隨利率變化的變化率，捕捉價格的非線性",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w21",
@@ -1890,11 +1993,12 @@
         {
           "weekly": "w29",
           "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "credit-spread",
@@ -1920,6 +2024,9 @@
         "信用息差",
         "credit spread"
       ],
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w23a",
@@ -1937,10 +2044,7 @@
           "weekly": "w29",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "cds",
@@ -1962,6 +2066,9 @@
       "body_hk": "信用違約互換（CDS）是轉移信用風險的衍生品：買方支付保費換取違約保護，賣方收取保費承擔違約損失。\n\n## 要點\n- RIM537：用 CDS 對衝信用風險，從 CDS 價格反推違約概率（見 [[pd-lgd]] Blackstone 案例）。\n- 信用衍生品（CDS）、證券化與信用危機的關係是課程重點。",
       "summary_en": "Derivative that transfers credit risk",
       "summary_hk": "轉移信用風險的衍生品合約",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w22",
@@ -1971,10 +2078,7 @@
           "weekly": "w23a",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "pd-lgd",
@@ -1996,6 +2100,9 @@
       "body_hk": "PD（違約概率）與 LGD（違約損失率）是信用風險的兩大參數，期望損失 ≈ PD × LGD × 敞口。RIM537 通過評級映射、結構化模型（如 Black-Scholes-Merton）與簡化形式模型估計。\n\n## 要點（Blackstone 案例）\n- 花旗槓桿貸款組合：高級無擔保貸款違約概率 14.37%，違約回收率約 44.9%。\n- B 級債券評級隱含預期違約率 5.91%，而 CDS 市場隱含 20.82%，反映市場定價分歧。 信用利差與 PD/LGD 是 [[credit-risk]]（信用風險）的核心組成。",
       "summary_en": "Probability of default and loss given default",
       "summary_hk": "信用風險的兩個基本參數：違約可能性與違約後損失",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w21",
@@ -2009,10 +2116,7 @@
           "weekly": "w29",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "yield-curve",
@@ -2038,6 +2142,9 @@
         "利率曲线",
         "yield curve"
       ],
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w23a",
@@ -2059,10 +2166,7 @@
           "weekly": "w33",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "capital-structure",
@@ -2108,15 +2212,15 @@
       "body_hk": "財務槓桿用債務放大收益與風險，由 [[capital-structure]] 決定。[[rim524]] 用它評估企業的償債能力與財務困境風險。",
       "summary_en": "Using debt to magnify returns and risk",
       "summary_hk": "用債務放大收益與風險的程度",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w33",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "dcf",
@@ -2141,7 +2245,13 @@
       "summary_hk": "把未來現金流折現以評估資產價值",
       "category": "学习与备考",
       "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
+      "weekly_refs": [
+        {
+          "weekly": "w38",
+          "role": "cited"
+        }
+      ]
     },
     {
       "slug": "hedging",
@@ -2163,6 +2273,9 @@
       "body_hk": "套期保值用衍生品對衝風險敞口，RIM520 聚焦期貨/遠期對衝。\n\n## 要點（RIM520）\n- long hedge（預期未來買入、鎖定價格）vs short hedge（預期未來賣出）。\n- 最優對衝比率 h = ρ·σ_s/σ_F（現貨與期貨收益相關係數 × 標準差比）；beta hedge 用資產相對市場的 beta 定比率。\n- 遠期利率協議（FRA）：用時間線鎖定未來利率。\n- 市場價格偏離期貨定價公式 → 套利機會。 [[interest-rate-swap]]（利率互換）是利率對衝的主要工具。",
       "summary_en": "Using derivatives to offset risk exposures",
       "summary_hk": "用衍生品對衝利率、匯率等風險敞口",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w21",
@@ -2195,11 +2308,12 @@
         {
           "weekly": "w35",
           "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "reinsurance",
@@ -2221,6 +2335,9 @@
       "body_hk": "再保險是保險公司（分出人 Cedant）把部分或全部風險轉移給再保險人（Reinsurer）的機制，是「保險人的保險」。\n\n## 核心（RIM530）\n- 轉移鏈條：Insured → Insurer → Reinsurer → Retrocedant → Retrocessionaire；被保險人僅與原保險人存在合同關係。\n- 與共保（co-insurance，多家共擔同一風險）不同，再保是真正的風險轉移。\n- 互惠分保（Reciprocity）：兩家公司互相接受對方的再保業務。\n- 用途：資本管理（降低償債資本要求、優化 SCR）、盈餘平滑、巨災保護、限制風險暴露。\n- 風險：再保人違約的信用風險 + 市場互聯的系統性風險（需分散再保夥伴、抵押品、動態監控）。\n\n## 類型\n- 合約（Treaty）vs 臨時（Facultative）；比例 vs 非比例。\n- Stop Loss（損失率觸發）vs Aggregate Excess of Loss（總損失金額觸發，見 [[retention]]）。 再保險分析師（[[reinsurance-analyst]]）評估再保安排與風險轉移。",
       "summary_en": "The ceding insurer transfers part of its risk to a reinsurer",
       "summary_hk": "保險公司把風險部分轉移給再保險人的機制",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w01",
@@ -2269,11 +2386,16 @@
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "insurance-linked-securities",
@@ -2295,6 +2417,9 @@
       "body_hk": "保險連接證券（ILS）把保險風險證券化轉移給資本市場投資者，巨災債券是典型代表，把尾部風險（巨災）轉出傳統再保渠道。\n\n## 要點（RIM530）\n- ILS 是替代風險轉移（ART）的核心工具，與 [[reinsurance]] 互補而非替代。\n- 用途：在巨災風險中釋放傳統再保市場的容量壓力；系統性風險視角下，ILS 深化了保險與資本市場的互聯。\n- 管理：需要透明度與信息披露（對再保/ILS 交易對手風險的披露）。",
       "summary_en": "Securitised insurance risk, e.g. catastrophe bonds",
       "summary_hk": "把保險風險證券化，如巨災債券（ILS）",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w21",
@@ -2319,11 +2444,16 @@
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "mortality-table",
@@ -2345,6 +2475,9 @@
       "body_hk": "生命表（Life Table）刻畫各年齡的生存與死亡概率，是壽險與年金定價的基礎。RIM531 使用 2001 CSO 生命表與預定利率（如 5%）定價。\n\n## 要點\n- 死亡概率（q_x）與存活概率（p_x）驅動保費計算。\n- 利率敏感性：利率降至 3% 時保費上升（約 +5.8%）；死亡率低估導致保費下降（約 −18.5%）。\n- 終身壽險需計算至生命表極限年齡（如 120 歲）。",
       "summary_en": "Life table of survival and death probabilities by age",
       "summary_hk": "刻畫各年齡生存/死亡概率的精算基礎數據",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w26",
@@ -2354,10 +2487,7 @@
           "weekly": "w31",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "actuarial-present-value",
@@ -2407,6 +2537,9 @@
       "body_hk": "長壽風險指人口壽命延長導致年金給付超預期的風險，由 [[mortality-table]] 的改進趨勢刻畫。它是 [[rim531]] 養老與財富管理的核心挑戰。",
       "summary_en": "Risk that people live longer than expected",
       "summary_hk": "人們活得更久導致給付超預期的風險",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w25",
@@ -2416,10 +2549,7 @@
           "weekly": "w26",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "machine-learning-pricing",
@@ -2445,15 +2575,15 @@
         "ML 定价",
         "机器学习核保定价"
       ],
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w33",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "fraud-detection",
@@ -2475,6 +2605,9 @@
       "body_hk": "反欺詐用數據方法識別欺詐理賠，是 RIM536 理賠管理的核心應用。\n\n## 要點（RIM536）\n- 理賠即直接盈虧線：loss ratio = 損失/保費，理賠節約直接進入利潤。\n- 技術：社交媒體分析、網絡分析識別團夥欺詐模式。\n- 自動化：Ping An/農夫保險用照片/視頻評估處理 95% 車險全損案，無人工查勘。 ML 項目遵循 [[crisp-dm]]（數據挖掘流程）方法論。",
       "summary_en": "Data-driven identification of fraudulent claims",
       "summary_hk": "用數據方法識別保險欺詐行為",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w25",
@@ -2488,10 +2621,7 @@
           "weekly": "w33",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "emerging-risks",
@@ -2513,15 +2643,15 @@
       "body_hk": "新興風險包括氣候、網絡與疫情等難以歷史建模的風險，挑戰傳統 [[actuarial-pricing]] 與 [[extreme-value-theory]]。它是 [[rim538]] 綜合專題的核心對象。",
       "summary_en": "New risks hard to model historically: climate, cyber, pandemic",
       "summary_hk": "氣候、網絡、疫情等難以量化建模的新風險",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w27",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "esg-insurance",
@@ -2543,6 +2673,9 @@
       "body_hk": "ESG 把環境、社會與治理因素納入保險承保與投資，與 [[emerging-risks]]（尤其氣候風險）深度交織。它是 [[rim538]] 的前沿議題之一。",
       "summary_en": "Integrating environmental, social and governance factors",
       "summary_hk": "把環境、社會與治理因素納入保險與投資",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w23a",
@@ -2552,10 +2685,7 @@
           "weekly": "w25",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "deepseek",
@@ -2977,6 +3107,9 @@
       "body_hk": "三道防線把風險治理分為業務營運、風險管理、內部審計三層，是 [[rim520]] 從 [[coso-erm]] 落地到治理結構的模型。",
       "summary_en": "Three-layer governance model: operations, risk, audit",
       "summary_hk": "業務、風險、審計三層治理的經典模型",
+      "category": "数据与标准",
+      "sourceKind": "框架条目",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：框架条目），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w23b",
@@ -2989,11 +3122,16 @@
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
-      ],
-      "category": "数据与标准",
-      "sourceKind": "框架条目",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：框架条目），未做链接核实"
+      ]
     },
     {
       "slug": "rctoa",
@@ -3248,15 +3386,15 @@
       "body_hk": "線性回歸（OLS）用最小二乘法估計 Y=α+βX+ε，是 RIM523 期末核心考點。\n\n## 公式\nβ=Σ(X-X̄)(Y-Ȳ)/Σ(X-X̄)²，α=Ȳ-βX̄\nTSS=RSS+ESS，R²=ESS/TSS，F=(ESS/k)/(RSS/v)\n\n## 要點\n- 計算 s²=RSS/(T-2)、ESS、R²、預測值（Y₆）。\n- 多元回歸顯著性檢驗（BHP Billiton 案例：RBHP 對 Gold/Oil 指數回歸）。\n- 金融應用：資產定價、風險因子暴露、業績歸因。",
       "summary_en": "OLS fit of a linear relationship between variables",
       "summary_hk": "用最小二乘法擬合因變量與自變量的線性關係",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w33",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "retention",
@@ -3302,15 +3440,15 @@
       "body_hk": "均衡保費（Level Premium）把淨躉繳保費（NSP）通過時間平滑分攤為每年等額的繳費，需額外考慮投保人每年的存活概率（未死亡才繼續繳費）。\n\n## 要點（RIM531）\n- 公式：NSP = LP + LP/(1+r)·P(活到第2年) + LP/(1+r)²·P(活到第3年) + …，即「保費現值 = 賠付現值」。\n- 與 [[actuarial-present-value]] 配合，是定期/終身壽險與年金定價的核心。",
       "summary_en": "A constant premium spreading the single premium over time",
       "summary_hk": "將躉繳保費通過時間平滑分攤為每年等額的保費",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w26",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "retirement-planning",
@@ -3332,6 +3470,9 @@
       "body_hk": "退休規劃測算退休後所需資本並安排儲蓄與投資，是 RIM532 核心模塊之一，與香港強積金（MPF）制度銜接。\n\n## 要點（RIM532 Top20）\n- 退休資本需求：以退休後每月開銷（今日幣值）為基礎，考慮通脹率（如 2.5%）與投資回報率（如 4%）折現。\n- 香港 MPF：僱員與僱主各供款 5%（月收入上下限約 HK$7,100–30,000）。\n- 與 [[longevity-risk]]、[[level-premium]]（年金化）銜接，對應 [[mpfe]] 強積金牌照。",
       "summary_en": "Estimating retirement capital needs and arranging savings",
       "summary_hk": "測算退休資本需求並安排儲蓄與投資的規划過程",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w01",
@@ -3341,10 +3482,7 @@
           "weekly": "w33",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "parametric-insurance",
@@ -3366,15 +3504,19 @@
       "body_hk": "參數保險以客觀觸發指標（如航班延誤時長、地震震級、降雨量）自動觸發賠付，無需現場損失查勘。\n\n## 要點（RIM536）\n- 簡化理賠結算：降低成本與延遲（如 USAA 無人機評估野火索賠、Lemonade AI 秒級賠付）。\n- 與 IoT/傳感器數據結合，適合巨災與指數型風險。",
       "summary_en": "Payout triggered by objective parameters, no loss adjustment",
       "summary_hk": "以客觀觸發指標自動賠付的保險，無需損失查勘",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "law-of-large-numbers",
@@ -3397,6 +3539,9 @@
       "body_hk": "大數法則（LLN）：隨着風險單位數量增加，實際損失平均趨近期望損失，保險池更穩定。\n\n## 應用\n- 保險池（risk pooling）：保單數量越多，波動越小，降低無力賠付概率（[[rim523]]）。\n- 可保性（[[rim536]]）：risk pool of one 使每名投保人單獨成池，若違背大數法則可能影響可保性。\n- 金融：配合 [[monte-carlo]] 模擬生成大量樣本來估計資產價格情景。",
       "summary_en": "Sample mean converges to the expectation as sample size grows",
       "summary_hk": "樣本量越大，樣本均值越趨近期望值，保險池越穩定",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w33",
@@ -3406,10 +3551,7 @@
           "weekly": "w35",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "operational-risk",
@@ -3431,6 +3573,9 @@
       "body_hk": "操作風險指因內部流程、人員、系統缺陷或外部事件導致損失的風險（如欺詐、系統故障、流程失誤）。\n\n## 要點（RIM520）\n- 緩釋方法：內部控制、雙人覆核、系統備份與災難恢復、員工培訓。\n- 保險與銀行監管關注的核心風險類別。",
       "summary_en": "Risk of loss from processes, people, systems or external events",
       "summary_hk": "因內部流程、人員、系統或外部事件導致損失的風險",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w01",
@@ -3451,11 +3596,12 @@
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "market-structure",
@@ -3477,6 +3623,9 @@
       "body_hk": "市場結構按競爭者數量、產品差異與進入壁壘劃分：完全競爭、壟斷競爭、寡頭、壟斷。\n\n## 要點（RIM521 Set5-6）\n- 市場結構影響定價能力與資源配置效率。",
       "summary_en": "Market types by competitor count and product differentiation",
       "summary_hk": "按競爭者數量與產品差異劃分的市場類型",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w25",
@@ -3490,10 +3639,7 @@
           "weekly": "w35",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "capm",
@@ -3517,7 +3663,13 @@
       "summary_hk": "用系統性風險（beta）決定資產的預期回報",
       "category": "学习与备考",
       "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
+      "weekly_refs": [
+        {
+          "weekly": "w38",
+          "role": "cited"
+        }
+      ]
     },
     {
       "slug": "mineru",
@@ -4331,6 +4483,9 @@
       "title_hk": "RBC 三支柱",
       "body_hk": "RBC（Risk-Based Capital）是以風險為基礎計算資本要求的償付能力監管框架，取代固定比例的資本要求。\n\n## 三支柱\n- 第一支柱（定量）：按保險/市場/信用/操作風險計量最低資本與償付能力充足率。\n- 第二支柱（定性）：監管審查與 [[orsa]]，評估風險治理與前瞻性資本規劃。\n- 第三支柱（市場紀律）：公眾披露財務、治理與風險信息。\n\n## 關聯\n- 香港 2026 RBC 修訂（儲蓄險資本上調、IUL 匹配調整、基建優惠），對應 [[rim522]]。\n- 與 [[coso-erm]]、[[three-lines-of-defense]] 同屬風險治理框架。",
       "summary_hk": "以風險為基礎計量資本要求的償付能力監管框架，分三支柱：定量資本、定性監管、市場紀律。",
+      "category": "数据与标准",
+      "sourceKind": "框架条目",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：框架条目），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w21",
@@ -4379,11 +4534,12 @@
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w38",
+          "role": "cited"
         }
-      ],
-      "category": "数据与标准",
-      "sourceKind": "框架条目",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：框架条目），未做链接核实"
+      ]
     },
     {
       "slug": "orsa",
@@ -4406,6 +4562,9 @@
       "title_hk": "ORSA 自身風險與償付能力評估",
       "body_hk": "ORSA（Own Risk and Solvency Assessment）是保險公司對自身風險與償付能力的內部評估，屬於 RBC/償付能力制度的第二支柱。\n\n## 要點\n- 前瞻性：評估未來 3–5 年風險與資本充足性，納入壓力/情景與反向壓力測試。\n- 與 [[stress-testing]]、[[value-at-risk]] 結合，輸出風險偏好與資本規劃。\n- 對應 [[rbc]] 第二支柱，與 [[three-lines-of-defense]] 治理框架配套。",
       "summary_hk": "保險公司對自身風險與償付能力的內部前瞻性評估，是 RBC/償付能力制度的第二支柱核心。",
+      "category": "数据与标准",
+      "sourceKind": "框架条目",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：框架条目），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w21",
@@ -4423,10 +4582,7 @@
           "weekly": "w27",
           "role": "cited"
         }
-      ],
-      "category": "数据与标准",
-      "sourceKind": "框架条目",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：框架条目），未做链接核实"
+      ]
     },
     {
       "slug": "gn16",
@@ -4449,6 +4605,9 @@
       "title_hk": "GN16 分紅實現率披露",
       "body_hk": "GN16 是香港保監局關於分紅保單的指引，要求披露分紅實現率與「總現金價值比率」，增強分紅產品透明度。\n\n## 要點\n- 披露過去 5 年分紅實現率（此前為 3 年），產品停售後仍須繼續披露 5 年。\n- 「總現金價值比率」讓客户對比實際到手 vs 演示收益；非合規披露觸發 IA 紀律行動。\n- 與 [[actuarial-pricing]]、[[rim531]] 分紅產品精算相關。",
       "summary_hk": "香港保監局指引，要求披露分紅保單的分紅實現率與總現金價值比率，增強分紅產品透明度。",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w01",
@@ -4485,11 +4644,12 @@
         {
           "weekly": "w35",
           "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "immunization",
@@ -4511,6 +4671,9 @@
       "title_hk": "免疫策略",
       "body_hk": "免疫策略是資產負債管理（ALM）中使資產與負債 [[duration]] 匹配、對利率變動免疫的策略。\n\n## 要點\n- 免疫不是一勞永逸，需定期再平衡（久期隨利率與時間漂移）。\n- 久期匹配 + [[convexity]] 優化，使組合在利率升/降時都取得正向表現。\n- 資產久期 < 負債久期 → 再投資風險；> 負債久期 → 價格風險。\n- 對應 [[rim537]] 債券久期管理。",
       "summary_hk": "使資產與負債久期匹配、從而對利率變動免疫的資產負債管理策略。",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w25",
@@ -4520,10 +4683,7 @@
           "weekly": "w29",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "credit-risk",
@@ -4545,6 +4705,9 @@
       "title_hk": "信用風險",
       "body_hk": "信用風險是交易對手或債券發行人違約、或信用質量下降（評級遷移）導致損失的風險。\n\n## 度量\n- 預期損失 = [[pd-lgd]]（違約概率 × 違約損失率 × 違約敞口）。\n- 信用質量以 [[credit-spread]] 與評級遷移矩陣刻畫。\n- 對衝工具：[[cds]]；監管資本按評級計提風險權重。\n\n## 關聯\n- 對應 [[rim537]] 債券市場與信用風險管理。 信用風險分析師（[[credit-risk-analyst]]）專職度量與管理信用風險。",
       "summary_hk": "交易對手或債券發行人違約、或信用質量下降導致損失的風險。",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w01",
@@ -4589,11 +4752,12 @@
         {
           "weekly": "w36",
           "role": "cited"
+        },
+        {
+          "weekly": "w39",
+          "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "interest-rate-swap",
@@ -4616,15 +4780,15 @@
       "title_hk": "利率互換",
       "body_hk": "利率互換（IRS）是雙方交換固定與浮動利率現金流的衍生工具。\n\n## 用途\n- 保險公司用於資產負債久期匹配（浮動→固定），對衝 [[duration]] 缺口。\n- 保費融資中用於鎖定貸款利率，常與 Cap（封頂）/Floor（下限）搭配。\n- 與 [[hedging]]、[[rim535]] 衍生品對衝相關。",
       "summary_hk": "雙方交換固定與浮動利率現金流的衍生工具，用於對衝利率風險或資產負債久期匹配。",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w22",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "glm",
@@ -4647,6 +4811,9 @@
       "title_hk": "廣義線性模型",
       "body_hk": "廣義線性模型（GLM）通過連接函數將線性預測擴展到非正態響應（泊松/二項/伽馬），是精算定價與預測建模的基礎。\n\n## 要點\n- 相比黑箱模型更可解釋，符合監管「可解釋性」要求。\n- 與 [[linear-regression]]（GLM 的特例）、[[machine-learning-pricing]]、[[bias-variance-tradeoff]] 相關。\n- 對應 [[rim523]] 風險分析建模、[[rim536]] 大數據應用。",
       "summary_hk": "通過連接函數將線性預測擴展到非正態響應的統計建模框架，是精算定價與預測建模的基礎。",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w01",
@@ -4664,10 +4831,7 @@
           "weekly": "w35",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "bias-variance-tradeoff",
@@ -4689,15 +4853,15 @@
       "title_hk": "偏差-方差權衡",
       "body_hk": "偏差-方差權衡描述模型複雜度與泛化誤差的關係：過度擬合歷史數據（低偏差高方差）會在新場景失效。\n\n## 要點\n- 監管場景：傳統 RBC 基於歷史線性模型，在「低概率高衝擊」事件前滯後。\n- AI 精準定價悖論：個性化定價提升承保精度，但風險池碎片化削弱 [[law-of-large-numbers]]。\n- 與 [[glm]]、[[machine-learning-pricing]] 相關；對應 [[rim536]]。",
       "summary_hk": "模型複雜度與泛化誤差之間的權衡：過度擬合歷史數據（低偏差高方差）會在新場景失效。",
+      "category": "学习与备考",
+      "sourceKind": "概念与术语条目（无外部单一来源）",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w33",
           "role": "cited"
         }
-      ],
-      "category": "学习与备考",
-      "sourceKind": "概念与术语条目（无外部单一来源）",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：概念与术语条目（无外部单一来源）），未做链接核实"
+      ]
     },
     {
       "slug": "crisp-dm",
@@ -4719,15 +4883,15 @@
       "title_hk": "CRISP-DM 數據挖掘流程",
       "body_hk": "CRISP-DM 是六步數據挖掘標準流程：業務理解 → 數據理解 → 數據準備 → 建模 → 評估 → 部署。\n\n## 要點\n- 強調「數據驅動決策必須始於業務理解」。\n- 應用於承保定價、理賠反欺詐、離岸信託穿透等。\n- 與 [[glm]]、[[fraud-detection]]、[[rim536]] 相關。",
       "summary_hk": "六步數據挖掘標準流程：業務理解、數據理解、數據準備、建模、評估、部署。",
+      "category": "数据与标准",
+      "sourceKind": "框架条目",
+      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：框架条目），未做链接核实",
       "weekly_refs": [
         {
           "weekly": "w33",
           "role": "cited"
         }
-      ],
-      "category": "数据与标准",
-      "sourceKind": "框架条目",
-      "verified_note": "；2026-09-17 来源层标注：本条为站内原生条目，无外部 URL 来源（来源类别：框架条目），未做链接核实"
+      ]
     },
     {
       "slug": "actuary",

@@ -546,6 +546,133 @@
         "three-lines-of-defense",
         "rbc"
       ]
+    },
+    {
+      "slug": "w38",
+      "title": "RIAA 周报 · 2026 W38",
+      "course": "rim524",
+      "file": "w38.md",
+      "topic": "金融机构的会计与财务管理（Accounting and Financial Management in Financial Institutions）",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim524",
+          "role": "primary"
+        },
+        {
+          "slug": "rim520",
+          "role": "cited"
+        },
+        {
+          "slug": "rim522",
+          "role": "cited"
+        },
+        {
+          "slug": "rim523",
+          "role": "cited"
+        },
+        {
+          "slug": "rim530",
+          "role": "cited"
+        },
+        {
+          "slug": "rim531",
+          "role": "cited"
+        },
+        {
+          "slug": "rim535",
+          "role": "cited"
+        },
+        {
+          "slug": "rim536",
+          "role": "cited"
+        },
+        {
+          "slug": "rim537",
+          "role": "cited"
+        }
+      ],
+      "concepts": [
+        "duration",
+        "convexity",
+        "dcf",
+        "hedging",
+        "reinsurance",
+        "insurance-linked-securities",
+        "capm"
+      ],
+      "frameworks": [
+        "three-lines-of-defense",
+        "rbc"
+      ]
+    },
+    {
+      "slug": "w39",
+      "title": "RIAA 周报 · 2026 W39",
+      "course": "rim530",
+      "file": "w39.md",
+      "topic": "再保险、风险转移及资产证券化（Reinsurance, Risk Transfer and Risk Securitisation）",
+      "attribution": "完整课程",
+      "courses": [
+        {
+          "slug": "rim530",
+          "role": "primary"
+        },
+        {
+          "slug": "rim520",
+          "role": "cited"
+        },
+        {
+          "slug": "rim522",
+          "role": "cited"
+        },
+        {
+          "slug": "rim523",
+          "role": "cited"
+        },
+        {
+          "slug": "rim524",
+          "role": "cited"
+        },
+        {
+          "slug": "rim531",
+          "role": "cited"
+        },
+        {
+          "slug": "rim533",
+          "role": "cited"
+        },
+        {
+          "slug": "rim534",
+          "role": "cited"
+        },
+        {
+          "slug": "rim535",
+          "role": "cited"
+        },
+        {
+          "slug": "rim536",
+          "role": "cited"
+        },
+        {
+          "slug": "rim537",
+          "role": "cited"
+        }
+      ],
+      "concepts": [
+        "risk-assessment",
+        "monte-carlo",
+        "stress-testing",
+        "reinsurance",
+        "insurance-linked-securities",
+        "parametric-insurance",
+        "operational-risk",
+        "gn16",
+        "credit-risk"
+      ],
+      "frameworks": [
+        "three-lines-of-defense"
+      ]
     }
   ]
 }
