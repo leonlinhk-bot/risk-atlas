@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12 18:08",
+  "updated": "2026-09-25 18:08",
   "note": "具体在招职位，直达投递/详情页；每日 18:08 更新（由 update-job-postings.cjs 刷新）。首期为手工抓取自公开招聘信息。",
   "postings": [
     {
@@ -47,9 +47,9 @@
       "employer": "manulife",
       "job": "actuary",
       "company": "Manulife 宏利",
-      "url": "https://hk.expertini.com/job/manulife-65-months-actuarial-internship-program-20262027-hong-kong-manulife-abfb3b3d4d324e749bf4cfb918041b5b105.pdf",
+      "url": "https://careers.manulife.com/global/en/job/JR26020078",
       "date": "2026-08-30",
-      "source": "expertini",
+      "source": "Manulife 官网",
       "level": "entry"
     },
     {
@@ -148,8 +148,8 @@
       "job": "risk-consultant",
       "company": "KPMG 毕马威",
       "url": "https://hk.jobsdb.com/job/94317020",
-      "date": "2026-08-31",
-      "source": "JobsDB",
+      "date": "2026-09-15",
+      "source": "JobsDB（已刷新）",
       "level": "senior"
     },
     {
@@ -171,6 +171,126 @@
       "date": "2026-09-02",
       "source": "JobsDB",
       "level": "mid"
+    },
+    {
+      "title": "Manager (Long Term Business) (Actuarial) (3-year Contract)",
+      "employer": "ia",
+      "job": "actuary",
+      "company": "Insurance Authority 保险业监管局",
+      "url": "https://hk.jobsdb.com/job/94733230",
+      "date": "2026-09-18",
+      "source": "JobsDB（监管机构官方雇主帖）",
+      "level": "mid"
+    },
+    {
+      "title": "Pricing Actuarial Internship Programme",
+      "employer": "allied-world",
+      "job": "actuary",
+      "company": "Allied World Assurance Company",
+      "url": "https://awac.wd108.myworkdayjobs.com/en-US/AlliedWorld_Careers/job/Hong-Kong/Intern_R-142-2",
+      "date": "2026-09-17",
+      "source": "Allied World 官网（Workday，wd108 tenant）",
+      "level": "entry"
+    },
+    {
+      "title": "Assistant Actuarial Manager / Actuarial Analyst (Non-Life Reinsurance)",
+      "employer": null,
+      "job": "reinsurance-analyst",
+      "company": "Taiping Reinsurance 太平再保险",
+      "url": "https://hk.jobsdb.com/job/94827794",
+      "date": "2026-09-23",
+      "source": "JobsDB（雇主直招，提及 HKFRS17 / HKRBC）",
+      "level": "mid"
+    },
+    {
+      "title": "Senior Actuarial Associate",
+      "employer": null,
+      "job": "actuary",
+      "company": "Fusure Reinsurance 富卫再保险",
+      "url": "https://hk.jobsdb.com/job/94802058",
+      "date": "2026-09-22",
+      "source": "JobsDB（再保雇主直招）",
+      "level": "senior"
+    },
+    {
+      "title": "Head L&H UW & Claims Office APAC ex China",
+      "employer": "swiss-re",
+      "job": "underwriter",
+      "company": "Swiss Re 瑞士再保险",
+      "url": "https://careers.swissre.com/job/Hong-Kong-Head-L&H-UW-&-Claims-Office-APAC-ex-China-Hong/1426823533/",
+      "date": "2026-09-15",
+      "source": "Swiss Re 官网",
+      "level": "senior"
+    },
+    {
+      "title": "Head of Financial Lines (Commercial Insurance)",
+      "employer": "zurich",
+      "job": "underwriter",
+      "company": "Zurich Insurance 苏黎世保险",
+      "url": "https://hk.jobsdb.com/job/94606660",
+      "date": "2026-09-14",
+      "source": "JobsDB（Zurich 官方雇主帖）",
+      "level": "senior"
+    },
+    {
+      "title": "Senior Manager, Asset Liability Management, Actuarial",
+      "employer": "fwd",
+      "job": "actuary",
+      "company": "FWD Life Insurance 富卫人寿",
+      "url": "https://hk.jobsdb.com/job/94722750",
+      "date": "2026-09-18",
+      "source": "JobsDB（雇主直招）",
+      "level": "senior"
+    },
+    {
+      "title": "Internal Control & Risk Management Advisory – Analyst (5 Days Work)",
+      "employer": null,
+      "job": "risk-consultant",
+      "company": "Roma Risk Advisory Limited",
+      "url": "https://hk.jobsdb.com/job/94726013",
+      "date": "2026-09-18",
+      "source": "JobsDB（明确欢迎应届生）",
+      "level": "entry"
+    },
+    {
+      "title": "[1 year contract] Senior Compliance Officer",
+      "employer": "hong-kong-life",
+      "job": "compliance-officer",
+      "company": "Hong Kong Life Insurance 香港人寿",
+      "url": "https://hk.jobsdb.com/job/94803648",
+      "date": "2026-09-22",
+      "source": "JobsDB（雇主直招，AML 方向）",
+      "level": "senior"
+    },
+    {
+      "title": "Senior Manager - Commercial Risk Management",
+      "employer": "aon",
+      "job": "risk-manager",
+      "company": "Aon 怡安",
+      "url": "https://jobs.aon.com/jobs/107474?lang=en-us",
+      "date": "2026-09-18",
+      "source": "Aon 官网",
+      "level": "senior"
+    },
+    {
+      "title": "Assistant Vice President / Vice President - Cyber Insurance Broking",
+      "employer": "marsh",
+      "job": "insurance-broker",
+      "company": "Marsh Insurance 达信",
+      "url": "https://hk.jobsdb.com/job/94735631",
+      "date": "2026-09-18",
+      "source": "JobsDB（Marsh 官方雇主帖）",
+      "level": "senior"
+    },
+    {
+      "title": "Marine Insurance Broker Trainee (Hong Kong)",
+      "employer": "lockton",
+      "job": "insurance-broker",
+      "company": "Lockton Companies 诺德",
+      "url": "https://hk.jobsdb.com/job/94775105",
+      "date": "2026-09-21",
+      "source": "JobsDB（Trainee 计划，应届友好）",
+      "level": "entry"
     }
   ]
 }
