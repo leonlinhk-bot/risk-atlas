@@ -23,7 +23,11 @@
   document.body.insertBefore(d, document.body.firstChild);
 
   function fit() {
-    try { document.body.style.paddingTop = d.offsetHeight + 'px'; } catch (e) {}
+    var h = 0;
+    try { h = d.offsetHeight; } catch (e) {}
+    try { document.body.style.paddingTop = h + 'px'; } catch (e) {}
+    // 供吸顶元素（就业页 .career-toc、词条页 .wk-side）取用：让它们贴在提示条下方而非被盖住
+    try { document.documentElement.style.setProperty('--stick-top', h + 'px'); } catch (e) {}
   }
   fit();
   window.addEventListener('resize', fit);
@@ -33,6 +37,7 @@
     closeBtn.addEventListener('click', function () {
       try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
       document.body.style.paddingTop = '';
+      document.documentElement.style.setProperty('--stick-top', '0px');
       if (d.parentNode) d.parentNode.removeChild(d);
       window.removeEventListener('resize', fit);
     });

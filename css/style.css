@@ -190,7 +190,7 @@ a:hover { text-decoration: underline; }
 /* ---------- 周报详情双栏 + 目录侧栏 ---------- */
 .wk-layout { display: flex; gap: 24px; align-items: flex-start; }
 .wk-main { flex: 1 1 auto; min-width: 0; }
-.wk-side { flex: 0 0 210px; position: sticky; top: 76px; }
+.wk-side { flex: 0 0 210px; position: sticky; top: calc(var(--stick-top, 0px) + 76px); }
 .wk-toc { background: #f7f9fc; border: 1px solid var(--line); border-radius: 12px; padding: 14px 12px; }
 .wk-toc-title { font-size: 12px; font-weight: 800; letter-spacing: 1px; color: #0a1f3d; margin-bottom: 10px; }
 .toc-item { display: flex; align-items: center; gap: 6px; padding: 5px 6px; border-radius: 6px; font-size: 13px; color: #475569; line-height: 1.35; margin: 1px 0; }
@@ -267,7 +267,7 @@ a:hover { text-decoration: underline; }
 .posting-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 2px; }
 .apply-btn { display: inline-block; padding: 5px 14px; background: var(--lingnan-red); color: #fff; border-radius: 20px; font-size: 12.5px; font-weight: 700; }
 .posting:hover .apply-btn { background: #b3121a; }
-.fresh-badge { display: inline-block; padding: 2px 10px; background: #dcefe4; color: #1d6b46; border-radius: 20px; font-size: 12px; font-weight: 700; vertical-align: middle; }
+.fresh-badge { display: inline-block; padding: 2px 10px; background: #dcefe4; color: #1d6b46; border-radius: 20px; font-size: 12px; font-weight: 700; vertical-align: middle; white-space: nowrap; }
 .more-jobs { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
 .more-jobs a { padding: 5px 13px; border-radius: 20px; background: #f2f5f9; color: #475569; font-size: 13px; font-weight: 600; }
 .more-jobs a:hover { background: #0a1f3d; color: #fff; }
@@ -318,9 +318,29 @@ a:hover { text-decoration: underline; }
 .stage-block .stage-tip { margin: 10px 0 2px; }
 
 /* 就业页内导航（pill）+ 折叠区块 */
-.career-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 16px; position: sticky; top: 66px; z-index: 5; background: rgba(255,255,255,.96); padding: 8px 0; border-bottom: 1px solid var(--line); }
-.career-toc a { padding: 5px 13px; border-radius: 20px; background: #f2f5f9; color: #475569; font-size: 13px; font-weight: 600; }
+/* 就业页吸顶锚点导航（浮动胶囊 toolbar）
+   —— 不透明底 + 描边 + 阴影：原先 rgba(255,255,255,.96) 的半透明通栏会把卡片透出来，
+      且通栏上下正好把一行卡片「切一半」，看起来像排版断了
+   —— 改为 width:fit-content 的圆角浮动条：四周留白，卡片从其下方穿过是「浮层」而非「撕裂」
+   —— top 取 --stick-top（js/notice.js 按「访问提示」条实际高度写入）+ 8px 呼吸位；
+      原先硬编码 top:66px 在提示条展开时会与之重叠
+   —— 窄屏单行横向滚动：原先 flex-wrap 换行会把吸顶条撑到 2–3 行，遮挡大片内容 */
+.career-toc {
+  display: flex; flex-wrap: nowrap; align-items: center; gap: 6px;
+  margin: 12px 0 18px; position: sticky; top: calc(var(--stick-top, 0px) + 8px); z-index: 60;
+  width: fit-content; max-width: 100%;
+  background: var(--paper); padding: 6px;
+  border: 1px solid var(--line); border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(10, 31, 61, .13);
+  overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.career-toc::-webkit-scrollbar { display: none; }
+.career-toc a { flex: 0 0 auto; white-space: nowrap; padding: 5px 13px; border-radius: 20px; background: #f2f5f9; color: #475569; font-size: 13px; font-weight: 600; }
 .career-toc a:hover { background: #0a1f3d; color: #fff; }
+/* 锚点跳转时给吸顶条留位，避免标题被压在条下 */
+.cat-section, .career-fold { scroll-margin-top: calc(var(--stick-top, 0px) + 82px); }
+.sort-note { font-size: 12.5px; white-space: nowrap; }
 .career-fold { margin: 14px 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
 .career-fold summary { cursor: pointer; padding: 14px 16px; font-size: 16px; font-weight: 800; color: #0a1f3d; list-style: none; }
 .career-fold summary::-webkit-details-marker { display: none; }

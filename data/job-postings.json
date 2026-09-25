@@ -3,196 +3,6 @@
   "note": "具体在招职位，直达投递/详情页；每日 18:08 更新（由 update-job-postings.cjs 刷新）。首期为手工抓取自公开招聘信息。",
   "postings": [
     {
-      "title": "中国太平在招职位汇总（太平人寿/太平保险）",
-      "employer": "china-taiping",
-      "job": null,
-      "company": "China Taiping 中国太平",
-      "url": "https://hk.jobsdb.com/china-taiping-life-insurance-hong-kong-company-limited-jobs-in-insurance-superannuation",
-      "date": "2026-09-11",
-      "source": "JobsDB",
-      "level": "all"
-    },
-    {
-      "title": "Actuarial Analyst, Asia Pacific Actuarial Group",
-      "employer": "allied-world",
-      "job": "actuary",
-      "company": "Allied World",
-      "url": "https://hk.joblum.com/job/actuarial-analyst-asia-pacific-actuarial-group/3977096",
-      "date": "2026-08-30",
-      "source": "joblum",
-      "level": "entry"
-    },
-    {
-      "title": "Senior Officer, Compliance (one-year contract)",
-      "employer": "zurich",
-      "job": "compliance-officer",
-      "company": "Zurich 苏黎世",
-      "url": "https://www.glassdoor.com.hk/job-listing/senior-officer-compliance-one-year-contract-zurich-insurance-JV_KO0,43_KE44,60.htm?jl=1010032548325",
-      "date": "2026-08-30",
-      "source": "Glassdoor",
-      "level": "mid"
-    },
-    {
-      "title": "Data Analyst / Analytics Associate (Finance & Actuarial Report)",
-      "employer": null,
-      "job": "data-scientist",
-      "company": "保险客户（Michael Page）",
-      "url": "https://www.michaelpage.com.hk/job-detail/data-analyst-analytics-associate-finance-actuarial-report/ref/jn-082026-7092269",
-      "date": "2026-08-30",
-      "source": "Michael Page",
-      "level": "mid"
-    },
-    {
-      "title": "Actuarial Internship Program 2026/2027 (6.5 months)",
-      "employer": "manulife",
-      "job": "actuary",
-      "company": "Manulife 宏利",
-      "url": "https://careers.manulife.com/global/en/job/JR26020078",
-      "date": "2026-08-30",
-      "source": "Manulife 官网",
-      "level": "entry"
-    },
-    {
-      "title": "Claims Specialist, Hong Kong",
-      "employer": "swiss-re",
-      "job": "claims-specialist",
-      "company": "Swiss Re 瑞士再保险",
-      "url": "https://jobs.ctgoodjobs.hk/job/10212440-ctfi/claims-specialist-hong-kong-hongkongsar-hk",
-      "date": "2026-09-01",
-      "source": "CTgoodjobs",
-      "level": "mid"
-    },
-    {
-      "title": "Data Analyst - Agency Platform / Insurance (50k-70k)",
-      "employer": null,
-      "job": "data-scientist",
-      "company": "保险客户（ConnectedGroup）",
-      "url": "https://jobs.ctgoodjobs.hk/job/10237025/data-analyst-agency-platform-insurance-50k-to-70k",
-      "date": "2026-08-30",
-      "source": "CTgoodjobs",
-      "level": "mid"
-    },
-    {
-      "title": "Actuarial Intern",
-      "employer": "axa",
-      "job": "actuary",
-      "company": "AXA 安盛",
-      "url": "https://careers.axa.com/careers-home/jobs/15135?lang=en-us",
-      "date": "2026-09-08",
-      "source": "AXA 官网",
-      "level": "entry"
-    },
-    {
-      "title": "Senior Manager / Manager, Life & Health Insurance Risk",
-      "employer": "axa",
-      "job": "risk-manager",
-      "company": "AXA 安盛",
-      "url": "https://careers.axa.com/careers-home/jobs/23431?lang=en-us",
-      "date": "2026-09-11",
-      "source": "AXA 官网",
-      "level": "senior"
-    },
-    {
-      "title": "Senior Underwriter",
-      "employer": "swiss-re",
-      "job": "underwriter",
-      "company": "Swiss Re 瑞士再保险",
-      "url": "https://careers.swissre.com/job/Hong-Kong-Senior-Underwriter-Hong/1429896333/",
-      "date": "2026-08-26",
-      "source": "Swiss Re 官网",
-      "level": "senior"
-    },
-    {
-      "title": "Engineering Underwriter",
-      "employer": "swiss-re",
-      "job": "underwriter",
-      "company": "Swiss Re 瑞士再保险",
-      "url": "https://careers.swissre.com/job/Hong-Kong-Engineering-Underwriter-Hong/1390180633/",
-      "date": "2026-08-29",
-      "source": "Swiss Re 官网",
-      "level": "mid"
-    },
-    {
-      "title": "Head, L&H Contracts - APAC",
-      "employer": "swiss-re",
-      "job": "reinsurance-analyst",
-      "company": "Swiss Re 瑞士再保险",
-      "url": "https://careers.swissre.com/job/Hong-Kong-Head%2C-L&H-Contracts-APAC-Hong/1435197933/",
-      "date": "2026-09-09",
-      "source": "Swiss Re 官网",
-      "level": "senior"
-    },
-    {
-      "title": "Senior Actuarial Analyst (Reinsurance Analytics)",
-      "employer": "aon",
-      "job": "reinsurance-analyst",
-      "company": "Aon 怡安",
-      "url": "https://jobs.aon.com/jobs/107169?lang=en-us",
-      "date": "2026-09-10",
-      "source": "Aon 官网",
-      "level": "mid"
-    },
-    {
-      "title": "Senior Pricing Actuarial Associate (Life Insurance)",
-      "employer": "zurich",
-      "job": "actuary",
-      "company": "Zurich 苏黎世",
-      "url": "https://hk.jobsdb.com/job/94262173",
-      "date": "2026-08-28",
-      "source": "JobsDB",
-      "level": "senior"
-    },
-    {
-      "title": "Manager/Associate Director, Actuarial, Risk Consulting (MJ005431)",
-      "employer": "kpmg",
-      "job": "risk-consultant",
-      "company": "KPMG 毕马威",
-      "url": "https://hk.jobsdb.com/job/94317020",
-      "date": "2026-09-15",
-      "source": "JobsDB（已刷新）",
-      "level": "senior"
-    },
-    {
-      "title": "Intern, Actuarial Pricing",
-      "employer": "china-taiping",
-      "job": "actuary",
-      "company": "China Taiping 中国太平",
-      "url": "https://hk.jobsdb.com/job/94554295",
-      "date": "2026-09-10",
-      "source": "JobsDB",
-      "level": "entry"
-    },
-    {
-      "title": "Underwriter, Cyber & Technology Practice",
-      "employer": "chubb",
-      "job": "underwriter",
-      "company": "Chubb 安达",
-      "url": "https://hk.jobsdb.com/job/94354747",
-      "date": "2026-09-02",
-      "source": "JobsDB",
-      "level": "mid"
-    },
-    {
-      "title": "Manager (Long Term Business) (Actuarial) (3-year Contract)",
-      "employer": "ia",
-      "job": "actuary",
-      "company": "Insurance Authority 保险业监管局",
-      "url": "https://hk.jobsdb.com/job/94733230",
-      "date": "2026-09-18",
-      "source": "JobsDB（监管机构官方雇主帖）",
-      "level": "mid"
-    },
-    {
-      "title": "Pricing Actuarial Internship Programme",
-      "employer": "allied-world",
-      "job": "actuary",
-      "company": "Allied World Assurance Company",
-      "url": "https://awac.wd108.myworkdayjobs.com/en-US/AlliedWorld_Careers/job/Hong-Kong/Intern_R-142-2",
-      "date": "2026-09-17",
-      "source": "Allied World 官网（Workday，wd108 tenant）",
-      "level": "entry"
-    },
-    {
       "title": "Assistant Actuarial Manager / Actuarial Analyst (Non-Life Reinsurance)",
       "employer": null,
       "job": "reinsurance-analyst",
@@ -213,33 +23,33 @@
       "level": "senior"
     },
     {
-      "title": "Head L&H UW & Claims Office APAC ex China",
-      "employer": "swiss-re",
-      "job": "underwriter",
-      "company": "Swiss Re 瑞士再保险",
-      "url": "https://careers.swissre.com/job/Hong-Kong-Head-L&H-UW-&-Claims-Office-APAC-ex-China-Hong/1426823533/",
-      "date": "2026-09-15",
-      "source": "Swiss Re 官网",
+      "title": "[1 year contract] Senior Compliance Officer",
+      "employer": "hong-kong-life",
+      "job": "compliance-officer",
+      "company": "Hong Kong Life Insurance 香港人寿",
+      "url": "https://hk.jobsdb.com/job/94803648",
+      "date": "2026-09-22",
+      "source": "JobsDB（雇主直招，AML 方向）",
       "level": "senior"
     },
     {
-      "title": "Head of Financial Lines (Commercial Insurance)",
-      "employer": "zurich",
-      "job": "underwriter",
-      "company": "Zurich Insurance 苏黎世保险",
-      "url": "https://hk.jobsdb.com/job/94606660",
-      "date": "2026-09-14",
-      "source": "JobsDB（Zurich 官方雇主帖）",
-      "level": "senior"
+      "title": "Marine Insurance Broker Trainee (Hong Kong)",
+      "employer": "lockton",
+      "job": "insurance-broker",
+      "company": "Lockton Companies 诺德",
+      "url": "https://hk.jobsdb.com/job/94775105",
+      "date": "2026-09-21",
+      "source": "JobsDB（Trainee 计划，应届友好）",
+      "level": "entry"
     },
     {
-      "title": "Senior Manager, Asset Liability Management, Actuarial",
-      "employer": "fwd",
-      "job": "actuary",
-      "company": "FWD Life Insurance 富卫人寿",
-      "url": "https://hk.jobsdb.com/job/94722750",
+      "title": "Assistant Vice President / Vice President - Cyber Insurance Broking",
+      "employer": "marsh",
+      "job": "insurance-broker",
+      "company": "Marsh Insurance 达信",
+      "url": "https://hk.jobsdb.com/job/94735631",
       "date": "2026-09-18",
-      "source": "JobsDB（雇主直招）",
+      "source": "JobsDB（Marsh 官方雇主帖）",
       "level": "senior"
     },
     {
@@ -253,14 +63,14 @@
       "level": "entry"
     },
     {
-      "title": "[1 year contract] Senior Compliance Officer",
-      "employer": "hong-kong-life",
-      "job": "compliance-officer",
-      "company": "Hong Kong Life Insurance 香港人寿",
-      "url": "https://hk.jobsdb.com/job/94803648",
-      "date": "2026-09-22",
-      "source": "JobsDB（雇主直招，AML 方向）",
-      "level": "senior"
+      "title": "Manager (Long Term Business) (Actuarial) (3-year Contract)",
+      "employer": "ia",
+      "job": "actuary",
+      "company": "Insurance Authority 保险业监管局",
+      "url": "https://hk.jobsdb.com/job/94733230",
+      "date": "2026-09-18",
+      "source": "JobsDB（监管机构官方雇主帖）",
+      "level": "mid"
     },
     {
       "title": "Senior Manager - Commercial Risk Management",
@@ -273,24 +83,214 @@
       "level": "senior"
     },
     {
-      "title": "Assistant Vice President / Vice President - Cyber Insurance Broking",
-      "employer": "marsh",
-      "job": "insurance-broker",
-      "company": "Marsh Insurance 达信",
-      "url": "https://hk.jobsdb.com/job/94735631",
+      "title": "Senior Manager, Asset Liability Management, Actuarial",
+      "employer": "fwd",
+      "job": "actuary",
+      "company": "FWD Life Insurance 富卫人寿",
+      "url": "https://hk.jobsdb.com/job/94722750",
       "date": "2026-09-18",
-      "source": "JobsDB（Marsh 官方雇主帖）",
+      "source": "JobsDB（雇主直招）",
       "level": "senior"
     },
     {
-      "title": "Marine Insurance Broker Trainee (Hong Kong)",
-      "employer": "lockton",
-      "job": "insurance-broker",
-      "company": "Lockton Companies 诺德",
-      "url": "https://hk.jobsdb.com/job/94775105",
-      "date": "2026-09-21",
-      "source": "JobsDB（Trainee 计划，应届友好）",
+      "title": "Pricing Actuarial Internship Programme",
+      "employer": "allied-world",
+      "job": "actuary",
+      "company": "Allied World Assurance Company",
+      "url": "https://awac.wd108.myworkdayjobs.com/en-US/AlliedWorld_Careers/job/Hong-Kong/Intern_R-142-2",
+      "date": "2026-09-17",
+      "source": "Allied World 官网（Workday，wd108 tenant）",
       "level": "entry"
+    },
+    {
+      "title": "Head L&H UW & Claims Office APAC ex China",
+      "employer": "swiss-re",
+      "job": "underwriter",
+      "company": "Swiss Re 瑞士再保险",
+      "url": "https://careers.swissre.com/job/Hong-Kong-Head-L&H-UW-&-Claims-Office-APAC-ex-China-Hong/1426823533/",
+      "date": "2026-09-15",
+      "source": "Swiss Re 官网",
+      "level": "senior"
+    },
+    {
+      "title": "Manager/Associate Director, Actuarial, Risk Consulting (MJ005431)",
+      "employer": "kpmg",
+      "job": "risk-consultant",
+      "company": "KPMG 毕马威",
+      "url": "https://hk.jobsdb.com/job/94317020",
+      "date": "2026-09-15",
+      "source": "JobsDB（已刷新）",
+      "level": "senior"
+    },
+    {
+      "title": "Head of Financial Lines (Commercial Insurance)",
+      "employer": "zurich",
+      "job": "underwriter",
+      "company": "Zurich Insurance 苏黎世保险",
+      "url": "https://hk.jobsdb.com/job/94606660",
+      "date": "2026-09-14",
+      "source": "JobsDB（Zurich 官方雇主帖）",
+      "level": "senior"
+    },
+    {
+      "title": "Senior Manager / Manager, Life & Health Insurance Risk",
+      "employer": "axa",
+      "job": "risk-manager",
+      "company": "AXA 安盛",
+      "url": "https://careers.axa.com/careers-home/jobs/23431?lang=en-us",
+      "date": "2026-09-11",
+      "source": "AXA 官网",
+      "level": "senior"
+    },
+    {
+      "title": "中国太平在招职位汇总（太平人寿/太平保险）",
+      "employer": "china-taiping",
+      "job": null,
+      "company": "China Taiping 中国太平",
+      "url": "https://hk.jobsdb.com/china-taiping-life-insurance-hong-kong-company-limited-jobs-in-insurance-superannuation",
+      "date": "2026-09-11",
+      "source": "JobsDB",
+      "level": "all"
+    },
+    {
+      "title": "Intern, Actuarial Pricing",
+      "employer": "china-taiping",
+      "job": "actuary",
+      "company": "China Taiping 中国太平",
+      "url": "https://hk.jobsdb.com/job/94554295",
+      "date": "2026-09-10",
+      "source": "JobsDB",
+      "level": "entry"
+    },
+    {
+      "title": "Senior Actuarial Analyst (Reinsurance Analytics)",
+      "employer": "aon",
+      "job": "reinsurance-analyst",
+      "company": "Aon 怡安",
+      "url": "https://jobs.aon.com/jobs/107169?lang=en-us",
+      "date": "2026-09-10",
+      "source": "Aon 官网",
+      "level": "mid"
+    },
+    {
+      "title": "Head, L&H Contracts - APAC",
+      "employer": "swiss-re",
+      "job": "reinsurance-analyst",
+      "company": "Swiss Re 瑞士再保险",
+      "url": "https://careers.swissre.com/job/Hong-Kong-Head%2C-L&H-Contracts-APAC-Hong/1435197933/",
+      "date": "2026-09-09",
+      "source": "Swiss Re 官网",
+      "level": "senior"
+    },
+    {
+      "title": "Actuarial Intern",
+      "employer": "axa",
+      "job": "actuary",
+      "company": "AXA 安盛",
+      "url": "https://careers.axa.com/careers-home/jobs/15135?lang=en-us",
+      "date": "2026-09-08",
+      "source": "AXA 官网",
+      "level": "entry"
+    },
+    {
+      "title": "Underwriter, Cyber & Technology Practice",
+      "employer": "chubb",
+      "job": "underwriter",
+      "company": "Chubb 安达",
+      "url": "https://hk.jobsdb.com/job/94354747",
+      "date": "2026-09-02",
+      "source": "JobsDB",
+      "level": "mid"
+    },
+    {
+      "title": "Claims Specialist, Hong Kong",
+      "employer": "swiss-re",
+      "job": "claims-specialist",
+      "company": "Swiss Re 瑞士再保险",
+      "url": "https://jobs.ctgoodjobs.hk/job/10212440-ctfi/claims-specialist-hong-kong-hongkongsar-hk",
+      "date": "2026-09-01",
+      "source": "CTgoodjobs",
+      "level": "mid"
+    },
+    {
+      "title": "Actuarial Analyst, Asia Pacific Actuarial Group",
+      "employer": "allied-world",
+      "job": "actuary",
+      "company": "Allied World",
+      "url": "https://hk.joblum.com/job/actuarial-analyst-asia-pacific-actuarial-group/3977096",
+      "date": "2026-08-30",
+      "source": "joblum",
+      "level": "entry"
+    },
+    {
+      "title": "Actuarial Internship Program 2026/2027 (6.5 months)",
+      "employer": "manulife",
+      "job": "actuary",
+      "company": "Manulife 宏利",
+      "url": "https://careers.manulife.com/global/en/job/JR26020078",
+      "date": "2026-08-30",
+      "source": "Manulife 官网",
+      "level": "entry"
+    },
+    {
+      "title": "Data Analyst - Agency Platform / Insurance (50k-70k)",
+      "employer": null,
+      "job": "data-scientist",
+      "company": "保险客户（ConnectedGroup）",
+      "url": "https://jobs.ctgoodjobs.hk/job/10237025/data-analyst-agency-platform-insurance-50k-to-70k",
+      "date": "2026-08-30",
+      "source": "CTgoodjobs",
+      "level": "mid"
+    },
+    {
+      "title": "Data Analyst / Analytics Associate (Finance & Actuarial Report)",
+      "employer": null,
+      "job": "data-scientist",
+      "company": "保险客户（Michael Page）",
+      "url": "https://www.michaelpage.com.hk/job-detail/data-analyst-analytics-associate-finance-actuarial-report/ref/jn-082026-7092269",
+      "date": "2026-08-30",
+      "source": "Michael Page",
+      "level": "mid"
+    },
+    {
+      "title": "Senior Officer, Compliance (one-year contract)",
+      "employer": "zurich",
+      "job": "compliance-officer",
+      "company": "Zurich 苏黎世",
+      "url": "https://www.glassdoor.com.hk/job-listing/senior-officer-compliance-one-year-contract-zurich-insurance-JV_KO0,43_KE44,60.htm?jl=1010032548325",
+      "date": "2026-08-30",
+      "source": "Glassdoor",
+      "level": "mid"
+    },
+    {
+      "title": "Engineering Underwriter",
+      "employer": "swiss-re",
+      "job": "underwriter",
+      "company": "Swiss Re 瑞士再保险",
+      "url": "https://careers.swissre.com/job/Hong-Kong-Engineering-Underwriter-Hong/1390180633/",
+      "date": "2026-08-29",
+      "source": "Swiss Re 官网",
+      "level": "mid"
+    },
+    {
+      "title": "Senior Pricing Actuarial Associate (Life Insurance)",
+      "employer": "zurich",
+      "job": "actuary",
+      "company": "Zurich 苏黎世",
+      "url": "https://hk.jobsdb.com/job/94262173",
+      "date": "2026-08-28",
+      "source": "JobsDB",
+      "level": "senior"
+    },
+    {
+      "title": "Senior Underwriter",
+      "employer": "swiss-re",
+      "job": "underwriter",
+      "company": "Swiss Re 瑞士再保险",
+      "url": "https://careers.swissre.com/job/Hong-Kong-Senior-Underwriter-Hong/1429896333/",
+      "date": "2026-08-26",
+      "source": "Swiss Re 官网",
+      "level": "senior"
     }
   ]
 }

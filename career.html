@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'none'" />
   <title>就业情报 · Risk Atlas · 风险图谱</title>
-  <link rel="stylesheet" href="css/style.css?v=fb6785e2" />
+  <link rel="stylesheet" href="css/style.css?v=b1e682c1" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳到主内容</a>
@@ -34,7 +34,7 @@
 
   <script src="js/nav.js?v=330b2eed"></script>
   <script src="js/wiki.js?v=25f80e49"></script>
-  <script src="js/notice.js?v=06b6a6bc"></script>
+  <script src="js/notice.js?v=09c40097"></script>
   <script>
     (function () {
       Wiki.attachLangSwitcher(document.getElementById('lang-switch'));
@@ -139,6 +139,12 @@
           if (roleFilter !== 'all' && roleOf(p) !== roleFilter) return false;
           return true;
         });
+        // 排序：发布日期倒序（最新在前）；同日按标题排序，保证渲染顺序稳定可复现
+        list = list.slice().sort(function (a, b) {
+          var da = String(a.date || ''), db = String(b.date || '');
+          if (da !== db) return da < db ? 1 : -1;
+          return String(a.title || '').localeCompare(String(b.title || ''), 'zh-Hans-CN');
+        });
         var btns = ['all', 'entry', 'mid', 'senior'].map(function (lv) {
           var label = { all: '全部', entry: '🎓 应届', mid: '📈 3–5年', senior: '🏛️ 资深' }[lv];
           return '<button class="pf-btn' + (postingFilter === lv ? ' active' : '') + '" data-pf="' + lv + '">' + label + '</button>';
@@ -146,7 +152,7 @@
         var roleBtns = ['all', '精算', '核保', '理赔', '风控', '数据', '再保', '合规', '投资', '经纪'].map(function (r) {
           return '<button class="rf-btn' + (roleFilter === r ? ' active' : '') + '" data-rf="' + r + '">' + (r === 'all' ? '全部岗位' : r) + '</button>';
         }).join('');
-        return '<section class="cat-section" id="latest"><h2>最新职位 · 直达投递 <span class="muted">(' + list.length + '/' + postings.postings.length + ')</span> <span class="fresh-badge">每日 18:08 更新</span></h2>' +
+        return '<section class="cat-section" id="latest"><h2>最新职位 · 直达投递 <span class="muted">(' + list.length + '/' + postings.postings.length + ')</span> <span class="muted sort-note">· 按发布日期倒序</span> <span class="fresh-badge">每日 18:08 更新</span></h2>' +
           '<div class="pf-bar">' + btns + '<span class="pf-div"></span>' + roleBtns + '</div>' +
           '<div class="entry-list">' + list.map(function (p) { return postingCard(p, idx); }).join('') + '</div>' +
           '<div class="more-jobs"><span class="muted">看更多：</span>' +
