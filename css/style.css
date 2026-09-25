@@ -328,7 +328,7 @@ a:hover { text-decoration: underline; }
 .career-toc {
   display: flex; flex-wrap: nowrap; align-items: center; gap: 6px;
   margin: 12px 0 18px; position: sticky; top: calc(var(--stick-top, 0px) + 8px); z-index: 60;
-  width: fit-content; max-width: 100%;
+  width: -webkit-fit-content; width: fit-content; max-width: 100%;
   background: var(--paper); padding: 6px;
   border: 1px solid var(--line); border-radius: 999px;
   box-shadow: 0 10px 24px rgba(10, 31, 61, .13);
