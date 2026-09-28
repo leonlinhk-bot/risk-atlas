@@ -1,7 +1,107 @@
 {
-  "updated": "2026-09-25 18:08",
+  "updated": "2026-09-28 18:08",
   "note": "具体在招职位，直达投递/详情页；每日 18:08 更新（由 update-job-postings.cjs 刷新）。首期为手工抓取自公开招聘信息。",
   "postings": [
+    {
+      "title": "(Senior) Manager, Distribution Governance (Life Insurance)",
+      "employer": "zurich",
+      "job": "compliance-officer",
+      "company": "Zurich 官网",
+      "url": "https://www.careers.zurich.com/job/Hong-Kong-%28Senior%29-Manager%2C-Distribution-Governance-%28Life-Insurance%29/1365542757/",
+      "date": "2026-09-28",
+      "source": "Zurich 官网",
+      "level": "senior"
+    },
+    {
+      "title": "Engineering Underwriter",
+      "employer": "swiss-re",
+      "job": "underwriter",
+      "company": "Swiss Re 瑞士再保险",
+      "url": "https://careers.swissre.com/job/Hong-Kong-Engineering-Underwriter-Hong/1390180633/",
+      "date": "2026-09-27",
+      "source": "Swiss Re 官网",
+      "level": "mid"
+    },
+    {
+      "title": "Senior Claims Officer (Liability & Property / Commercial)",
+      "employer": "zurich",
+      "job": "claims-specialist",
+      "company": "Zurich 官网",
+      "url": "https://www.careers.zurich.com/job/Hong-Kong-Senior-Claims-Officer-%28Liability-&-Property-Commercial%29/1349775357/",
+      "date": "2026-09-27",
+      "source": "Zurich 官网",
+      "level": "mid"
+    },
+    {
+      "title": "Business Regulatory and Conduct Risk Manager - Hang Seng Insurance - Hang Seng Bank (HK)",
+      "employer": "hang-seng-insurance",
+      "job": "risk-manager",
+      "company": "HSBC 官网",
+      "url": "https://apply.careers.hsbc.com/job/Central-Business-Regulatory-and-Conduct-Risk-Manager-Hang-Seng-Insurance-Hang-Seng-Bank-%28HK%29-Hong/1369123757/",
+      "date": "2026-09-25",
+      "source": "HSBC 官网（apply.careers.hsbc.com）",
+      "level": "mid"
+    },
+    {
+      "title": "Underwriter (Middle Market / Commercial Insurance Hong Kong)",
+      "employer": "zurich",
+      "job": "underwriter",
+      "company": "Zurich 官网",
+      "url": "https://www.careers.zurich.com/job/Hong-Kong-Underwriter-%28Middle-Market-Commercial-Insurance-Hong-Kong%29/1373155957/",
+      "date": "2026-09-25",
+      "source": "Zurich 官网",
+      "level": "mid"
+    },
+    {
+      "title": "Underwriting Manager, HNW and Individual Life Business",
+      "employer": "hsbc-life",
+      "job": "underwriter",
+      "company": "HSBC 官网",
+      "url": "https://apply.careers.hsbc.com/job/Kowloon-City-Underwriting-Manager%2C-HNW-and-Individual-Life-Business-Kowl/1367107557/",
+      "date": "2026-09-25",
+      "source": "HSBC 官网（apply.careers.hsbc.com）",
+      "level": "mid"
+    },
+    {
+      "title": "Assistant Manager, Professional Liability",
+      "employer": "axa",
+      "job": "underwriter",
+      "company": "AXA 官网",
+      "url": "https://careers.axa.com/careers-home/jobs/26867?lang=en-us",
+      "date": "2026-09-24",
+      "source": "AXA 官网",
+      "level": "mid"
+    },
+    {
+      "title": "Senior Lead, Partnership Development (Life & Employee Benefits) Asia",
+      "employer": "zurich",
+      "job": "insurance-broker",
+      "company": "Zurich 官网",
+      "url": "https://www.careers.zurich.com/job/Hong-Kong-Senior-Lead%2C-Partnership-Development-%28Life-&-Employee-Benefits%29-Asia/1367881957/",
+      "date": "2026-09-24",
+      "source": "Zurich 官网",
+      "level": "senior"
+    },
+    {
+      "title": "Senior Manager, Innovation and Product Development - Hang Seng Insurance - Hang Seng Bank (HK)",
+      "employer": "hang-seng-insurance",
+      "job": null,
+      "company": "HSBC 官网",
+      "url": "https://apply.careers.hsbc.com/job/Mongkok-Senior-Manager%2C-Innovation-and-Product-Development-Hang-Seng-Insurance-Hang-Seng-Bank-%28HK%29-Kowl/1354232757/",
+      "date": "2026-09-24",
+      "source": "HSBC 官网（apply.careers.hsbc.com）",
+      "level": "senior"
+    },
+    {
+      "title": "Senior Underwriter",
+      "employer": "swiss-re",
+      "job": "underwriter",
+      "company": "Swiss Re 瑞士再保险",
+      "url": "https://careers.swissre.com/job/Hong-Kong-Senior-Underwriter-Hong/1429896333/",
+      "date": "2026-09-24",
+      "source": "Swiss Re 官网",
+      "level": "senior"
+    },
     {
       "title": "Assistant Actuarial Manager / Actuarial Analyst (Non-Life Reinsurance)",
       "employer": null,
@@ -13,14 +113,14 @@
       "level": "mid"
     },
     {
-      "title": "Senior Actuarial Associate",
-      "employer": null,
-      "job": "actuary",
-      "company": "Fusure Reinsurance 富卫再保险",
-      "url": "https://hk.jobsdb.com/job/94802058",
-      "date": "2026-09-22",
-      "source": "JobsDB（再保雇主直招）",
-      "level": "senior"
+      "title": "Underwriting Manager - Hang Seng Insurance - Hang Seng Bank (HK)",
+      "employer": "hang-seng-insurance",
+      "job": "underwriter",
+      "company": "HSBC 官网",
+      "url": "https://apply.careers.hsbc.com/job/Mongkok-Underwriting-Manager-Hang-Seng-Insurance-Hang-Seng-Bank-%28HK%29-Kowl/1367751457/",
+      "date": "2026-09-23",
+      "source": "HSBC 官网（apply.careers.hsbc.com）",
+      "level": "mid"
     },
     {
       "title": "[1 year contract] Senior Compliance Officer",
@@ -30,6 +130,16 @@
       "url": "https://hk.jobsdb.com/job/94803648",
       "date": "2026-09-22",
       "source": "JobsDB（雇主直招，AML 方向）",
+      "level": "senior"
+    },
+    {
+      "title": "Senior Actuarial Associate",
+      "employer": null,
+      "job": "actuary",
+      "company": "Fusure Reinsurance 富卫再保险",
+      "url": "https://hk.jobsdb.com/job/94802058",
+      "date": "2026-09-22",
+      "source": "JobsDB（再保雇主直招）",
       "level": "senior"
     },
     {
@@ -133,16 +243,6 @@
       "level": "senior"
     },
     {
-      "title": "Senior Manager / Manager, Life & Health Insurance Risk",
-      "employer": "axa",
-      "job": "risk-manager",
-      "company": "AXA 安盛",
-      "url": "https://careers.axa.com/careers-home/jobs/23431?lang=en-us",
-      "date": "2026-09-11",
-      "source": "AXA 官网",
-      "level": "senior"
-    },
-    {
       "title": "中国太平在招职位汇总（太平人寿/太平保险）",
       "employer": "china-taiping",
       "job": null,
@@ -151,6 +251,16 @@
       "date": "2026-09-11",
       "source": "JobsDB",
       "level": "all"
+    },
+    {
+      "title": "Senior Manager, Life & Financial Risk",
+      "employer": "axa",
+      "job": "risk-manager",
+      "company": "AXA 安盛",
+      "url": "https://careers.axa.com/careers-home/jobs/23431?lang=en-us",
+      "date": "2026-09-11",
+      "source": "AXA 官网",
+      "level": "senior"
     },
     {
       "title": "Intern, Actuarial Pricing",
@@ -263,16 +373,6 @@
       "level": "mid"
     },
     {
-      "title": "Engineering Underwriter",
-      "employer": "swiss-re",
-      "job": "underwriter",
-      "company": "Swiss Re 瑞士再保险",
-      "url": "https://careers.swissre.com/job/Hong-Kong-Engineering-Underwriter-Hong/1390180633/",
-      "date": "2026-08-29",
-      "source": "Swiss Re 官网",
-      "level": "mid"
-    },
-    {
       "title": "Senior Pricing Actuarial Associate (Life Insurance)",
       "employer": "zurich",
       "job": "actuary",
@@ -280,16 +380,6 @@
       "url": "https://hk.jobsdb.com/job/94262173",
       "date": "2026-08-28",
       "source": "JobsDB",
-      "level": "senior"
-    },
-    {
-      "title": "Senior Underwriter",
-      "employer": "swiss-re",
-      "job": "underwriter",
-      "company": "Swiss Re 瑞士再保险",
-      "url": "https://careers.swissre.com/job/Hong-Kong-Senior-Underwriter-Hong/1429896333/",
-      "date": "2026-08-26",
-      "source": "Swiss Re 官网",
       "level": "senior"
     }
   ]
