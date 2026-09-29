@@ -1,7 +1,17 @@
 {
-  "updated": "2026-09-28 18:08",
+  "updated": "2026-09-29 18:08",
   "note": "具体在招职位，直达投递/详情页；每日 18:08 更新（由 update-job-postings.cjs 刷新）。首期为手工抓取自公开招聘信息。",
   "postings": [
+    {
+      "title": "Assistant Claims Manager / Senior Claims Officer (Commercial)",
+      "employer": "zurich",
+      "job": "claims-specialist",
+      "company": "Zurich 官网",
+      "url": "https://www.careers.zurich.com/job/Hong-Kong-Assistant-Claims-Manager-Senior-Claims-Officer-%28Commercial%29/804536702/",
+      "date": "2026-09-29",
+      "source": "Zurich 官网",
+      "level": "mid"
+    },
     {
       "title": "(Senior) Manager, Distribution Governance (Life Insurance)",
       "employer": "zurich",
