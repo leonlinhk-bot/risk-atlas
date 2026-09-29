@@ -83,11 +83,21 @@ done
 echo "→ 页面状态："
 PAGES=(index.html career.html weekly.html map.html categories.html catalog.html companies.html wiki.html robots.txt sitemap.xml)
 PAGE_FAIL=0
+# 单次请求偶发 000（本机到 Cloudflare 的瞬时掉线，非站点故障）→ 每个页面最多重试 3 次
+page_code() {
+  local url="$1" code='' i=1
+  while [ "$i" -le 3 ]; do
+    code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 25 "$url")
+    [ "$code" != "000" ] && { echo "$code"; return 0; }
+    sleep 3; i=$((i + 1))
+  done
+  echo "$code"
+}
 for p in "${PAGES[@]}"; do
-  code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 25 "$SITE/$p")
+  code=$(page_code "$SITE/$p")
   if [ "$code" = "200" ]; then printf '  OK   %-16s 200\n' "$p"; else printf '  FAIL %-16s %s\n' "$p" "$code"; PAGE_FAIL=1; fi
 done
-code404=$(curl -s -o /dev/null -w '%{http_code}' --max-time 25 "$SITE/no-such-page-verify")
+code404=$(page_code "$SITE/no-such-page-verify")
 if [ "$code404" = "404" ]; then echo "  OK   404 页          404（品牌化）"; else echo "  FAIL 404 页          $code404"; PAGE_FAIL=1; fi
 
 echo "→ 数据计数："
