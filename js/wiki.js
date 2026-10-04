@@ -39,9 +39,18 @@
     });
   }
 
-  /* 载入 entries.json（全量，含正文；wiki 详情页使用） */
+  /* 载入 entries.json（全量，含正文）：仅作分片缺失时的兜底，正常路径不再使用 */
   function load() {
     return fetchJSON('data/entries.json');
+  }
+
+  /* 载入单个词条分片（详情页主路径）：{e: 词条, b: [入链 slug]} */
+  function loadEntry(slug) {
+    return fetchJSON('data/entry/' + encodeURIComponent(slug) + '.json')
+      .then(function (d) {
+        if (!d || !d.e) throw new Error('分片为空');
+        return { entry: d.e, backlinks: d.b || [] };
+      });
   }
 
   /* 当前语言对应的派生文件后缀（zh-cn 用默认文件） */
@@ -341,6 +350,7 @@
 
   window.Wiki = {
     load: load,
+    loadEntry: loadEntry,
     loadIndex: loadIndex,
     loadGraph: loadGraph,
     loadSearch: loadSearch,

@@ -5,9 +5,11 @@
 生成：
   1) data/index.json —— 列表页/搜索用的精简索引（去掉 body/body_en/body_hk/weekly_refs）
   2) data/graph.json —— 知识宇宙预计算图（nodes + links），避免前端加载全量正文再算边
+  3) data/entry/<slug>.json —— 词条详情页分片（该词条全文 + 预计算反向链接），
+     取代「详情页下载整份 14 MB entries.json」的做法
 
 用法：
-  python3 scripts/build.py          # 生成（覆盖）
+  python3 scripts/build.py          # 生成（覆盖；分片按内容变化增量写，并清理已删词条的分片）
   python3 scripts/build.py --check  # 只校验生成物是否与当前一致（CI 用，过期则 exit 1）
 """
 import datetime
@@ -21,6 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENTRIES = os.path.join(ROOT, 'data', 'entries.json')
 INDEX = os.path.join(ROOT, 'data', 'index.json')
 GRAPH = os.path.join(ROOT, 'data', 'graph.json')
+ENTRY_DIR = os.path.join(ROOT, 'data', 'entry')   # 词条分片目录
 # 语言化派生文件（每次只加载当前语言，体积约为合并版 1/3）
 LANG_OUT = {
     'zh-cn': ('data/index.json', 'data/graph.json'),          # 同时作为向后兼容的默认文件
@@ -164,6 +167,99 @@ def build_graph(doc, lang='zh-cn'):
     return {'generated_from': 'entries.json', 'nodes': nodes, 'links': links}
 
 
+def outgoing_slugs(e):
+    """与 js/wiki.js 的 outgoingSlugs() 逐条对齐（分片里的反链必须与前端算法一致）"""
+    found = set()
+    for m in LINK_RE.finditer(e.get('body') or ''):
+        found.add(m.group(1).strip())
+    for t in (e.get('aiTools') or []):
+        mm = re.match(r'^\[\[([^\]|]+)', str(t))
+        if mm:
+            found.add(mm.group(1).strip())
+    for k in ('concepts', 'courses', 'usedIn', 'credentials', 'employers'):
+        for s in (e.get(k) or []):
+            found.add(str(s).strip())
+    if e.get('pair'):
+        found.add(str(e['pair']).strip())
+    tr = e.get('track')
+    if tr:
+        if isinstance(tr, dict):
+            if tr.get('slug'):
+                found.add(str(tr['slug']).strip())
+        else:
+            found.add(str(tr).strip())
+    return found
+
+
+def build_backlink_map(entries):
+    """slug -> 入链来源 slug 列表（保持 entries.json 顺序，与前端 Wiki.backlinks 一致）"""
+    have = {e['slug'] for e in entries}
+    rev = {}
+    for e in entries:
+        for t in outgoing_slugs(e):
+            if t in have and t != e['slug']:
+                rev.setdefault(t, [])
+                if e['slug'] not in rev[t]:
+                    rev[t].append(e['slug'])
+    return rev
+
+
+def build_entry_shards(doc):
+    """词条分片：{"e": <完整词条>, "b": [入链 slug]}（短键省字节）"""
+    entries = doc['entries']
+    back = build_backlink_map(entries)
+    shards = {}
+    for e in entries:
+        payload = {'e': e, 'b': back.get(e['slug'], [])}
+        shards[e['slug']] = json.dumps(payload, ensure_ascii=False, separators=(',', ':')) + '\n'
+    return shards
+
+
+def write_shards_or_check(shards, check):
+    """按内容增量写分片，并清理已不存在词条的分片"""
+    os.makedirs(ENTRY_DIR, exist_ok=True)
+    stale = False
+    written = kept = 0
+    total_bytes = 0
+    for slug, text in shards.items():
+        path = os.path.join(ENTRY_DIR, slug + '.json')
+        data = text.encode('utf-8')
+        total_bytes += len(data)
+        old = None
+        if os.path.exists(path):
+            with open(path, 'rb') as f:
+                old = f.read()
+        if old == data:
+            kept += 1
+            continue
+        stale = True
+        if not check:
+            with open(path, 'w', encoding='utf-8') as f:
+                f.write(text)
+            written += 1
+    # 已删除词条的分片
+    expect = {s + '.json' for s in shards}
+    removed = 0
+    for fn in os.listdir(ENTRY_DIR):
+        if fn.endswith('.json') and fn not in expect:
+            stale = True
+            if not check:
+                os.remove(os.path.join(ENTRY_DIR, fn))
+                removed += 1
+    if check:
+        flag = '[过期] ' if stale else '[一致] '
+        print(f"  {flag}data/entry/: {len(shards)} 个分片，{total_bytes:,} B 原始")
+        return stale
+    parts = [f"{written} 个写入"] if written else []
+    if removed:
+        parts.append(f"{removed} 个已删词条分片清理")
+    if kept:
+        parts.append(f"{kept} 个未变")
+    print(f"  {'已更新' if stale else '无变化'} data/entry/: {len(shards)} 个分片，"
+          f"{total_bytes:,} B 原始（{'、'.join(parts) if parts else '无变化'}）")
+    return stale
+
+
 def build_search(doc, lang='zh-cn'):
     """语言化搜索语料：slug/type/title/en/code/summary/正文摘录/别名（短键）"""
     tf = LANG_FIELDS[lang]['title']
@@ -269,6 +365,7 @@ def main():
         stale |= write_or_check(os.path.join(ROOT, gpath), build_graph(doc, lang), check)
     for lang, spath in SEARCH_OUT.items():
         stale |= write_or_check(os.path.join(ROOT, spath), build_search(doc, lang), check)
+    stale |= write_shards_or_check(build_entry_shards(doc), check)
     stale |= write_raw_or_check(SITEMAP, build_sitemap(doc), check)
     if check and stale:
         print("✗ 生成物与 entries.json 不同步 —— 请运行 python3 scripts/build.py 并提交")

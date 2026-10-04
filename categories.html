@@ -33,7 +33,7 @@
   </footer>
 
   <script src="js/nav.js?v=330b2eed"></script>
-  <script src="js/wiki.js?v=25f80e49"></script>
+  <script src="js/wiki.js?v=86aa6fbe"></script>
   <script src="js/notice.js?v=aac6b809"></script>
   <script>
     (function () {
@@ -77,7 +77,9 @@
         }).join('');
       }
 
-      Wiki.load().then(function (data) {
+      // 分类索引只需要列表字段（title/summary/type/category/code/verified），
+      // 用语言化 index（约 160KB gzip）即可，不再下载整份 entries.json（约 4.2MB gzip）
+      Wiki.loadIndex().then(function (data) {
         var entries = data.entries;
         var groups = {};
         entries.forEach(function (e) { (groups[e.type] = groups[e.type] || []).push(e); });

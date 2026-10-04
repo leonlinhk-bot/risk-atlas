@@ -27,13 +27,15 @@ git push origin main
 ### 生成物同步（改 entries.json 后必做）
 
 ```bash
-python3 scripts/build.py     # 生成 data/index.<lang>.json（列表页索引）、data/graph.<lang>.json（宇宙图）、data/search.<lang>.json（搜索语料）
+python3 scripts/build.py     # 生成 data/index.<lang>.json（列表页索引）、data/graph.<lang>.json（宇宙图）、data/search.<lang>.json（搜索语料）、data/entry/<slug>.json（词条详情分片）
 python3 scripts/stamp.py     # 给 HTML 里的 css/js 引用打内容指纹 ?v=
 ```
 
-- `data/index*.json` / `data/graph*.json` / `data/search*.json` 是派生文件，**必须与 entries.json 一起提交**（否则线上读到旧数据）；均按语言拆分（zh-cn 为默认文件，en/hk 为后缀文件）。
+- `data/index*.json` / `data/graph*.json` / `data/search*.json` / **`data/entry/*.json`** 是派生文件，**必须与 entries.json 一起提交**（否则线上读到旧数据）；前四类按语言拆分（zh-cn 为默认文件，en/hk 为后缀文件）。
+- `data/entry/<slug>.json` = `{e: 词条全文, b: [入链 slug]}`：详情页只取「当前词条的 1 个分片 + index」，**不再下载整份 entries.json**（2026-09-30 改；单页载荷 4.2MB → 约 160KB gzip）。分片缺失时页面自动回退到全量 `entries.json` + 客户端算反链，所以新增词条即使忘记跑 build.py 也不会白屏。
+- `build.py` 对分片按内容**增量写**，并自动清理已删除词条的分片；新增/删除词条后仍请照常提交这些分片。
 - 校验是否同步：`python3 scripts/build.py --check`、`python3 scripts/stamp.py --check`（过期返回 1，适合未来 CI）。
-- 页面取数：列表页（首页/课程目录/分类索引/就业情报/机构全景/周报）读当前语言的 `index.<lang>.json`；搜索首次输入懒加载 `search.<lang>.json`（**不再拉全量**）；`map.html` 读 `graph.<lang>.json`；`wiki.html` 详情页仍读全量 `entries.json`（仅详情页）。
+- 页面取数：列表页（首页/课程目录/分类索引/就业情报/机构全景/周报）读当前语言的 `index.<lang>.json`；搜索首次输入懒加载 `search.<lang>.json`（**不再拉全量**）；`map.html` 读 `graph.<lang>.json`；`wiki.html` 详情页读 `index.<lang>.json` + `data/entry/<slug>.json`（`entries.json` 仅作兜底）。
 
 推送后自动核验（推荐，替代人工 sleep + shasum）：
 

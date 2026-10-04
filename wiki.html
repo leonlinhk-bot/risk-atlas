@@ -31,7 +31,7 @@
   </footer>
 
   <script src="js/nav.js?v=330b2eed"></script>
-  <script src="js/wiki.js?v=25f80e49"></script>
+  <script src="js/wiki.js?v=86aa6fbe"></script>
   <script src="js/notice.js?v=aac6b809"></script>
   <script>
     (function () {
@@ -136,8 +136,9 @@
         return b;
       }
 
-      function renderEntry(e, entries, idx, wkMap) {
-        var back = Wiki.backlinks(entries, e.slug);
+      function renderEntry(e, entries, idx, wkMap, backArg) {
+        // 反链：优先用分片里预计算好的（避免为了算入链而下载全量数据）
+        var back = backArg || Wiki.backlinks(entries, e.slug);
         var tr = Wiki.trackRef(e, idx);
         var crumb = '<a href="index.html">首页</a> › <a href="categories.html#type-' + e.type + '">' + Wiki.typeLabel(e.type) + '</a>' +
           (tr ? ' › <a href="' + Wiki.entryHref(tr.slug) + '">' + Wiki.escapeHtml(tr.name) + '</a>' : '') + ' › ' + Wiki.escapeHtml(Wiki.tr(e, 'title'));
@@ -199,19 +200,35 @@
           }).join('') + '</div>';
       }
 
+      // 详情页主路径：index（解析双链标题）+ 该词条分片（正文 + 预计算反链）+ weekly
+      // 分片缺失（例如刚新增、尚未跑 build.py）时回退到全量 entries.json + 客户端算反链
+      var weeklyP = fetch('data/weekly.json').then(function (r) { return r.json(); }).catch(function () { return { reports: [] }; });
       Promise.all([
-        Wiki.load(),
-        fetch('data/weekly.json').then(function (r) { return r.json(); }).catch(function () { return { reports: [] }; })
+        Wiki.loadIndex(),
+        weeklyP,
+        slug ? Wiki.loadEntry(slug).catch(function () { return null; }) : Promise.resolve(null)
       ]).then(function (rs) {
-        var data = rs[0], wk = rs[1];
+        var data = rs[0], wk = rs[1], shard = rs[2];
         var entries = data.entries;
         var idx = Wiki.index(entries);
         var wkMap = {};
         (wk.reports || []).forEach(function (r) { wkMap[r.slug] = r; });
         if (!slug) { renderLanding(entries, idx); return; }
-        var e = idx[slug];
-        if (!e) { renderMissing(); return; }
-        renderEntry(e, entries, idx, wkMap);
+
+        if (shard && shard.entry) {
+          var back = (shard.backlinks || []).map(function (s) { return idx[s]; }).filter(Boolean);
+          renderEntry(shard.entry, entries, idx, wkMap, back);
+          return;
+        }
+        // 兜底：分片不可用 → 拉全量并保持旧行为
+        Wiki.load().then(function (full) {
+          var fEntries = full.entries, fIdx = Wiki.index(fEntries);
+          var fe = fIdx[slug];
+          if (!fe) { renderMissing(); return; }
+          renderEntry(fe, fEntries, fIdx, wkMap, Wiki.backlinks(fEntries, slug));
+        }).catch(function (err) {
+          main.innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(err.message) + '</p>';
+        });
       }).catch(function (err) {
         main.innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(err.message) + '</p>';
       });
