@@ -31,7 +31,7 @@
   </footer>
 
   <script src="js/nav.js?v=330b2eed"></script>
-  <script src="js/wiki.js?v=86aa6fbe"></script>
+  <script src="js/wiki.js?v=4312881b"></script>
   <script src="js/notice.js?v=aac6b809"></script>
   <script>
     (function () {
@@ -200,24 +200,33 @@
           }).join('') + '</div>';
       }
 
-      // 详情页主路径：index（解析双链标题）+ 该词条分片（正文 + 预计算反链）+ weekly
-      // 分片缺失（例如刚新增、尚未跑 build.py）时回退到全量 entries.json + 客户端算反链
+      // 详情页：标题索引（比整份 index 小得多）+ 该词条分片（正文 + 预计算反链）+ weekly
+      // 逐级回退：分片缺失 → 全量 entries.json + 客户端算反链；标题索引缺失 → 自动退到整份 index
       var weeklyP = fetch('data/weekly.json').then(function (r) { return r.json(); }).catch(function () { return { reports: [] }; });
+
+      function fail(err) {
+        main.innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(err && err.message ? err.message : String(err)) + '</p>';
+      }
+
+      if (!slug) {
+        Promise.all([Wiki.loadIndex(), weeklyP]).then(function (rs) {
+          renderLanding(rs[0].entries, Wiki.index(rs[0].entries));
+        }).catch(fail);
+        return;
+      }
+
       Promise.all([
-        Wiki.loadIndex(),
+        Wiki.loadTitleIndex(),
         weeklyP,
-        slug ? Wiki.loadEntry(slug).catch(function () { return null; }) : Promise.resolve(null)
+        Wiki.loadEntry(slug).catch(function () { return null; })
       ]).then(function (rs) {
-        var data = rs[0], wk = rs[1], shard = rs[2];
-        var entries = data.entries;
-        var idx = Wiki.index(entries);
+        var idx = rs[0], wk = rs[1], shard = rs[2];
         var wkMap = {};
         (wk.reports || []).forEach(function (r) { wkMap[r.slug] = r; });
-        if (!slug) { renderLanding(entries, idx); return; }
 
         if (shard && shard.entry) {
           var back = (shard.backlinks || []).map(function (s) { return idx[s]; }).filter(Boolean);
-          renderEntry(shard.entry, entries, idx, wkMap, back);
+          renderEntry(shard.entry, null, idx, wkMap, back);
           return;
         }
         // 兜底：分片不可用 → 拉全量并保持旧行为
@@ -226,12 +235,8 @@
           var fe = fIdx[slug];
           if (!fe) { renderMissing(); return; }
           renderEntry(fe, fEntries, fIdx, wkMap, Wiki.backlinks(fEntries, slug));
-        }).catch(function (err) {
-          main.innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(err.message) + '</p>';
-        });
-      }).catch(function (err) {
-        main.innerHTML = '<p class="muted">加载失败：' + Wiki.escapeHtml(err.message) + '</p>';
-      });
+        }).catch(fail);
+      }).catch(fail);
     })();
   </script>
 </body>

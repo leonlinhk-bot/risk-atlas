@@ -71,6 +71,26 @@
       .catch(function () { return fetchJSON('data/search.json'); });
   }
 
+  /* 载入「标题索引」（详情页用）：slug -> {slug,title,type}，比整份 index 小得多。
+     依次回退：titles.<lang> → titles → 整份 index（三级，任一级可用即返回） */
+  function loadTitleIndex() {
+    function fromTitles(d) {
+      var m = {};
+      var es = (d && d.entries) || {};
+      Object.keys(es).forEach(function (s) {
+        var v = es[s] || [];
+        m[s] = { slug: s, title: v[0] || '', type: v[1] || '' };
+      });
+      return m;
+    }
+    return fetchJSON('data/titles' + langSuffix() + '.json')
+      .catch(function () { return fetchJSON('data/titles.json'); })
+      .then(fromTitles)
+      .catch(function () {
+        return loadIndex().then(function (d) { return index(d.entries); });
+      });
+  }
+
   /* 载入知识宇宙预计算图：同上按语言取，失败回退 */
   function loadGraph() {
     return fetchJSON('data/graph' + langSuffix() + '.json')
@@ -352,6 +372,7 @@
     load: load,
     loadEntry: loadEntry,
     loadIndex: loadIndex,
+    loadTitleIndex: loadTitleIndex,
     loadGraph: loadGraph,
     loadSearch: loadSearch,
     index: index,

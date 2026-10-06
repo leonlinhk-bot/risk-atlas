@@ -32,6 +32,8 @@ LANG_OUT = {
 }
 # 搜索语料（懒加载用；取代整份 entries.json）：短键压缩字段名
 SEARCH_OUT = {'zh-cn': 'data/search.json', 'en': 'data/search.en.json', 'hk': 'data/search.hk.json'}
+# 标题映射（详情页解析双链显示名/反链标签用；比整份 index 小得多）
+TITLES_OUT = {'zh-cn': 'data/titles.json', 'en': 'data/titles.en.json', 'hk': 'data/titles.hk.json'}
 BODY_EXCERPT = 80    # 正文摘录字符数（正文全文仍在 entries.json / 词条页）
 SITEMAP = os.path.join(ROOT, 'sitemap.xml')
 SITE = 'https://risk-atlas.wiki'
@@ -56,6 +58,8 @@ EXTRA_FIELDS = {
     'tool':       ['verified'],
 }
 LINK_RE = re.compile(r'\[\[([^\]|]+)(?:\|[^\]]+)?\]\]')
+# 带「别名」捕获组的版本（清洗摘要时需要拿到 [[slug|别名]] 里的别名）
+LINK_LABEL_RE = re.compile(r'\[\[([^\]|]+)(?:\|([^\]]+))?\]\]')
 
 
 # 列表页展示用的文本截断上限（正文仍在 entries.json / wiki 详情页，不受影响）
@@ -77,6 +81,23 @@ def clean_title(s, n=60):
     return clip(t, n)
 
 
+def clean_md(s, resolve=None):
+    """列表卡片用的摘要清洗：剥 markdown 标记 + 把 [[slug|label]] 解析成可读文本。
+    卡片不渲染 markdown，原样输出会显示成 **、` 这类符号（实测 index 中 197 条中招）。"""
+    t = str(s or '')
+
+    def rep(m):
+        slug = m.group(1).strip()
+        label = (m.group(2) or '').strip()
+        if label:
+            return label
+        return (resolve or {}).get(slug, slug)
+
+    t = LINK_LABEL_RE.sub(rep, t)
+    t = re.sub(r'\*\*|__|`', '', t)
+    return re.sub(r'\s+', ' ', t).strip()
+
+
 def clip(s, n):
     if not isinstance(s, str) or len(s) <= n:
         return s
@@ -91,6 +112,10 @@ def load_entries():
 def build_index(doc, lang='zh-cn'):
     out = []
     tf, sf = LANG_FIELDS[lang]['title'], LANG_FIELDS[lang]['summary']
+    # 摘要里可能含 [[slug]]，解析成该语言下的标题（构建期一次算好）
+    resolve = {}
+    for e in doc['entries']:
+        resolve[e['slug']] = clean_title(e.get(tf) or e.get('title') or '', 40)
     drop = set()
     for k, v in LANG_FIELDS.items():
         if k == lang:
@@ -111,6 +136,9 @@ def build_index(doc, lang='zh-cn'):
                 slim['title'] = t
             if sm:
                 slim['summary'] = sm
+        for f in ('summary', 'summary_en', 'summary_hk'):
+            if f in slim:
+                slim[f] = clean_md(slim[f], resolve)
         for f, n in TRUNC.items():
             if f in slim:
                 slim[f] = clip(slim[f], n)
@@ -126,6 +154,7 @@ def build_graph(doc, lang='zh-cn'):
     entries = doc['entries']
     tfield = LANG_FIELDS[lang]['title']
     sfield = LANG_FIELDS[lang]['summary']
+    resolve = {e['slug']: clean_title(e.get(tfield) or e.get('title') or '', 40) for e in entries}
     have = {e['slug'] for e in entries}
     nodes = []
     for e in entries:
@@ -134,7 +163,7 @@ def build_graph(doc, lang='zh-cn'):
             'type': e['type'],
             'title': clean_title(e.get(tfield) or e.get('title') or '', 60),
             'en': clip(e.get('en') or e.get('title_en') or '', GRAPH_TRUNC['title_en']),
-            'summary': clip(e.get(sfield) or e.get('summary') or '', GRAPH_TRUNC['summary']),
+            'summary': clip(clean_md(e.get(sfield) or e.get('summary') or '', resolve), GRAPH_TRUNC['summary']),
             'kind': e.get('kind'),
             'status': e.get('status'),
             'degree': 0,
@@ -165,6 +194,16 @@ def build_graph(doc, lang='zh-cn'):
         pos[l['target']]['degree'] += 1
 
     return {'generated_from': 'entries.json', 'nodes': nodes, 'links': links}
+
+
+def build_titles(doc, lang='zh-cn'):
+    """标题映射：复用 build_index 的语言解析与截断结果，保证与列表页显示完全一致。
+    结构 {slug: [title, type]}——详情页只需它来渲染双链显示名、反链标签与信息栏。"""
+    idx = build_index(doc, lang)
+    entries = {}
+    for e in idx['entries']:
+        entries[e['slug']] = [e.get('title', ''), e.get('type', '')]
+    return {'generated_from': 'entries.json', 'lang': lang, 'entries': entries}
 
 
 def outgoing_slugs(e):
@@ -365,6 +404,8 @@ def main():
         stale |= write_or_check(os.path.join(ROOT, gpath), build_graph(doc, lang), check)
     for lang, spath in SEARCH_OUT.items():
         stale |= write_or_check(os.path.join(ROOT, spath), build_search(doc, lang), check)
+    for lang, tpath in TITLES_OUT.items():
+        stale |= write_or_check(os.path.join(ROOT, tpath), build_titles(doc, lang), check)
     stale |= write_shards_or_check(build_entry_shards(doc), check)
     stale |= write_raw_or_check(SITEMAP, build_sitemap(doc), check)
     if check and stale:

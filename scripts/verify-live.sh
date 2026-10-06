@@ -32,6 +32,7 @@ if [ ${#FILES[@]} -eq 0 ]; then
     css/style.css js/wiki.js js/nav.js js/search.js js/graph.js js/notice.js js/vendor/echarts.min.js
     data/index.json data/index.en.json data/index.hk.json data/graph.json data/graph.en.json
     data/search.json data/search.en.json data/search.hk.json
+    data/titles.json data/titles.en.json data/titles.hk.json
     data/entries.json data/weekly.json data/job-postings.json data/career-trends.json data/companies.json
     data/entry/rim520.json data/entry/rim530.json data/entry/insurance-linked-securities.json
   )
